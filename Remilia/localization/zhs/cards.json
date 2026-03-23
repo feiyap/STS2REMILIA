@@ -1,0 +1,13 @@
+{
+  "REMILIA-STRIKE_REMILIA.description": "造成{Damage:diff()}点伤害。",
+  "REMILIA-STRIKE_REMILIA.title": "打击",
+  
+  "REMILIA-DEFEND_REMILIA.description": "获得{Block:diff()}点[gold]格挡[/gold]。",
+  "REMILIA-DEFEND_REMILIA.title": "防御",
+
+  "REMILIA-SCARLET_FIGURE.description": "失去2点生命。\n获得{Block:diff()}点[gold]格挡[/gold]。",
+  "REMILIA-SCARLET_FIGURE.title": "绯红身影",
+
+  "REMILIA-BLOOD_SUCKING.description": "造成{Damage:diff()}点伤害。\n消耗最多等量于所造成伤害的[gold]血池[/gold]，回复等量的生命值。",
+  "REMILIA-BLOOD_SUCKING.title": "吸血"
+}

@@ -1,0 +1,46 @@
+[gd_scene load_steps=3 format=3 uid="uid://brdoauwitrc22"]
+
+[ext_resource type="Texture2D" uid="uid://bwpv400hj6swg" path="res://00004-2537062500.png" id="1_4ipca"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_rf1jx"]
+resource_local_to_scene = true
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_4ipca")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_4ipca")
+}],
+"loop": true,
+"name": &"idle_loop",
+"speed": 60.0
+}]
+
+[node name="RemiliaCharacter" type="Node2D"]
+
+[node name="Visuals" type="AnimatedSprite2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(2, -233)
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_rf1jx")
+animation = &"idle_loop"
+autoplay = "idle_loop"
+frame_progress = 0.93716
+
+[node name="Bounds" type="Control" parent="."]
+unique_name_in_owner = true
+layout_mode = 3
+anchors_preset = 0
+offset_left = -108.0
+offset_top = -396.0
+offset_right = 126.0
+offset_bottom = -12.0
+
+[node name="IntentPos" type="Marker2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(2, -333)
+
+[node name="CenterPos" type="Marker2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(1, -250)

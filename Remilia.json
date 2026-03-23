@@ -1,0 +1,11 @@
+{
+  "id": "Remilia",
+  "name": "Remilia",
+  "author": "Feiyap",
+  "description": "蕾米莉亚MOD",
+  "version": "v0.0.1",
+  "has_pck": true,
+  "has_dll": true,
+  "dependencies": ["BaseLib"],
+  "affects_gameplay": true
+}
