@@ -1,5 +1,33 @@
 {
   "REMILIA-BLOOD_POOL.description": "积攒的血池可以被技能消耗。",
   "REMILIA-BLOOD_POOL.smartDescription": "积攒的血池可以被技能消耗。",
-  "REMILIA-BLOOD_POOL.title": "血池"
+  "REMILIA-BLOOD_POOL.title": "血池",
+
+  "REMILIA-CLAW_PRINTS.description": "从攻击中受到的伤害增加[blue]1[/blue]点。",
+  "REMILIA-CLAW_PRINTS.smartDescription": "从攻击中受到的伤害增加[blue]{Amount}[/blue]点。",
+  "REMILIA-CLAW_PRINTS.title": "爪痕",
+
+  "REMILIA-REMILIA_COMMON19_POWER.description": "下个回合开始后，抽1张牌。",
+  "REMILIA-REMILIA_COMMON19_POWER.smartDescription": "下[blue]{Amount}[/blue]个回合开始后，抽1张牌。",
+  "REMILIA-REMILIA_COMMON19_POWER.title": "下回合抽牌",
+
+  "REMILIA-REMILIA_UNCOMMON27_POWER.description": "你在本回合内每失去一次生命，获得1点[gold]格挡[/gold]。",
+  "REMILIA-REMILIA_UNCOMMON27_POWER.smartDescription": "你在本回合内每失去一次生命，获得[blue]{Amount}[/blue]点[gold]格挡[/gold]。",
+  "REMILIA-REMILIA_UNCOMMON27_POWER.title": "冥符「红色的冥界」",
+
+  "REMILIA-REMILIA_UNCOMMON28_POWER.description": "使自己获得的下1个负面状态反弹给施加者。",
+  "REMILIA-REMILIA_UNCOMMON28_POWER.smartDescription": "使自己获得的下[blue]{Amount}[/blue]个负面状态反弹给施加者。",
+  "REMILIA-REMILIA_UNCOMMON28_POWER.title": "吸血鬼之心",
+
+  "REMILIA-REMILIA_UNCOMMON29_POWER.description": "在你的回合开始时，失去1点生命。\n在你的回合内失去生命时，对所有敌人造成1点伤害。消耗最多等量于所造成伤害的[gold]血池[/gold]，回复等量的生命。",
+  "REMILIA-REMILIA_UNCOMMON29_POWER.smartDescription": "在你的回合开始时，失去1点生命。\n在你的回合内失去生命时，对所有敌人造成[blue]{Amount}[/blue]点伤害。消耗最多等量于所造成伤害的[gold]血池[/gold]，回复等量的生命。",
+  "REMILIA-REMILIA_UNCOMMON29_POWER.title": "纵血鬼",
+
+  "REMILIA-REMILIA_UNCOMMON30_POWER.description": "失去生命的1%转化为血池。",
+  "REMILIA-REMILIA_UNCOMMON30_POWER.smartDescription": "失去生命的[blue]{Amount}[/blue]%转化为血池。",
+  "REMILIA-REMILIA_UNCOMMON30_POWER.title": "吸血习性",
+
+  "REMILIA-BLOOD_PLAGUE.description": "获得负面效果时，受到[blue]1[/blue]点伤害。",
+  "REMILIA-BLOOD_PLAGUE.smartDescription": "获得负面效果时，受到[blue]{Amount}[/blue]点伤害。",
+  "REMILIA-BLOOD_PLAGUE.title": "血疫"
 }

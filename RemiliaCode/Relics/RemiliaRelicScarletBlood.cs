@@ -19,7 +19,7 @@ public class RemiliaRelicScarletBlood() : RemiliaRelic
 {
     public override bool ShowCounter => true;
     private int _savedBlood;
-    
+
     [SavedProperty]
     public int SavedBlood
     {

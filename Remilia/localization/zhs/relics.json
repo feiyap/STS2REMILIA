@@ -1,9 +1,9 @@
 {
-  "REMILIA-REMILIA_RELIC_SCARLET_BLOOD.description": "失去生命值时，失去生命的{HpLossReduction}%转化为血池。\n战斗结束后，剩余血池的[green]{BloodPoolLift}%[/green]会存储进“猩红之血”中，在下次战斗开始时取出。",
+  "REMILIA-REMILIA_RELIC_SCARLET_BLOOD.description": "失去生命时，失去生命的{HpLossReduction}%转化为血池。\n战斗结束后，剩余血池的[green]{BloodPoolLift}%[/green]会存储进“猩红之血”中，在下次战斗开始时取出。",
   "REMILIA-REMILIA_RELIC_SCARLET_BLOOD.flavor": "这个遗物的细节将在未来揭晓……",
   "REMILIA-REMILIA_RELIC_SCARLET_BLOOD.title": "猩红之血",
 
-  "REMILIA-REMILIA_RELIC_RED_BLOOD.description": "失去生命值时，失去生命的{HpLossReduction}%转化为血池。\n战斗结束后，剩余血池的[green]{BloodPoolLift}%[/green]会存储进“绯红之血”中，在下次战斗开始时取出。",
+  "REMILIA-REMILIA_RELIC_RED_BLOOD.description": "失去生命时，失去生命的{HpLossReduction}%转化为血池。\n战斗结束后，剩余血池的[green]{BloodPoolLift}%[/green]会存储进“绯红之血”中，在下次战斗开始时取出。",
   "REMILIA-REMILIA_RELIC_RED_BLOOD.flavor": "这个遗物的细节将在未来揭晓……",
   "REMILIA-REMILIA_RELIC_RED_BLOOD.title": "绯红之血"
 }

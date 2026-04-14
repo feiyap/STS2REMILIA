@@ -76,7 +76,7 @@
     </ItemGroup>
 
     <ItemGroup>
-        <PackageReference Include="Alchyr.Sts2.BaseLib" Version="*" PrivateAssets="All"/>
+        <PackageReference Include="Alchyr.Sts2.BaseLib" Version="3.0.1" PrivateAssets="All"/>
         <PackageReference Include="Alchyr.Sts2.ModAnalyzers" Version="*"/>
         <AdditionalFiles Include="Remilia/localization/**/*.json"/>
         <AdditionalFiles Remove="Remilia\localization\eng\**" />
@@ -93,6 +93,8 @@
         <EmbeddedResource Remove="images/**"/>
         <Compile Remove="Remilia\localization\eng\**" />
         <EmbeddedResource Remove="Remilia\localization\eng\**" />
+        <Compile Remove="RemiliaCode\Keywords\**" />
+        <EmbeddedResource Remove="RemiliaCode\Keywords\**" />
     </ItemGroup>
 
     <ItemGroup>

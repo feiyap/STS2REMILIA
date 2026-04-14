@@ -2,9 +2,12 @@
 using BaseLib.Extensions;
 using BaseLib.Utils;
 using Godot;
+using MegaCrit.Sts2.Core.Combat;
+using MegaCrit.Sts2.Core.Combat.History.Entries;
 using Remilia.RemiliaCode.Character;
 using Remilia.RemiliaCode.Extensions;
 using MegaCrit.Sts2.Core.Entities.Cards;
+using Remilia.RemiliaCode.Powers;
 
 namespace Remilia.RemiliaCode.Cards;
 
@@ -44,5 +47,16 @@ public abstract class RemiliaCard(int cost, CardType type, CardRarity rarity, Ta
             var path =  $"beta/{Id.Entry.RemovePrefix().ToLowerInvariant()}.png".CardImagePath();
             return ResourceLoader.Exists(path) ? path : "card.png".CardImagePath();
         }
+    }
+    
+    public bool IsBloodPoolCount(int  count)
+    {
+        return base.Owner.Creature.GetPowerAmount<BloodPool>() >= count;
+    }
+
+    public bool IsDrawInRound()
+    {
+        return CombatManager.Instance.History.Entries.OfType<CardDrawnEntry>().Count((CardDrawnEntry e) =>
+            e.HappenedThisTurn(base.CombatState) && e.Actor == base.Owner.Creature && !e.FromHandDraw) > 0;
     }
 }

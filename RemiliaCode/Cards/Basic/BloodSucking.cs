@@ -1,3 +1,4 @@
+using BaseLib.Abstracts;
 using BaseLib.Utils;
 using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Commands.Builders;
@@ -5,17 +6,21 @@ using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.Entities.Creatures;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
+using MegaCrit.Sts2.Core.Models;
 using MegaCrit.Sts2.Core.Nodes.Vfx;
 using MegaCrit.Sts2.Core.ValueProps;
+using Remilia.RemiliaCode.Cards.Ancient;
 using Remilia.RemiliaCode.Powers;
 
 namespace Remilia.RemiliaCode.Cards.Basic;
 
 public class BloodSucking() : RemiliaCard(1,
     CardType.Attack, CardRarity.Basic,
-    TargetType.AnyEnemy)
+    TargetType.AnyEnemy), ITranscendenceCard
 {
     protected override IEnumerable<DynamicVar> CanonicalVars => [new DamageVar(5, ValueProp.Move)];
+    
+    public CardModel GetTranscendenceTransformedCard() => ModelDb.Card<RemiliaAncient2>().ToMutable();
 
     protected override async Task OnPlay(
         PlayerChoiceContext choiceContext,
