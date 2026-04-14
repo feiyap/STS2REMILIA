@@ -158,8 +158,11 @@
   "REMILIA-REMILIA_UNCOMMON29.description": "在你的回合开始时，失去1点生命。\n在你的回合内失去生命时，对所有敌人造成{RemiliaUncommon29Power:diff()}点伤害。消耗最多等量于所造成伤害的[gold]血池[/gold]，回复等量的生命。",
   "REMILIA-REMILIA_UNCOMMON29.title": "纵血鬼",
 
-  "REMILIA-REMILIA_UNCOMMON30.description": "失去生命的{RemiliaUncommon30Power:diff()}%转化为血池。",
+  "REMILIA-REMILIA_UNCOMMON30.description": "失去生命的{RemiliaUncommon30Power:diff()}%转化为[gold]血池[/gold]。",
   "REMILIA-REMILIA_UNCOMMON30.title": "吸血习性",
+
+  "REMILIA-REMILIA_UNCOMMON31.description": "对生命值低于自己最大生命值的敌人，造成的攻击伤害提升{RemiliaUncommon31Power:diff()}%。",
+  "REMILIA-REMILIA_UNCOMMON31.title": "贵气凌人",
 
   "REMILIA-REMILIA_RARE1.description": "消耗所有[gold]血池[/gold]，对所有敌人造成等量的伤害，回复等量的生命。\n获得{IntangiblePower:diff()}层[gold]无实体[/gold]。",
   "REMILIA-REMILIA_RARE1.title": "红魔「绯红恶魔」",

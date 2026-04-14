@@ -27,6 +27,10 @@
   "REMILIA-REMILIA_UNCOMMON30_POWER.smartDescription": "失去生命的[blue]{Amount}[/blue]%转化为血池。",
   "REMILIA-REMILIA_UNCOMMON30_POWER.title": "吸血习性",
 
+  "REMILIA-REMILIA_UNCOMMON31_POWER.description": "对生命值低于自己最大生命值的敌人，造成的攻击伤害提升1%。",
+  "REMILIA-REMILIA_UNCOMMON31_POWER.smartDescription": "对生命值低于自己最大生命值的敌人，造成的攻击伤害提升[blue]{Amount}[/blue]%。",
+  "REMILIA-REMILIA_UNCOMMON31_POWER.title": "贵气凌人",
+
   "REMILIA-BLOOD_PLAGUE.description": "获得负面效果时，受到[blue]1[/blue]点伤害。",
   "REMILIA-BLOOD_PLAGUE.smartDescription": "获得负面效果时，受到[blue]{Amount}[/blue]点伤害。",
   "REMILIA-BLOOD_PLAGUE.title": "血疫"
