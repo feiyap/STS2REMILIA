@@ -24,7 +24,7 @@ public class RemiliaUncommon5() : RemiliaCard(2,
             count = 3;
         }
         AttackCommand attackCommand = await DamageCmd.Attack(base.DynamicVars.Damage.BaseValue).WithHitCount(count).FromCard(this)
-            .Targeting(play.Target)
+            .TargetingAllOpponents(base.CombatState)
             .WithHitFx("vfx/vfx_attack_slash")
             .Execute(choiceContext);
     }

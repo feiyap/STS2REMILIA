@@ -28,7 +28,6 @@ public class RemiliaCommon15() : RemiliaCard(1,
     
     public override async Task AfterDamageReceived(PlayerChoiceContext choiceContext, Creature target, DamageResult result, ValueProp props, Creature? dealer, CardModel? cardSource)
     {
-        int count = (int)base.DynamicVars["HpLossReduction"].BaseValue * result.UnblockedDamage / 100;
         if (target == base.Owner.Creature && result.UnblockedDamage > 0)
         {
             base.EnergyCost.AddThisTurn(-base.DynamicVars.Energy.IntValue);

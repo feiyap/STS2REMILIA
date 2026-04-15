@@ -1,4 +1,4 @@
-﻿using BaseLib.Extensions;
+using BaseLib.Extensions;
 using MegaCrit.Sts2.Core.Combat;
 using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Creatures;
@@ -16,28 +16,18 @@ using MegaCrit.Sts2.Core.ValueProps;
 
 namespace Remilia.RemiliaCode.Powers;
 
-public class RemiliaUncommon32Power : RemiliaPower
+public class RemiliaUncommon34Power : RemiliaPower
 {
     public override PowerType Type => PowerType.Buff;
     public override PowerStackType StackType => PowerStackType.Counter;
 
-    protected override IEnumerable<DynamicVar> CanonicalVars => [new HealVar(30m)];
-    
-    public override bool ShouldDieLate(Creature creature)
+    public override async Task AfterDamageReceived(PlayerChoiceContext choiceContext, Creature target, DamageResult result, ValueProp props, Creature? dealer, CardModel? cardSource)
     {
-        if (creature != base.Owner)
+        int value = base.Amount * result.UnblockedDamage;
+        if (target == base.Owner && result.UnblockedDamage > 0)
         {
-            return true;
+            Flash();
+            await CreatureCmd.GainBlock(this.Owner, value, ValueProp.Unpowered, null);
         }
-        
-        return false;
-    }
-
-    public override async Task AfterPreventingDeath(Creature creature)
-    {
-        Flash();
-        decimal amount = Math.Max(1m, (decimal)creature.MaxHp * (base.DynamicVars.Heal.BaseValue / 100m));
-        await CreatureCmd.Heal(creature, amount);
-        await PowerCmd.Remove(this);
     }
 }

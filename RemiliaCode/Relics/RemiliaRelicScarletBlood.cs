@@ -21,12 +21,9 @@ public class RemiliaRelicScarletBlood() : RemiliaRelic
     private int _savedBlood;
 
     [SavedProperty]
-    public int SavedBlood
+    private int SavedBlood
     {
-        get
-        {
-            return _savedBlood;
-        }
+        get => _savedBlood;
         set
         {
             AssertMutable();
@@ -38,14 +35,8 @@ public class RemiliaRelicScarletBlood() : RemiliaRelic
     public override RelicRarity Rarity =>
         RelicRarity.Starter;
     
-    public override int DisplayAmount
-    {
-        get
-        {
-            return SavedBlood;
-        }
-    }
-    
+    public override int DisplayAmount => SavedBlood;
+
     public override RelicModel GetUpgradeReplacement()
     {
         return ModelDb.Relic<RemiliaRelicRedBlood>();
@@ -79,9 +70,10 @@ public class RemiliaRelicScarletBlood() : RemiliaRelic
         if (!base.Owner.Creature.IsDead)
         {
             Flash();
-            SavedBlood = (int)base.DynamicVars["BloodPoolLift"].BaseValue / 100 * base.Owner.Creature.GetPower<BloodPool>()?.Amount ?? 0;
+            int count = base.Owner.Creature.GetPower<BloodPool>()?.Amount ?? 0;
+            Console.WriteLine("count = %d", count);
+            SavedBlood = (int)((base.DynamicVars["BloodPoolLift"].BaseValue * count) / 100);
+            Console.WriteLine("SavedBlood = %d", SavedBlood);
         }
     }
-
-    private const string _hpLossReductionKey = "HpLossReduction";
 }

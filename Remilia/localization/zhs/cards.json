@@ -95,7 +95,7 @@
   "REMILIA-REMILIA_UNCOMMON8.description": "造成{Damage:diff()}点伤害。\n给予其他敌人该名敌人身上的所有负面效果。\n将1张[gold]渴血诅咒[/gold]加入你的[gold]手牌[/gold]。",
   "REMILIA-REMILIA_UNCOMMON8.title": "猩红灾祸",
 
-  "REMILIA-REMILIA_UNCOMMON9.description": "移除目标的[gold]格挡[/gold]和[gold]人工制品[/gold]。\n造成{Damage:diff()}点伤害。\n给予{BloodPlague:diff()}层血疫。\n将1张[gold]渴血诅咒[/gold]加入你的[gold]手牌[/gold]。",
+  "REMILIA-REMILIA_UNCOMMON9.description": "移除目标的[gold]格挡[/gold]和[gold]人工制品[/gold]。\n造成{Damage:diff()}点伤害。\n给予{BloodPlague:diff()}层[gold]血疫[/gold]。\n将1张[gold]渴血诅咒[/gold]加入你的[gold]手牌[/gold]。",
   "REMILIA-REMILIA_UNCOMMON9.title": "死亡之触",
 
   "REMILIA-REMILIA_UNCOMMON10.description": "造成{Damage:diff()}点伤害。\n斩杀时，获得{BloodPool}点[gold]血池[/gold]。",
@@ -131,7 +131,7 @@
   "REMILIA-REMILIA_UNCOMMON20.description": "消耗{BloodCost}点[gold]血池[/gold]。\n获得{Block:diff()}点[gold]格挡[/gold]。",
   "REMILIA-REMILIA_UNCOMMON20.title": "黑夜帷幕",
 
-  "REMILIA-REMILIA_UNCOMMON21.description": "给予所有敌人{BloodPlague}层血疫。",
+  "REMILIA-REMILIA_UNCOMMON21.description": "给予所有敌人{BloodPlague}层[gold]血疫[/gold]。",
   "REMILIA-REMILIA_UNCOMMON21.title": "血液沸腾",
 
   "REMILIA-REMILIA_UNCOMMON22.description": "获得{Block:diff()}点[gold]格挡[/gold]。\n将2张[gold]渴血诅咒[/gold]加入你的[gold]手牌[/gold]。",
@@ -164,11 +164,41 @@
   "REMILIA-REMILIA_UNCOMMON31.description": "对生命值低于自己最大生命值的敌人，造成的攻击伤害提升{RemiliaUncommon31Power:diff()}%。",
   "REMILIA-REMILIA_UNCOMMON31.title": "贵气凌人",
 
+  "REMILIA-REMILIA_UNCOMMON32.description": "当你将要死亡时，仅1次，将你回复到你最大生命的30%。",
+  "REMILIA-REMILIA_UNCOMMON32.title": "雾化躯体",
+
+  "REMILIA-REMILIA_UNCOMMON33.description": "每有一次攻击造成未被格挡的伤害，就给予{RemiliaUncommon33Power:diff()}层爪痕。",
+  "REMILIA-REMILIA_UNCOMMON33.title": "雾中花",
+
+  "REMILIA-REMILIA_UNCOMMON34.description": "每失去1点生命值，获得1点[gold]格挡[/gold]。",
+  "REMILIA-REMILIA_UNCOMMON34.title": "水中月",
+
+  "REMILIA-REMILIA_UNCOMMON35.description": "在你的回合开始时，给予所有敌人{RemiliaUncommon35Power:diff()}层[gold]爪痕[/gold]。",
+  "REMILIA-REMILIA_UNCOMMON35.title": "斯卡雷特伯爵",
+
+  "REMILIA-REMILIA_UNCOMMON36.description": "每当有一张牌被消耗时，获得{RemiliaUncommon36Power:diff()}点[gold]血池[/gold]。",
+  "REMILIA-REMILIA_UNCOMMON36.title": "反血",
+
   "REMILIA-REMILIA_RARE1.description": "消耗所有[gold]血池[/gold]，对所有敌人造成等量的伤害，回复等量的生命。\n获得{IntangiblePower:diff()}层[gold]无实体[/gold]。",
   "REMILIA-REMILIA_RARE1.title": "红魔「绯红恶魔」",
 
   "REMILIA-REMILIA_RARE2.description": "消耗{BloodCost}点[gold]血池[/gold]。\n造成{Damage:diff()}点伤害，回复等量的生命。",
   "REMILIA-REMILIA_RARE2.title": "夜符「恶女置乱」",
+
+  "REMILIA-REMILIA_RARE3.description": "造成{CalculatedDamage:diff()}点伤害。\\n该敌人身上每有一层[gold]爪痕[/gold]就额外造成{ExtraDamage:diff()}点伤害。\n[gold]斩杀[/gold]时，将此牌返回你的手牌，并且耗能减少为0。",
+  "REMILIA-REMILIA_RARE3.title": "神罚「年幼的恶魔之王」",
+
+  "REMILIA-REMILIA_RARE10.description": "[gold]变化[/gold]1张[gold]手牌[/gold]。",
+  "REMILIA-REMILIA_RARE10.title": "幻在的命运",
+
+  "REMILIA-REMILIA_RARE11.description": "消耗{BloodCost:diff()}[gold]血池[/gold]。\n[gold]击晕[/gold]该敌人。",
+  "REMILIA-REMILIA_RARE11.title": "命运「悲惨的命运」",
+
+  "REMILIA-REMILIA_RARE16.description": "失去生命时，获得{Energy:energyIcons()}。",
+  "REMILIA-REMILIA_RARE16.title": "红魔形态",
+
+  "REMILIA-REMILIA_RARE17.description": "在你的回合开始时，失去1点生命。\n获得{Energy:energyIcons()}，抽1张牌。",
+  "REMILIA-REMILIA_RARE17.title": "绯夜幻想曲",
 
   "REMILIA-REMILIA_ANCIENT1.description": "造成{CalculatedDamage:diff()}点伤害。\n额外造成自己的最大体力值25%的伤害。\n[gold]斩杀[/gold]时，永久获得{MaxHp:diff()}点最大生命值，获得{Energy:energyIcons()}。",
   "REMILIA-REMILIA_ANCIENT1.title": "神枪「冈格尼尔」",

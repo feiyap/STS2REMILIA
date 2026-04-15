@@ -36,7 +36,7 @@ public class RemiliaRare1() : RemiliaCard(3,
     {
         ArgumentNullException.ThrowIfNull(play.Target, "cardPlay.Target");
         AttackCommand attackCommand = await DamageCmd.Attack(base.DynamicVars.CalculatedDamage.BaseValue).FromCard(this)
-            .Targeting(play.Target)
+            .TargetingAllOpponents(base.CombatState)
             .WithHitVfxNode((Creature t) => NScratchVfx.Create(t, goingRight: true))
             .Execute(choiceContext);
         

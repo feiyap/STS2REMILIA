@@ -1,10 +1,12 @@
 using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
+using MegaCrit.Sts2.Core.HoverTips;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
 using MegaCrit.Sts2.Core.Models.Powers;
 using MegaCrit.Sts2.Core.ValueProps;
 using Remilia.RemiliaCode.Cards;
+using Remilia.RemiliaCode.Powers;
 
 namespace Remilia.RemiliaCode.Cards.Uncommon;
 
@@ -14,6 +16,8 @@ public class RemiliaUncommon24() : RemiliaCard(0,
 {
     protected override IEnumerable<DynamicVar> CanonicalVars => [new HpLossVar(1m), new PowerVar<TemporaryStrengthPower>(3m), new PowerVar<TemporaryDexterityPower>(3m)];
 
+    protected override IEnumerable<IHoverTip> ExtraHoverTips => [HoverTipFactory.FromPower<StrengthPower>(), HoverTipFactory.FromPower<DexterityPower>()];
+    
     protected override async Task OnPlay(
         PlayerChoiceContext choiceContext,
         CardPlay play)

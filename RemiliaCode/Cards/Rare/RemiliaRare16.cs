@@ -5,24 +5,26 @@ using MegaCrit.Sts2.Core.Localization.DynamicVars;
 using Remilia.RemiliaCode.Cards;
 using Remilia.RemiliaCode.Powers;
 
-namespace Remilia.RemiliaCode.Cards.Uncommon;
+namespace Remilia.RemiliaCode.Cards.Rare;
 
-public class RemiliaUncommon30() : RemiliaCard(1,
-    CardType.Power, CardRarity.Uncommon,
+public class RemiliaRare16() : RemiliaCard(3,
+    CardType.Power, CardRarity.Basic,
     TargetType.Self)
 {
-    protected override IEnumerable<DynamicVar> CanonicalVars => [new PowerVar<RemiliaUncommon30Power>(50m)];
+    protected override IEnumerable<DynamicVar> CanonicalVars => [new PowerVar<RemiliaRare16Power>(1), new EnergyVar(1)];
+    
+    public override IEnumerable<CardKeyword> CanonicalKeywords => [CardKeyword.Ethereal];
 
     protected override async Task OnPlay(
         PlayerChoiceContext choiceContext,
         CardPlay play)
     {
         await CreatureCmd.TriggerAnim(base.Owner.Creature, "Cast", base.Owner.Character.CastAnimDelay);
-        await PowerCmd.Apply<RemiliaUncommon30Power>(base.Owner.Creature, base.DynamicVars["RemiliaUncommon30Power"].BaseValue, base.Owner.Creature, this);
+        await PowerCmd.Apply<RemiliaRare16Power>(base.Owner.Creature, base.DynamicVars["RemiliaRare16Power"].BaseValue, base.Owner.Creature, this);
     }
 
     protected override void OnUpgrade()
     {
-        base.AddKeyword(CardKeyword.Innate);
+        base.RemoveKeyword(CardKeyword.Ethereal);
     }
 }

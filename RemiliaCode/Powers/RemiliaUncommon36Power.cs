@@ -1,4 +1,4 @@
-﻿using BaseLib.Extensions;
+using BaseLib.Extensions;
 using MegaCrit.Sts2.Core.Combat;
 using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Creatures;
@@ -10,34 +10,23 @@ using MegaCrit.Sts2.Core.HoverTips;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
 using MegaCrit.Sts2.Core.Models;
 using MegaCrit.Sts2.Core.Models.Powers;
+using MegaCrit.Sts2.Core.Nodes.Combat;
 using MegaCrit.Sts2.Core.Nodes.Rooms;
 using MegaCrit.Sts2.Core.Nodes.Vfx;
 using MegaCrit.Sts2.Core.ValueProps;
 
 namespace Remilia.RemiliaCode.Powers;
 
-public class RemiliaUncommon32Power : RemiliaPower
+public class RemiliaUncommon36Power : RemiliaPower
 {
     public override PowerType Type => PowerType.Buff;
     public override PowerStackType StackType => PowerStackType.Counter;
-
-    protected override IEnumerable<DynamicVar> CanonicalVars => [new HealVar(30m)];
     
-    public override bool ShouldDieLate(Creature creature)
+    public override async Task AfterCardExhausted(PlayerChoiceContext choiceContext, CardModel card, bool _)
     {
-        if (creature != base.Owner)
+        if (card.Owner.Creature == base.Owner)
         {
-            return true;
+            await PowerCmd.Apply<BloodPool>(base.Owner, base.Amount, base.Owner, null);
         }
-        
-        return false;
-    }
-
-    public override async Task AfterPreventingDeath(Creature creature)
-    {
-        Flash();
-        decimal amount = Math.Max(1m, (decimal)creature.MaxHp * (base.DynamicVars.Heal.BaseValue / 100m));
-        await CreatureCmd.Heal(creature, amount);
-        await PowerCmd.Remove(this);
     }
 }

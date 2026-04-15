@@ -11,7 +11,7 @@ namespace Remilia.RemiliaCode.Cards.Uncommon;
 
 public class RemiliaUncommon11() : RemiliaCard(1,
     CardType.Attack, CardRarity.Uncommon,
-    TargetType.AnyEnemy)
+    TargetType.AllEnemies)
 {
     protected override IEnumerable<DynamicVar> CanonicalVars => [new DamageVar(9m, ValueProp.Move), new DynamicVar("BloodCost", 9m)];
 

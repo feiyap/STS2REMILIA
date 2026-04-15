@@ -18,9 +18,9 @@ public class BloodSucking() : RemiliaCard(1,
     CardType.Attack, CardRarity.Basic,
     TargetType.AnyEnemy), ITranscendenceCard
 {
-    protected override IEnumerable<DynamicVar> CanonicalVars => [new DamageVar(5, ValueProp.Move)];
+    protected override IEnumerable<DynamicVar> CanonicalVars => [new DamageVar(8, ValueProp.Move)];
     
-    public CardModel GetTranscendenceTransformedCard() => ModelDb.Card<RemiliaAncient2>().ToMutable();
+    public CardModel GetTranscendenceTransformedCard() => ModelDb.Card<RemiliaAncient2>();
 
     protected override async Task OnPlay(
         PlayerChoiceContext choiceContext,

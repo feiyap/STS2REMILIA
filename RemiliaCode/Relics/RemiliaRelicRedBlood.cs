@@ -73,7 +73,7 @@ public class RemiliaRelicRedBlood() : RemiliaRelic
         if (!base.Owner.Creature.IsDead)
         {
             Flash();
-            SavedBlood = (int)base.DynamicVars["BloodPoolLift"].BaseValue / 100 * base.Owner.Creature.GetPower<BloodPool>()?.Amount ?? 0;
+            SavedBlood = (int)((base.DynamicVars["BloodPoolLift"].BaseValue * base.Owner.Creature.GetPower<BloodPool>()?.Amount ?? 0) / 100);
         }
     }
 
