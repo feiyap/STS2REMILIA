@@ -39,6 +39,6 @@ public class RemiliaUncommon31Power : RemiliaPower
         {
             return 1m;
         }
-        return amount + (decimal)base.Amount / 100m;
+        return 1m + (decimal)base.Amount / 100m;
     }
 }

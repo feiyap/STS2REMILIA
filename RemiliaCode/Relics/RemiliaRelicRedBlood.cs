@@ -16,7 +16,7 @@ namespace Remilia.RemiliaCode.Relics;
 
 public class RemiliaRelicRedBlood() : RemiliaRelic
 {
-        public override bool ShowCounter => true;
+    public override bool ShowCounter => true;
     private int _savedBlood;
     
     [SavedProperty]

@@ -27,7 +27,7 @@ public class RemiliaUncommon7() : RemiliaCard(2,
         PlayerChoiceContext choiceContext,
         CardPlay play)
     {
-        decimal damageValue = Math.Min(base.Owner.Creature.GetPowerAmount<BloodPool>(), base.DynamicVars["BloodCost"].BaseValue);
+        decimal damageValue = Math.Max(base.Owner.Creature.GetPowerAmount<BloodPool>(), base.DynamicVars["BloodCost"].BaseValue);
         
         AttackCommand attackCommand = await DamageCmd.Attack(damageValue).FromCard(this)
             .Targeting(play.Target)

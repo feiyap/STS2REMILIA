@@ -46,7 +46,7 @@ public class RemiliaUncommon29Power : RemiliaPower
         }
         await CreatureCmd.Damage(choiceContext, base.CombatState.HittableEnemies, base.Amount, ValueProp.Unpowered, base.Owner, null);
         
-        int count = Math.Min(base.Amount, base.Owner.GetPower<BloodPool>()?.Amount ?? 0);
+        int count = Math.Max(base.Amount, base.Owner.GetPower<BloodPool>()?.Amount ?? 0);
         await PowerCmd.Apply<BloodPool>(base.Owner, -count, base.Owner, null);
         await CreatureCmd.Heal(base.Owner, count);
     }

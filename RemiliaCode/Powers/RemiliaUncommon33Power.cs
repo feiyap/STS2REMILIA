@@ -26,7 +26,7 @@ public class RemiliaUncommon33Power : RemiliaPower
 
     public override async Task AfterDamageGiven(PlayerChoiceContext choiceContext, Creature? dealer, DamageResult result, ValueProp props, Creature target, CardModel? cardSource)
     {
-        if (dealer == base.Owner && props.IsPoweredAttack() && result.UnblockedDamage > 0)
+        if (dealer == base.Owner && props.IsPoweredAttack_() && result.UnblockedDamage > 0)
         {
             Flash();
             await PowerCmd.Apply<ClawPrints>(target, base.Amount, base.Owner, null);

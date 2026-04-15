@@ -13,7 +13,7 @@ public class RemiliaCommon5() : RemiliaCard(1,
     TargetType.Self)
 {
     protected override IEnumerable<DynamicVar> CanonicalVars => [
-        new BlockVar(7m, ValueProp.Move),
+        new BlockVar(8m, ValueProp.Move),
         new CardsVar(1)
     ];
     

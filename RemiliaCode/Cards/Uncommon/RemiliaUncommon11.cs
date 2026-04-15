@@ -23,7 +23,7 @@ public class RemiliaUncommon11() : RemiliaCard(1,
             .WithHitFx("vfx/vfx_attack_slash")
             .Execute(choiceContext);
         
-        int count = Math.Min(base.DynamicVars["BloodCost"].IntValue, base.Owner.Creature.GetPower<BloodPool>()?.Amount ?? 0);
+        int count = Math.Max(base.DynamicVars["BloodCost"].IntValue, base.Owner.Creature.GetPower<BloodPool>()?.Amount ?? 0);
         await PowerCmd.Apply<BloodPool>(base.Owner.Creature, -count, base.Owner.Creature, null);
         await CreatureCmd.Heal(base.Owner.Creature, count);
     }

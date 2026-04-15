@@ -12,7 +12,7 @@ public class RemiliaCommon8() : RemiliaCard(0,
     TargetType.Self)
 {
     protected override IEnumerable<DynamicVar> CanonicalVars => [
-        new HpLossVar(3m),
+        new HpLossVar(2m),
         new CardsVar(2)
     ];
 

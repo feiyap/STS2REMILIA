@@ -65,7 +65,7 @@ public class RemiliaRelicScarletBlood() : RemiliaRelic
         }
     }
     
-    public override async Task AfterCombatVictory(CombatRoom _)
+    public override async Task AfterCombatVictoryEarly(CombatRoom _)
     {
         if (!base.Owner.Creature.IsDead)
         {

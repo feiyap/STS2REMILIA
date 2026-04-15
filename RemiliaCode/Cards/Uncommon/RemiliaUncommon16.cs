@@ -7,7 +7,7 @@ using Remilia.RemiliaCode.Powers;
 
 namespace Remilia.RemiliaCode.Cards.Uncommon;
 
-public class RemiliaUncommon16() : RemiliaCard(1,
+public class RemiliaUncommon16() : RemiliaCard(0,
     CardType.Skill, CardRarity.Uncommon,
     TargetType.Self)
 {
@@ -19,7 +19,7 @@ public class RemiliaUncommon16() : RemiliaCard(1,
         PlayerChoiceContext choiceContext,
         CardPlay play)
     {
-        int count = Math.Min(0, base.Owner.Creature.GetPower<BloodPool>()?.Amount ?? 0);
+        int count = Math.Max(0, base.Owner.Creature.GetPower<BloodPool>()?.Amount ?? 0);
         await PowerCmd.Apply<BloodPool>(base.Owner.Creature, -count, base.Owner.Creature, null);
         await CreatureCmd.Heal(base.Owner.Creature, count);
     }
