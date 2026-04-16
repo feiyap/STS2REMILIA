@@ -12,7 +12,7 @@ public class RemiliaUncommon34() : RemiliaCard(2,
     TargetType.Self)
 {
     protected override IEnumerable<DynamicVar> CanonicalVars => [new PowerVar<RemiliaUncommon34Power>(1)];
-
+    
     protected override async Task OnPlay(
         PlayerChoiceContext choiceContext,
         CardPlay play)

@@ -20,12 +20,9 @@ public class RemiliaRelicRedBlood() : RemiliaRelic
     private int _savedBlood;
     
     [SavedProperty]
-    public int SavedBlood
+    private int SavedBlood
     {
-        get
-        {
-            return _savedBlood;
-        }
+        get => _savedBlood;
         set
         {
             AssertMutable();
@@ -37,14 +34,8 @@ public class RemiliaRelicRedBlood() : RemiliaRelic
     public override RelicRarity Rarity =>
         RelicRarity.Starter;
     
-    public override int DisplayAmount
-    {
-        get
-        {
-            return SavedBlood;
-        }
-    }
-    
+    public override int DisplayAmount => SavedBlood;
+
     protected override IEnumerable<DynamicVar> CanonicalVars => 
         [new DynamicVar("HpLossReduction", 100m), new DynamicVar("BloodPoolLift", 100m)];
     
@@ -68,14 +59,17 @@ public class RemiliaRelicRedBlood() : RemiliaRelic
         }
     }
     
-    public override async Task AfterCombatVictory(CombatRoom _)
+    public override Task AfterCombatEnd(CombatRoom room)
     {
         if (!base.Owner.Creature.IsDead)
         {
             Flash();
-            SavedBlood = (int)((base.DynamicVars["BloodPoolLift"].BaseValue * base.Owner.Creature.GetPower<BloodPool>()?.Amount ?? 0) / 100);
+            int count = base.Owner.Creature.GetPower<BloodPool>()?.Amount ?? 0;
+            Console.WriteLine(count);
+            SavedBlood = (int)((base.DynamicVars["BloodPoolLift"].BaseValue * count) / 100);
+            Console.WriteLine(SavedBlood);
         }
-    }
 
-    private const string _hpLossReductionKey = "HpLossReduction";
+        return Task.CompletedTask;
+    }
 }

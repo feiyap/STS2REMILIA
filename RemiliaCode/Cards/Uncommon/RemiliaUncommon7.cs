@@ -27,14 +27,14 @@ public class RemiliaUncommon7() : RemiliaCard(2,
         PlayerChoiceContext choiceContext,
         CardPlay play)
     {
-        decimal damageValue = Math.Max(base.Owner.Creature.GetPowerAmount<BloodPool>(), base.DynamicVars["BloodCost"].BaseValue);
+        decimal damageValue = Math.Min(base.Owner.Creature.GetPowerAmount<BloodPool>(), base.DynamicVars["BloodCost"].BaseValue);
         
         AttackCommand attackCommand = await DamageCmd.Attack(damageValue).FromCard(this)
             .Targeting(play.Target)
             .WithHitVfxNode((Creature t) => NScratchVfx.Create(t, goingRight: true))
             .Execute(choiceContext);
         
-        await CreatureCmd.GainBlock(base.Owner.Creature, damageValue, base.DynamicVars.CalculatedBlock.Props, play);
+        await CreatureCmd.GainBlock(base.Owner.Creature, damageValue, ValueProp.Move, play);
         await PowerCmd.Apply<BloodPool>(base.Owner.Creature, -damageValue, base.Owner.Creature, null);
     }
 

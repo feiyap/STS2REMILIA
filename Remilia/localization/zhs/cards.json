@@ -32,13 +32,13 @@
   "REMILIA-REMILIA_COMMON7.description": "获得{BloodPool}点[gold]血池[/gold]。",
   "REMILIA-REMILIA_COMMON7.title": "血包",
 
-  "REMILIA-REMILIA_COMMON8.description": "失去3点生命。\n抽{Cards:diff()}张牌。",
+  "REMILIA-REMILIA_COMMON8.description": "失去{HpLoss:diff()}点生命。\n抽{Cards:diff()}张牌。",
   "REMILIA-REMILIA_COMMON8.title": "血之核心",
 
   "REMILIA-REMILIA_COMMON9.description": "造成{Damage:diff()}点伤害。\n将该敌人身上的[gold]爪痕[/gold]层数翻倍。",
   "REMILIA-REMILIA_COMMON9.title": "冥打",
 
-  "REMILIA-REMILIA_COMMON10.description": "消耗6点[gold]血池[/gold]。\n获得{Energy:energyIcons()}。",
+  "REMILIA-REMILIA_COMMON10.description": "消耗{BloodCost}点[gold]血池[/gold]。\n获得{Energy:energyIcons()}。",
   "REMILIA-REMILIA_COMMON10.title": "血之代偿",
 
   "REMILIA-REMILIA_COMMON11.description": "造成{Damage:diff()}点伤害。\n如果你在回合进行中抽过至少一张牌，消耗最多等量于所造成伤害的[gold]血池[/gold]，回复等量的生命。",
@@ -140,7 +140,7 @@
   "REMILIA-REMILIA_UNCOMMON23.description": "获得{Block:diff()}点[gold]格挡[/gold]。\n抽{Cards:diff()}张牌。",
   "REMILIA-REMILIA_UNCOMMON23.title": "伤心小夜曲",
 
-  "REMILIA-REMILIA_UNCOMMON24.description": "失去{HpLoss:diff()}点生命。\n本回合获得{TemporaryStrengthPower}点[gold]力量[/gold]和{TemporaryDexterityPower}点[gold]敏捷[/gold]。",
+  "REMILIA-REMILIA_UNCOMMON24.description": "失去{HpLoss:diff()}点生命。\n本回合获得{StrengthPower:diff()}点[gold]力量[/gold]和{DexterityPower:diff()}点[gold]敏捷[/gold]。",
   "REMILIA-REMILIA_UNCOMMON24.title": "血之冲动",
 
   "REMILIA-REMILIA_UNCOMMON25.description": "[gold]消耗[/gold]1张牌，获得{Energy:energyIcons()}。\n若[gold]消耗[/gold]的是诅咒牌，额外获得{Energy:energyIcons()}。",
@@ -167,7 +167,7 @@
   "REMILIA-REMILIA_UNCOMMON32.description": "当你将要死亡时，仅1次，将你回复到你最大生命的30%。",
   "REMILIA-REMILIA_UNCOMMON32.title": "雾化躯体",
 
-  "REMILIA-REMILIA_UNCOMMON33.description": "每有一次攻击造成未被格挡的伤害，就给予{RemiliaUncommon33Power:diff()}层爪痕。",
+  "REMILIA-REMILIA_UNCOMMON33.description": "每有一次攻击造成未被格挡的伤害，就给予{RemiliaUncommon33Power:diff()}层[gold]爪痕[/gold]。",
   "REMILIA-REMILIA_UNCOMMON33.title": "雾中花",
 
   "REMILIA-REMILIA_UNCOMMON34.description": "每失去1点生命值，获得1点[gold]格挡[/gold]。",
@@ -185,7 +185,7 @@
   "REMILIA-REMILIA_RARE2.description": "消耗{BloodCost}点[gold]血池[/gold]。\n造成{Damage:diff()}点伤害，回复等量的生命。",
   "REMILIA-REMILIA_RARE2.title": "夜符「恶女置乱」",
 
-  "REMILIA-REMILIA_RARE3.description": "造成{CalculatedDamage:diff()}点伤害。\\n该敌人身上每有一层[gold]爪痕[/gold]就额外造成{ExtraDamage:diff()}点伤害。\n[gold]斩杀[/gold]时，将此牌返回你的手牌，并且耗能减少为0。",
+  "REMILIA-REMILIA_RARE3.description": "造成{CalculatedDamage:diff()}点伤害。\\n该敌人身上每有一层[gold]爪痕[/gold]就额外造成{ExtraDamage:diff()}点伤害。\n[gold]斩杀[/gold]时，生成一个附带[gold]消耗[/gold]和[gold]虚无[/gold]的复制，并且耗能减少为0。",
   "REMILIA-REMILIA_RARE3.title": "神罚「年幼的恶魔之王」",
 
   "REMILIA-REMILIA_RARE10.description": "[gold]变化[/gold]1张[gold]手牌[/gold]。",

@@ -64,16 +64,18 @@ public class RemiliaRelicScarletBlood() : RemiliaRelic
             SavedBlood = 0;
         }
     }
-    
-    public override async Task AfterCombatVictoryEarly(CombatRoom _)
+
+    public override Task AfterCombatEnd(CombatRoom room)
     {
         if (!base.Owner.Creature.IsDead)
         {
             Flash();
             int count = base.Owner.Creature.GetPower<BloodPool>()?.Amount ?? 0;
-            Console.WriteLine("count = %d", count);
+            Console.WriteLine(count);
             SavedBlood = (int)((base.DynamicVars["BloodPoolLift"].BaseValue * count) / 100);
-            Console.WriteLine("SavedBlood = %d", SavedBlood);
+            Console.WriteLine(SavedBlood);
         }
+
+        return Task.CompletedTask;
     }
 }

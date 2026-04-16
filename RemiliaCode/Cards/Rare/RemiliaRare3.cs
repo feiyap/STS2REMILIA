@@ -45,8 +45,12 @@ public class RemiliaRare3() : RemiliaCard(3,
     {
         if (cardPlay.Card.Owner == base.Owner && cardPlay.Card == this && base.Pile.Type != PileType.Hand && isFatal)
         {
-            await CardPileCmd.Add(this, PileType.Hand);
-            this.SetToFreeThisTurn();
+            CardModel cardModel = cardPlay.Card.CreateClone();
+            //await CardPileCmd.Add(this, PileType.Hand);
+            cardModel.SetToFreeThisTurn();
+            cardModel.AddKeyword(CardKeyword.Exhaust);
+            cardModel.AddKeyword(CardKeyword.Ethereal);
+            await CardPileCmd.AddGeneratedCardToCombat(cardModel, PileType.Hand, addedByPlayer: true);
         }
     }
 

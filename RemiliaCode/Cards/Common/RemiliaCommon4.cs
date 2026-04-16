@@ -28,7 +28,7 @@ public class RemiliaCommon4() : RemiliaCard(0,
         PlayerChoiceContext choiceContext,
         CardPlay play)
     {
-        decimal blockValue = Math.Max(base.Owner.Creature.GetPowerAmount<BloodPool>(), base.DynamicVars.Block.BaseValue);
+        decimal blockValue = Math.Min(base.Owner.Creature.GetPowerAmount<BloodPool>(), base.DynamicVars.Block.BaseValue);
         //decimal blockValue = base.DynamicVars.CalculatedBlock.Calculate(play.Target);
         await CreatureCmd.GainBlock(base.Owner.Creature, blockValue, base.DynamicVars.CalculatedBlock.Props, play);
         await PowerCmd.Apply<BloodPool>(base.Owner.Creature, -blockValue, base.Owner.Creature, null);
