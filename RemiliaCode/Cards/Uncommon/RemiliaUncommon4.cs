@@ -15,11 +15,11 @@ using Remilia.RemiliaCode.Cards;
 
 namespace Remilia.RemiliaCode.Cards.Uncommon;
 
-public class RemiliaUncommon4() : RemiliaCard(3,
+public class RemiliaUncommon4() : RemiliaCard(4,
     CardType.Attack, CardRarity.Uncommon,
     TargetType.AnyEnemy)
 {
-    protected override IEnumerable<DynamicVar> CanonicalVars => [new DamageVar(24m, ValueProp.Move), new EnergyVar(1)];
+    protected override IEnumerable<DynamicVar> CanonicalVars => [new DamageVar(18m, ValueProp.Move), new EnergyVar(1)];
 
     protected override async Task OnPlay(
         PlayerChoiceContext choiceContext,
@@ -33,18 +33,16 @@ public class RemiliaUncommon4() : RemiliaCard(3,
         base.DynamicVars.Damage.UpgradeValueBy(6m);
     }
     
-    public override async Task AfterCardDrawn(PlayerChoiceContext choiceContext, CardModel card, bool fromHandDraw)
+    public override async Task AfterDamageReceived(PlayerChoiceContext choiceContext, Creature target, DamageResult result, ValueProp props, Creature? dealer, CardModel? cardSource)
     {
-        if (card.Owner.Creature != base.Owner.Creature)
+        if (target == base.Owner.Creature && result.UnblockedDamage > 0)
         {
-            return;
+            ReduceCostBy(1);
         }
-
-        ReduceCostBy(1);
     }
     
     private void ReduceCostBy(int amount)
     {
-        base.EnergyCost.AddThisTurn(-amount);
+        base.EnergyCost.AddThisCombat(-amount);
     }
 }

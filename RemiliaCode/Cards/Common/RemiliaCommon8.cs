@@ -7,13 +7,13 @@ using Remilia.RemiliaCode.Cards;
 
 namespace Remilia.RemiliaCode.Cards.Common;
 
-public class RemiliaCommon8() : RemiliaCard(0,
+public class RemiliaCommon8() : RemiliaCard(1,
     CardType.Skill, CardRarity.Common,
     TargetType.Self)
 {
     protected override IEnumerable<DynamicVar> CanonicalVars => [
         new HpLossVar(2m),
-        new CardsVar(2)
+        new CardsVar(3)
     ];
 
     protected override async Task OnPlay(

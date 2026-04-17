@@ -13,7 +13,7 @@ public class RemiliaCommon6() : RemiliaCard(1,
     CardType.Skill, CardRarity.Common,
     TargetType.Self)
 {
-    protected override IEnumerable<DynamicVar> CanonicalVars => [new BlockVar(7m, ValueProp.Move), new DynamicVar("BloodPool", 3m)];
+    protected override IEnumerable<DynamicVar> CanonicalVars => [new BlockVar(7m, ValueProp.Move), new DynamicVar("BloodPool", 1m)];
 
     protected override async Task OnPlay(
         PlayerChoiceContext choiceContext,
@@ -26,6 +26,6 @@ public class RemiliaCommon6() : RemiliaCard(1,
     protected override void OnUpgrade()
     {
         base.DynamicVars.Block.UpgradeValueBy(3m);
-        base.DynamicVars["BloodPool"].UpgradeValueBy(3m);
+        base.DynamicVars["BloodPool"].UpgradeValueBy(1m);
     }
 }
