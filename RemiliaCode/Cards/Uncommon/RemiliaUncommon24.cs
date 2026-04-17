@@ -26,8 +26,9 @@ public class RemiliaUncommon24() : RemiliaCard(0,
         VfxCmd.PlayOnCreatureCenter(base.Owner.Creature, "vfx/vfx_bloody_impact");
         await CreatureCmd.Damage(choiceContext, base.Owner.Creature, base.DynamicVars.HpLoss.BaseValue, ValueProp.Unblockable | ValueProp.Unpowered | ValueProp.Move, this);
         
-        await PowerCmd.Apply<TemporaryStrengthPower>(base.Owner.Creature, base.DynamicVars["StrengthPower"].BaseValue, base.Owner.Creature, this);
-        await PowerCmd.Apply<TemporaryDexterityPower>(base.Owner.Creature, base.DynamicVars["DexterityPower"].BaseValue, base.Owner.Creature, this);
+        //await PowerCmd.Apply<TemporaryStrengthPower>(base.Owner.Creature, base.DynamicVars["StrengthPower"].BaseValue, base.Owner.Creature, this);
+        //await PowerCmd.Apply<TemporaryDexterityPower>(base.Owner.Creature, base.DynamicVars["DexterityPower"].BaseValue, base.Owner.Creature, this);
+        await PowerCmd.Apply<RemiliaUncommon24Power>(base.Owner.Creature, base.DynamicVars["DexterityPower"].BaseValue, base.Owner.Creature, this);
     }
 
     protected override void OnUpgrade()

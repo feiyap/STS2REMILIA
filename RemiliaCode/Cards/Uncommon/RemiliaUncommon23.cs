@@ -12,7 +12,7 @@ public class RemiliaUncommon23() : RemiliaCard(2,
     CardType.Skill, CardRarity.Uncommon,
     TargetType.Self)
 {
-    protected override IEnumerable<DynamicVar> CanonicalVars => [new BlockVar(13m, ValueProp.Move), new CardsVar(1)];
+    protected override IEnumerable<DynamicVar> CanonicalVars => [new BlockVar(13m, ValueProp.Move), new CardsVar(2)];
 
     protected override async Task OnPlay(
         PlayerChoiceContext choiceContext,

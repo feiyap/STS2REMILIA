@@ -29,7 +29,7 @@ public class RemiliaCommon11() : RemiliaCard(1,
 
         if (IsDrawInRound())
         {
-            int count = Math.Min(attackCommand.Results.Sum((DamageResult r) => r.TotalDamage + r.OverkillDamage), base.Owner.Creature.GetPower<BloodPool>()?.Amount ?? 0);
+            int count = Math.Min(base.DynamicVars.Damage.IntValue, base.Owner.Creature.GetPower<BloodPool>()?.Amount ?? 0);
             await PowerCmd.Apply<BloodPool>(base.Owner.Creature, -count, base.Owner.Creature, null);
             await CreatureCmd.Heal(base.Owner.Creature, count);
         }

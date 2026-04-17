@@ -8,7 +8,7 @@ using Remilia.RemiliaCode.Powers;
 
 namespace Remilia.RemiliaCode.Cards.Uncommon;
 
-public class RemiliaUncommon35() : RemiliaCard(1,
+public class RemiliaUncommon35() : RemiliaCard(2,
     CardType.Power, CardRarity.Uncommon,
     TargetType.Self)
 {

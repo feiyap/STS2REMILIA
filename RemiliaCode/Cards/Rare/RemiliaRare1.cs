@@ -34,7 +34,7 @@ public class RemiliaRare1() : RemiliaCard(3,
         PlayerChoiceContext choiceContext,
         CardPlay play)
     {
-        AttackCommand attackCommand = await DamageCmd.Attack(base.DynamicVars.CalculatedDamage.BaseValue).FromCard(this)
+        AttackCommand attackCommand = await DamageCmd.Attack(base.DynamicVars.CalculatedDamage).FromCard(this)
             .TargetingAllOpponents(base.CombatState)
             .WithHitVfxNode((Creature t) => NScratchVfx.Create(t, goingRight: true))
             .Execute(choiceContext);
@@ -43,12 +43,15 @@ public class RemiliaRare1() : RemiliaCard(3,
         int count = base.Owner.Creature.GetPower<BloodPool>()?.Amount ?? 0;
         await PowerCmd.Apply<BloodPool>(base.Owner.Creature, -count, base.Owner.Creature, null);
         await CreatureCmd.Heal(base.Owner.Creature, count);
-        
-        await PowerCmd.Apply<IntangiblePower>(base.Owner.Creature, base.DynamicVars["IntangiblePower"].BaseValue, base.Owner.Creature, null);
+
+        if (base.IsUpgraded)
+        {
+            await PowerCmd.Apply<IntangiblePower>(base.Owner.Creature, base.DynamicVars["IntangiblePower"].BaseValue, base.Owner.Creature, null);
+        }
     }
 
     protected override void OnUpgrade()
     {
-        base.DynamicVars["IntangiblePower"].UpgradeValueBy(1m);
+        
     }
 }

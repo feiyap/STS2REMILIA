@@ -14,7 +14,7 @@ public class RemiliaCommon19Power : RemiliaPower
     {
         if (side == base.Owner.Side)
         {
-            await CardPileCmd.Draw(new BlockingPlayerChoiceContext(), base.Amount, base.Owner.Player);
+            await CardPileCmd.Draw(new BlockingPlayerChoiceContext(), 1, base.Owner.Player);
             await PowerCmd.Decrement(this);
         }
     }

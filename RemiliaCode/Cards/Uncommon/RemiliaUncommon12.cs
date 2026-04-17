@@ -16,7 +16,7 @@ public class RemiliaUncommon12() : RemiliaCard(2,
     CardType.Attack, CardRarity.Uncommon,
     TargetType.AnyEnemy)
 {
-    protected override IEnumerable<DynamicVar> CanonicalVars => [new DamageVar(14m, ValueProp.Move), new PowerVar<ClawPrints>(4)];
+    protected override IEnumerable<DynamicVar> CanonicalVars => [new DamageVar(14m, ValueProp.Move), new PowerVar<ClawPrints>(2)];
     
     protected override IEnumerable<IHoverTip> ExtraHoverTips => [HoverTipFactory.FromPower<ClawPrints>()];
 
@@ -35,6 +35,6 @@ public class RemiliaUncommon12() : RemiliaCard(2,
     protected override void OnUpgrade()
     {
         base.DynamicVars.Damage.UpgradeValueBy(4m);
-        base.DynamicVars["ClawPrints"].UpgradeValueBy(3m);
+        base.DynamicVars["ClawPrints"].UpgradeValueBy(1m);
     }
 }

@@ -19,8 +19,8 @@ public class RemiliaCommon2() : RemiliaCard(1,
 {
     protected override IEnumerable<DynamicVar> CanonicalVars => [
         new DamageVar(10m, ValueProp.Move),
-        new DynamicVar("BloodCost", 1m),
-        new CardsVar(1)
+        new DynamicVar("BloodCost", 2m),
+        new CardsVar(2)
     ];
 
     protected override bool IsPlayable => IsBloodPoolCount(base.DynamicVars["BloodCost"].IntValue);

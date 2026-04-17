@@ -18,9 +18,7 @@ public class RemiliaCommon1() : RemiliaCard(1,
     CardType.Attack, CardRarity.Common,
     TargetType.AnyEnemy)
 {
-    protected override IEnumerable<DynamicVar> CanonicalVars => [new DamageVar(9, ValueProp.Move), new PowerVar<ClawPrints>(1m)];
-
-    protected override IEnumerable<IHoverTip> ExtraHoverTips => [HoverTipFactory.FromPower<ClawPrints>()];
+    protected override IEnumerable<DynamicVar> CanonicalVars => [new DamageVar(9, ValueProp.Move), new DynamicVar("BloodPool", 1m)];
     
     protected override async Task OnPlay(
         PlayerChoiceContext choiceContext,
@@ -31,12 +29,12 @@ public class RemiliaCommon1() : RemiliaCard(1,
             .WithHitVfxNode((Creature t) => NScratchVfx.Create(t, goingRight: true))
             .Execute(choiceContext);
         
-        await PowerCmd.Apply<ClawPrints>(play.Target, base.DynamicVars["ClawPrints"].BaseValue, base.Owner.Creature, null);
+        await PowerCmd.Apply<BloodPool>(base.Owner.Creature, base.DynamicVars["BloodPool"].BaseValue, base.Owner.Creature, null);
     }
 
     protected override void OnUpgrade()
     {
         DynamicVars.Damage.UpgradeValueBy(3m);
-        DynamicVars["ClawPrints"].UpgradeValueBy(1m);
+        DynamicVars["BloodPool"].UpgradeValueBy(1m);
     }
 }

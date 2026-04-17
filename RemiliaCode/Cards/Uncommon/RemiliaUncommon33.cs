@@ -8,7 +8,7 @@ using Remilia.RemiliaCode.Powers;
 
 namespace Remilia.RemiliaCode.Cards.Uncommon;
 
-public class RemiliaUncommon33() : RemiliaCard(2,
+public class RemiliaUncommon33() : RemiliaCard(3,
     CardType.Power, CardRarity.Uncommon,
     TargetType.Self)
 {
@@ -26,6 +26,7 @@ public class RemiliaUncommon33() : RemiliaCard(2,
 
     protected override void OnUpgrade()
     {
-        base.DynamicVars["RemiliaUncommon33Power"].UpgradeValueBy(1m);
+        //base.DynamicVars["RemiliaUncommon33Power"].UpgradeValueBy(1m);
+        base.EnergyCost.UpgradeBy(-1);
     }
 }

@@ -15,7 +15,7 @@ public class RemiliaCommon14() : RemiliaCard(1,
 {
     protected override IEnumerable<DynamicVar> CanonicalVars => [
         new DamageVar(6m, ValueProp.Move),
-        new PowerVar<ClawPrints>(2m)
+        new PowerVar<ClawPrints>(1m)
     ];
     
     protected override IEnumerable<IHoverTip> ExtraHoverTips => [HoverTipFactory.FromPower<ClawPrints>()];

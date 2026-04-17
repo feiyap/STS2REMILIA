@@ -10,11 +10,11 @@ using Remilia.RemiliaCode.Powers;
 
 namespace Remilia.RemiliaCode.Cards.Uncommon;
 
-public class RemiliaUncommon14() : RemiliaCard(1,
+public class RemiliaUncommon14() : RemiliaCard(2,
     CardType.Attack, CardRarity.Uncommon,
     TargetType.AnyEnemy)
 {
-    protected override IEnumerable<DynamicVar> CanonicalVars => [new DamageVar(7m, ValueProp.Move), new PowerVar<VulnerablePower>(1m), new PowerVar<ClawPrints>(1m)];
+    protected override IEnumerable<DynamicVar> CanonicalVars => [new DamageVar(13m, ValueProp.Move), new PowerVar<VulnerablePower>(1m), new PowerVar<ClawPrints>(1m)];
     
     protected override IEnumerable<IHoverTip> ExtraHoverTips => [HoverTipFactory.FromPower<ClawPrints>()];
 
@@ -31,8 +31,7 @@ public class RemiliaUncommon14() : RemiliaCard(1,
 
     protected override void OnUpgrade()
     {
-        base.DynamicVars.Damage.UpgradeValueBy(3m);
-        base.DynamicVars.Vulnerable.UpgradeValueBy(1m);
+        base.DynamicVars["VulnerablePower"].UpgradeValueBy(1m);
         base.DynamicVars["ClawPrints"].UpgradeValueBy(1m);
     }
 }

@@ -15,7 +15,7 @@ public class BloodCurse() : RemiliaCard(0,
     CardType.Curse, CardRarity.Curse,
     TargetType.Self)
 {
-    protected override IEnumerable<DynamicVar> CanonicalVars => [new HpLossVar(1m), new CardsVar(1)];
+    protected override IEnumerable<DynamicVar> CanonicalVars => [new HpLossVar(1m), new DynamicVar("HpLoss2", 2), new CardsVar(1)];
     
     public override IEnumerable<CardKeyword> CanonicalKeywords => [CardKeyword.Exhaust];
 
@@ -26,7 +26,7 @@ public class BloodCurse() : RemiliaCard(0,
         CardPlay play)
     {
         VfxCmd.PlayOnCreatureCenter(base.Owner.Creature, "vfx/vfx_bloody_impact");
-        await CreatureCmd.Damage(choiceContext, base.Owner.Creature, base.DynamicVars.HpLoss.BaseValue, ValueProp.Unblockable | ValueProp.Unpowered | ValueProp.Move, this);
+        await CreatureCmd.Damage(choiceContext, base.Owner.Creature, base.DynamicVars["HpLoss2"].BaseValue, ValueProp.Unblockable | ValueProp.Unpowered | ValueProp.Move, this);
         
         await CardPileCmd.Draw(choiceContext, base.DynamicVars.Cards.IntValue, base.Owner);
     }

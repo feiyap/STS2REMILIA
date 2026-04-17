@@ -11,8 +11,8 @@
   "REMILIA-BLOOD_SUCKING.description": "造成{Damage:diff()}点伤害。\n消耗最多等量于所造成伤害的[gold]血池[/gold]，回复等量的生命。",
   "REMILIA-BLOOD_SUCKING.title": "吸血",
 
-  "REMILIA-REMILIA_COMMON1.description": "造成{Damage:diff()}点伤害。\n给予{ClawPrints:diff()}层[gold]爪痕[/gold]。",
-  "REMILIA-REMILIA_COMMON1.title": "绯红爪击",
+  "REMILIA-REMILIA_COMMON1.description": "造成{Damage:diff()}点伤害。\n获得{BloodPool:diff()}点[gold]血池[/gold]。",
+  "REMILIA-REMILIA_COMMON1.title": "绯红",
 
   "REMILIA-REMILIA_COMMON2.description": "消耗{BloodCost}点[gold]血池[/gold]。\n造成{Damage:diff()}点伤害。\n抽{Cards}张牌。",
   "REMILIA-REMILIA_COMMON2.title": "夜曲",
@@ -23,7 +23,7 @@
   "REMILIA-REMILIA_COMMON4.description": "消耗最多{BloodCost}点[gold]血池[/gold]。\n获得等量的[gold]格挡[/gold]。",
   "REMILIA-REMILIA_COMMON4.title": "冥河",
 
-  "REMILIA-REMILIA_COMMON5.description": "获得{Block:diff()}点[gold]格挡[/gold]。\n抽{Cards:diff()}张牌。",
+  "REMILIA-REMILIA_COMMON5.description": "消耗{BloodCost}点[gold]血池[/gold]。\n获得{Block:diff()}点[gold]格挡[/gold]。\n抽{Cards:diff()}张牌。",
   "REMILIA-REMILIA_COMMON5.title": "夜翼",
 
   "REMILIA-REMILIA_COMMON6.description": "获得{Block:diff()}点[gold]格挡[/gold]。\n获得{BloodPool}点[gold]血池[/gold]。",
@@ -41,7 +41,7 @@
   "REMILIA-REMILIA_COMMON10.description": "消耗{BloodCost}点[gold]血池[/gold]。\n获得{Energy:energyIcons()}。",
   "REMILIA-REMILIA_COMMON10.title": "血之代偿",
 
-  "REMILIA-REMILIA_COMMON11.description": "造成{Damage:diff()}点伤害。\n如果你在回合进行中抽过至少一张牌，消耗最多等量于所造成伤害的[gold]血池[/gold]，回复等量的生命。",
+  "REMILIA-REMILIA_COMMON11.description": "造成{Damage:diff()}点伤害。\n如果你在回合进行中抽过至少一张牌，消耗最多{Damage:diff()}点[gold]血池[/gold]，回复等量的生命。",
   "REMILIA-REMILIA_COMMON11.title": "渴血之咬",
 
   "REMILIA-REMILIA_COMMON12.description": "失去{HpLoss:diff()}点生命。\n将[gold]手牌[/gold]中的1张牌放到[gold]抽牌堆[/gold]顶部。\n从[gold]抽牌堆[/gold]中选择1张牌放入你的[gold]手牌[/gold]。",
@@ -65,10 +65,10 @@
   "REMILIA-REMILIA_COMMON18.description": "造成你当前[gold]血池[/gold]层数的伤害。",
   "REMILIA-REMILIA_COMMON18.title": "腥风血雨",
 
-  "REMILIA-REMILIA_COMMON19.description": "抽1张牌。\n在下{RemiliaCommon19Power}个回合抽1张牌。",
+  "REMILIA-REMILIA_COMMON19.description": "抽1张牌。\n在下{RemiliaCommon19Power:diff()}个回合抽1张牌。",
   "REMILIA-REMILIA_COMMON19.title": "贵族血统",
 
-  "REMILIA-REMILIA_COMMON20.description": "失去{HpLoss:diff()}点生命。\n造成{Damage:diff()}点伤害。\n给予{WeakPower:diff()}层[gold]虚弱[/gold]。\n给予{VulnerablePower:diff()}层[gold]易伤[/gold]。",
+  "REMILIA-REMILIA_COMMON20.description": "造成{Damage:diff()}点伤害。\n给予{BloodPlague:diff()}层[gold]血疫[/gold]。",
   "REMILIA-REMILIA_COMMON20.title": "心脏打击",
   
   "REMILIA-REMILIA_UNCOMMON1.description": "造成{Damage:diff()}点伤害。给予{ClawPrints:diff()}层[gold]爪痕[/gold]。\n消耗{BloodCost}点[gold]血池[/gold]，将此牌返回你的[gold]手牌[/gold]。",
@@ -98,10 +98,10 @@
   "REMILIA-REMILIA_UNCOMMON9.description": "移除目标的[gold]格挡[/gold]和[gold]人工制品[/gold]。\n造成{Damage:diff()}点伤害。\n给予{BloodPlague:diff()}层[gold]血疫[/gold]。\n将1张[gold]渴血诅咒[/gold]加入你的[gold]手牌[/gold]。",
   "REMILIA-REMILIA_UNCOMMON9.title": "死亡之触",
 
-  "REMILIA-REMILIA_UNCOMMON10.description": "造成{Damage:diff()}点伤害。\n斩杀时，获得{BloodPool}点[gold]血池[/gold]。",
+  "REMILIA-REMILIA_UNCOMMON10.description": "造成{Damage:diff()}点伤害。\n斩杀时，获得{BloodPool:diff()}点[gold]血池[/gold]。",
   "REMILIA-REMILIA_UNCOMMON10.title": "骨髓打击",
 
-  "REMILIA-REMILIA_UNCOMMON11.description": "对所有敌人造成{Damage:diff()}点伤害。\n消耗最多{BloodCost}点[gold]血池[/gold]，回复等量的生命。",
+  "REMILIA-REMILIA_UNCOMMON11.description": "对所有敌人造成{Damage:diff()}点伤害。\n消耗最多{BloodCost:diff()}点[gold]血池[/gold]，回复等量的生命。",
   "REMILIA-REMILIA_UNCOMMON11.title": "红符「红色不夜城」",
 
   "REMILIA-REMILIA_UNCOMMON12.description": "造成{Damage:diff()}点伤害。\n给予{ClawPrints:diff()}层[gold]爪痕[/gold]。",
@@ -167,7 +167,7 @@
   "REMILIA-REMILIA_UNCOMMON32.description": "当你将要死亡时，仅1次，将你回复到你最大生命的30%。",
   "REMILIA-REMILIA_UNCOMMON32.title": "雾化躯体",
 
-  "REMILIA-REMILIA_UNCOMMON33.description": "每有一次攻击造成未被格挡的伤害，就给予{RemiliaUncommon33Power:diff()}层[gold]爪痕[/gold]。",
+  "REMILIA-REMILIA_UNCOMMON33.description": "每有一次攻击造成未被格挡的伤害，就给予{RemiliaUncommon33Power}层[gold]爪痕[/gold]。",
   "REMILIA-REMILIA_UNCOMMON33.title": "雾中花",
 
   "REMILIA-REMILIA_UNCOMMON34.description": "每失去1点生命值，获得1点[gold]格挡[/gold]。",
@@ -179,7 +179,7 @@
   "REMILIA-REMILIA_UNCOMMON36.description": "每当有一张牌被消耗时，获得{RemiliaUncommon36Power:diff()}点[gold]血池[/gold]。",
   "REMILIA-REMILIA_UNCOMMON36.title": "反血",
 
-  "REMILIA-REMILIA_RARE1.description": "消耗所有[gold]血池[/gold]，对所有敌人造成等量的伤害，回复等量的生命。\n获得{IntangiblePower:diff()}层[gold]无实体[/gold]。",
+  "REMILIA-REMILIA_RARE1.description": "消耗所有[gold]血池[/gold]，对所有敌人造成等量的伤害，回复等量的生命。{IfUpgraded:show:\n获得{IntangiblePower:diff()}层[gold]无实体[/gold]。|}",
   "REMILIA-REMILIA_RARE1.title": "红魔「绯红恶魔」",
 
   "REMILIA-REMILIA_RARE2.description": "消耗{BloodCost}点[gold]血池[/gold]。\n造成{Damage:diff()}点伤害，回复等量的生命。",
@@ -206,6 +206,6 @@
   "REMILIA-REMILIA_ANCIENT2.description": "对所有敌人造成{Damage:diff()}点伤害。\n消耗最多等量于所造成伤害的[gold]血池[/gold]，回复等量的生命。",
   "REMILIA-REMILIA_ANCIENT2.title": "狂血",
 
-  "REMILIA-BLOOD_CURSE.description": "在你的回合结束时，如果这张牌在你的[gold]手牌[/gold]中，你受到1点伤害。\n打出时，你受到1点伤害，抽1张牌。",
+  "REMILIA-BLOOD_CURSE.description": "在你的回合结束时，如果这张牌在你的[gold]手牌[/gold]中，你受到{HpLoss}点伤害。\n打出时，你受到{HpLoss2}点伤害，抽{Cards}张牌。",
   "REMILIA-BLOOD_CURSE.title": "渴血诅咒"
 }

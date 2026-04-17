@@ -23,6 +23,7 @@ public class RemiliaUncommon22() : RemiliaCard(1,
     {
         await CommonActions.CardBlock(this, play);
         await BloodCurse.CreateInHand(base.Owner, base.CombatState);
+        await BloodCurse.CreateInHand(base.Owner, base.CombatState);
     }
 
     protected override void OnUpgrade()

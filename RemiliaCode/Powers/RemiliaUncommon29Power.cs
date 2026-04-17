@@ -19,41 +19,17 @@ public class RemiliaUncommon29Power : RemiliaPower
     public override PowerType Type => PowerType.Buff;
     public override PowerStackType StackType => PowerStackType.Counter;
 
-    protected override IEnumerable<DynamicVar> CanonicalVars =>
-        [new DamageVar("SelfDamage", 1m, ValueProp.Unblockable | ValueProp.Unpowered)];
-    
-    public override async Task AfterPlayerTurnStart(PlayerChoiceContext choiceContext, Player player)
-    {
-        if (player == base.Owner.Player)
-        {
-            NCombatRoom.Instance?.CombatVfxContainer.AddChildSafely(NFireSmokePuffVfx.Create(base.Owner));
-            await Cmd.CustomScaledWait(0.2f, 0.4f);
-            DamageVar damageVar = (DamageVar)base.DynamicVars["SelfDamage"];
-            await CreatureCmd.Damage(choiceContext, base.Owner, damageVar.BaseValue, damageVar.Props, base.Owner, null);
-        }
-    }
+    protected override IEnumerable<IHoverTip> ExtraHoverTips =>
+        [HoverTipFactory.FromPower<BloodPlague>()];
 
-    public override async Task AfterDamageReceived(PlayerChoiceContext choiceContext, Creature target, DamageResult result, ValueProp props, Creature? dealer, CardModel? cardSource)
+    public override async Task AfterSideTurnStart(CombatSide side, CombatState combatState)
     {
-        if (target != base.Owner || result.UnblockedDamage <= 0 || base.Owner.CombatState.CurrentSide != base.Owner.Side)
+        if (side != base.Owner.Side)
         {
             return;
         }
-        foreach (Creature hittableEnemy in base.CombatState.HittableEnemies)
-        {
-            NFireBurstVfx child = NFireBurstVfx.Create(hittableEnemy, 0.75f);
-            NCombatRoom.Instance?.CombatVfxContainer.AddChildSafely(child);
-        }
-        await CreatureCmd.Damage(choiceContext, base.CombatState.HittableEnemies, base.Amount, ValueProp.Unpowered, base.Owner, null);
-        
-        int count = Math.Min(base.Amount, base.Owner.GetPower<BloodPool>()?.Amount ?? 0);
-        await PowerCmd.Apply<BloodPool>(base.Owner, -count, base.Owner, null);
-        await CreatureCmd.Heal(base.Owner, count);
-    }
-    
-    public void IncrementSelfDamage()
-    {
-        AssertMutable();
-        base.DynamicVars["SelfDamage"].BaseValue++;
+        Flash();
+        await Cmd.CustomScaledWait(0.2f, 0.4f);
+        await PowerCmd.Apply<BloodPlague>(base.CombatState.HittableEnemies, base.Amount, base.Owner, null);
     }
 }

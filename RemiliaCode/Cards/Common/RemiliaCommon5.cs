@@ -5,6 +5,7 @@ using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
 using MegaCrit.Sts2.Core.ValueProps;
 using Remilia.RemiliaCode.Cards;
+using Remilia.RemiliaCode.Powers;
 
 namespace Remilia.RemiliaCode.Cards.Common;
 
@@ -14,10 +15,13 @@ public class RemiliaCommon5() : RemiliaCard(1,
 {
     protected override IEnumerable<DynamicVar> CanonicalVars => [
         new BlockVar(8m, ValueProp.Move),
-        new CardsVar(1)
+        new CardsVar(2),
+        new DynamicVar("BloodCost", 1)
     ];
     
     public override bool GainsBlock => true;
+    
+    protected override bool IsPlayable => IsBloodPoolCount(base.DynamicVars["BloodCost"].IntValue);
 
     protected override async Task OnPlay(
         PlayerChoiceContext choiceContext,
@@ -25,6 +29,7 @@ public class RemiliaCommon5() : RemiliaCard(1,
     {
         await CommonActions.CardBlock(this, play);
         await CardPileCmd.Draw(choiceContext, base.DynamicVars.Cards.IntValue, base.Owner);
+        await PowerCmd.Apply<BloodPool>(base.Owner.Creature, -base.DynamicVars["BloodCost"].IntValue, base.Owner.Creature, null);
     }
 
     protected override void OnUpgrade()
