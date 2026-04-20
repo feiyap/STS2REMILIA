@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://d05k5xufv8y3h"]
+
+[ext_resource type="Texture2D" uid="uid://bwpv400hj6swg" path="res://00004-2537062500.png" id="1_sp1qi"]
+
+[node name="CharacterMerchant" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = -242.0
+offset_top = -526.0
+offset_right = 224.0
+offset_bottom = 181.0
+texture = ExtResource("1_sp1qi")
+expand_mode = 4

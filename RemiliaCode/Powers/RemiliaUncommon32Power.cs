@@ -21,7 +21,7 @@ public class RemiliaUncommon32Power : RemiliaPower
     public override PowerType Type => PowerType.Buff;
     public override PowerStackType StackType => PowerStackType.Counter;
 
-    protected override IEnumerable<DynamicVar> CanonicalVars => [new HealVar(30m)];
+    protected override IEnumerable<DynamicVar> CanonicalVars => [new HealVar(1m)];
     
     public override bool ShouldDieLate(Creature creature)
     {
@@ -38,6 +38,6 @@ public class RemiliaUncommon32Power : RemiliaPower
         Flash();
         decimal amount = Math.Max(1m, (decimal)creature.MaxHp * (base.DynamicVars.Heal.BaseValue / 100m));
         await CreatureCmd.Heal(creature, amount);
-        await PowerCmd.Remove(this);
+        await PowerCmd.Decrement(this);
     }
 }

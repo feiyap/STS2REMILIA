@@ -8,13 +8,11 @@ using Remilia.RemiliaCode.Powers;
 
 namespace Remilia.RemiliaCode.Cards.Uncommon;
 
-public class RemiliaUncommon33() : RemiliaCard(3,
+public class RemiliaUncommon33() : RemiliaCard(2,
     CardType.Power, CardRarity.Uncommon,
     TargetType.Self)
 {
     protected override IEnumerable<DynamicVar> CanonicalVars => [new PowerVar<RemiliaUncommon33Power>(1)];
-
-    protected override IEnumerable<IHoverTip> ExtraHoverTips => [HoverTipFactory.FromPower<ClawPrints>()];
     
     protected override async Task OnPlay(
         PlayerChoiceContext choiceContext,

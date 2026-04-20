@@ -23,6 +23,6 @@ public class RemiliaUncommon31() : RemiliaCard(1,
 
     protected override void OnUpgrade()
     {
-        base.DynamicVars["RemiliaUncommon31Power"].UpgradeValueBy(25m);
+        base.EnergyCost.UpgradeBy(-1);
     }
 }

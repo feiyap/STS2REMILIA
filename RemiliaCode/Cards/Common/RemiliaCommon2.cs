@@ -15,10 +15,10 @@ namespace Remilia.RemiliaCode.Cards.Common;
 
 public class RemiliaCommon2() : RemiliaCard(1,
     CardType.Attack, CardRarity.Common,
-    TargetType.AllEnemies)
+    TargetType.AnyEnemy)
 {
     protected override IEnumerable<DynamicVar> CanonicalVars => [
-        new DamageVar(10m, ValueProp.Move),
+        new DamageVar(12m, ValueProp.Move),
         new DynamicVar("BloodCost", 2m),
         new CardsVar(2)
     ];

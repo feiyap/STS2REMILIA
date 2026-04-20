@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://mqxc3kyu7qt4"]
 
-[ext_resource type="Texture2D" uid="uid://co4503omswfjh" path="res://00026-3534330216.png" id="1_dckxq"]
+[ext_resource type="Texture2D" uid="uid://br83ttsjgxhgy" path="res://62549069_p0.jpg" id="1_dckxq"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -21,4 +21,3 @@ offset_bottom = 1385.0
 texture = ExtResource("1_dckxq")
 expand_mode = 3
 stretch_mode = 2
-flip_h = true

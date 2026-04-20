@@ -9,7 +9,7 @@ using Remilia.RemiliaCode.Powers;
 namespace Remilia.RemiliaCode.Cards.Rare;
 
 public class RemiliaRare16() : RemiliaCard(3,
-    CardType.Power, CardRarity.Basic,
+    CardType.Power, CardRarity.Rare,
     TargetType.Self)
 {
     protected override IEnumerable<DynamicVar> CanonicalVars => [new PowerVar<RemiliaRare16Power>(1), new EnergyVar(1)];

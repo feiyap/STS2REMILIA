@@ -22,7 +22,8 @@ public abstract class RemiliaCard(int cost, CardType type, CardRarity rarity, Ta
     {
         get
         {
-            var path =  $"{Id.Entry.RemovePrefix().ToLowerInvariant()}.png".BigCardImagePath();
+            //var path =  $"{Id.Entry.RemovePrefix().ToLowerInvariant()}.png".BigCardImagePath();
+            var path =  $"{Id.Entry.RemovePrefix().ToLowerInvariant()}.png".CardImagePath();
             return ResourceLoader.Exists(path) ? path : "card.png".CardImagePath();
         }
     }

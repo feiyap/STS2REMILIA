@@ -1,5 +1,6 @@
 using MegaCrit.Sts2.Core.Combat;
 using MegaCrit.Sts2.Core.Commands;
+using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.Entities.Creatures;
 using MegaCrit.Sts2.Core.Entities.Players;
 using MegaCrit.Sts2.Core.Entities.Powers;
@@ -18,14 +19,17 @@ public class RemiliaUncommon30Power : RemiliaPower
 {
     public override PowerType Type => PowerType.Buff;
     public override PowerStackType StackType => PowerStackType.Counter;
-
-    public override async Task AfterDamageReceived(PlayerChoiceContext choiceContext, Creature target, DamageResult result, ValueProp props, Creature? dealer, CardModel? cardSource)
+    
+    public override async Task AfterCardPlayed(PlayerChoiceContext context, CardPlay cardPlay)
     {
-        int count = (int)Amount * result.UnblockedDamage / 100;
-        if (target == base.Owner && result.UnblockedDamage > 0)
+        if (cardPlay.Card.Owner != base.Owner.Player || cardPlay.Card.Type != CardType.Attack)
         {
-            Flash();
-            await PowerCmd.Apply<BloodPool>(base.Owner, count, base.Owner, null);
+            return;
         }
+        
+        Flash();
+        int count = Math.Min(this.Amount, base.Owner.GetPower<BloodPool>()?.Amount ?? 0);
+        await PowerCmd.Apply<BloodPool>(base.Owner, -count, base.Owner, null);
+        await CreatureCmd.Heal(base.Owner, count);
     }
 }

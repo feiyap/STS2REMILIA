@@ -19,7 +19,7 @@ public class RemiliaUncommon5() : RemiliaCard(2,
         CardPlay play)
     {
         int count = 2;
-        if (base.CombatState.Enemies.Count > 1)
+        if (base.CombatState.Enemies.Count == 1)
         {
             count = 3;
         }

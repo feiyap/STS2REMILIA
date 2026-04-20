@@ -13,7 +13,7 @@ public class RemiliaUncommon25() : RemiliaCard(1,
     CardType.Skill, CardRarity.Uncommon,
     TargetType.Self)
 {
-    protected override IEnumerable<DynamicVar> CanonicalVars => [new EnergyVar(1)];
+    protected override IEnumerable<DynamicVar> CanonicalVars => [new CardsVar(1), new EnergyVar(1)];
     
     protected override IEnumerable<IHoverTip> ExtraHoverTips => [HoverTipFactory.ForEnergy(this)];
 
@@ -25,7 +25,7 @@ public class RemiliaUncommon25() : RemiliaCard(1,
         if (cardModel != null)
         {
             await CardCmd.Exhaust(choiceContext, cardModel);
-            await PlayerCmd.GainEnergy(base.DynamicVars.Energy.BaseValue, base.Owner);
+            await CardPileCmd.Draw(choiceContext, base.DynamicVars.Cards.IntValue, base.Owner);
             if (cardModel.Type == CardType.Curse)
             {
                 await PlayerCmd.GainEnergy(base.DynamicVars.Energy.BaseValue, base.Owner);
@@ -35,6 +35,7 @@ public class RemiliaUncommon25() : RemiliaCard(1,
 
     protected override void OnUpgrade()
     {
+        base.DynamicVars.Cards.UpgradeValueBy(1m);
         base.DynamicVars.Energy.UpgradeValueBy(1m);
     }
 }

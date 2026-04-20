@@ -21,15 +21,11 @@ public class RemiliaUncommon33Power : RemiliaPower
     public override PowerType Type => PowerType.Buff;
     public override PowerStackType StackType => PowerStackType.Counter;
 
-    protected override IEnumerable<IHoverTip> ExtraHoverTips =>
-        [HoverTipFactory.FromPower<ClawPrints>()];
-
-    public override async Task AfterDamageGiven(PlayerChoiceContext choiceContext, Creature? dealer, DamageResult result, ValueProp props, Creature target, CardModel? cardSource)
+    public override async Task AfterCardDrawn(PlayerChoiceContext choiceContext, CardModel card, bool fromHandDraw)
     {
-        if (dealer == base.Owner && props.IsPoweredAttack_() && result.UnblockedDamage > 0)
+        if (!fromHandDraw && card.Owner.Creature == base.Owner && card.Owner.Creature.CombatState.CurrentSide == card.Owner.Creature.Side)
         {
-            Flash();
-            await PowerCmd.Apply<ClawPrints>(target, base.Amount, base.Owner, null);
+            await PowerCmd.Apply<BloodPool>(base.Owner, this.Amount, base.Owner, null);
         }
     }
 }

@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://un8aussea638"]
+
+[ext_resource type="Texture2D" uid="uid://lt5g6k2oa8gm" path="res://character_icon_char.png" id="1_d17j7"]
+
+[node name="character_icon_char" type="TextureRect"]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_d17j7")
+stretch_mode = 2

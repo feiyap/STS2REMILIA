@@ -23,22 +23,10 @@ public class RemiliaUncommon31Power : RemiliaPower
 
     public override decimal ModifyDamageMultiplicative(Creature? target, decimal amount, ValueProp props, Creature? dealer, CardModel? cardSource)
     {
-        if (!props.IsPoweredAttack_())
+        if ((target == base.Owner || dealer == base.Owner) && props.IsPoweredAttack())
         {
-            return 1m;
+            return 1m + (decimal)base.Amount / 100;
         }
-        if (cardSource == null)
-        {
-            return 1m;
-        }
-        if (dealer != base.Owner && !base.Owner.Pets.Contains<Creature>(dealer))
-        {
-            return 1m;
-        }
-        if (target == null || target.CurrentHp > base.Owner?.MaxHp)
-        {
-            return 1m;
-        }
-        return 1m + (decimal)base.Amount / 100m;
+        return 1m;
     }
 }

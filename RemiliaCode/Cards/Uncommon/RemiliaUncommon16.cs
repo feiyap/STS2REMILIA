@@ -7,7 +7,7 @@ using Remilia.RemiliaCode.Powers;
 
 namespace Remilia.RemiliaCode.Cards.Uncommon;
 
-public class RemiliaUncommon16() : RemiliaCard(0,
+public class RemiliaUncommon16() : RemiliaCard(1,
     CardType.Skill, CardRarity.Uncommon,
     TargetType.Self)
 {
@@ -26,6 +26,6 @@ public class RemiliaUncommon16() : RemiliaCard(0,
 
     protected override void OnUpgrade()
     {
-        RemoveKeyword(CardKeyword.Exhaust);
+        base.EnergyCost.UpgradeBy(-1);
     }
 }

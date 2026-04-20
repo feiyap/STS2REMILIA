@@ -11,7 +11,7 @@ public class ScarletFigure() : RemiliaCard(0,
     CardType.Skill, CardRarity.Basic,
     TargetType.Self)
 {
-    protected override IEnumerable<DynamicVar> CanonicalVars => [new HpLossVar(1m), new BlockVar(8, ValueProp.Move)];
+    protected override IEnumerable<DynamicVar> CanonicalVars => [new HpLossVar(2m), new BlockVar(8, ValueProp.Move)];
     
     public override bool GainsBlock => true;
 

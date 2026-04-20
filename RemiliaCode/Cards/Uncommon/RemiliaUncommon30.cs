@@ -11,7 +11,7 @@ public class RemiliaUncommon30() : RemiliaCard(1,
     CardType.Power, CardRarity.Uncommon,
     TargetType.Self)
 {
-    protected override IEnumerable<DynamicVar> CanonicalVars => [new PowerVar<RemiliaUncommon30Power>(50m)];
+    protected override IEnumerable<DynamicVar> CanonicalVars => [new PowerVar<RemiliaUncommon30Power>(1m)];
 
     protected override async Task OnPlay(
         PlayerChoiceContext choiceContext,
@@ -23,6 +23,6 @@ public class RemiliaUncommon30() : RemiliaCard(1,
 
     protected override void OnUpgrade()
     {
-        base.AddKeyword(CardKeyword.Innate);
+        base.DynamicVars["RemiliaUncommon30Power"].UpgradeValueBy(1);
     }
 }
