@@ -22,6 +22,8 @@ public class RemiliaUncommon7() : RemiliaCard(2,
         new ExtraDamageVar(1m),
         new CalculatedDamageVar(ValueProp.Move).WithMultiplier((CardModel card, Creature? _) => Math.Min(card.Owner.Creature.GetPowerAmount<BloodPool>(), card.DynamicVars["BloodCost"].BaseValue))
     ];
+    
+    protected override HashSet<CardTag> CanonicalTags => [CardTag.Strike];
 
     protected override async Task OnPlay(
         PlayerChoiceContext choiceContext,

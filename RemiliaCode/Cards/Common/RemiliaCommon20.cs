@@ -15,6 +15,8 @@ public class RemiliaCommon20() : RemiliaCard(1,
     TargetType.AnyEnemy)
 {
     protected override IEnumerable<DynamicVar> CanonicalVars => [new DamageVar(8m, ValueProp.Move), new PowerVar<BloodPlague>(3m)];
+    
+    protected override HashSet<CardTag> CanonicalTags => [CardTag.Strike];
 
     protected override IEnumerable<IHoverTip> ExtraHoverTips =>
     [

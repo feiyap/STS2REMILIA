@@ -32,7 +32,7 @@ public class RemiliaAncient1() : RemiliaCard(2,
         CardPlay play)
     {
         bool shouldTriggerFatal = play.Target.Powers.All((PowerModel p) => p.ShouldOwnerDeathTriggerFatal());
-        AttackCommand attackCommand = await DamageCmd.Attack(base.DynamicVars.CalculatedDamage.BaseValue).FromCard(this)
+        AttackCommand attackCommand = await DamageCmd.Attack(base.DynamicVars.CalculatedDamage).FromCard(this)
             .Targeting(play.Target)
             .Execute(choiceContext);
         

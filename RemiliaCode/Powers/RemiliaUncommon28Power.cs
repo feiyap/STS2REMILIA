@@ -33,6 +33,11 @@ public class RemiliaUncommon28Power : RemiliaPower
             modifiedAmount = amount;
             return false;
         }
+        if (canonicalPower.Applier == base.Owner)
+        {
+            modifiedAmount = amount;
+            return false;
+        }
         modifiedAmount = default(decimal);
         return true;
     }

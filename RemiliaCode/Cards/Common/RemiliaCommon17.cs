@@ -25,7 +25,7 @@ public class RemiliaCommon17() : RemiliaCard(3,
             .WithHitFx("vfx/vfx_attack_blunt", null, "blunt_attack.mp3")
             .Execute(choiceContext);
         
-        await CreatureCmd.GainBlock(base.Owner.Creature, base.DynamicVars.Block.BaseValue, base.DynamicVars.CalculatedBlock.Props, play);
+        await CreatureCmd.GainBlock(base.Owner.Creature, base.DynamicVars.Block, play);
     }
 
     protected override void OnUpgrade()

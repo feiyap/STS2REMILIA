@@ -23,7 +23,7 @@ public class RemiliaUncommon13() : RemiliaCard(1,
         await CreatureCmd.TriggerAnim(base.Owner.Creature, "Cast", base.Owner.Character.CastAnimDelay);
         await PowerCmd.Apply<BloodPool>(base.Owner.Creature, -base.DynamicVars["BloodCost"].IntValue, base.Owner.Creature, null);
         
-        await DamageCmd.Attack(base.DynamicVars.CalculatedDamage.BaseValue).FromCard(this)
+        await DamageCmd.Attack(base.DynamicVars.Damage.BaseValue).FromCard(this)
             .Targeting(play.Target)
             .Execute(choiceContext);
     }
