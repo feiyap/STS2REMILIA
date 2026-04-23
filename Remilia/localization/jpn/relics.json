@@ -1,0 +1,9 @@
+{
+  "REMILIA-REMILIA_RELIC_SCARLET_BLOOD.description": "HPを失うたび、失ったHPの{HpLossReduction}%を[gold]血池[/gold]に変換する。\n戦闘終了時、残っている[gold]血池[/gold]の[green]{BloodPoolLift}%[/green]を「スカーレットブラッド」に蓄積する。次の戦闘開始時、それを取り出す。",
+  "REMILIA-REMILIA_RELIC_SCARLET_BLOOD.flavor": "このレリックの詳細は、いずれ明らかになる……",
+  "REMILIA-REMILIA_RELIC_SCARLET_BLOOD.title": "スカーレットブラッド",
+
+  "REMILIA-REMILIA_RELIC_RED_BLOOD.description": "HPを失うたび、失ったHPの{HpLossReduction}%を[gold]血池[/gold]に変換する。\n戦闘終了時、残っている[gold]血池[/gold]の[green]{BloodPoolLift}%[/green]を「クリムゾンブラッド」に蓄積する。次の戦闘開始時、それを取り出す。",
+  "REMILIA-REMILIA_RELIC_RED_BLOOD.flavor": "このレリックの詳細は、いずれ明らかになる……",
+  "REMILIA-REMILIA_RELIC_RED_BLOOD.title": "クリムゾンブラッド"
+}

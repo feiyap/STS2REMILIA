@@ -16,6 +16,8 @@ public class RemiliaUncommon28Power : RemiliaPower
     
     public override bool ShouldScaleInMultiplayer => true;
 
+    private int powerCount = 0;
+
     public override bool TryModifyPowerAmountReceived(PowerModel canonicalPower, Creature target, decimal amount, Creature? _, out decimal modifiedAmount)
     {
         if (target != base.Owner)
@@ -35,9 +37,13 @@ public class RemiliaUncommon28Power : RemiliaPower
         }
         if (canonicalPower.Applier == base.Owner)
         {
+            Console.WriteLine("LL1");
             modifiedAmount = amount;
             return false;
         }
+        Console.WriteLine("LL2");
+        Console.WriteLine(amount);
+        powerCount = (int)amount;
         modifiedAmount = default(decimal);
         return true;
     }
@@ -46,6 +52,10 @@ public class RemiliaUncommon28Power : RemiliaPower
     {
         await PowerCmd.Decrement(this);
         
-        await PowerCmd.Apply(power, power.Applier, power.Amount, base.Owner, null);
+        Console.WriteLine(power);
+        Console.WriteLine(power.Applier);
+        Console.WriteLine(power.Amount);
+        Console.WriteLine(powerCount);
+        await PowerCmd.Apply(power, power.Applier, powerCount, base.Owner, null);
     }
 }

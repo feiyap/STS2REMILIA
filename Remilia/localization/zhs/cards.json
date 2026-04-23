@@ -153,9 +153,6 @@
   "REMILIA-REMILIA_UNCOMMON27.description": "打出此牌后，你在本回合内每失去一次生命，获得{RemiliaUncommon27Power:diff()}点格挡。",
   "REMILIA-REMILIA_UNCOMMON27.title": "冥符「红色的冥界」",
 
-  "REMILIA-REMILIA_UNCOMMON28.description": "消耗{BloodCost}点[gold]血池[/gold]。\n使自己获得的下{RemiliaUncommon28Power:diff()}个负面状态反弹给施加者。",
-  "REMILIA-REMILIA_UNCOMMON28.title": "吸血鬼之心",
-
   "REMILIA-REMILIA_UNCOMMON29.description": "在你的回合开始时，给予所有敌人{RemiliaUncommon29Power:diff()}层[gold]血疫[/gold]。",
   "REMILIA-REMILIA_UNCOMMON29.title": "纵血鬼",
 

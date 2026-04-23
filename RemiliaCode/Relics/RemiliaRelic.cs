@@ -17,7 +17,6 @@ public abstract class RemiliaRelic : CustomRelicModel
         get
         {
             var path = $"{Id.Entry.RemovePrefix().ToLowerInvariant()}.png".RelicImagePath();
-            Console.WriteLine(path);
             return ResourceLoader.Exists(path) ? path : "relic.png".RelicImagePath();
         }
     }

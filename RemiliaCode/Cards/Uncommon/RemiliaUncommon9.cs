@@ -25,7 +25,6 @@ public class RemiliaUncommon9() : RemiliaCard(1,
     
     protected override IEnumerable<IHoverTip> ExtraHoverTips => [
         HoverTipFactory.FromPower<BloodPlague>(), 
-        HoverTipFactory.FromPower<VulnerablePower>(),
         HoverTipFactory.FromPower<ArtifactPower>(),
         HoverTipFactory.FromCard<BloodCurse>()
     ];

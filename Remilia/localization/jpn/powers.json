@@ -1,0 +1,97 @@
+{
+  "REMILIA-BLOOD_POOL.description": "蓄積された血液はスキルで消費される。",
+  "REMILIA-BLOOD_POOL.smartDescription": "蓄積された血液はスキルで消費される。",
+  "REMILIA-BLOOD_POOL.title": "血液",
+
+  "REMILIA-CLAW_PRINTS.description": "攻撃から受けるダメージが[blue]1[/blue]増加する。",
+  "REMILIA-CLAW_PRINTS.smartDescription": "攻撃から受けるダメージが[blue]{Amount}[/blue]増加する。",
+  "REMILIA-CLAW_PRINTS.title": "爪痕",
+
+  "REMILIA-REMILIA_COMMON19_POWER.description": "次の[blue]1[/blue]ターンの開始時、カードを1枚引く。",
+  "REMILIA-REMILIA_COMMON19_POWER.smartDescription": "次の[blue]{Amount}[/blue]ターンの開始時、カードを1枚引く。",
+  "REMILIA-REMILIA_COMMON19_POWER.title": "次ターンドロー",
+
+  "REMILIA-REMILIA_UNCOMMON24_POWER.description": "このターン、[blue]1[/blue][gold]筋力[/gold]と[blue]1[/blue][gold]敏捷性[/gold]を得る。",
+  "REMILIA-REMILIA_UNCOMMON24_POWER.smartDescription": "このターン、[blue]{Amount}[/blue][gold]筋力[/gold]と[blue]{Amount}[/blue][gold]敏捷性[/gold]を得る。",
+  "REMILIA-REMILIA_UNCOMMON24_POWER.title": "血の衝動",
+
+  "REMILIA-REMILIA_UNCOMMON27_POWER.description": "このターン中、HPを失うたびに[blue]1[/blue][gold]ブロック[/gold]を得る。",
+  "REMILIA-REMILIA_UNCOMMON27_POWER.smartDescription": "このターン中、HPを失うたびに[blue]{Amount}[/blue][gold]ブロック[/gold]を得る。",
+  "REMILIA-REMILIA_UNCOMMON27_POWER.title": "冥符「紅色の冥界」",
+
+  "REMILIA-REMILIA_UNCOMMON28_POWER.description": "次に受ける[blue]1[/blue]個のデバフをそのまま付与者に返す。",
+  "REMILIA-REMILIA_UNCOMMON28_POWER.smartDescription": "次に受ける[blue]{Amount}[/blue]個のデバフをそのまま付与者に返す。",
+  "REMILIA-REMILIA_UNCOMMON28_POWER.title": "吸血鬼の心",
+
+  "REMILIA-REMILIA_UNCOMMON29_POWER.description": "自分のターン開始時、すべての敵に[blue]1[/blue][gold]血疫[/gold]を付与する。",
+  "REMILIA-REMILIA_UNCOMMON29_POWER.smartDescription": "自分のターン開始時、すべての敵に[blue]{Amount}[/blue][gold]血疫[/gold]を付与する。",
+  "REMILIA-REMILIA_UNCOMMON29_POWER.title": "血鬼支配",
+
+  "REMILIA-REMILIA_UNCOMMON30_POWER.description": "攻撃カードを使用するたび、最大[blue]1[/blue][gold]血液[/gold]を消費し、その分のHPを回復する。",
+  "REMILIA-REMILIA_UNCOMMON30_POWER.smartDescription": "攻撃カードを使用するたび、最大[blue]{Amount}[/blue][gold]血液[/gold]を消費し、その分のHPを回復する。",
+  "REMILIA-REMILIA_UNCOMMON30_POWER.title": "吸血習性",
+
+  "REMILIA-REMILIA_UNCOMMON31_POWER.description": "与えるダメージと受けるダメージが増加する。",
+  "REMILIA-REMILIA_UNCOMMON31_POWER.smartDescription": "与えるダメージと受けるダメージが[blue]{Amount}[/blue]%増加する。",
+  "REMILIA-REMILIA_UNCOMMON31_POWER.title": "高貴なる威圧",
+
+  "REMILIA-REMILIA_UNCOMMON32_POWER.description": "致死ダメージを受けると、[blue]1[/blue]回だけ最大HPの1%まで回復する。",
+  "REMILIA-REMILIA_UNCOMMON32_POWER.smartDescription": "致死ダメージを受けると、[blue]{Amount}[/blue]回だけ最大HPの1%まで回復する。",
+  "REMILIA-REMILIA_UNCOMMON32_POWER.title": "霧化の身体",
+
+  "REMILIA-REMILIA_UNCOMMON33_POWER.description": "ターン中にカードを引くたび、[blue]1[/blue][gold]血液[/gold]を得る。",
+  "REMILIA-REMILIA_UNCOMMON33_POWER.smartDescription": "ターン中にカードを引くたび、[blue]{Amount}[/blue][gold]血液[/gold]を得る。",
+  "REMILIA-REMILIA_UNCOMMON33_POWER.title": "霧中の花",
+
+  "REMILIA-REMILIA_UNCOMMON34_POWER.description": "HPを1失うたび、[blue]1[/blue][gold]ブロック[/gold]を得る。",
+  "REMILIA-REMILIA_UNCOMMON34_POWER.smartDescription": "HPを失うたび、[blue]{Amount}[/blue][gold]ブロック[/gold]を得る。",
+  "REMILIA-REMILIA_UNCOMMON34_POWER.title": "水中の月",
+
+  "REMILIA-REMILIA_UNCOMMON35_POWER.description": "自分のターン開始時、すべての敵に[blue]1[/blue][gold]爪痕[/gold]を付与する。",
+  "REMILIA-REMILIA_UNCOMMON35_POWER.smartDescription": "自分のターン開始時、すべての敵に[blue]{Amount}[/blue][gold]爪痕[/gold]を付与する。",
+  "REMILIA-REMILIA_UNCOMMON35_POWER.title": "スカーレット伯爵",
+
+  "REMILIA-REMILIA_UNCOMMON36_POWER.description": "カードが消費されるたび、[blue]1[/blue][gold]血液[/gold]を得る。",
+  "REMILIA-REMILIA_UNCOMMON36_POWER.smartDescription": "カードが消費されるたび、[blue]{Amount}[/blue][gold]血液[/gold]を得る。",
+  "REMILIA-REMILIA_UNCOMMON36_POWER.title": "反血",
+
+  "REMILIA-REMILIA_RARE15_POWER.description": "使用した攻撃カードは追加でもう1回発動する。",
+  "REMILIA-REMILIA_RARE15_POWER.smartDescription": "使用した攻撃カードは追加でもう1回発動する。",
+  "REMILIA-REMILIA_RARE15_POWER.title": "「子夜の女王」",
+
+  "REMILIA-REMILIA_RARE16_POWER.description": "HPを失うたび、[blue]1[/blue][gold]エナジー[/gold]を得る。",
+  "REMILIA-REMILIA_RARE16_POWER.smartDescription": "HPを失うたび、{Amount:energyIcons()}を得る。",
+  "REMILIA-REMILIA_RARE16_POWER.title": "紅魔形態",
+
+  "REMILIA-REMILIA_RARE17_POWER.description": "自分のターン開始時、1HPを失う。\n[blue]1[/blue][gold]エナジー[/gold]を得て、カードを[blue]1[/blue]枚引く。",
+  "REMILIA-REMILIA_RARE17_POWER.smartDescription": "自分のターン開始時、1HPを失う。\n{Amount:energyIcons()}を得て、カードを[blue]{Amount}[/blue]枚引く。",
+  "REMILIA-REMILIA_RARE17_POWER.title": "緋夜幻想曲",
+
+  "REMILIA-REMILIA_RARE18_POWER.description": "いずれかのキャラクターが死亡するたび、[gold]血液[/gold]を得る。",
+  "REMILIA-REMILIA_RARE18_POWER.smartDescription": "いずれかのキャラクターが死亡するたび、[blue]{Amount}[/blue][gold]血液[/gold]を得る。",
+  "REMILIA-REMILIA_RARE18_POWER.title": "死の凋落",
+
+  "REMILIA-REMILIA_RARE20_POWER.description": "攻撃がブロックされずにダメージを与えるたび、[blue]1[/blue][gold]爪痕[/gold]を付与する。",
+  "REMILIA-REMILIA_RARE20_POWER.smartDescription": "攻撃がブロックされずにダメージを与えるたび、[blue]{Amount}[/blue][gold]爪痕[/gold]を付与する。",
+  "REMILIA-REMILIA_RARE20_POWER.title": "「千年吸血鬼」",
+
+  "REMILIA-REMILIA_RARE21_POWER.description": "最大HPが自分より低い敵に対する攻撃ダメージが[blue]1[/blue]%増加する。",
+  "REMILIA-REMILIA_RARE21_POWER.smartDescription": "最大HPが自分より低い敵に対する攻撃ダメージが[blue]{Amount}[/blue]%増加する。",
+  "REMILIA-REMILIA_RARE21_POWER.title": "紅符「紅の主」",
+
+  "REMILIA-REMILIA_RARE22_POWER.description": "呪いカードを引いた時、1HPを失い、それを[gold]消費[/gold]する。\n呪いカードを[gold]消費[/gold]するたび、カードを1枚引き、[blue]1[/blue]筋力を得る。",
+  "REMILIA-REMILIA_RARE22_POWER.smartDescription": "呪いカードを引いた時、1HPを失い、それを[gold]消費[/gold]する。\n呪いカードを[gold]消費[/gold]するたび、カードを1枚引き、[blue]{Amount}[/blue]筋力を得る。",
+  "REMILIA-REMILIA_RARE22_POWER.title": "呪符「ヴラド・ツェペシュの呪い」",
+
+  "REMILIA-REMILIA_RARE24_POWER.description": "自分のターン開始時、カードを[blue]1[/blue]枚引く。",
+  "REMILIA-REMILIA_RARE24_POWER.smartDescription": "自分のターン開始時、カードを[blue]{Amount}[/blue]枚引く。",
+  "REMILIA-REMILIA_RARE24_POWER.title": "「紅魔法」",
+
+  "REMILIA-REMILIA_RARE26_POWER.description": "[gold]血疫[/gold]が追加で[blue]1[/blue]回発動する。",
+  "REMILIA-REMILIA_RARE26_POWER.smartDescription": "[gold]血疫[/gold]が追加で[blue]{Amount}[/blue]回発動する。",
+  "REMILIA-REMILIA_RARE26_POWER.title": "紅符「嗜血魔方陣」",
+
+  "REMILIA-BLOOD_PLAGUE.description": "デバフを受けるたび、[blue]1[/blue]ダメージを受ける。",
+  "REMILIA-BLOOD_PLAGUE.smartDescription": "デバフを受けるたび、[blue]{Amount}[/blue]ダメージを受ける。",
+  "REMILIA-BLOOD_PLAGUE.title": "血疫"
+}

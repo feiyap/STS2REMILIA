@@ -37,12 +37,14 @@ public class RemiliaUncommon4() : RemiliaCard(4,
     {
         if (target == base.Owner.Creature && result.UnblockedDamage > 0)
         {
+            Console.WriteLine("LL1");
             ReduceCostBy(1);
         }
     }
     
     private void ReduceCostBy(int amount)
     {
+        Console.WriteLine("LL2");
         base.EnergyCost.AddThisCombat(-amount);
     }
 }

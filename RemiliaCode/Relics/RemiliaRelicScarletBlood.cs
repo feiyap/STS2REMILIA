@@ -71,9 +71,7 @@ public class RemiliaRelicScarletBlood() : RemiliaRelic
         {
             Flash();
             int count = base.Owner.Creature.GetPower<BloodPool>()?.Amount ?? 0;
-            Console.WriteLine(count);
             SavedBlood = (int)((base.DynamicVars["BloodPoolLift"].BaseValue * count) / 100);
-            Console.WriteLine(SavedBlood);
         }
 
         return Task.CompletedTask;

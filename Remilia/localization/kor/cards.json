@@ -1,0 +1,258 @@
+{
+  "REMILIA-STRIKE_REMILIA.description": "{Damage:diff()} 피해를 줍니다.",
+  "REMILIA-STRIKE_REMILIA.title": "타격",
+
+  "REMILIA-DEFEND_REMILIA.description": "{Block:diff()} [gold]방어도[/gold]를 얻습니다.",
+  "REMILIA-DEFEND_REMILIA.title": "방어",
+
+  "REMILIA-SCARLET_FIGURE.description": "생명력 2를 잃습니다.\n{Block:diff()} [gold]방어도[/gold]를 얻습니다.",
+  "REMILIA-SCARLET_FIGURE.title": "비홍의 그림자",
+
+  "REMILIA-BLOOD_SUCKING.description": "{Damage:diff()} 피해를 줍니다.\n가한 피해만큼 최대 [gold]혈지[/gold]를 소모하여 같은 양의 생명력을 회복합니다.",
+  "REMILIA-BLOOD_SUCKING.title": "흡혈",
+
+  "REMILIA-REMILIA_COMMON1.description": "{Damage:diff()} 피해를 줍니다.\n{BloodPool:diff()} [gold]혈지[/gold]를 얻습니다.",
+  "REMILIA-REMILIA_COMMON1.title": "적색의 분노",
+
+  "REMILIA-REMILIA_COMMON2.description": "{BloodCost} [gold]혈지[/gold]를 소모합니다.\n{Damage:diff()} 피해를 줍니다.\n카드를 {Cards}장 뽑습니다.",
+  "REMILIA-REMILIA_COMMON2.title": "야상곡",
+
+  "REMILIA-REMILIA_COMMON3.description": "{Damage:diff()} 피해를 2회 줍니다.\n가한 피해만큼 [gold]혈지[/gold]를 얻습니다.",
+  "REMILIA-REMILIA_COMMON3.title": "피의 맛",
+
+  "REMILIA-REMILIA_COMMON4.description": "최대 {BloodCost} [gold]혈지[/gold]를 소모합니다.\n같은 양의 [gold]방어도[/gold]를 얻습니다.",
+  "REMILIA-REMILIA_COMMON4.title": "명하",
+
+  "REMILIA-REMILIA_COMMON5.description": "{BloodCost} [gold]혈지[/gold]를 소모합니다.\n{Block:diff()} [gold]방어도[/gold]를 얻습니다.\n카드를 {Cards:diff()}장 뽑습니다.",
+  "REMILIA-REMILIA_COMMON5.title": "야익",
+
+  "REMILIA-REMILIA_COMMON6.description": "{Block:diff()} [gold]방어도[/gold]를 얻습니다.\n{BloodPool} [gold]혈지[/gold]를 얻습니다.",
+  "REMILIA-REMILIA_COMMON6.title": "자장가",
+
+  "REMILIA-REMILIA_COMMON7.description": "{BloodPool} [gold]혈지[/gold]를 얻습니다.",
+  "REMILIA-REMILIA_COMMON7.title": "혈팩",
+
+  "REMILIA-REMILIA_COMMON8.description": "생명력 {HpLoss:diff()}를 잃습니다.\n카드를 {Cards:diff()}장 뽑습니다.",
+  "REMILIA-REMILIA_COMMON8.title": "혈의 핵",
+
+  "REMILIA-REMILIA_COMMON9.description": "{Damage:diff()} 피해를 줍니다.\n해당 적의 [gold]발톱 자국[/gold]을 2배로 만듭니다.",
+  "REMILIA-REMILIA_COMMON9.title": "명타",
+
+  "REMILIA-REMILIA_COMMON10.description": "{BloodCost} [gold]혈지[/gold]를 소모합니다.\n{Energy:energyIcons()}를 얻습니다.",
+  "REMILIA-REMILIA_COMMON10.title": "혈의 대가",
+
+  "REMILIA-REMILIA_COMMON11.description": "{Damage:diff()} 피해를 줍니다.\n이번 턴에 카드를 1장 이상 뽑았다면, 최대 {Damage:diff()} [gold]혈지[/gold]를 소모하여 같은 양의 생명력을 회복합니다.",
+  "REMILIA-REMILIA_COMMON11.title": "갈혈의 송곳니",
+
+  "REMILIA-REMILIA_COMMON12.description": "생명력 {HpLoss:diff()}를 잃습니다.\n[gold]손패[/gold]의 카드 1장을 [gold]뽑을 카드 더미[/gold] 맨 위에 놓습니다.\n[gold]뽑을 카드 더미[/gold]에서 카드 1장을 골라 [gold]손패[/gold]로 가져옵니다.",
+  "REMILIA-REMILIA_COMMON12.selectionScreenPrompt": "되돌릴 카드나 뽑을 카드를 선택하세요.",
+  "REMILIA-REMILIA_COMMON12.title": "역명",
+
+  "REMILIA-REMILIA_COMMON13.description": "생명력 {HpLoss:diff()}를 잃습니다.\n{Damage:diff()} 피해를 2회 줍니다.",
+  "REMILIA-REMILIA_COMMON13.title": "비홍야 타격",
+
+  "REMILIA-REMILIA_COMMON14.description": "모든 적에게 {Damage:diff()} 피해를 주고, {ClawPrints:diff()} [gold]발톱 자국[/gold]을 부여합니다.",
+  "REMILIA-REMILIA_COMMON14.title": "파공조",
+
+  "REMILIA-REMILIA_COMMON15.description": "{Damage:diff()} 피해를 줍니다.\n이번 턴에 생명력을 잃었다면 이 카드의 비용이 {Energy:energyIcons()} 감소합니다.",
+  "REMILIA-REMILIA_COMMON15.title": "흡혈 본능",
+
+  "REMILIA-REMILIA_COMMON16.description": "생명력 {HpLoss:diff()}를 잃습니다.\n{Damage:diff()} 피해를 줍니다.\n카드를 1장 뽑고, 그 카드를 [gold]강화[/gold]합니다.",
+  "REMILIA-REMILIA_COMMON16.title": "운명의 일격",
+
+  "REMILIA-REMILIA_COMMON17.description": "생명력 {HpLoss:diff()}를 잃습니다.\n{Damage:diff()} 피해를 줍니다.\n{Block:diff()} [gold]방어도[/gold]를 얻습니다.",
+  "REMILIA-REMILIA_COMMON17.title": "위엄",
+
+  "REMILIA-REMILIA_COMMON18.description": "현재 [gold]혈지[/gold] 수치만큼 피해를 줍니다.",
+  "REMILIA-REMILIA_COMMON18.title": "혈풍혈우",
+
+  "REMILIA-REMILIA_COMMON19.description": "카드를 1장 뽑습니다.\n다음 {RemiliaCommon19Power:diff()}턴 동안 카드를 1장 뽑습니다.",
+  "REMILIA-REMILIA_COMMON19.title": "귀족의 혈통",
+
+  "REMILIA-REMILIA_COMMON20.description": "{Damage:diff()} 피해를 줍니다.\n{BloodPlague:diff()} [gold]혈병[/gold]을 부여합니다.",
+  "REMILIA-REMILIA_COMMON20.title": "심장 타격",
+
+  "REMILIA-REMILIA_UNCOMMON1.description": "{Damage:diff()} 피해를 줍니다. {ClawPrints:diff()} [gold]발톱 자국[/gold]을 부여합니다.\n{BloodCost} [gold]혈지[/gold]를 소모하여 이 카드를 [gold]손패[/gold]로 되돌립니다.",
+  "REMILIA-REMILIA_UNCOMMON1.title": "흡혈귀의 발톱",
+
+  "REMILIA-REMILIA_UNCOMMON2.description": "{Damage:diff()} 피해를 줍니다.\n[gold]갈혈 저주[/gold] 1장을 [gold]손패[/gold]에 넣습니다.",
+  "REMILIA-REMILIA_UNCOMMON2.title": "흡혈귀의 송곳니",
+
+  "REMILIA-REMILIA_UNCOMMON3.description": "{Damage:diff()} 피해를 줍니다.\n이번 턴에 카드를 1장 이상 뽑았다면, 가한 피해만큼 [gold]혈지[/gold]를 얻습니다.",
+  "REMILIA-REMILIA_UNCOMMON3.title": "갈혈 사슬",
+
+  "REMILIA-REMILIA_UNCOMMON4.description": "{Damage:diff()} 피해를 줍니다.\n이번 전투에서 생명력을 잃은 횟수만큼 이 카드의 비용이 1{Energy:energyIcons()} 감소합니다.",
+  "REMILIA-REMILIA_UNCOMMON4.title": "천명",
+
+  "REMILIA-REMILIA_UNCOMMON5.description": "모든 적에게 {Damage:diff()} 피해를 2회 줍니다.\n적이 1명일 경우, 1회 추가 공격합니다.",
+  "REMILIA-REMILIA_UNCOMMON5.title": "주재",
+
+  "REMILIA-REMILIA_UNCOMMON6.description": "{Damage:diff()} 피해를 줍니다.\n[gold]손패[/gold]의 모든 저주 카드를 [gold]소멸[/gold]시키고, 1장당 [gold]힘[/gold]을 1 얻습니다.",
+  "REMILIA-REMILIA_UNCOMMON6.title": "사기",
+
+  "REMILIA-REMILIA_UNCOMMON7.description": "최대 {BloodCost} [gold]혈지[/gold]를 소모합니다.\n같은 양의 피해를 주고, 같은 양의 생명력을 회복하며, 같은 양의 [gold]방어도[/gold]를 얻습니다.",
+  "REMILIA-REMILIA_UNCOMMON7.title": "영계 타격",
+
+  "REMILIA-REMILIA_UNCOMMON8.description": "{Damage:diff()} 피해를 줍니다.\n대상 적에게 걸린 모든 해로운 효과를 다른 적들에게 부여합니다.\n[gold]갈혈 저주[/gold] 1장을 [gold]손패[/gold]에 넣습니다.",
+  "REMILIA-REMILIA_UNCOMMON8.title": "진홍 재앙",
+
+  "REMILIA-REMILIA_UNCOMMON9.description": "대상의 [gold]방어도[/gold]와 [gold]인공 유물[/gold]을 제거합니다.\n{Damage:diff()} 피해를 줍니다.\n{BloodPlague:diff()} [gold]혈병[/gold]을 부여합니다.\n[gold]갈혈 저주[/gold] 1장을 [gold]손패[/gold]에 넣습니다.",
+  "REMILIA-REMILIA_UNCOMMON9.title": "죽음의 손길",
+
+  "REMILIA-REMILIA_UNCOMMON10.description": "{Damage:diff()} 피해를 줍니다.\n처치 시, {BloodPool:diff()} [gold]혈지[/gold]를 얻습니다.",
+  "REMILIA-REMILIA_UNCOMMON10.title": "골수 타격",
+
+  "REMILIA-REMILIA_UNCOMMON11.description": "모든 적에게 {Damage:diff()} 피해를 줍니다.\n최대 {BloodCost:diff()} [gold]혈지[/gold]를 소모하여 같은 양의 생명력을 회복합니다.",
+  "REMILIA-REMILIA_UNCOMMON11.title": "홍부「붉은 불야성」",
+
+  "REMILIA-REMILIA_UNCOMMON12.description": "{Damage:diff()} 피해를 줍니다.\n{ClawPrints:diff()} [gold]발톱 자국[/gold]을 부여합니다.",
+  "REMILIA-REMILIA_UNCOMMON12.title": "필살「쇄심」",
+
+  "REMILIA-REMILIA_UNCOMMON13.description": "{BloodCost} [gold]혈지[/gold]를 소모합니다.\n{Damage:diff()} 피해를 줍니다.",
+  "REMILIA-REMILIA_UNCOMMON13.title": "야부「마왕의 요람」",
+
+  "REMILIA-REMILIA_UNCOMMON14.description": "{Damage:diff()} 피해를 줍니다.\n{VulnerablePower:diff()} [gold]취약[/gold]을 부여합니다.\n{ClawPrints:diff()} [gold]발톱 자국[/gold]을 부여합니다.",
+  "REMILIA-REMILIA_UNCOMMON14.title": "천벌「다윗의 별」",
+
+  "REMILIA-REMILIA_UNCOMMON15.description": "{CalculatedDamage:diff()} 피해를 줍니다.\n적의 [gold]발톱 자국[/gold] 1층마다 추가로 {ExtraDamage:diff()} 피해를 줍니다.",
+  "REMILIA-REMILIA_UNCOMMON15.title": "홍부「비홍의 일격」",
+
+  "REMILIA-REMILIA_UNCOMMON16.description": "모든 [gold]혈지[/gold]를 [gold]소모[/gold]하여 같은 양의 생명력을 회복합니다.",
+  "REMILIA-REMILIA_UNCOMMON16.title": "흡혈귀의 피",
+
+  "REMILIA-REMILIA_UNCOMMON17.description": "카드를 2장 뽑습니다.\n대상 적의 의도가 공격일 경우, {Block:diff()} [gold]방어도[/gold]를 얻습니다.\n그렇지 않을 경우, {Energy:energyIcons()}를 얻습니다.",
+  "REMILIA-REMILIA_UNCOMMON17.title": "뒤틀린 운명",
+
+  "REMILIA-REMILIA_UNCOMMON18.description": "현재 [gold]혈지[/gold] 수치만큼 [gold]방어도[/gold]를 얻습니다.",
+  "REMILIA-REMILIA_UNCOMMON18.title": "넘쳐흐르는 피",
+
+  "REMILIA-REMILIA_UNCOMMON19.description": "{BloodPool} [gold]혈지[/gold]를 얻습니다.\n카드를 1장 뽑습니다.\n{IfUpgraded:show:| 무작위} 카드 1장을 [gold]소멸[/gold]시킵니다.",
+  "REMILIA-REMILIA_UNCOMMON19.title": "선혈 변환",
+
+  "REMILIA-REMILIA_UNCOMMON20.description": "{BloodCost} [gold]혈지[/gold]를 소모합니다.\n{Block:diff()} [gold]방어도[/gold]를 얻습니다.",
+  "REMILIA-REMILIA_UNCOMMON20.title": "어둠의 장막",
+
+  "REMILIA-REMILIA_UNCOMMON21.description": "모든 적에게 {BloodPlague} [gold]혈병[/gold]을 부여합니다.",
+  "REMILIA-REMILIA_UNCOMMON21.title": "혈액 비등",
+
+  "REMILIA-REMILIA_UNCOMMON22.description": "{Block:diff()} [gold]방어도[/gold]를 얻습니다.\n[gold]갈혈 저주[/gold] 2장을 [gold]손패[/gold]에 넣습니다.",
+  "REMILIA-REMILIA_UNCOMMON22.title": "선혈 강화",
+
+  "REMILIA-REMILIA_UNCOMMON23.description": "{Block:diff()} [gold]방어도[/gold]를 얻습니다.\n카드를 {Cards:diff()}장 뽑습니다.",
+  "REMILIA-REMILIA_UNCOMMON23.title": "상심의 세레나데",
+
+  "REMILIA-REMILIA_UNCOMMON24.description": "생명력 {HpLoss:diff()}를 잃습니다.\n이번 턴에 [gold]힘[/gold]을 {StrengthPower:diff()} 얻고 [gold]민첩[/gold]을 {DexterityPower:diff()} 얻습니다.",
+  "REMILIA-REMILIA_UNCOMMON24.title": "혈의 충동",
+
+  "REMILIA-REMILIA_UNCOMMON25.description": "카드 1장을 [gold]소멸[/gold]시키고, 카드를 {Cards:diff()}장 뽑습니다.\n[gold]소멸[/gold]시킨 카드가 저주 카드라면, 추가로 {Energy:energyIcons()}를 얻습니다.",
+  "REMILIA-REMILIA_UNCOMMON25.title": "신생",
+
+  "REMILIA-REMILIA_UNCOMMON26.description": "생명력 {HpLoss:diff()}를 잃습니다.\n다른 플레이어에게 {Block:diff()} [gold]방어도[/gold]를 부여하고 생명력 {Heal:diff()}를 회복시킵니다.",
+  "REMILIA-REMILIA_UNCOMMON26.title": "사혈",
+
+  "REMILIA-REMILIA_UNCOMMON27.description": "이 카드를 낸 후, 이번 턴에 생명력을 잃을 때마다 방어도를 {RemiliaUncommon27Power:diff()} 얻습니다.",
+  "REMILIA-REMILIA_UNCOMMON27.title": "명부「붉은 명계」",
+
+  "REMILIA-REMILIA_UNCOMMON29.description": "턴 시작 시, 모든 적에게 {RemiliaUncommon29Power:diff()} [gold]혈병[/gold]을 부여합니다.",
+  "REMILIA-REMILIA_UNCOMMON29.title": "종혈귀",
+
+  "REMILIA-REMILIA_UNCOMMON30.description": "공격 카드를 낼 때마다 최대 {RemiliaUncommon30Power:diff()} [gold]혈지[/gold]를 소모하여 같은 양의 생명력을 회복합니다.",
+  "REMILIA-REMILIA_UNCOMMON30.title": "흡혈 습성",
+
+  "REMILIA-REMILIA_UNCOMMON31.description": "가하는 피해가 {RemiliaUncommon31Power:diff()}% 증가하고, 받는 피해가 {RemiliaUncommon31Power:diff()}% 증가합니다.",
+  "REMILIA-REMILIA_UNCOMMON31.title": "귀기 능인",
+
+  "REMILIA-REMILIA_UNCOMMON32.description": "죽음에 이르는 피해를 받을 시, 단 1회에 한해 최대 생명력의 1%까지 회복합니다.",
+  "REMILIA-REMILIA_UNCOMMON32.title": "안개 육체",
+
+  "REMILIA-REMILIA_UNCOMMON33.description": "턴 진행 중 카드를 뽑을 때마다 [gold]혈지[/gold]를 {RemiliaUncommon33Power} 얻습니다.",
+  "REMILIA-REMILIA_UNCOMMON33.title": "안중화",
+
+  "REMILIA-REMILIA_UNCOMMON34.description": "생명력을 1 잃을 때마다 [gold]방어도[/gold]를 1 얻습니다.",
+  "REMILIA-REMILIA_UNCOMMON34.title": "수중월",
+
+  "REMILIA-REMILIA_UNCOMMON35.description": "턴 시작 시, 모든 적에게 {RemiliaUncommon35Power:diff()} [gold]발톱 자국[/gold]을 부여합니다.",
+  "REMILIA-REMILIA_UNCOMMON35.title": "스칼렛 백작",
+
+  "REMILIA-REMILIA_UNCOMMON36.description": "카드가 소멸될 때마다 [gold]혈지[/gold]를 {RemiliaUncommon36Power:diff()} 얻습니다.",
+  "REMILIA-REMILIA_UNCOMMON36.title": "반혈",
+
+  "REMILIA-REMILIA_RARE1.description": "모든 [gold]혈지[/gold]를 소모하여 모든 적에게 같은 양의 피해를 주고, 같은 양의 생명력을 회복합니다.{IfUpgraded:show:\n{IntangiblePower:diff()} [gold]무형[/gold]을 얻습니다.|}",
+  "REMILIA-REMILIA_RARE1.title": "홍마「비홍의 악마」",
+
+  "REMILIA-REMILIA_RARE2.description": "{BloodCost} [gold]혈지[/gold]를 소모합니다.\n모든 적에게 {Damage:diff()} 피해를 주고, {ClawPrints:diff()} [gold]발톱 자국[/gold]을 부여합니다.",
+  "REMILIA-REMILIA_RARE2.title": "야부「악녀 치란」",
+
+  "REMILIA-REMILIA_RARE3.description": "{CalculatedDamage:diff()} 피해를 줍니다.\n적의 [gold]발톱 자국[/gold] 1층마다 추가로 {ExtraDamage:diff()} 피해를 줍니다.\n[gold]처치[/gold] 시, [gold]소멸[/gold] 및 [gold]휘발[/gold]이 포함된 이 카드의 복사본을 생성하며, 비용이 0으로 감소합니다.",
+  "REMILIA-REMILIA_RARE3.title": "신벌「어린 마왕」",
+
+  "REMILIA-REMILIA_RARE4.description": "{BloodCost} [gold]혈지[/gold]를 소모합니다.\n{Damage:diff()} 피해를 줍니다.\n[gold]처치[/gold] 시, 이 카드의 피해량이 영구히 {Increase:diff()} 증가합니다.",
+  "REMILIA-REMILIA_RARE4.title": "야왕「드라큘라의 요람」",
+
+  "REMILIA-REMILIA_RARE5.description": "{CalculatedDamage:diff()} 피해를 주고, [gold]갈혈 저주[/gold] 1장을 손패에 넣습니다.\n보유한 저주 카드 1장당 추가로 {ExtraDamage:diff()} 피해를 줍니다.",
+  "REMILIA-REMILIA_RARE5.title": "악마「레밀리아 스트레치」",
+
+  "REMILIA-REMILIA_RARE6.description": "{Damage:diff()} 피해를 {Repeat:diff()}회 줍니다.",
+  "REMILIA-REMILIA_RARE6.title": "박쥐「흡혈귀 휩쓸기」",
+
+  "REMILIA-REMILIA_RARE7.description": "{BloodCost} [gold]혈지[/gold]를 소모합니다.\n모든 적에게 {Damage:diff()} 피해를 주고, 이 카드를 [gold]손패[/gold]로 되돌립니다.",
+  "REMILIA-REMILIA_RARE7.title": "야부「봄버 나이트」",
+
+  "REMILIA-REMILIA_RARE8.description": "다른 플레이어에게 {Damage:diff()} 피해를 주고, 가한 피해만큼 [gold]혈지[/gold]를 얻습니다.\n당신과 해당 플레이어는 [gold]힘[/gold]을 {StrengthPower:diff()} 얻습니다.\n[gold]처치[/gold] 시, 추가로 [gold]힘[/gold]을 {StrengthPower:diff()} 얻고 {Energy:energyIcons()}를 얻습니다.",
+  "REMILIA-REMILIA_RARE8.title": "옥부「천 개의 바늘 산」",
+
+  "REMILIA-REMILIA_RARE9.description": "{BloodCost} [gold]혈지[/gold]를 소모합니다.\n다른 플레이어의 소멸되지 않은 모든 카드를 [gold]뽑을 카드 더미[/gold]에 다시 섞어 넣고, 카드를 {Cards}장 뽑습니다.",
+  "REMILIA-REMILIA_RARE9.title": "운명 조작",
+
+  "REMILIA-REMILIA_RARE10.description": "[gold]손패[/gold]의 카드 1장을 [gold]변화[/gold]시킵니다.",
+  "REMILIA-REMILIA_RARE10.title": "환재의 운명",
+
+  "REMILIA-REMILIA_RARE11.description": "{BloodCost:diff()} [gold]혈지[/gold]를 소모합니다.\n대상 적을 [gold]기절[/gold]시킵니다.",
+  "REMILIA-REMILIA_RARE11.title": "운명「비참한 운명」",
+
+  "REMILIA-REMILIA_RARE12.description": "{BloodCost} [gold]혈지[/gold]를 소모합니다.\n[gold]손패[/gold]와 [gold]버린 카드 더미[/gold]의 모든 카드를 [gold]뽑을 카드 더미[/gold]로 되돌립니다.\n[gold]뽑을 카드 더미[/gold]에서 {Cards}장을 골라 손패로 가져옵니다.",
+  "REMILIA-REMILIA_RARE12.selectionScreenPrompt": "뽑을 카드를 선택하세요.",
+  "REMILIA-REMILIA_RARE12.title": "신귀「레밀리아 스토커」",
+
+  "REMILIA-REMILIA_RARE13.description": "[gold]손패[/gold]가 가득 찰 때까지 카드를 뽑습니다.{IfUpgraded:show:\n이번 턴에 [gold]손패[/gold]를 유지합니다.|}",
+  "REMILIA-REMILIA_RARE13.title": "신술「뱀파이어 판타지」",
+
+  "REMILIA-REMILIA_RARE14.description": "모든 플레이어에게 {IntangiblePower} [gold]무형[/gold]을 부여합니다.",
+  "REMILIA-REMILIA_RARE14.title": "「진홍빛 환상향」",
+
+  "REMILIA-REMILIA_RARE15.description": "이번 턴에 당신이 내는 공격 카드가 한 번 더 발동됩니다.",
+  "REMILIA-REMILIA_RARE15.title": "「자정의 여왕」",
+
+  "REMILIA-REMILIA_RARE16.description": "생명력을 잃을 때마다 {Energy:energyIcons()}를 얻습니다.",
+  "REMILIA-REMILIA_RARE16.title": "홍마 형태",
+
+  "REMILIA-REMILIA_RARE17.description": "턴 시작 시, 생명력을 1 잃습니다.\n{Energy:energyIcons()}를 얻고, 카드를 1장 뽑습니다.",
+  "REMILIA-REMILIA_RARE17.title": "비홍야 환상곡",
+
+  "REMILIA-REMILIA_RARE18.description": "생명체가 죽을 때마다 [gold]혈지[/gold]를 {RemiliaRare18Power:diff()} 얻습니다.",
+  "REMILIA-REMILIA_RARE18.title": "죽음의 시듦",
+
+  "REMILIA-REMILIA_RARE20.description": "공격이 막히지 않은 피해를 줄 때마다 {RemiliaRare20Power:diff()} [gold]발톱 자국[/gold]을 부여합니다.",
+  "REMILIA-REMILIA_RARE20.title": "「천년 흡혈귀」",
+
+  "REMILIA-REMILIA_RARE21.description": "생명력이 자신의 최대 생명력보다 낮은 적에게 가하는 공격 피해가 {RemiliaRare21Power:diff()}% 증가합니다.",
+  "REMILIA-REMILIA_RARE21.title": "홍부「비홍의 주인」",
+
+  "REMILIA-REMILIA_RARE22.description": "저주 카드를 뽑을 때, 생명력 1을 잃고 그 카드를 [gold]소멸[/gold]시킵니다.\n저주 카드를 [gold]소멸[/gold]시킬 때마다 카드를 1장 뽑고 [gold]힘[/gold]을 {RemiliaRare22Power:diff()} 얻습니다.",
+  "REMILIA-REMILIA_RARE22.title": "저주「블라드 체페쉬의 저주」",
+
+  "REMILIA-REMILIA_RARE24.description": "턴 시작 시, 카드를 {RemiliaRare24Power:diff()}장 뽑습니다.",
+  "REMILIA-REMILIA_RARE24.title": "「적마법」",
+
+  "REMILIA-REMILIA_RARE26.description": "[gold]혈병[/gold]이 추가로 {RemiliaRare26Power:diff()}회 발동합니다.",
+  "REMILIA-REMILIA_RARE26.title": "홍부「흡혈 마방진」",
+
+  "REMILIA-REMILIA_ANCIENT1.description": "{CalculatedDamage:diff()} 피해를 줍니다.\n자신의 최대 체력 25%만큼 추가 피해를 줍니다.\n[gold]처치[/gold] 시, 최대 생명력을 {MaxHp:diff()} 영구히 얻고 {Energy:energyIcons()}를 얻습니다.",
+  "REMILIA-REMILIA_ANCIENT1.title": "신창「궁니르의 창」",
+
+  "REMILIA-REMILIA_ANCIENT2.description": "모든 적에게 {Damage:diff()} 피해를 줍니다.\n가한 피해만큼 최대 [gold]혈지[/gold]를 소모하여 같은 양의 생명력을 회복합니다.",
+  "REMILIA-REMILIA_ANCIENT2.title": "광혈",
+
+  "REMILIA-BLOOD_CURSE.description": "턴 종료 시 이 카드가 [gold]손패[/gold]에 있다면 생명력 {HpLoss}를 잃습니다.\n사용 시 생명력 {HpLoss2}를 잃고 카드를 {Cards}장 뽑습니다.",
+  "REMILIA-BLOOD_CURSE.title": "갈혈 저주"
+}

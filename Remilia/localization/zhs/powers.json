@@ -67,8 +67,8 @@
   "REMILIA-REMILIA_RARE17_POWER.smartDescription": "在你的回合开始时，失去1点生命。\n获得{Amount:energyIcons()}，抽[blue]{Amount}[/blue]张牌。",
   "REMILIA-REMILIA_RARE17_POWER.title": "绯夜幻想曲",
 
-  "REMILIA-REMILIA_RARE18_POWER.description": "名字含有“打击”的牌现在会对所有敌人造成伤害。",
-  "REMILIA-REMILIA_RARE18_POWER.smartDescription": "名字含有“打击”的牌现在会对所有敌人造成伤害。",
+  "REMILIA-REMILIA_RARE18_POWER.description": "每当有任何生物死亡时，获得[gold]血池[/gold]。",
+  "REMILIA-REMILIA_RARE18_POWER.smartDescription": "每当有任何生物死亡时，获得[blue]{Amount}[/blue]点[gold]血池[/gold]。",
   "REMILIA-REMILIA_RARE18_POWER.title": "死亡凋零",
 
   "REMILIA-REMILIA_RARE20_POWER.description": "每有一次攻击造成未被格挡的伤害，就给予[blue]1[/blue]层[gold]爪痕[/gold]。",

@@ -5,6 +5,7 @@ using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
 using MegaCrit.Sts2.Core.Models;
 using Remilia.RemiliaCode.Cards;
+using Remilia.RemiliaCode.Powers;
 
 namespace Remilia.RemiliaCode.Cards.Rare;
 
@@ -15,11 +16,15 @@ public class RemiliaRare12() : RemiliaCard(0,
     protected override IEnumerable<DynamicVar> CanonicalVars => [new DynamicVar("BloodCost", 15), new CardsVar(5)];
     
     public override IEnumerable<CardKeyword> CanonicalKeywords => [CardKeyword.Exhaust, CardKeyword.Ethereal];
+    
+    protected override bool IsPlayable => IsBloodPoolCount(base.DynamicVars["BloodCost"].IntValue);
 
     protected override async Task OnPlay(
         PlayerChoiceContext choiceContext,
         CardPlay play)
     {
+        await PowerCmd.Apply<BloodPool>(base.Owner.Creature, -base.DynamicVars["BloodCost"].IntValue, base.Owner.Creature, null);
+        
         await CreatureCmd.TriggerAnim(base.Owner.Creature, "Cast", base.Owner.Character.CastAnimDelay);
         foreach (CardModel item in PileType.Hand.GetPile(base.Owner).Cards.ToList())
         {

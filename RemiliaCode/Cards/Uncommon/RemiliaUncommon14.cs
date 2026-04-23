@@ -16,7 +16,10 @@ public class RemiliaUncommon14() : RemiliaCard(2,
 {
     protected override IEnumerable<DynamicVar> CanonicalVars => [new DamageVar(13m, ValueProp.Move), new PowerVar<VulnerablePower>(1m), new PowerVar<ClawPrints>(1m)];
     
-    protected override IEnumerable<IHoverTip> ExtraHoverTips => [HoverTipFactory.FromPower<ClawPrints>()];
+    protected override IEnumerable<IHoverTip> ExtraHoverTips => [
+        HoverTipFactory.FromPower<ClawPrints>(),
+        HoverTipFactory.FromPower<VulnerablePower>()
+    ];
 
     protected override async Task OnPlay(
         PlayerChoiceContext choiceContext,

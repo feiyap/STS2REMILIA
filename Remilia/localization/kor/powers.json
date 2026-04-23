@@ -1,0 +1,97 @@
+{
+  "REMILIA-BLOOD_POOL.description": "축적된 혈지는 스킬에 의해 소모될 수 있습니다.",
+  "REMILIA-BLOOD_POOL.smartDescription": "축적된 혈지는 스킬에 의해 소모될 수 있습니다.",
+  "REMILIA-BLOOD_POOL.title": "혈지",
+
+  "REMILIA-CLAW_PRINTS.description": "공격으로 받는 피해가 [blue]1[/blue] 증가합니다.",
+  "REMILIA-CLAW_PRINTS.smartDescription": "공격으로 받는 피해가 [blue]{Amount}[/blue] 증가합니다.",
+  "REMILIA-CLAW_PRINTS.title": "발톱 자국",
+
+  "REMILIA-REMILIA_COMMON19_POWER.description": "다음 [blue]1[/blue]턴 시작 시, 카드를 1장 뽑습니다.",
+  "REMILIA-REMILIA_COMMON19_POWER.smartDescription": "다음 [blue]{Amount}[/blue]턴 시작 시, 카드를 1장 뽑습니다.",
+  "REMILIA-REMILIA_COMMON19_POWER.title": "다음 턴 드로우",
+
+  "REMILIA-REMILIA_UNCOMMON24_POWER.description": "이번 턴 동안 [blue]1[/blue] [gold]힘[/gold]과 [blue]1[/blue] [gold]민첩[/gold]을 얻습니다.",
+  "REMILIA-REMILIA_UNCOMMON24_POWER.smartDescription": "이번 턴 동안 [blue]{Amount}[/blue] [gold]힘[/gold]과 [blue]{Amount}[/blue] [gold]민첩[/gold]을 얻습니다.",
+  "REMILIA-REMILIA_UNCOMMON24_POWER.title": "혈의 충동",
+
+  "REMILIA-REMILIA_UNCOMMON27_POWER.description": "이번 턴 동안 생명력을 잃을 때마다 [blue]1[/blue] [gold]방어도[/gold]를 얻습니다.",
+  "REMILIA-REMILIA_UNCOMMON27_POWER.smartDescription": "이번 턴 동안 생명력을 잃을 때마다 [blue]{Amount}[/blue] [gold]방어도[/gold]를 얻습니다.",
+  "REMILIA-REMILIA_UNCOMMON27_POWER.title": "명부「붉은 명계」",
+
+  "REMILIA-REMILIA_UNCOMMON28_POWER.description": "다음 [blue]1[/blue]개의 부정 상태를 시전자에게 반사합니다.",
+  "REMILIA-REMILIA_UNCOMMON28_POWER.smartDescription": "다음 [blue]{Amount}[/blue]개의 부정 상태를 시전자에게 반사합니다.",
+  "REMILIA-REMILIA_UNCOMMON28_POWER.title": "흡혈귀의 심장",
+
+  "REMILIA-REMILIA_UNCOMMON29_POWER.description": "자신의 턴 시작 시, 모든 적에게 [blue]1[/blue]층의 [gold]혈병[/gold]을 부여합니다.",
+  "REMILIA-REMILIA_UNCOMMON29_POWER.smartDescription": "자신의 턴 시작 시, 모든 적에게 [blue]{Amount}[/blue]층의 [gold]혈병[/gold]을 부여합니다.",
+  "REMILIA-REMILIA_UNCOMMON29_POWER.title": "혈귀 지배",
+
+  "REMILIA-REMILIA_UNCOMMON30_POWER.description": "공격 카드를 사용할 때, 최대 [blue]1[/blue] [gold]혈지[/gold]를 소모하여 같은 양의 생명력을 회복합니다.",
+  "REMILIA-REMILIA_UNCOMMON30_POWER.smartDescription": "공격 카드를 사용할 때, 최대 [blue]{Amount}[/blue] [gold]혈지[/gold]를 소모하여 같은 양의 생명력을 회복합니다.",
+  "REMILIA-REMILIA_UNCOMMON30_POWER.title": "흡혈 습성",
+
+  "REMILIA-REMILIA_UNCOMMON31_POWER.description": "가하는 피해와 받는 피해가 증가합니다.",
+  "REMILIA-REMILIA_UNCOMMON31_POWER.smartDescription": "가하는 피해가 [blue]{Amount}[/blue]% 증가하고, 받는 피해가 [blue]{Amount}[/blue]% 증가합니다.",
+  "REMILIA-REMILIA_UNCOMMON31_POWER.title": "귀기 압도",
+
+  "REMILIA-REMILIA_UNCOMMON32_POWER.description": "사망 직전에 단 [blue]1[/blue]번, 최대 생명력의 1%만큼 회복합니다.",
+  "REMILIA-REMILIA_UNCOMMON32_POWER.smartDescription": "사망 직전에 단 [blue]{Amount}[/blue]번, 최대 생명력의 1%만큼 회복합니다.",
+  "REMILIA-REMILIA_UNCOMMON32_POWER.title": "안개화된 육체",
+
+  "REMILIA-REMILIA_UNCOMMON33_POWER.description": "턴 중에 카드를 뽑을 때마다 [blue]1[/blue] [gold]혈지[/gold]를 얻습니다.",
+  "REMILIA-REMILIA_UNCOMMON33_POWER.smartDescription": "턴 중에 카드를 뽑을 때마다 [blue]{Amount}[/blue] [gold]혈지[/gold]를 얻습니다.",
+  "REMILIA-REMILIA_UNCOMMON33_POWER.title": "안개의 꽃",
+
+  "REMILIA-REMILIA_UNCOMMON34_POWER.description": "생명력 1을 잃을 때마다 [blue]1[/blue] [gold]방어도[/gold]를 얻습니다.",
+  "REMILIA-REMILIA_UNCOMMON34_POWER.smartDescription": "생명력 1을 잃을 때마다 [blue]{Amount}[/blue] [gold]방어도[/gold]를 얻습니다.",
+  "REMILIA-REMILIA_UNCOMMON34_POWER.title": "물속의 달",
+
+  "REMILIA-REMILIA_UNCOMMON35_POWER.description": "자신의 턴 시작 시, 모든 적에게 [blue]1[/blue]층의 [gold]발톱 자국[/gold]을 부여합니다.",
+  "REMILIA-REMILIA_UNCOMMON35_POWER.smartDescription": "자신의 턴 시작 시, 모든 적에게 [blue]{Amount}[/blue]층의 [gold]발톱 자국[/gold]을 부여합니다.",
+  "REMILIA-REMILIA_UNCOMMON35_POWER.title": "스칼렛 백작",
+
+  "REMILIA-REMILIA_UNCOMMON36_POWER.description": "카드가 소모될 때마다 [blue]1[/blue] [gold]혈지[/gold]를 얻습니다.",
+  "REMILIA-REMILIA_UNCOMMON36_POWER.smartDescription": "카드가 소모될 때마다 [blue]{Amount}[/blue] [gold]혈지[/gold]를 얻습니다.",
+  "REMILIA-REMILIA_UNCOMMON36_POWER.title": "반혈",
+
+  "REMILIA-REMILIA_RARE15_POWER.description": "공격 카드를 사용하면 한 번 더 발동됩니다.",
+  "REMILIA-REMILIA_RARE15_POWER.smartDescription": "공격 카드를 사용하면 한 번 더 발동됩니다.",
+  "REMILIA-REMILIA_RARE15_POWER.title": "「자정의 여왕」",
+
+  "REMILIA-REMILIA_RARE16_POWER.description": "생명력을 잃을 때마다 [blue]1[/blue] [gold]에너지[/gold]를 얻습니다.",
+  "REMILIA-REMILIA_RARE16_POWER.smartDescription": "생명력을 잃을 때마다 {Amount:energyIcons()}를 얻습니다.",
+  "REMILIA-REMILIA_RARE16_POWER.title": "홍마 형태",
+
+  "REMILIA-REMILIA_RARE17_POWER.description": "턴 시작 시 생명력 1을 잃습니다.\n[blue]1[/blue] [gold]에너지[/gold]를 얻고, 카드 [blue]1[/blue]장을 뽑습니다.",
+  "REMILIA-REMILIA_RARE17_POWER.smartDescription": "턴 시작 시 생명력 1을 잃습니다.\n{Amount:energyIcons()}를 얻고, 카드 [blue]{Amount}[/blue]장을 뽑습니다.",
+  "REMILIA-REMILIA_RARE17_POWER.title": "비홍야 환상곡",
+
+  "REMILIA-REMILIA_RARE18_POWER.description": "어떤 생물이라도 사망할 때마다 [gold]혈지[/gold]를 얻습니다.",
+  "REMILIA-REMILIA_RARE18_POWER.smartDescription": "어떤 생물이라도 사망할 때마다 [blue]{Amount}[/blue] [gold]혈지[/gold]를 얻습니다.",
+  "REMILIA-REMILIA_RARE18_POWER.title": "죽음의 고사",
+
+  "REMILIA-REMILIA_RARE20_POWER.description": "공격이 방어되지 않은 피해를 줄 때마다 [blue]1[/blue]층의 [gold]발톱 자국[/gold]을 부여합니다.",
+  "REMILIA-REMILIA_RARE20_POWER.smartDescription": "공격이 방어되지 않은 피해를 줄 때마다 [blue]{Amount}[/blue]층의 [gold]발톱 자국[/gold]을 부여합니다.",
+  "REMILIA-REMILIA_RARE20_POWER.title": "「천년 흡혈귀」",
+
+  "REMILIA-REMILIA_RARE21_POWER.description": "자신의 최대 생명력보다 낮은 적에게 가하는 공격 피해가 [blue]1[/blue]% 증가합니다.",
+  "REMILIA-REMILIA_RARE21_POWER.smartDescription": "자신의 최대 생명력보다 낮은 적에게 가하는 공격 피해가 [blue]{Amount}[/blue]% 증가합니다.",
+  "REMILIA-REMILIA_RARE21_POWER.title": "홍부「비홍의 주인」",
+
+  "REMILIA-REMILIA_RARE22_POWER.description": "저주 카드를 뽑을 때 생명력 1을 잃고, 해당 카드를 [gold]소모[/gold]합니다.\n저주 카드를 [gold]소모[/gold]할 때마다 카드 1장을 뽑고 [blue]1[/blue] 힘을 얻습니다.",
+  "REMILIA-REMILIA_RARE22_POWER.smartDescription": "저주 카드를 뽑을 때 생명력 1을 잃고, 해당 카드를 [gold]소모[/gold]합니다.\n저주 카드를 [gold]소모[/gold]할 때마다 카드 1장을 뽑고 [blue]{Amount}[/blue] 힘을 얻습니다.",
+  "REMILIA-REMILIA_RARE22_POWER.title": "저주「블라드 체페슈의 저주」",
+
+  "REMILIA-REMILIA_RARE24_POWER.description": "자신의 턴 시작 시 카드 [blue]1[/blue]장을 뽑습니다.",
+  "REMILIA-REMILIA_RARE24_POWER.smartDescription": "자신의 턴 시작 시 카드 [blue]{Amount}[/blue]장을 뽑습니다.",
+  "REMILIA-REMILIA_RARE24_POWER.title": "「홍마법」",
+
+  "REMILIA-REMILIA_RARE26_POWER.description": "[gold]혈병[/gold]이 추가로 [blue]1[/blue]회 발동됩니다.",
+  "REMILIA-REMILIA_RARE26_POWER.smartDescription": "[gold]혈병[/gold]이 추가로 [blue]{Amount}[/blue]회 발동됩니다.",
+  "REMILIA-REMILIA_RARE26_POWER.title": "홍부「흡혈 마법진」",
+
+  "REMILIA-BLOOD_PLAGUE.description": "디버프를 얻을 때마다 [blue]1[/blue] 피해를 받습니다.",
+  "REMILIA-BLOOD_PLAGUE.smartDescription": "디버프를 얻을 때마다 [blue]{Amount}[/blue] 피해를 받습니다.",
+  "REMILIA-BLOOD_PLAGUE.title": "혈병"
+}
