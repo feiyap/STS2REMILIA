@@ -13,7 +13,7 @@ public class RemiliaUncommon11() : RemiliaCard(1,
     CardType.Attack, CardRarity.Uncommon,
     TargetType.AllEnemies)
 {
-    protected override IEnumerable<DynamicVar> CanonicalVars => [new DamageVar(9m, ValueProp.Move), new DynamicVar("BloodCost", 9m)];
+    protected override IEnumerable<DynamicVar> CanonicalVars => [new DamageVar(6m, ValueProp.Move), new DynamicVar("BloodCost", 6m)];
 
     protected override async Task OnPlay(
         PlayerChoiceContext choiceContext,

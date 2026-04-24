@@ -17,7 +17,7 @@ public class RemiliaUncommon7() : RemiliaCard(2,
     TargetType.AnyEnemy)
 {
     protected override IEnumerable<DynamicVar> CanonicalVars => [
-        new DynamicVar("BloodCost", 12m),
+        new DynamicVar("BloodCost", 9m),
         new CalculationBaseVar(0m),
         new ExtraDamageVar(1m),
         new CalculatedDamageVar(ValueProp.Move).WithMultiplier((CardModel card, Creature? _) => Math.Min(card.Owner.Creature.GetPowerAmount<BloodPool>(), card.DynamicVars["BloodCost"].BaseValue))
@@ -43,6 +43,6 @@ public class RemiliaUncommon7() : RemiliaCard(2,
 
     protected override void OnUpgrade()
     {
-        base.DynamicVars["BloodCost"].UpgradeValueBy(4m);
+        base.DynamicVars["BloodCost"].UpgradeValueBy(3m);
     }
 }

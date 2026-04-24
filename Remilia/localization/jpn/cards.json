@@ -78,7 +78,7 @@
   "REMILIA-REMILIA_UNCOMMON2.description": "{Damage:diff()}のダメージを与える。\n[gold]渇血の呪い[/gold]を1枚手札に加える。",
   "REMILIA-REMILIA_UNCOMMON2.title": "吸血鬼の牙",
 
-  "REMILIA-REMILIA_UNCOMMON3.description": "{Damage:diff()}のダメージを与える。\nこのターン中にカードを引いていた場合、与えたダメージに等しい[gold]血のプール[/gold]を得る。",
+  "REMILIA-REMILIA_UNCOMMON3.description": "{Damage:diff()}のダメージを与える。\nこのターン中にカードを引いていた場合、与えたダメージに等しい[gold]血液[/gold]を得る。",
   "REMILIA-REMILIA_UNCOMMON3.title": "渇血の鎖",
 
   "REMILIA-REMILIA_UNCOMMON4.description": "{Damage:diff()}のダメージを与える。\nこの戦闘中に失ったHPの回数分、このカードのコストを1ずつ減少させる。",
@@ -90,7 +90,7 @@
   "REMILIA-REMILIA_UNCOMMON6.description": "{Damage:diff()}のダメージを与える。\n手札のすべての呪いカードを[gold]消費[/gold]し、その枚数分の[gold]筋力[/gold]を得る。",
   "REMILIA-REMILIA_UNCOMMON6.title": "欺瞞",
 
-  "REMILIA-REMILIA_UNCOMMON7.description": "最大で{BloodCost}の[gold]血のプール[/gold]を消費する。\nその数値に等しいダメージを与え、同量のHPを回復し、さらに同量の[gold]ブロック[/gold]を得る。",
+  "REMILIA-REMILIA_UNCOMMON7.description": "最大で{BloodCost}の[gold]血液[/gold]を消費する。\nその数値に等しいダメージを与え、同量のHPを回復し、さらに同量の[gold]ブロック[/gold]を得る。",
   "REMILIA-REMILIA_UNCOMMON7.title": "霊界打撃",
 
   "REMILIA-REMILIA_UNCOMMON8.description": "{Damage:diff()}のダメージを与える。\n対象の敵が持つすべてのデバフを他の敵にも付与する。\n[gold]渇血の呪い[/gold]を1枚手札に加える。",
@@ -99,16 +99,16 @@
   "REMILIA-REMILIA_UNCOMMON9.description": "対象の[gold]ブロック[/gold]と[gold]アーティファクト[/gold]を除去する。\n{Damage:diff()}のダメージを与え、{BloodPlague:diff()}の[gold]血疫[/gold]を付与する。\n[gold]渇血の呪い[/gold]を1枚手札に加える。",
   "REMILIA-REMILIA_UNCOMMON9.title": "死の接吻",
 
-  "REMILIA-REMILIA_UNCOMMON10.description": "{Damage:diff()}のダメージを与える。\nとどめを刺した場合、{BloodPool:diff()}の[gold]血のプール[/gold]を得る。",
+  "REMILIA-REMILIA_UNCOMMON10.description": "{Damage:diff()}のダメージを与える。\nとどめを刺した場合、{BloodPool:diff()}の[gold]血液[/gold]を得る。",
   "REMILIA-REMILIA_UNCOMMON10.title": "骨髄打撃",
 
-  "REMILIA-REMILIA_UNCOMMON11.description": "すべての敵に{Damage:diff()}のダメージを与える。\n最大で{BloodCost:diff()}の[gold]血のプール[/gold]を消費し、その分HPを回復する。",
+  "REMILIA-REMILIA_UNCOMMON11.description": "すべての敵に{Damage:diff()}のダメージを与える。\n最大で{BloodCost:diff()}の[gold]血液[/gold]を消費し、その分HPを回復する。",
   "REMILIA-REMILIA_UNCOMMON11.title": "紅符「紅色の不夜城」",
 
   "REMILIA-REMILIA_UNCOMMON12.description": "{Damage:diff()}のダメージを与え、{ClawPrints:diff()}の[gold]爪痕[/gold]を付与する。",
   "REMILIA-REMILIA_UNCOMMON12.title": "必殺「ハートブレイク」",
 
-  "REMILIA-REMILIA_UNCOMMON13.description": "{BloodCost}の[gold]血のプール[/gold]を消費し、{Damage:diff()}のダメージを与える。",
+  "REMILIA-REMILIA_UNCOMMON13.description": "{BloodCost}の[gold]血液[/gold]を消費し、{Damage:diff()}のダメージを与える。",
   "REMILIA-REMILIA_UNCOMMON13.title": "夜符「魔王の揺り籠」",
 
   "REMILIA-REMILIA_UNCOMMON14.description": "{Damage:diff()}のダメージを与える。\n{VulnerablePower:diff()}の[gold]弱体[/gold]と{ClawPrints:diff()}の[gold]爪痕[/gold]を付与する。",
@@ -117,22 +117,22 @@
   "REMILIA-REMILIA_UNCOMMON15.description": "{CalculatedDamage:diff()}のダメージを与える。\n対象の[gold]爪痕[/gold]1つにつき、{ExtraDamage:diff()}の追加ダメージを与える。",
   "REMILIA-REMILIA_UNCOMMON15.title": "紅符「スカーレットシュート」",
 
-  "REMILIA-REMILIA_UNCOMMON16.description": "すべての[gold]血のプール[/gold]を[gold]消費[/gold]し、その分HPを回復する。",
+  "REMILIA-REMILIA_UNCOMMON16.description": "すべての[gold]血液[/gold]を[gold]消費[/gold]し、その分HPを回復する。",
   "REMILIA-REMILIA_UNCOMMON16.title": "吸血鬼の血",
 
   "REMILIA-REMILIA_UNCOMMON17.description": "カードを2枚引く。\n対象の意図が攻撃であれば{Block:diff()}の[gold]ブロック[/gold]を得る。\nそれ以外なら{Energy:energyIcons()}を得る。",
   "REMILIA-REMILIA_UNCOMMON17.title": "歪められた運命",
 
-  "REMILIA-REMILIA_UNCOMMON18.description": "現在の[gold]血のプール[/gold]に等しい[gold]ブロック[/gold]を得る。",
+  "REMILIA-REMILIA_UNCOMMON18.description": "現在の[gold]血液[/gold]に等しい[gold]ブロック[/gold]を得る。",
   "REMILIA-REMILIA_UNCOMMON18.title": "溢れ出る血",
 
-  "REMILIA-REMILIA_UNCOMMON19.description": "{BloodPool}の[gold]血のプール[/gold]を得て、カードを1枚引く。\n{IfUpgraded:show:| ランダムなカードを}[gold]消費[/gold]する。",
+  "REMILIA-REMILIA_UNCOMMON19.description": "{BloodPool}の[gold]血液[/gold]を得て、カードを1枚引く。\n{IfUpgraded:show:| ランダムなカードを}[gold]消費[/gold]する。",
   "REMILIA-REMILIA_UNCOMMON19.title": "血の転化",
 
-  "REMILIA-REMILIA_UNCOMMON20.description": "{BloodCost}の[gold]血のプール[/gold]を消費し、{Block:diff()}の[gold]ブロック[/gold]を得る。",
+  "REMILIA-REMILIA_UNCOMMON20.description": "{BloodCost}の[gold]血液[/gold]を消費し、{Block:diff()}の[gold]ブロック[/gold]を得る。",
   "REMILIA-REMILIA_UNCOMMON20.title": "夜の帳",
 
-  "REMILIA-REMILIA_UNCOMMON21.description": "すべての敵に{BloodPlague}層の[gold]血疫[/gold]を与える。",
+  "REMILIA-REMILIA_UNCOMMON21.description": "すべての敵に{BloodPlague}回の[gold]血疫[/gold]を与える。",
   "REMILIA-REMILIA_UNCOMMON21.title": "血符「ブラッディボイル」",
 
   "REMILIA-REMILIA_UNCOMMON22.description": "{Block:diff()}の[gold]ブロック[/gold]を得る。\n[gold]渇血の呪い[/gold]を2枚手札に加える。",
@@ -153,7 +153,7 @@
   "REMILIA-REMILIA_UNCOMMON27.description": "このカードを使用後、このターン中HPを失うたびに{RemiliaUncommon27Power:diff()}のブロックを得る。",
   "REMILIA-REMILIA_UNCOMMON27.title": "冥符「レッドネザーワールド」",
 
-  "REMILIA-REMILIA_UNCOMMON29.description": "あなたのターン開始時、すべての敵に{RemiliaUncommon29Power:diff()}層の[gold]血疫[/gold]を与える。",
+  "REMILIA-REMILIA_UNCOMMON29.description": "あなたのターン開始時、すべての敵に{RemiliaUncommon29Power:diff()}回の[gold]血疫[/gold]を与える。",
   "REMILIA-REMILIA_UNCOMMON29.title": "血鬼「ブラッドドミネイター」",
 
   "REMILIA-REMILIA_UNCOMMON30.description": "攻撃カードを使用するたび、最大{RemiliaUncommon30Power:diff()}の[gold]血液[/gold]を消費し、その分HPを回復する。",
@@ -171,19 +171,19 @@
   "REMILIA-REMILIA_UNCOMMON34.description": "HPを1失うたび、1の[gold]ブロック[/gold]を得る。",
   "REMILIA-REMILIA_UNCOMMON34.title": "幻月「リフレクション・ムーン」",
 
-  "REMILIA-REMILIA_UNCOMMON35.description": "あなたのターン開始時、すべての敵に{RemiliaUncommon35Power:diff()}層の[gold]爪痕[/gold]を与える。",
+  "REMILIA-REMILIA_UNCOMMON35.description": "あなたのターン開始時、すべての敵に{RemiliaUncommon35Power:diff()}回の[gold]爪痕[/gold]を与える。",
   "REMILIA-REMILIA_UNCOMMON35.title": "紅爵「カウント・スカーレット」",
 
   "REMILIA-REMILIA_UNCOMMON36.description": "カードが消滅するたび、{RemiliaUncommon36Power:diff()}の[gold]血液[/gold]を得る。",
   "REMILIA-REMILIA_UNCOMMON36.title": "逆血「ブラッドリバース」",
 
-  "REMILIA-REMILIA_RARE1.description": "すべての[gold]血液[/gold]を消費し、その分すべての敵にダメージを与え、同量回復する。{IfUpgraded:show:\nさらに{IntangiblePower:diff()}層の[gold]無形[/gold]を得る。|}",
+  "REMILIA-REMILIA_RARE1.description": "すべての[gold]血液[/gold]を消費し、その分すべての敵にダメージを与え、同量回復する。{IfUpgraded:show:\nさらに{IntangiblePower:diff()}一回[gold]無形[/gold]を得る。|}",
   "REMILIA-REMILIA_RARE1.title": "紅魔「スカーレットデビル」",
 
-  "REMILIA-REMILIA_RARE2.description": "{BloodCost}の[gold]血液[/gold]を消費。\nすべての敵に{Damage:diff()}ダメージを与え、{ClawPrints:diff()}層の[gold]爪痕[/gold]を付与。",
+  "REMILIA-REMILIA_RARE2.description": "{BloodCost}の[gold]血液[/gold]を消費。\nすべての敵に{Damage:diff()}ダメージを与え、{ClawPrints:diff()}回の[gold]爪痕[/gold]を付与。",
   "REMILIA-REMILIA_RARE2.title": "夜符「レディ・ディスオーダー」",
 
-  "REMILIA-REMILIA_RARE3.description": "{CalculatedDamage:diff()}ダメージを与える。\n対象の[gold]爪痕[/gold]1層につき{ExtraDamage:diff()}追加ダメージ。\n[gold]撃破[/gold]時、消滅・虚無を持つ0コストのコピーを生成。",
+  "REMILIA-REMILIA_RARE3.description": "{CalculatedDamage:diff()}ダメージを与える。\n対象の[gold]爪痕[/gold]1個につき{ExtraDamage:diff()}追加ダメージ。\n[gold]撃破[/gold]時、消滅・虚無を持つ0コストのコピーを生成。",
   "REMILIA-REMILIA_RARE3.title": "神罰「幼き魔王」",
 
   "REMILIA-REMILIA_RARE4.description": "{BloodCost}の血液を消費。\n{Damage:diff()}ダメージ。\n[gold]撃破[/gold]時、このカードのダメージが永続的に{Increase:diff()}増加。",
@@ -217,7 +217,7 @@
   "REMILIA-REMILIA_RARE13.description": "手札が最大になるまでカードを引く。{IfUpgraded:show:\nこのターン手札を保持する。|}",
   "REMILIA-REMILIA_RARE13.title": "神術「ヴァンパイアファンタジー」",
 
-  "REMILIA-REMILIA_RARE14.description": "すべてのプレイヤーに{IntangiblePower}層の[gold]無形[/gold]を付与。",
+  "REMILIA-REMILIA_RARE14.description": "すべてのプレイヤーに{IntangiblePower}回の[gold]無形[/gold]を付与。",
   "REMILIA-REMILIA_RARE14.title": "「スカーレット幻想郷」",
 
   "REMILIA-REMILIA_RARE15.description": "このターン、攻撃カードは追加でもう一度発動する。",
@@ -232,7 +232,7 @@
   "REMILIA-REMILIA_RARE18.description": "誰かが死亡するたび、{RemiliaRare18Power:diff()}の[gold]血液[/gold]を得る。",
   "REMILIA-REMILIA_RARE18.title": "死華",
 
-  "REMILIA-REMILIA_RARE20.description": "ブロックされなかった攻撃ごとに{RemiliaRare20Power:diff()}層の[gold]爪痕[/gold]を付与。",
+  "REMILIA-REMILIA_RARE20.description": "ブロックされなかった攻撃ごとに{RemiliaRare20Power:diff()}一回の[gold]爪痕[/gold]を付与。",
   "REMILIA-REMILIA_RARE20.title": "「千年吸血鬼」",
 
   "REMILIA-REMILIA_RARE21.description": "自分より最大HPが低い敵に対するダメージが{RemiliaRare21Power:diff()}%増加。",
