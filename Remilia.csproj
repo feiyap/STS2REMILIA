@@ -76,10 +76,9 @@
     </ItemGroup>
 
     <ItemGroup>
-        <PackageReference Include="Alchyr.Sts2.BaseLib" Version="3.0.8" PrivateAssets="All"/>
+        <PackageReference Include="Alchyr.Sts2.BaseLib" Version="3.0.9" PrivateAssets="All"/>
         <PackageReference Include="Alchyr.Sts2.ModAnalyzers" Version="*"/>
         <AdditionalFiles Include="Remilia/localization/**/*.json"/>
-        <AdditionalFiles Remove="Remilia\localization\eng\**" />
     </ItemGroup>
 
     <ItemGroup>
@@ -91,8 +90,6 @@
         <EmbeddedResource Remove="materials/**"/>
         <EmbeddedResource Remove="shaders/**"/>
         <EmbeddedResource Remove="images/**"/>
-        <Compile Remove="Remilia\localization\eng\**" />
-        <EmbeddedResource Remove="Remilia\localization\eng\**" />
         <Compile Remove="RemiliaCode\Keywords\**" />
         <EmbeddedResource Remove="RemiliaCode\Keywords\**" />
     </ItemGroup>
@@ -102,13 +99,21 @@
         <None Include="Remilia.json"/>
         <None Include="project.godot"/>
         <None Include="Remilia/**"/>
-        <None Remove="Remilia\localization\eng\**" />
     </ItemGroup>
 
     <ItemGroup>
         <Folder Include="Remilia\images\card_portraits\big\"/>
         <Folder Include="Remilia\images\powers\big\"/>
         <Folder Include="Remilia\images\relics\big\"/>
+    </ItemGroup>
+
+    <ItemGroup>
+      <Content Include="Remilia\localization\eng\ancients.json" />
+      <Content Include="Remilia\localization\eng\cards.json" />
+      <Content Include="Remilia\localization\eng\card_keywords.json" />
+      <Content Include="Remilia\localization\eng\characters.json" />
+      <Content Include="Remilia\localization\eng\powers.json" />
+      <Content Include="Remilia\localization\eng\relics.json" />
     </ItemGroup>
 
     <Target Name="CheckDependencyPaths">

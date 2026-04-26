@@ -20,7 +20,7 @@
   "REMILIA-REMILIA_COMMON3.description": "{Damage:diff()}ダメージを2回与える。\n与えたダメージと同量の[gold]血液[/gold]を得る。",
   "REMILIA-REMILIA_COMMON3.title": "血の味",
 
-  "REMILIA-REMILIA_COMMON4.description": "最大{BloodCost}[gold]血液[/gold]を消費する。\n同量のブロックを得る。",
+  "REMILIA-REMILIA_COMMON4.description": "{BloodCost}[gold]血液[/gold]を消費する。\n{VulnerablePower:diff()}の[gold]弱体[/gold]と{BloodPlague:diff()}[gold]血疫[/gold]を付与する。",
   "REMILIA-REMILIA_COMMON4.title": "冥河",
 
   "REMILIA-REMILIA_COMMON5.description": "{BloodCost}[gold]血液[/gold]を消費する。\n{Block:diff()}ブロックを得る。\nカードを{Cards:diff()}枚引く。",
@@ -41,7 +41,7 @@
   "REMILIA-REMILIA_COMMON10.description": "{BloodCost}[gold]血液[/gold]を消費する。\n{Energy:energyIcons()}を得る。",
   "REMILIA-REMILIA_COMMON10.title": "血の代償",
 
-  "REMILIA-REMILIA_COMMON11.description": "{Damage:diff()}ダメージを与える。\nこのターン中にカードを引いていた場合、最大{Damage:diff()}[gold]血液[/gold]を消費し、その分のHPを回復する。",
+  "REMILIA-REMILIA_COMMON11.description": "{Damage:diff()}ダメージを与える。\nこのターン中にカードを引いていた場合、{ClawPrints:diff()}[gold]爪痕[/gold]を付与する。",
   "REMILIA-REMILIA_COMMON11.title": "渇血の牙",
 
   "REMILIA-REMILIA_COMMON12.description": "{HpLoss:diff()}HPを失う。\n手札のカードを1枚山札の上に戻す。\n山札からカードを1枚選び手札に加える。",
@@ -177,6 +177,9 @@
   "REMILIA-REMILIA_UNCOMMON36.description": "カードが消滅するたび、{RemiliaUncommon36Power:diff()}の[gold]血液[/gold]を得る。",
   "REMILIA-REMILIA_UNCOMMON36.title": "逆血「ブラッドリバース」",
 
+  "REMILIA-REMILIA_UNCOMMON37.description": "{Damage}ダメージを{IfUpgraded:show:X+1|X}回与える。\n{IfUpgraded:show:X+1|X}回の[gold]血疫[/gold]を付与する。\n{IfUpgraded:show:X+1|X}回の[gold]爪痕[/gold]を付与。",
+  "REMILIA-REMILIA_UNCOMMON37.title": "渇血の嗣",
+
   "REMILIA-REMILIA_RARE1.description": "すべての[gold]血液[/gold]を消費し、その分すべての敵にダメージを与え、同量回復する。{IfUpgraded:show:\nさらに{IntangiblePower:diff()}一回[gold]無形[/gold]を得る。|}",
   "REMILIA-REMILIA_RARE1.title": "紅魔「スカーレットデビル」",
 
@@ -243,6 +246,9 @@
 
   "REMILIA-REMILIA_RARE24.description": "ターン開始時、{RemiliaRare24Power:diff()}枚引く。",
   "REMILIA-REMILIA_RARE24.title": "「紅魔法」",
+
+  "REMILIA-REMILIA_RARE25.description": "すべての敵に{BloodPlague}回の[gold]血疫[/gold]を与える。これを{IfUpgraded:show:X+1|X}回繰り返す。",
+  "REMILIA-REMILIA_RARE25.title": "魔符「全世界の悪夢」",
 
   "REMILIA-REMILIA_RARE26.description": "[gold]血疫[/gold]の発動回数が{RemiliaRare26Power:diff()}回増加。",
   "REMILIA-REMILIA_RARE26.title": "紅符「ブラッドマトリクス」",

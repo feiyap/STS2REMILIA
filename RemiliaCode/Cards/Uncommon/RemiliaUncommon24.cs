@@ -14,7 +14,7 @@ public class RemiliaUncommon24() : RemiliaCard(0,
     CardType.Skill, CardRarity.Uncommon,
     TargetType.Self)
 {
-    protected override IEnumerable<DynamicVar> CanonicalVars => [new HpLossVar(1m), new PowerVar<StrengthPower>(3m), new PowerVar<DexterityPower>(3m)];
+    protected override IEnumerable<DynamicVar> CanonicalVars => [new HpLossVar(3m), new PowerVar<StrengthPower>(3m), new PowerVar<DexterityPower>(3m)];
 
     protected override IEnumerable<IHoverTip> ExtraHoverTips => [HoverTipFactory.FromPower<StrengthPower>(), HoverTipFactory.FromPower<DexterityPower>()];
     

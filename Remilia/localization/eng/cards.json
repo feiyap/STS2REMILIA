@@ -1,0 +1,264 @@
+{
+  "REMILIA-STRIKE_REMILIA.description": "Deal {Damage:diff()} damage.",
+  "REMILIA-STRIKE_REMILIA.title": "Strike",
+  
+  "REMILIA-DEFEND_REMILIA.description": "Gain {Block:diff()} [gold]Block[/gold].",
+  "REMILIA-DEFEND_REMILIA.title": "Defend",
+
+  "REMILIA-SCARLET_FIGURE.description": "Lose 2 HP.\nGain {Block:diff()} [gold]Block[/gold].",
+  "REMILIA-SCARLET_FIGURE.title": "Scarlet Figure",
+
+  "REMILIA-BLOOD_SUCKING.description": "Deal {Damage:diff()} damage.\nConsume [gold]Blood Pool[/gold] equal to damage dealt and heal an equal amount of HP.",
+  "REMILIA-BLOOD_SUCKING.title": "Blood Sucking",
+
+  "REMILIA-REMILIA_COMMON1.description": "Deal {Damage:diff()} damage.\nGain {BloodPool:diff()} [gold]Blood Pool[/gold].",
+  "REMILIA-REMILIA_COMMON1.title": "Scarlet Fury",
+
+  "REMILIA-REMILIA_COMMON2.description": "Consume {BloodCost} [gold]Blood Pool[/gold].\nDeal {Damage:diff()} damage.\nDraw {Cards} cards.",
+  "REMILIA-REMILIA_COMMON2.title": "Nocturne",
+
+  "REMILIA-REMILIA_COMMON3.description": "Deal {Damage:diff()} damage 2 times.\nGain [gold]Blood Pool[/gold] equal to damage dealt.",
+  "REMILIA-REMILIA_COMMON3.title": "The Taste of Blood",
+
+  "REMILIA-REMILIA_COMMON4.description": "Consume {BloodCost} [gold]Blood Pool[/gold].\nApply {VulnerablePower:diff()} [gold]Vulnerable[/gold].\nApply {BloodPlague:diff()} [gold]Blood Plague[/gold].",
+  "REMILIA-REMILIA_COMMON4.title": "River Styx",
+
+  "REMILIA-REMILIA_COMMON5.description": "Consume {BloodCost} [gold]Blood Pool[/gold].\nGain {Block:diff()} [gold]Block[/gold].\nDraw {Cards:diff()} card{Cards:plural:|s}.",
+  "REMILIA-REMILIA_COMMON5.title": "Nightwing",
+
+  "REMILIA-REMILIA_COMMON6.description": "Gain {Block:diff()} [gold]Block[/gold].\nGain {BloodPool} [gold]Blood Pool[/gold].",
+  "REMILIA-REMILIA_COMMON6.title": "Lullaby",
+
+  "REMILIA-REMILIA_COMMON7.description": "Gain {BloodPool} [gold]Blood Pool[/gold].",
+  "REMILIA-REMILIA_COMMON7.title": "Blood Bag",
+
+  "REMILIA-REMILIA_COMMON8.description": "Lose {HpLoss:diff()} HP.\nDraw {Cards:diff()} card{Cards:plural:|s}.",
+  "REMILIA-REMILIA_COMMON8.title": "Core of Blood",
+
+  "REMILIA-REMILIA_COMMON9.description": "Deal {Damage:diff()} damage.\nDouble the enemy's [gold]Claw Marks[/gold].",
+  "REMILIA-REMILIA_COMMON9.title": "Deep Strike",
+
+  "REMILIA-REMILIA_COMMON10.description": "Consume {BloodCost} [gold]Blood Pool[/gold].\nGain {Energy:energyIcons()}.",
+  "REMILIA-REMILIA_COMMON10.title": "Blood Compensation",
+
+  "REMILIA-REMILIA_COMMON11.description": "Deal {Damage:diff()} damage.\nIf you have drawn at least one card this turn, apply {ClawPrints:diff()} [gold]Claw Mark{ClawPrints:plural:|s}[/gold].",
+  "REMILIA-REMILIA_COMMON11.title": "Bloodthirsty Bite",
+
+  "REMILIA-REMILIA_COMMON12.description": "Lose {HpLoss:diff()} HP.\nPut 1 card from your [gold]Hand[/gold] on top of your [gold]Draw Pile[/gold].\nPut 1 card from your [gold]Draw Pile[/gold] into your [gold]Hand[/gold].",
+  "REMILIA-REMILIA_COMMON12.selectionScreenPrompt": "Choose a Card to return to your Hand or draw.",
+  "REMILIA-REMILIA_COMMON12.title": "Defying Fate",
+
+  "REMILIA-REMILIA_COMMON13.description": "Lose {HpLoss:diff()} HP.\nDeal {Damage:diff()} damage 2 times.",
+  "REMILIA-REMILIA_COMMON13.title": "Scarlet Night Strike",
+
+  "REMILIA-REMILIA_COMMON14.description": "Deal {Damage:diff()} damage to ALL enemies, and apply {ClawPrints:diff()} [gold]Claw Mark{ClawPrints:plural:|s}[/gold].",
+  "REMILIA-REMILIA_COMMON14.title": "Sky-Rending Claw",
+
+  "REMILIA-REMILIA_COMMON15.description": "Deal {Damage:diff()} damage.\nReduce cost by {Energy:energyIcons()} if you lost HP this turn.",
+  "REMILIA-REMILIA_COMMON15.title": "Bloodthirst",
+
+  "REMILIA-REMILIA_COMMON16.description": "Lose {HpLoss:diff()} HP.\nDeal {Damage:diff()} damage.\nDraw 1 card and [gold]Upgrade[/gold] it.",
+  "REMILIA-REMILIA_COMMON16.title": "Destiny Strike",
+
+  "REMILIA-REMILIA_COMMON17.description": "Lose {HpLoss:diff()} HP.\nDeal {Damage:diff()} damage.\nGain {Block:diff()} [gold]Block[/gold].",
+  "REMILIA-REMILIA_COMMON17.title": "Majesty",
+
+  "REMILIA-REMILIA_COMMON18.description": "Deal damage equal to your [gold]Blood Pool[/gold].",
+  "REMILIA-REMILIA_COMMON18.title": "Storm of Blood",
+
+  "REMILIA-REMILIA_COMMON19.description": "Draw 1 card.\nAt the start of the next {RemiliaCommon19Power:diff()} turns, draw 1 card.",
+  "REMILIA-REMILIA_COMMON19.title": "Nobile Lineage",
+
+  "REMILIA-REMILIA_COMMON20.description": "Deal {Damage:diff()} damage.\nApply {BloodPlague:diff()} [gold]Blood Plague[/gold].",
+  "REMILIA-REMILIA_COMMON20.title": "Heart Strike",
+  
+  "REMILIA-REMILIA_UNCOMMON1.description": "Deal {Damage:diff()} damage. Apply {ClawPrints:diff()} [gold]Claw Mark{ClawPrints:plural:|s}[/gold].\nConsume {BloodCost} [gold]Blood Pool[/gold] and return this card to your [gold]Hand[/gold].",
+  "REMILIA-REMILIA_UNCOMMON1.title": "Vampire Claw",
+
+  "REMILIA-REMILIA_UNCOMMON2.description": "Deal {Damage:diff()} damage.\nAdd 1 [gold]Blood Curse[/gold] into your [gold]Hand[/gold].",
+  "REMILIA-REMILIA_UNCOMMON2.title": "Vampire Fang",
+
+  "REMILIA-REMILIA_UNCOMMON3.description": "Deal {Damage:diff()} damage.\nIf you have drawn a card this turn, gain [gold]Blood Pool[/gold] equal to damage dealt.",
+  "REMILIA-REMILIA_UNCOMMON3.title": "Chains of Bloodlust",
+
+  "REMILIA-REMILIA_UNCOMMON4.description": "Deal {Damage:diff()} damage.\nWhenever you lose 1 HP, reduce the cost of this card by 1 {Energy:energyIcons()} this combat.",
+  "REMILIA-REMILIA_UNCOMMON4.title": "Destiny",
+
+  "REMILIA-REMILIA_UNCOMMON5.description": "Deal {Damage:diff()} damage to ALL enemies 2 times.\nIf there is only 1 enemy, attack 1 additional time.",
+  "REMILIA-REMILIA_UNCOMMON5.title": "Domination",
+
+  "REMILIA-REMILIA_UNCOMMON6.description": "Deal {Damage:diff()} damage.\nConsume all Curses in your [gold]Hand[/gold]. Gain 1 [gold]Strength[/gold] for every card consumed.",
+  "REMILIA-REMILIA_UNCOMMON6.title": "Deceit",
+
+  "REMILIA-REMILIA_UNCOMMON7.description": "Consume up to {BloodCost} [gold]Blood Pool[/gold].\nDeal an equal amount of damage, heal an equal amount of HP, and gain an equal amount of [gold]Block[/gold].",
+  "REMILIA-REMILIA_UNCOMMON7.title": "Spiritual Strike",
+
+  "REMILIA-REMILIA_UNCOMMON8.description": "Deal {Damage:diff()} damage.\nApply any debuffs on the enemy to ALL other enemies.\nAdd 1 [gold]Blood Curse[/gold] into your [gold]Hand[/gold].",
+  "REMILIA-REMILIA_UNCOMMON8.title": "Scarlet Calamity",
+
+  "REMILIA-REMILIA_UNCOMMON9.description": "Remove all [gold]Block[/gold] and [gold]Artifact[/gold] from the enemy.\nDeal {Damage:diff()} damage.\nApply {BloodPlague:diff()} [gold]Blood Plague[/gold].\nAdd 1 [gold]Blood Curse[/gold] into your [gold]Hand[/gold].",
+  "REMILIA-REMILIA_UNCOMMON9.title": "Touch of Death",
+
+  "REMILIA-REMILIA_UNCOMMON10.description": "Deal {Damage:diff()} damage.\nIf this kills an enemy, gain {BloodPool:diff()} [gold]Blood Pool[/gold].",
+  "REMILIA-REMILIA_UNCOMMON10.title": "Bone Marrow Strike",
+
+  "REMILIA-REMILIA_UNCOMMON11.description": "Deal {Damage:diff()} damage to ALL enemies.\nConsume up to {BloodCost} [gold]Blood Pool[/gold] and heal an equal amount of HP.",
+  "REMILIA-REMILIA_UNCOMMON11.title": "Scarlet Sign 「Nightless Castle Red」",
+
+  "REMILIA-REMILIA_UNCOMMON12.description": "Deal {Damage:diff()} damage.\nApply {ClawPrints:diff()} [gold]Claw Mark{ClawPrints:plural:|s}[/gold].",
+  "REMILIA-REMILIA_UNCOMMON12.title": "Certain Kill 「Heart Break」",
+
+  "REMILIA-REMILIA_UNCOMMON13.description": "Consume {BloodCost} [gold]Blood Pool[/gold].\nDeal {Damage:diff()} damage.",
+  "REMILIA-REMILIA_UNCOMMON13.title": "Night Sign 「Demon King Cradle」",
+
+  "REMILIA-REMILIA_UNCOMMON14.description": "Deal {Damage:diff()} damage.\nApply {VulnerablePower:diff()} [gold]Vulnerable[/gold].\nApply {ClawPrints:diff()} [gold]Claw Mark{ClawPrints:plural:|s}[/gold].",
+  "REMILIA-REMILIA_UNCOMMON14.title": "Heaven's Punishment 「Star of David」",
+
+  "REMILIA-REMILIA_UNCOMMON15.description": "Deal {CalculatedDamage:diff()} damage.\nDeals {ExtraDamage:diff()} additional damage for each [gold]Claw Mark[/gold] on the enemy.",
+  "REMILIA-REMILIA_UNCOMMON15.title": "Scarlet Sign 「Scarlet Strike」",
+
+  "REMILIA-REMILIA_UNCOMMON16.description": "[gold]Consume[/gold] all [gold]Blood Pool[/gold] and heal an equal amount of HP.",
+  "REMILIA-REMILIA_UNCOMMON16.title": "Vampire Blood",
+
+  "REMILIA-REMILIA_UNCOMMON17.description": "Draw 2 cards.\nIf the enemy intends to attack, gain {Block:diff()} [gold]Block[/gold].\nOtherwise, gain {Energy:energyIcons()}.",
+  "REMILIA-REMILIA_UNCOMMON17.title": "Twisting Fate",
+
+  "REMILIA-REMILIA_UNCOMMON18.description": "Gain [gold]Block[/gold] equal to your [gold]Blood Pool[/gold].",
+  "REMILIA-REMILIA_UNCOMMON18.title": "Overflowing Blood",
+
+  "REMILIA-REMILIA_UNCOMMON19.description": "Gain {BloodPool} [gold]Blood Pool[/gold].\nDraw 1 card.\n[gold]Exhaust[/gold] 1 card{IfUpgraded:show:| at random}.",
+  "REMILIA-REMILIA_UNCOMMON19.title": "Blood Conversion",
+
+  "REMILIA-REMILIA_UNCOMMON20.description": "Consume {BloodCost} [gold]Blood Pool[/gold].\nGain {Block:diff()} [gold]Block[/gold].",
+  "REMILIA-REMILIA_UNCOMMON20.title": "Veil of Night",
+
+  "REMILIA-REMILIA_UNCOMMON21.description": "Apply {BloodPlague} [gold]Blood Plague[/gold] to ALL enemies.",
+  "REMILIA-REMILIA_UNCOMMON21.title": "Boiling Blood",
+
+  "REMILIA-REMILIA_UNCOMMON22.description": "Gain {Block:diff()} [gold]Block[/gold].\nAdd 2 [gold]Blood Curse[/gold] into your [gold]Hand[/gold].",
+  "REMILIA-REMILIA_UNCOMMON22.title": "Blood Strengthening",
+
+  "REMILIA-REMILIA_UNCOMMON23.description": "Gain {Block:diff()} [gold]Block[/gold].\nDraw {Cards:diff()} card{Cards:plural:|s}.",
+  "REMILIA-REMILIA_UNCOMMON23.title": "Heartbreaking Serenade",
+
+  "REMILIA-REMILIA_UNCOMMON24.description": "Lose {HpLoss:diff()} HP.\nGain {StrengthPower:diff()} [gold]Strength[/gold] and {DexterityPower:diff()} [gold]Dexterity[/gold] this turn.",
+  "REMILIA-REMILIA_UNCOMMON24.title": "Blood Urge",
+
+  "REMILIA-REMILIA_UNCOMMON25.description": "[gold]Exhaust[/gold] 1 card then draw {Cards:diff()} card{Cards:plural:|s}.\nIf a Curse is [gold]Exhausted[/gold], gain {Energy:energyIcons()}.",
+  "REMILIA-REMILIA_UNCOMMON25.title": "Rebirth",
+
+  "REMILIA-REMILIA_UNCOMMON26.description": "Lose {HpLoss:diff()} HP.\nGive another player {Block:diff()} [gold]Block[/gold] and they heal {Heal:diff()} HP.",
+  "REMILIA-REMILIA_UNCOMMON26.title": "Blood Bestowal",
+
+  "REMILIA-REMILIA_UNCOMMON27.description": "Every time you lose HP this turn, gain {RemiliaUncommon27Power:diff()} [gold]Block[/gold].",
+  "REMILIA-REMILIA_UNCOMMON27.title": "Nether Sign 「Scarlet Netherworld」",
+
+  "REMILIA-REMILIA_UNCOMMON29.description": "At the start of your turn, apply {RemiliaUncommon29Power:diff()} [gold]Blood Plague[/gold] to ALL enemies.",
+  "REMILIA-REMILIA_UNCOMMON29.title": "Vampiric Plague",
+
+  "REMILIA-REMILIA_UNCOMMON30.description": "Whenever you play an Attack, consume up to {RemiliaUncommon30Power:diff()} [gold]Blood Pool[/gold] and heal an equal amount of HP.",
+  "REMILIA-REMILIA_UNCOMMON30.title": "Vampirism",
+
+  "REMILIA-REMILIA_UNCOMMON31.description": "Increase damage dealt by {RemiliaUncommon31Power:diff()}% and increase damage taken by {RemiliaUncommon31Power:diff()}%.",
+  "REMILIA-REMILIA_UNCOMMON31.title": "Overwhelming Nobility",
+
+  "REMILIA-REMILIA_UNCOMMON32.description": "If Fatal damage is taken, heal up to 1% of your Max HP once.",
+  "REMILIA-REMILIA_UNCOMMON32.title": "A Body of Mist",
+
+  "REMILIA-REMILIA_UNCOMMON33.description": "Whenever you draw a card during your turn, gain {RemiliaUncommon33Power} [gold]Blood Pool[/gold].",
+  "REMILIA-REMILIA_UNCOMMON33.title": "Flower in the Mist",
+
+  "REMILIA-REMILIA_UNCOMMON34.description": "Gain 1 [gold]Block[/gold] for every 1 HP lost.",
+  "REMILIA-REMILIA_UNCOMMON34.title": "Moon in the Water",
+
+  "REMILIA-REMILIA_UNCOMMON35.description": "At the start of your turn, apply {RemiliaUncommon35Power:diff()} [gold]Claw Mark{RemiliaUncommon35Power:plural:|s}[/gold] to ALL enemies.",
+  "REMILIA-REMILIA_UNCOMMON35.title": "Count Scarlet",
+
+  "REMILIA-REMILIA_UNCOMMON36.description": "Whenever a card is [gold]Exhausted[/gold], gain {RemiliaUncommon36Power:diff()} [gold]Blood Pool[/gold].",
+  "REMILIA-REMILIA_UNCOMMON36.title": "Blood Reversal",
+
+  "REMILIA-REMILIA_UNCOMMON37.description": "Deal {Damage} damage {IfUpgraded:show:X+1|X} times. Apply {IfUpgraded:show:X+1|X} [gold]Blood Plague[/gold]. Apply {IfUpgraded:show:X+1|X} [gold]Claw Mark{ClawPrints:plural:|s}[/gold].",
+  "REMILIA-REMILIA_UNCOMMON37.title": "Heir of Bloodthirst",
+
+  "REMILIA-REMILIA_RARE1.description": "Consume all [gold]Blood Pool[/gold] to deal an equal amount of damage to ALL enemies and heal an equal amount of HP.{IfUpgraded:show:\nGain {IntangiblePower:diff()} [gold]Intangible[/gold].|}",
+  "REMILIA-REMILIA_RARE1.title": "Scarlet Devil 「Scarlet Devil」",
+
+  "REMILIA-REMILIA_RARE2.description": "Consume {BloodCost} [gold]Blood Pool[/gold].\nDeal {Damage:diff()} damage to ALL enemies and apply {ClawPrints:diff()} [gold]Claw Mark{ClawPrints:plural:|s}[/gold].",
+  "REMILIA-REMILIA_RARE2.title": "Night Sign 「Bad Lady Scramble」",
+
+  "REMILIA-REMILIA_RARE3.description": "Deal {CalculatedDamage:diff()} damage.\nDeals {ExtraDamage:diff()} additional damage for each [gold]Claw Mark[/gold] on the enemy.\nIf [gold]Fatal[/gold], add a copy of this card with [gold]Exhaust[/gold] and [gold]Ethereal[/gold] that costs 0.",
+  "REMILIA-REMILIA_RARE3.title": "God's Punishment 「Young Demon Lord」",
+
+  "REMILIA-REMILIA_RARE4.description": "Consume {BloodCost} [gold]Blood Pool[/gold].\nDeal {Damage:diff()} damage.\nIf [gold]Fatal[/gold], permanently increase this card's damage by {Increase:diff()}.",
+  "REMILIA-REMILIA_RARE4.title": "Night Lord 「Dracula Cradle」",
+
+  "REMILIA-REMILIA_RARE5.description": "Deal {CalculatedDamage:diff()} damage, Add 1 [gold]Blood Curse[/gold] into your [gold]Hand[/gold].\nDeals {ExtraDamage:diff()} additional damage for each Curse you have.",
+  "REMILIA-REMILIA_RARE5.title": "Devil 「Remilia Stretch」",
+
+  "REMILIA-REMILIA_RARE6.description": "Deal {Damage:diff()} damage {Repeat:diff()} time{Repeat:plural:|s}.",
+  "REMILIA-REMILIA_RARE6.title": "Bat 「Vampire Sweep」",
+
+  "REMILIA-REMILIA_RARE7.description": "Consume {BloodCost} [gold]Blood Pool[/gold].\nDeal {Damage:diff()} to ALL enemies and return this card to your [gold]Hand[/gold].",
+  "REMILIA-REMILIA_RARE7.title": "Night Sign 「Bombard Night」",
+
+  "REMILIA-REMILIA_RARE8.description": "Deal {Damage:diff()} damage to another player and gain [gold]Blood Pool[/gold] equal to damage dealt.\nBoth players gain {StrengthPower:diff()} [gold]Strength[/gold].\nIf [gold]Fatal[/gold], gain an additional {StrengthPower:diff()} [gold]Strength[/gold] and {Energy:energyIcons()}.",
+  "REMILIA-REMILIA_RARE8.title": "Hell Sign 「Mountain of a Thousand Needles」",
+
+  "REMILIA-REMILIA_RARE9.description": "Consume {BloodCost} [gold]Blood Pool[/gold].\nShuffle ALL of another player's [gold]Hand[/gold] into their [gold]Draw Pile[/gold], then they draw {Cards} card.",
+  "REMILIA-REMILIA_RARE9.title": "Manipulating Fate",
+
+  "REMILIA-REMILIA_RARE10.description": "[gold]Transform[/gold] 1 card in your [gold]Hand[/gold].",
+  "REMILIA-REMILIA_RARE10.title": "Illusory Fate",
+
+  "REMILIA-REMILIA_RARE11.description": "Consume {BloodCost:diff()} [gold]Blood Pool[/gold].\n[gold]Stun[/gold] the enemy.",
+  "REMILIA-REMILIA_RARE11.title": "Destiny 「Miserable Fate」",
+
+  "REMILIA-REMILIA_RARE12.description": "Consume {BloodCost} [gold]Blood Pool[/gold].\nReturn all cards in your [gold]Hand[/gold] and [gold]Discard Pile[/gold] to your [gold]Draw Pile[/gold].\nChoose {Cards} card{Cards:plural:|s} in your [gold]Draw Pile[/gold] to add into your [gold]Hand[/gold].",
+  "REMILIA-REMILIA_RARE12.selectionScreenPrompt": "Choose Cards to draw.",
+  "REMILIA-REMILIA_RARE12.title": "God Devil 「Remilia Stalker」",
+
+  "REMILIA-REMILIA_RARE13.description": "Draw cards until your [gold]Hand[/gold] is full.{IfUpgraded:show:\n[gold]Retain[/gold] your [gold]Hand[/gold] this turn.|}",
+  "REMILIA-REMILIA_RARE13.title": "God Art 「Vampire Illusion」",
+
+  "REMILIA-REMILIA_RARE14.description": "ALL players gain {IntangiblePower} [gold]Intangible[/gold].",
+  "REMILIA-REMILIA_RARE14.title": "「Scarlet Gensokyo」",
+
+  "REMILIA-REMILIA_RARE15.description": "This turn, your Attacks are played an extra time.",
+  "REMILIA-REMILIA_RARE15.title": "「Queen of Midnight」",
+
+  "REMILIA-REMILIA_RARE16.description": "Whenever you lose HP, gain {Energy:energyIcons()}.",
+  "REMILIA-REMILIA_RARE16.title": "Scarlet Devil Form",
+
+  "REMILIA-REMILIA_RARE17.description": "At the start of your turn, lose 1 HP.\nGain {Energy:energyIcons()} and draw 1 card.",
+  "REMILIA-REMILIA_RARE17.title": "Scarlet Night Fantasia",
+
+  "REMILIA-REMILIA_RARE18.description": "Whenever any creature dies, gain {RemiliaRare18Power:diff()} [gold]Blood Pool[/gold].",
+  "REMILIA-REMILIA_RARE18.title": "Death and Decay",
+
+  "REMILIA-REMILIA_RARE20.description": "Whenever an Attack deals unblocked damage, apply {RemiliaRare20Power:diff()} [gold]Claw Mark{RemiliaRare20Power:plural:|s}[/gold].",
+  "REMILIA-REMILIA_RARE20.title": "「Millennium Vampire」" ,
+
+  "REMILIA-REMILIA_RARE21.description": "Against enemies with HP lower than your Max HP, the damage dealt is increased by {RemiliaRare21Power:diff()}%.",
+  "REMILIA-REMILIA_RARE21.title": "Scarlet Sign 「Scarlet Meister」",
+
+  "REMILIA-REMILIA_RARE22.description": "Whenever you draw a Curse, lose 1 HP and [gold]Exhaust[/gold] it.\nWhenever a Curse is [gold]Exhausted[/gold], draw 1 card and gain {RemiliaRare22Power:diff()} [gold]Strength[/gold].",
+  "REMILIA-REMILIA_RARE22.title": "Curse 「Curse of Vlad Tepes」",
+
+  "REMILIA-REMILIA_RARE24.description": "At the start of your turn, draw {RemiliaRare24Power:diff()} card{RemiliaRare24Power:plural:|s}.",
+  "REMILIA-REMILIA_RARE24.title": "「Red Magic」",
+
+  "REMILIA-REMILIA_RARE25.description": "Apply {BloodPlague} [gold]Blood Plague[/gold] to ALL enemies. repeat {IfUpgraded:show:X+1|X} times.",
+  "REMILIA-REMILIA_RARE25.title": "Sigil 「Nightmare of the World」",
+
+  "REMILIA-REMILIA_RARE26.description": "[gold]Blood Plague[/gold] is triggered {RemiliaRare26Power:diff()} additional time{RemiliaRare26Power:plural:|s}.",
+  "REMILIA-REMILIA_RARE26.title": "Scarlet Sign 「Bloody Magic Square」",
+
+  "REMILIA-REMILIA_ANCIENT1.description": "Deal {CalculatedDamage:diff()} damage.\nDeal additional damage equal to 25% of your Max HP.\nIf [gold]Fatal[/gold], raise your Max HP by {MaxHp:diff()} and gain {Energy:energyIcons()}.",
+  "REMILIA-REMILIA_ANCIENT1.title": "Divine Spear 「Spear of Gungnir」",
+
+  "REMILIA-REMILIA_ANCIENT2.description": "Deal {Damage:diff()} damage to ALL enemies.\nConsume [gold]Blood Pool[/gold] equal to damage dealt and heal an equal amount of HP.",
+  "REMILIA-REMILIA_ANCIENT2.title": "Raging Blood",
+
+  "REMILIA-BLOOD_CURSE.description": "At the end of your turn, if this is in your [gold]Hand[/gold], lose {HpLoss} HP.\nWhen played, lose {HpLoss2} HP and draw {Cards} cards.",
+  "REMILIA-BLOOD_CURSE.title": "Blood Curse"
+}

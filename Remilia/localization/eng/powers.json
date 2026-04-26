@@ -1,0 +1,97 @@
+{
+  "REMILIA-BLOOD_POOL.description": "Accumulated Blood Pool can be consumed by Skills.",
+  "REMILIA-BLOOD_POOL.smartDescription": "Accumulated Blood Pool can be consumed by Skills.",
+  "REMILIA-BLOOD_POOL.title": "Blood Pool",
+
+  "REMILIA-CLAW_PRINTS.description": "Receive [blue]1[/blue] more damage from Attacks.",
+  "REMILIA-CLAW_PRINTS.smartDescription": "Receive [blue]{Amount}[/blue] more damage from Attacks.",
+  "REMILIA-CLAW_PRINTS.title": "Claw Marks",
+
+  "REMILIA-REMILIA_COMMON19_POWER.description": "At the start of the next [blue]1[/blue] turn, draw 1 card.",
+  "REMILIA-REMILIA_COMMON19_POWER.smartDescription": "At the start of the next [blue]{Amount}[/blue] turns, draw 1 card.",
+  "REMILIA-REMILIA_COMMON19_POWER.title": "Draw a card next turn",
+
+  "REMILIA-REMILIA_UNCOMMON24_POWER.description": "Gain [blue]1[/blue] [gold]Strength[/gold] and [blue]1[/blue] [gold]Dexterity[/gold] this turn.",
+  "REMILIA-REMILIA_UNCOMMON24_POWER.smartDescription": "Gain [blue]{Amount}[/blue] [gold]Strength[/gold] and [blue]{Amount}[/blue] [gold]Dexterity[/gold] this turn.",
+  "REMILIA-REMILIA_UNCOMMON24_POWER.title": "Blood Urge",
+
+  "REMILIA-REMILIA_UNCOMMON27_POWER.description": "Whenever you lose HP this turn, gain [blue]1[/blue] [gold]Block[/gold].",
+  "REMILIA-REMILIA_UNCOMMON27_POWER.smartDescription": "Whenever you lose HP this turn, gain [blue]{Amount}[/blue] [gold]Block[/gold].",
+  "REMILIA-REMILIA_UNCOMMON27_POWER.title": "Nether Sign 「Scarlet Netherworld」",
+
+  "REMILIA-REMILIA_UNCOMMON28_POWER.description": "The next [blue]1[/blue] debuff is reflected to your attacker.",
+  "REMILIA-REMILIA_UNCOMMON28_POWER.smartDescription": "The next [blue]{Amount}[/blue] debuff is reflected to your attacker.",
+  "REMILIA-REMILIA_UNCOMMON28_POWER.title": "A Vampire's Heart",
+
+  "REMILIA-REMILIA_UNCOMMON29_POWER.description": "At the start of your turn, apply [blue]1[/blue] [gold]Blood Plague[/gold] to ALL enemies.",
+  "REMILIA-REMILIA_UNCOMMON29_POWER.smartDescription": "At the start of your turn, apply [blue]{Amount}[/blue] [gold]Blood Plague[/gold] to ALL enemies.",
+  "REMILIA-REMILIA_UNCOMMON29_POWER.title": "Vampiric Plague",
+
+  "REMILIA-REMILIA_UNCOMMON30_POWER.description": "Whenever you play an Attack, consume up to [blue]1[/blue] [gold]Blood Pool[/gold] and heal an equal amount of HP.",
+  "REMILIA-REMILIA_UNCOMMON30_POWER.smartDescription": "Whenever you play an Attack, consume up to [blue]{Amount}[/blue] [gold]Blood Pool[/gold] and heal an equal amount of HP.",
+  "REMILIA-REMILIA_UNCOMMON30_POWER.title": "Vampirism",
+
+  "REMILIA-REMILIA_UNCOMMON31_POWER.description": "Increase damage dealt and increase damage taken.",
+  "REMILIA-REMILIA_UNCOMMON31_POWER.smartDescription": "Increase damage dealt by [blue]{Amount}[/blue]% and increase damage taken by [blue]{Amount}[/blue]%.",
+  "REMILIA-REMILIA_UNCOMMON31_POWER.title": "Overwhelming Nobility",
+
+  "REMILIA-REMILIA_UNCOMMON32_POWER.description": "If Fatal damage is taken, heal up to 1% of your Max HP [blue]once[/blue].",
+  "REMILIA-REMILIA_UNCOMMON32_POWER.smartDescription": "If Fatal damage is taken, heal up to 1% of your Max HP [blue]{Amount}[/blue] times.",
+  "REMILIA-REMILIA_UNCOMMON32_POWER.title": "A Body of Mist",
+
+  "REMILIA-REMILIA_UNCOMMON33_POWER.description": "Whenever you draw a card during your turn, gain [blue]1[/blue] [gold]Blood Pool[/gold].",
+  "REMILIA-REMILIA_UNCOMMON33_POWER.smartDescription": "Whenever you draw a card during your turn, gain [blue]{Amount}[/blue] [gold]Blood Pool[/gold].",
+  "REMILIA-REMILIA_UNCOMMON33_POWER.title": "Flower in the Mist",
+
+  "REMILIA-REMILIA_UNCOMMON34_POWER.description": "Gain [blue]1[/blue] [gold]Block[/gold] for every 1 HP lost.",
+  "REMILIA-REMILIA_UNCOMMON34_POWER.smartDescription": "Gain 1 [gold]Block[/gold] for every [blue]{Amount}[/blue] HP lost.",
+  "REMILIA-REMILIA_UNCOMMON34_POWER.title": "Moon in the Water",
+
+  "REMILIA-REMILIA_UNCOMMON35_POWER.description": "At the start of your turn, apply [blue]1[/blue] [gold]Claw Mark[/gold] to ALL enemies.",
+  "REMILIA-REMILIA_UNCOMMON35_POWER.smartDescription": "At the start of your turn, apply [blue]{Amount}[/blue] [gold]Claw Marks[/gold] to ALL enemies.",
+  "REMILIA-REMILIA_UNCOMMON35_POWER.title": "Count Scarlet",
+
+  "REMILIA-REMILIA_UNCOMMON36_POWER.description": "Whenever a card is [gold]Exhausted[/gold], gain [blue]1[/blue] [gold]Blood Pool[/gold].",
+  "REMILIA-REMILIA_UNCOMMON36_POWER.smartDescription": "Whenever a card is [gold]Exhausted[/gold], gain [blue]{Amount}[/blue] [gold]Blood Pool[/gold].",
+  "REMILIA-REMILIA_UNCOMMON36_POWER.title": "Blood Reversal",
+
+  "REMILIA-REMILIA_RARE15_POWER.description": "This turn, your Attacks are played an extra time..",
+  "REMILIA-REMILIA_RARE15_POWER.smartDescription": "This turn, your Attacks are played an extra time.",
+  "REMILIA-REMILIA_RARE15_POWER.title": "「Queen of Midnight」",
+
+  "REMILIA-REMILIA_RARE16_POWER.description": "Whenever you lose HP, gain [blue]1[/blue] [gold]Energy[/gold].",
+  "REMILIA-REMILIA_RARE16_POWER.smartDescription": "Whenever you lose HP, gain {Amount:energyIcons()}.",
+  "REMILIA-REMILIA_RARE16_POWER.title": "Scarlet Devil Form",
+
+  "REMILIA-REMILIA_RARE17_POWER.description": "At the start of your turn, lose 1 HP.\nGain [blue]1[/blue] [gold]Energy[/gold] and draw [blue]1[/blue] card.",
+  "REMILIA-REMILIA_RARE17_POWER.smartDescription": "At the start of your turn, lose 1 HP.\nGain {Amount:energyIcons()} and draw [blue]{Amount}[/blue] cards.",
+  "REMILIA-REMILIA_RARE17_POWER.title": "Scarlet Night Fantasia",
+
+  "REMILIA-REMILIA_RARE18_POWER.description": "Whenever any creature dies, gain [gold]Blood Pool[/gold].",
+  "REMILIA-REMILIA_RARE18_POWER.smartDescription": "Whenever any creature dies, gain [blue]{Amount}[/blue] [gold]Blood Pool[/gold].",
+  "REMILIA-REMILIA_RARE18_POWER.title": "Death and Decay",
+
+  "REMILIA-REMILIA_RARE20_POWER.description": "Whenever an Attack deals unblocked damage, apply [blue]1[/blue] [gold]Claw Mark[/gold].",
+  "REMILIA-REMILIA_RARE20_POWER.smartDescription": "Whenever an Attack deals unblocked damage, apply [blue]{Amount}[/blue] [gold]Claw Marks[/gold].",
+  "REMILIA-REMILIA_RARE20_POWER.title": "「Millennium Vampire」",
+
+  "REMILIA-REMILIA_RARE21_POWER.description": "Against enemies with HP lower than your Max HP, the damage dealt is increased by [blue]1[/blue]%.",
+  "REMILIA-REMILIA_RARE21_POWER.smartDescription": "Against enemies with HP lower than your Max HP, the damage dealt is increased by [blue]{Amount}[/blue]%.",
+  "REMILIA-REMILIA_RARE21_POWER.title": "Scarlet Sign 「Scarlet Meister」",
+
+  "REMILIA-REMILIA_RARE22_POWER.description": "Whenever you draw a Curse, lose 1 HP and [gold]Exhaust[/gold] it.\nWhenever a Curse is [gold]Exhausted[/gold], draw 1 card and gain [blue]1[/blue] [gold]Strength[/gold].",
+  "REMILIA-REMILIA_RARE22_POWER.smartDescription": "Whenever you draw a Curse, lose 1 HP and [gold]Exhaust[/gold] it.\nWhenever a Curse is [gold]Exhausted[/gold], draw 1 card and gain [blue]{Amount}[/blue] [gold]Strength[/gold].",
+  "REMILIA-REMILIA_RARE22_POWER.title": "Curse 「Curse of Vlad Tepes」",
+
+  "REMILIA-REMILIA_RARE24_POWER.description": "At the start of your turn, draw [blue]1[/blue] card.",
+  "REMILIA-REMILIA_RARE24_POWER.smartDescription": "At the start of your turn, draw [blue]{Amount}[/blue] cards.",
+  "REMILIA-REMILIA_RARE24_POWER.title": "「Red Magic」",
+
+  "REMILIA-REMILIA_RARE26_POWER.description": "[gold]Blood Plague[/gold] is triggered [blue]1[/blue] additional time.",
+  "REMILIA-REMILIA_RARE26_POWER.smartDescription": "[gold]Blood Plague[/gold] is triggered [blue]{Amount}[/blue] additional times.",
+  "REMILIA-REMILIA_RARE26_POWER.title": "Scarlet Sign 「Bloody Magic Square」",
+
+  "REMILIA-BLOOD_PLAGUE.description": "When gaining a debuff, take [blue]1[/blue] damage.",
+  "REMILIA-BLOOD_PLAGUE.smartDescription": "When gaining a debuff, take [blue]{Amount}[/blue] damage.",
+  "REMILIA-BLOOD_PLAGUE.title": "Blood Plague"
+}

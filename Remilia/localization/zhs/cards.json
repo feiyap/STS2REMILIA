@@ -20,7 +20,7 @@
   "REMILIA-REMILIA_COMMON3.description": "造成{Damage:diff()}点伤害2次。\n获得等量于所造成伤害的[gold]血池[/gold]。",
   "REMILIA-REMILIA_COMMON3.title": "血之滋味",
 
-  "REMILIA-REMILIA_COMMON4.description": "消耗最多{BloodCost}点[gold]血池[/gold]。\n获得等量的[gold]格挡[/gold]。",
+  "REMILIA-REMILIA_COMMON4.description": "消耗{BloodCost}点[gold]血池[/gold]。\n给予{VulnerablePower:diff()}层[gold]易伤[/gold]。\n给予{BloodPlague:diff()}层[gold]血疫[/gold]。",
   "REMILIA-REMILIA_COMMON4.title": "冥河",
 
   "REMILIA-REMILIA_COMMON5.description": "消耗{BloodCost}点[gold]血池[/gold]。\n获得{Block:diff()}点[gold]格挡[/gold]。\n抽{Cards:diff()}张牌。",
@@ -132,7 +132,7 @@
   "REMILIA-REMILIA_UNCOMMON20.description": "消耗{BloodCost}点[gold]血池[/gold]。\n获得{Block:diff()}点[gold]格挡[/gold]。",
   "REMILIA-REMILIA_UNCOMMON20.title": "黑夜帷幕",
 
-  "REMILIA-REMILIA_UNCOMMON21.description": "给予所有敌人{BloodPlague}层[gold]血疫[/gold]。",
+  "REMILIA-REMILIA_UNCOMMON21.description": "给予所有敌人{BloodPlague:diff()}层[gold]血疫[/gold]。",
   "REMILIA-REMILIA_UNCOMMON21.title": "血液沸腾",
 
   "REMILIA-REMILIA_UNCOMMON22.description": "获得{Block:diff()}点[gold]格挡[/gold]。\n将2张[gold]渴血诅咒[/gold]加入你的[gold]手牌[/gold]。",
@@ -156,7 +156,7 @@
   "REMILIA-REMILIA_UNCOMMON29.description": "在你的回合开始时，给予所有敌人{RemiliaUncommon29Power:diff()}层[gold]血疫[/gold]。",
   "REMILIA-REMILIA_UNCOMMON29.title": "纵血鬼",
 
-  "REMILIA-REMILIA_UNCOMMON30.description": "打出攻击牌时，最多消耗{RemiliaUncommon30Power:diff()}点[gold]血池[/gold]，回复等量的生命。",
+  "REMILIA-REMILIA_UNCOMMON30.description": "打出攻击牌时，消耗最多{RemiliaUncommon30Power:diff()}点[gold]血池[/gold]，回复等量的生命。",
   "REMILIA-REMILIA_UNCOMMON30.title": "吸血习性",
 
   "REMILIA-REMILIA_UNCOMMON31.description": "造成的伤害提升{RemiliaUncommon31Power:diff()}%，受到的伤害提升{RemiliaUncommon31Power:diff()}%。",
@@ -176,6 +176,9 @@
 
   "REMILIA-REMILIA_UNCOMMON36.description": "每当有一张牌被消耗时，获得{RemiliaUncommon36Power:diff()}点[gold]血池[/gold]。",
   "REMILIA-REMILIA_UNCOMMON36.title": "反血",
+
+  "REMILIA-REMILIA_UNCOMMON37.description": "造成{Damage}点伤害{IfUpgraded:show:X+1|X}次。\n施加{IfUpgraded:show:X+1|X}层[gold]血疫[/gold]。\n施加{IfUpgraded:show:X+1|X}层[gold]爪痕[/gold]。",
+  "REMILIA-REMILIA_UNCOMMON37.title": "渴血之嗣",
 
   "REMILIA-REMILIA_RARE1.description": "消耗所有[gold]血池[/gold]，对所有敌人造成等量的伤害，回复等量的生命。{IfUpgraded:show:\n获得{IntangiblePower:diff()}层[gold]无实体[/gold]。|}",
   "REMILIA-REMILIA_RARE1.title": "红魔「绯红恶魔」",
@@ -243,6 +246,9 @@
 
   "REMILIA-REMILIA_RARE24.description": "在你的回合开始时，抽{RemiliaRare24Power:diff()}张牌。",
   "REMILIA-REMILIA_RARE24.title": "「红魔法」",
+
+  "REMILIA-REMILIA_RARE25.description": "给予所有敌人{BloodPlague}层[gold]血疫[/gold]，重复{IfUpgraded:show:X+1|X}次。",
+  "REMILIA-REMILIA_RARE25.title": "魔符「全世界噩梦」",
 
   "REMILIA-REMILIA_RARE26.description": "[gold]血疫[/gold]会额外触发{RemiliaRare26Power:diff()}次。",
   "REMILIA-REMILIA_RARE26.title": "红符「嗜血魔方阵」",

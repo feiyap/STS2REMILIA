@@ -13,29 +13,29 @@ namespace Remilia.RemiliaCode.Cards.Common;
 
 public class RemiliaCommon4() : RemiliaCard(0,
     CardType.Skill, CardRarity.Common,
-    TargetType.Self)
+    TargetType.AnyEnemy)
 {
     protected override IEnumerable<DynamicVar> CanonicalVars => [
-        new DynamicVar("BloodCost", 11m),
-        new CalculationBaseVar(0m),
-        new CalculationExtraVar(1m),
-        new CalculatedBlockVar(ValueProp.Move).WithMultiplier((CardModel card, Creature? _) => Math.Min(card.Owner.Creature.GetPowerAmount<BloodPool>(), card.DynamicVars["BloodCost"].BaseValue))
+        new DynamicVar("BloodCost", 2m),
+        new PowerVar<VulnerablePower>(1m),
+        new PowerVar<BloodPlague>(1m)
     ];
     
-    public override bool GainsBlock => true;
+    public override IEnumerable<CardKeyword> CanonicalKeywords => [CardKeyword.Exhaust];
+    
+    protected override bool IsPlayable => IsBloodPoolCount(base.DynamicVars["BloodCost"].IntValue);
 
     protected override async Task OnPlay(
         PlayerChoiceContext choiceContext,
         CardPlay play)
     {
-        decimal blockValue = Math.Min(base.Owner.Creature.GetPowerAmount<BloodPool>(), base.DynamicVars["BloodCost"].BaseValue);
-        //decimal blockValue = base.DynamicVars.CalculatedBlock.Calculate(play.Target);
-        await CreatureCmd.GainBlock(base.Owner.Creature, blockValue, base.DynamicVars.CalculatedBlock.Props, play);
-        await PowerCmd.Apply<BloodPool>(base.Owner.Creature, -blockValue, base.Owner.Creature, null);
+        await PowerCmd.Apply<BloodPool>(base.Owner.Creature, -base.DynamicVars["BloodCost"].BaseValue, base.Owner.Creature, null);
+        await PowerCmd.Apply<VulnerablePower>(play.Target, base.DynamicVars["VulnerablePower"].BaseValue, base.Owner.Creature, null);
+        await PowerCmd.Apply<BloodPlague>(play.Target, base.DynamicVars["BloodPlague"].BaseValue, base.Owner.Creature, null);
     }
 
     protected override void OnUpgrade()
     {
-        base.DynamicVars["BloodCost"].UpgradeValueBy(3m);
+        base.RemoveKeyword(CardKeyword.Exhaust);
     }
 }

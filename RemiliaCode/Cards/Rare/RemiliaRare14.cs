@@ -9,7 +9,7 @@ using Remilia.RemiliaCode.Cards;
 
 namespace Remilia.RemiliaCode.Cards.Rare;
 
-public class RemiliaRare14() : RemiliaCard(4,
+public class RemiliaRare14() : RemiliaCard(3,
     CardType.Skill, CardRarity.Rare,
     TargetType.AllAllies)
 {
