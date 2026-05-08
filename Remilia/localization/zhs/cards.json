@@ -26,10 +26,10 @@
   "REMILIA-REMILIA_COMMON5.description": "消耗{BloodCost}点[gold]血池[/gold]。\n获得{Block:diff()}点[gold]格挡[/gold]。\n抽{Cards:diff()}张牌。",
   "REMILIA-REMILIA_COMMON5.title": "夜翼",
 
-  "REMILIA-REMILIA_COMMON6.description": "获得{Block:diff()}点[gold]格挡[/gold]。\n获得{BloodPool}点[gold]血池[/gold]。",
+  "REMILIA-REMILIA_COMMON6.description": "获得{Block:diff()}点[gold]格挡[/gold]。\n获得{BloodPool:diff()}点[gold]血池[/gold]。",
   "REMILIA-REMILIA_COMMON6.title": "摇篮曲",
 
-  "REMILIA-REMILIA_COMMON7.description": "获得{BloodPool}点[gold]血池[/gold]。",
+  "REMILIA-REMILIA_COMMON7.description": "获得{BloodPool:diff()}点[gold]血池[/gold]。",
   "REMILIA-REMILIA_COMMON7.title": "血包",
 
   "REMILIA-REMILIA_COMMON8.description": "失去{HpLoss:diff()}点生命。\n抽{Cards:diff()}张牌。",
@@ -41,7 +41,7 @@
   "REMILIA-REMILIA_COMMON10.description": "消耗{BloodCost}点[gold]血池[/gold]。\n获得{Energy:energyIcons()}。",
   "REMILIA-REMILIA_COMMON10.title": "血之代偿",
 
-  "REMILIA-REMILIA_COMMON11.description": "造成{Damage:diff()}点伤害。\n如果你在回合进行中抽过至少一张牌，消耗最多{Damage:diff()}点[gold]血池[/gold]，回复等量的生命。",
+  "REMILIA-REMILIA_COMMON11.description": "造成{Damage:diff()}点伤害。\n如果你在回合进行中抽过至少一张牌，给予{ClawPrints:diff()}层[gold]爪痕[/gold]。",
   "REMILIA-REMILIA_COMMON11.title": "渴血之咬",
 
   "REMILIA-REMILIA_COMMON12.description": "失去{HpLoss:diff()}点生命。\n将[gold]手牌[/gold]中的1张牌放到[gold]抽牌堆[/gold]顶部。\n从[gold]抽牌堆[/gold]中选择1张牌放入你的[gold]手牌[/gold]。",
@@ -99,7 +99,7 @@
   "REMILIA-REMILIA_UNCOMMON9.description": "移除目标的[gold]格挡[/gold]和[gold]人工制品[/gold]。\n造成{Damage:diff()}点伤害。\n给予{BloodPlague:diff()}层[gold]血疫[/gold]。\n将1张[gold]渴血诅咒[/gold]加入你的[gold]手牌[/gold]。",
   "REMILIA-REMILIA_UNCOMMON9.title": "死亡之触",
 
-  "REMILIA-REMILIA_UNCOMMON10.description": "造成{Damage:diff()}点伤害。\n斩杀时，获得{BloodPool:diff()}点[gold]血池[/gold]。",
+  "REMILIA-REMILIA_UNCOMMON10.description": "造成{Damage:diff()}点伤害。\n[gold]斩杀[/gold]时，获得{BloodPool:diff()}点[gold]血池[/gold]。",
   "REMILIA-REMILIA_UNCOMMON10.title": "骨髓打击",
 
   "REMILIA-REMILIA_UNCOMMON11.description": "对所有敌人造成{Damage:diff()}点伤害。\n消耗最多{BloodCost:diff()}点[gold]血池[/gold]，回复等量的生命。",

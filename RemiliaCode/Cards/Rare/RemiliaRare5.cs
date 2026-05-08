@@ -16,7 +16,7 @@ public class RemiliaRare5() : RemiliaCard(1,
     TargetType.AnyEnemy)
 {
     protected override IEnumerable<DynamicVar> CanonicalVars => [
-        new CalculationBaseVar(10m),
+        new CalculationBaseVar(15m),
         new ExtraDamageVar(3m),
         new CalculatedDamageVar(ValueProp.Move).WithMultiplier((CardModel card, Creature? _) => card.Owner.PlayerCombatState?.AllCards.Count((CardModel c) => c.Type == CardType.Curse) ?? 0)
     ];

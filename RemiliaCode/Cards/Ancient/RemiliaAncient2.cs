@@ -16,6 +16,8 @@ public class RemiliaAncient2() : RemiliaCard(1,
     TargetType.AllEnemies)
 {
     protected override IEnumerable<DynamicVar> CanonicalVars => [new DamageVar(14m, ValueProp.Move)];
+    
+    public override IEnumerable<CardKeyword> CanonicalKeywords => [CardKeyword.Retain];
 
     protected override async Task OnPlay(
         PlayerChoiceContext choiceContext,
@@ -27,7 +29,11 @@ public class RemiliaAncient2() : RemiliaCard(1,
             .Execute(choiceContext);
         
         
-        int count = Math.Min(attackCommand.Results.Sum((DamageResult r) => r.TotalDamage + r.OverkillDamage), base.Owner.Creature.GetPower<BloodPool>()?.Amount ?? 0);
+        int value1 = attackCommand.Results.Sum(r => r.TotalDamage + r.OverkillDamage);
+        int value2 = base.Owner.Creature.GetPower<BloodPool>()?.Amount ?? 0;
+        int value3 = Math.Max(0, base.Owner.Creature.MaxHp - base.Owner.Creature.CurrentHp);
+        int count = new[] { value1, value2, value3 }.Min();
+        
         await PowerCmd.Apply<BloodPool>(base.Owner.Creature, -count, base.Owner.Creature, null);
         await CreatureCmd.Heal(base.Owner.Creature, count);
     }

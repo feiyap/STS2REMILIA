@@ -14,7 +14,7 @@ public class RemiliaCommon3() : RemiliaCard(2,
     CardType.Attack, CardRarity.Common,
     TargetType.AnyEnemy)
 {
-    protected override IEnumerable<DynamicVar> CanonicalVars => [new DamageVar(7m, ValueProp.Move)];
+    protected override IEnumerable<DynamicVar> CanonicalVars => [new DamageVar(7m, ValueProp.Move), new PowerVar<BloodPool>(3m)];
 
     protected override async Task OnPlay(
         PlayerChoiceContext choiceContext,
@@ -26,12 +26,12 @@ public class RemiliaCommon3() : RemiliaCard(2,
             .WithHitFx("vfx/vfx_attack_slash")
             .Execute(choiceContext);
         
-        int count = attackCommand.Results.Sum((DamageResult r) => r.TotalDamage + r.OverkillDamage);
-        await PowerCmd.Apply<BloodPool>(base.Owner.Creature, count, base.Owner.Creature, null);
+        await PowerCmd.Apply<BloodPool>(base.Owner.Creature, base.DynamicVars["BloodPool"].BaseValue, base.Owner.Creature, null);
     }
 
     protected override void OnUpgrade()
     {
         base.DynamicVars.Damage.UpgradeValueBy(2m);
+        DynamicVars["BloodPool"].UpgradeValueBy(1m);
     }
 }

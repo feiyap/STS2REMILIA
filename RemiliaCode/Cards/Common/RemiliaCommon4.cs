@@ -2,6 +2,7 @@ using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.Entities.Creatures;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
+using MegaCrit.Sts2.Core.HoverTips;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
 using MegaCrit.Sts2.Core.Models;
 using MegaCrit.Sts2.Core.Models.Powers;
@@ -23,6 +24,8 @@ public class RemiliaCommon4() : RemiliaCard(0,
     
     public override IEnumerable<CardKeyword> CanonicalKeywords => [CardKeyword.Exhaust];
     
+    protected override IEnumerable<IHoverTip> ExtraHoverTips => [HoverTipFactory.FromPower<VulnerablePower>(), HoverTipFactory.FromPower<BloodPlague>()];
+    
     protected override bool IsPlayable => IsBloodPoolCount(base.DynamicVars["BloodCost"].IntValue);
 
     protected override async Task OnPlay(
@@ -30,8 +33,8 @@ public class RemiliaCommon4() : RemiliaCard(0,
         CardPlay play)
     {
         await PowerCmd.Apply<BloodPool>(base.Owner.Creature, -base.DynamicVars["BloodCost"].BaseValue, base.Owner.Creature, null);
-        await PowerCmd.Apply<VulnerablePower>(play.Target, base.DynamicVars["VulnerablePower"].BaseValue, base.Owner.Creature, null);
-        await PowerCmd.Apply<BloodPlague>(play.Target, base.DynamicVars["BloodPlague"].BaseValue, base.Owner.Creature, null);
+        await PowerCmd.Apply<VulnerablePower>(play.Target, base.DynamicVars["VulnerablePower"].BaseValue, base.Owner.Creature, this);
+        await PowerCmd.Apply<BloodPlague>(play.Target, base.DynamicVars["BloodPlague"].BaseValue, base.Owner.Creature, this);
     }
 
     protected override void OnUpgrade()

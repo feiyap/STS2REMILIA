@@ -4,6 +4,7 @@ using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.Entities.Creatures;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
+using MegaCrit.Sts2.Core.Logging;
 using MegaCrit.Sts2.Core.Models;
 using MegaCrit.Sts2.Core.Saves.Runs;
 using MegaCrit.Sts2.Core.ValueProps;
@@ -54,6 +55,8 @@ public class RemiliaRare4() : RemiliaCard(1,
             _increasedDamage = value;
         }
     }
+    
+    public override IEnumerable<CardKeyword> CanonicalKeywords => [CardKeyword.Exhaust];
 
     protected override async Task OnPlay(
         PlayerChoiceContext choiceContext,
@@ -93,6 +96,6 @@ public class RemiliaRare4() : RemiliaCard(1,
 
     private void UpdateDamage()
     {
-        CurrentDamage = 13 + IncreasedDamage;
+        CurrentDamage = 18 + IncreasedDamage;
     }
 }

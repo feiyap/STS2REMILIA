@@ -10,13 +10,15 @@ using Remilia.RemiliaCode.Powers;
 
 namespace Remilia.RemiliaCode.Cards.Uncommon;
 
-public class RemiliaUncommon19() : RemiliaCard(1,
+public class RemiliaUncommon19() : RemiliaCard(0,
     CardType.Skill, CardRarity.Uncommon,
     TargetType.Self)
 {
-    protected override IEnumerable<DynamicVar> CanonicalVars => [new DynamicVar("BloodPool", 9m), new CardsVar(1)];
+    protected override IEnumerable<DynamicVar> CanonicalVars => [new DynamicVar("BloodPool", 3m), new CardsVar(1)];
     
     protected override IEnumerable<IHoverTip> ExtraHoverTips => [HoverTipFactory.FromKeyword(CardKeyword.Exhaust)];
+    
+    public override IEnumerable<CardKeyword> CanonicalKeywords => [CardKeyword.Exhaust];
 
     protected override async Task OnPlay(
         PlayerChoiceContext choiceContext,
@@ -44,6 +46,5 @@ public class RemiliaUncommon19() : RemiliaCard(1,
 
     protected override void OnUpgrade()
     {
-        base.DynamicVars["BloodPool"].UpgradeValueBy(3m);
     }
 }

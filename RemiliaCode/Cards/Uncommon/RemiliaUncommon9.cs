@@ -43,7 +43,7 @@ public class RemiliaUncommon9() : RemiliaCard(1,
             .Targeting(play.Target)
             .WithHitVfxNode((Creature t) => NScratchVfx.Create(t, goingRight: true))
             .Execute(choiceContext);
-        await PowerCmd.Apply<BloodPlague>(play.Target, base.DynamicVars["BloodPlague"].BaseValue, base.Owner.Creature, null);
+        await PowerCmd.Apply<BloodPlague>(play.Target, base.DynamicVars["BloodPlague"].BaseValue, base.Owner.Creature, this);
         
         await BloodCurse.CreateInHand(base.Owner, base.CombatState);
     }

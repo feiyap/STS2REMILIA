@@ -32,8 +32,11 @@ public class BloodSucking() : RemiliaCard(1,
             .WithHitVfxNode((Creature t) => NScratchVfx.Create(t, goingRight: true))
             .Execute(choiceContext);
         
+        int value1 = attackCommand.Results.Sum(r => r.TotalDamage + r.OverkillDamage);
+        int value2 = base.Owner.Creature.GetPower<BloodPool>()?.Amount ?? 0;
+        int value3 = Math.Max(0, base.Owner.Creature.MaxHp - base.Owner.Creature.CurrentHp);
+        int count = new[] { value1, value2, value3 }.Min();
         
-        int count = Math.Min(attackCommand.Results.Sum((DamageResult r) => r.TotalDamage + r.OverkillDamage), base.Owner.Creature.GetPower<BloodPool>()?.Amount ?? 0);
         await PowerCmd.Apply<BloodPool>(base.Owner.Creature, -count, base.Owner.Creature, null);
         await CreatureCmd.Heal(base.Owner.Creature, count);
     }

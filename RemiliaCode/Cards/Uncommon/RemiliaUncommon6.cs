@@ -33,14 +33,14 @@ public class RemiliaUncommon6() : RemiliaCard(1,
             .WithHitVfxNode((Creature t) => NScratchVfx.Create(t, goingRight: true))
             .Execute(choiceContext);
         
-        List<CardModel> list = PileType.Hand.GetPile(base.Owner).Cards.Where((CardModel c) => c != null && (c.Type == CardType.Curse || c.Type == CardType.Status)).ToList();
+        List<CardModel> list = PileType.Hand.GetPile(base.Owner).Cards.Where((CardModel c) => c != null && (c.Type == CardType.Curse)).ToList();
         int count = 0;
         foreach (CardModel item in list)
         {
             await CardCmd.Exhaust(choiceContext, item);
             count++;
         }
-        await PowerCmd.Apply<StrengthPower>(base.Owner.Creature, count, base.Owner.Creature, null);
+        await PowerCmd.Apply<StrengthPower>(base.Owner.Creature, count, base.Owner.Creature, this);
     }
 
     protected override void OnUpgrade()

@@ -7,7 +7,7 @@ using Remilia.RemiliaCode.Cards;
 
 namespace Remilia.RemiliaCode.Cards.Rare;
 
-public class RemiliaRare6() : RemiliaCard(2,
+public class RemiliaRare6() : RemiliaCard(1,
     CardType.Attack, CardRarity.Rare,
     TargetType.AnyEnemy)
 {

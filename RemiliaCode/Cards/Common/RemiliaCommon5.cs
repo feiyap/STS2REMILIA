@@ -16,7 +16,7 @@ public class RemiliaCommon5() : RemiliaCard(1,
     protected override IEnumerable<DynamicVar> CanonicalVars => [
         new BlockVar(8m, ValueProp.Move),
         new CardsVar(2),
-        new DynamicVar("BloodCost", 1)
+        new DynamicVar("BloodCost", 2)
     ];
     
     public override bool GainsBlock => true;

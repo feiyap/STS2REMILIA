@@ -45,7 +45,7 @@ public class RemiliaRare1() : RemiliaCard(3,
 
         if (base.IsUpgraded)
         {
-            await PowerCmd.Apply<IntangiblePower>(base.Owner.Creature, base.DynamicVars["IntangiblePower"].BaseValue, base.Owner.Creature, null);
+            await PowerCmd.Apply<IntangiblePower>(base.Owner.Creature, base.DynamicVars["IntangiblePower"].BaseValue, base.Owner.Creature, this);
         }
     }
 

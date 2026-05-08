@@ -19,7 +19,7 @@ public class RemiliaRare14() : RemiliaCard(3,
     
     protected override IEnumerable<IHoverTip> ExtraHoverTips => [HoverTipFactory.FromPower<IntangiblePower>()];
     
-    public override IEnumerable<CardKeyword> CanonicalKeywords => [CardKeyword.Exhaust];
+    public override IEnumerable<CardKeyword> CanonicalKeywords => [CardKeyword.Exhaust, CardKeyword.Retain];
 
     protected override async Task OnPlay(
         PlayerChoiceContext choiceContext,
@@ -30,7 +30,7 @@ public class RemiliaRare14() : RemiliaCard(3,
             select c;
         foreach (Creature item in enumerable)
         {
-            await PowerCmd.Apply<IntangiblePower>(item, base.DynamicVars["Equilibrium"].BaseValue, base.Owner.Creature, this);
+            await PowerCmd.Apply<IntangiblePower>(item, base.DynamicVars["IntangiblePower"].BaseValue, base.Owner.Creature, this);
         }
     }
 

@@ -26,10 +26,10 @@
   "REMILIA-REMILIA_COMMON5.description": "Consume {BloodCost} [gold]Blood Pool[/gold].\nGain {Block:diff()} [gold]Block[/gold].\nDraw {Cards:diff()} card{Cards:plural:|s}.",
   "REMILIA-REMILIA_COMMON5.title": "Nightwing",
 
-  "REMILIA-REMILIA_COMMON6.description": "Gain {Block:diff()} [gold]Block[/gold].\nGain {BloodPool} [gold]Blood Pool[/gold].",
+  "REMILIA-REMILIA_COMMON6.description": "Gain {Block:diff()} [gold]Block[/gold].\nGain {BloodPool:diff()} [gold]Blood Pool[/gold].",
   "REMILIA-REMILIA_COMMON6.title": "Lullaby",
 
-  "REMILIA-REMILIA_COMMON7.description": "Gain {BloodPool} [gold]Blood Pool[/gold].",
+  "REMILIA-REMILIA_COMMON7.description": "Gain {BloodPool:diff()} [gold]Blood Pool[/gold].",
   "REMILIA-REMILIA_COMMON7.title": "Blood Bag",
 
   "REMILIA-REMILIA_COMMON8.description": "Lose {HpLoss:diff()} HP.\nDraw {Cards:diff()} card{Cards:plural:|s}.",

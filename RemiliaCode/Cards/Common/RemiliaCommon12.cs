@@ -14,6 +14,8 @@ public class RemiliaCommon12() : RemiliaCard(0,
     TargetType.Self)
 {
     protected override IEnumerable<DynamicVar> CanonicalVars => [new HpLossVar(3m), new CardsVar(1), new DynamicVar("PutBack", 1m)];
+    
+    public override IEnumerable<CardKeyword> CanonicalKeywords => [CardKeyword.Exhaust];
 
     protected override async Task OnPlay(
         PlayerChoiceContext choiceContext,

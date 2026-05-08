@@ -26,10 +26,10 @@
   "REMILIA-REMILIA_COMMON5.description": "{BloodCost} [gold]혈지[/gold]를 소모합니다.\n{Block:diff()} [gold]방어도[/gold]를 얻습니다.\n카드를 {Cards:diff()}장 뽑습니다.",
   "REMILIA-REMILIA_COMMON5.title": "야익",
 
-  "REMILIA-REMILIA_COMMON6.description": "{Block:diff()} [gold]방어도[/gold]를 얻습니다.\n{BloodPool} [gold]혈지[/gold]를 얻습니다.",
+  "REMILIA-REMILIA_COMMON6.description": "{Block:diff()} [gold]방어도[/gold]를 얻습니다.\n{BloodPool:diff()} [gold]혈지[/gold]를 얻습니다.",
   "REMILIA-REMILIA_COMMON6.title": "자장가",
 
-  "REMILIA-REMILIA_COMMON7.description": "{BloodPool} [gold]혈지[/gold]를 얻습니다.",
+  "REMILIA-REMILIA_COMMON7.description": "{BloodPool:diff()} [gold]혈지[/gold]를 얻습니다.",
   "REMILIA-REMILIA_COMMON7.title": "혈팩",
 
   "REMILIA-REMILIA_COMMON8.description": "생명력 {HpLoss:diff()}를 잃습니다.\n카드를 {Cards:diff()}장 뽑습니다.",

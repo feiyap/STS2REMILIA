@@ -11,7 +11,7 @@ public class RemiliaCommon7() : RemiliaCard(1,
     CardType.Skill, CardRarity.Common,
     TargetType.Self)
 {
-    protected override IEnumerable<DynamicVar> CanonicalVars => [new DynamicVar("BloodPool", 6m)];
+    protected override IEnumerable<DynamicVar> CanonicalVars => [new DynamicVar("BloodPool", 4m)];
     
     public override IEnumerable<CardKeyword> CanonicalKeywords => [CardKeyword.Exhaust];
 
@@ -24,6 +24,6 @@ public class RemiliaCommon7() : RemiliaCard(1,
 
     protected override void OnUpgrade()
     {
-        base.DynamicVars["BloodPool"].UpgradeValueBy(3m);
+        base.DynamicVars["BloodPool"].UpgradeValueBy(2m);
     }
 }

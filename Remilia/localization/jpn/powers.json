@@ -9,7 +9,7 @@
 
   "REMILIA-REMILIA_COMMON19_POWER.description": "次の[blue]1[/blue]ターンの開始時、カードを1枚引く。",
   "REMILIA-REMILIA_COMMON19_POWER.smartDescription": "次の[blue]{Amount}[/blue]ターンの開始時、カードを1枚引く。",
-  "REMILIA-REMILIA_COMMON19_POWER.title": "次ターンドロー",
+  "REMILIA-REMILIA_COMMON19_POWER.title": "次のターンドロー",
 
   "REMILIA-REMILIA_UNCOMMON24_POWER.description": "このターン、[blue]1[/blue][gold]筋力[/gold]と[blue]1[/blue][gold]敏捷性[/gold]を得る。",
   "REMILIA-REMILIA_UNCOMMON24_POWER.smartDescription": "このターン、[blue]{Amount}[/blue][gold]筋力[/gold]と[blue]{Amount}[/blue][gold]敏捷性[/gold]を得る。",
@@ -49,7 +49,7 @@
 
   "REMILIA-REMILIA_UNCOMMON35_POWER.description": "自分のターン開始時、すべての敵に[blue]1[/blue][gold]爪痕[/gold]を付与する。",
   "REMILIA-REMILIA_UNCOMMON35_POWER.smartDescription": "自分のターン開始時、すべての敵に[blue]{Amount}[/blue][gold]爪痕[/gold]を付与する。",
-  "REMILIA-REMILIA_UNCOMMON35_POWER.title": "スカーレット伯爵",
+  "REMILIA-REMILIA_UNCOMMON35_POWER.title": "紅爵",
 
   "REMILIA-REMILIA_UNCOMMON36_POWER.description": "カードが消費されるたび、[blue]1[/blue][gold]血液[/gold]を得る。",
   "REMILIA-REMILIA_UNCOMMON36_POWER.smartDescription": "カードが消費されるたび、[blue]{Amount}[/blue][gold]血液[/gold]を得る。",
@@ -57,7 +57,7 @@
 
   "REMILIA-REMILIA_RARE15_POWER.description": "使用した攻撃カードは追加でもう1回発動する。",
   "REMILIA-REMILIA_RARE15_POWER.smartDescription": "使用した攻撃カードは追加でもう1回発動する。",
-  "REMILIA-REMILIA_RARE15_POWER.title": "「子夜の女王」",
+  "REMILIA-REMILIA_RARE15_POWER.title": "「夜の女王」",
 
   "REMILIA-REMILIA_RARE16_POWER.description": "HPを失うたび、[blue]1[/blue][gold]エナジー[/gold]を得る。",
   "REMILIA-REMILIA_RARE16_POWER.smartDescription": "HPを失うたび、{Amount:energyIcons()}を得る。",
@@ -73,23 +73,23 @@
 
   "REMILIA-REMILIA_RARE20_POWER.description": "攻撃がブロックされずにダメージを与えるたび、[blue]1[/blue][gold]爪痕[/gold]を付与する。",
   "REMILIA-REMILIA_RARE20_POWER.smartDescription": "攻撃がブロックされずにダメージを与えるたび、[blue]{Amount}[/blue][gold]爪痕[/gold]を付与する。",
-  "REMILIA-REMILIA_RARE20_POWER.title": "「千年吸血鬼」",
+  "REMILIA-REMILIA_RARE20_POWER.title": "「ミレニアムの吸血鬼」",
 
   "REMILIA-REMILIA_RARE21_POWER.description": "最大HPが自分より低い敵に対する攻撃ダメージが[blue]1[/blue]%増加する。",
   "REMILIA-REMILIA_RARE21_POWER.smartDescription": "最大HPが自分より低い敵に対する攻撃ダメージが[blue]{Amount}[/blue]%増加する。",
-  "REMILIA-REMILIA_RARE21_POWER.title": "紅符「紅の主」",
+  "REMILIA-REMILIA_RARE21_POWER.title": "紅符「スカーレットマイスタ」",
 
   "REMILIA-REMILIA_RARE22_POWER.description": "呪いカードを引いた時、1HPを失い、それを[gold]消費[/gold]する。\n呪いカードを[gold]消費[/gold]するたび、カードを1枚引き、[blue]1[/blue]筋力を得る。",
   "REMILIA-REMILIA_RARE22_POWER.smartDescription": "呪いカードを引いた時、1HPを失い、それを[gold]消費[/gold]する。\n呪いカードを[gold]消費[/gold]するたび、カードを1枚引き、[blue]{Amount}[/blue]筋力を得る。",
-  "REMILIA-REMILIA_RARE22_POWER.title": "呪符「ヴラド・ツェペシュの呪い」",
+  "REMILIA-REMILIA_RARE22_POWER.title": "呪詛「ブラド・ツェペシュの呪い」",
 
   "REMILIA-REMILIA_RARE24_POWER.description": "自分のターン開始時、カードを[blue]1[/blue]枚引く。",
   "REMILIA-REMILIA_RARE24_POWER.smartDescription": "自分のターン開始時、カードを[blue]{Amount}[/blue]枚引く。",
-  "REMILIA-REMILIA_RARE24_POWER.title": "「紅魔法」",
+  "REMILIA-REMILIA_RARE24_POWER.title": "「レッドマジック」",
 
   "REMILIA-REMILIA_RARE26_POWER.description": "[gold]血疫[/gold]が追加で[blue]1[/blue]回発動する。",
   "REMILIA-REMILIA_RARE26_POWER.smartDescription": "[gold]血疫[/gold]が追加で[blue]{Amount}[/blue]回発動する。",
-  "REMILIA-REMILIA_RARE26_POWER.title": "紅符「嗜血魔方陣」",
+  "REMILIA-REMILIA_RARE26_POWER.title": "紅符「ブラッディマジックスクウェア」",
 
   "REMILIA-BLOOD_PLAGUE.description": "デバフを受けるたび、[blue]1[/blue]ダメージを受ける。",
   "REMILIA-BLOOD_PLAGUE.smartDescription": "デバフを受けるたび、[blue]{Amount}[/blue]ダメージを受ける。",
