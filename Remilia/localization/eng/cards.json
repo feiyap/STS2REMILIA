@@ -17,7 +17,7 @@
   "REMILIA-REMILIA_COMMON2.description": "Consume {BloodCost} [gold]Blood Pool[/gold].\nDeal {Damage:diff()} damage.\nDraw {Cards} cards.",
   "REMILIA-REMILIA_COMMON2.title": "Nocturne",
 
-  "REMILIA-REMILIA_COMMON3.description": "Deal {Damage:diff()} damage 2 times.\nGain [gold]Blood Pool[/gold] equal to damage dealt.",
+  "REMILIA-REMILIA_COMMON3.description": "Deal {Damage:diff()} damage 2 times.\nGain {BloodPool:diff()} [gold]Blood Pool[/gold].",
   "REMILIA-REMILIA_COMMON3.title": "The Taste of Blood",
 
   "REMILIA-REMILIA_COMMON4.description": "Consume {BloodCost} [gold]Blood Pool[/gold].\nApply {VulnerablePower:diff()} [gold]Vulnerable[/gold].\nApply {BloodPlague:diff()} [gold]Blood Plague[/gold].",

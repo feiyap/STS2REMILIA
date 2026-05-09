@@ -16,8 +16,6 @@ public class RemiliaAncient2() : RemiliaCard(1,
     TargetType.AllEnemies)
 {
     protected override IEnumerable<DynamicVar> CanonicalVars => [new DamageVar(14m, ValueProp.Move)];
-    
-    public override IEnumerable<CardKeyword> CanonicalKeywords => [CardKeyword.Retain];
 
     protected override async Task OnPlay(
         PlayerChoiceContext choiceContext,

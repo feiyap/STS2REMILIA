@@ -18,6 +18,7 @@ public class Remilia : PlaceholderCharacterModel
     public static readonly Color Color = new("FF3030");
 
     public override Color NameColor => Color;
+    public override Color MapDrawingColor => Color;
     public override CharacterGender Gender => CharacterGender.Feminine;
     public override int StartingHp => 85;
 
@@ -56,4 +57,13 @@ public class Remilia : PlaceholderCharacterModel
     public override string CustomMapMarkerPath => "map_marker_char_name.png".CharacterUiPath();
     public override string CustomIconPath => "character_icon_char.tscn".CharacterUiPath();
     public override string CustomMerchantAnimPath => "character_merchant.tscn".CharacterUiPath();
+    
+    // 多人模式-手指。
+    // public override string CustomArmPointingTexturePath => null;
+    // 多人模式剪刀石头布-石头。
+    // public override string CustomArmRockTexturePath => null;
+    // 多人模式剪刀石头布-布。
+    // public override string CustomArmPaperTexturePath => null;
+    // 多人模式剪刀石头布-剪刀。
+    // public override string CustomArmScissorsTexturePath => null;
 }

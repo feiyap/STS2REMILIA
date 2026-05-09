@@ -17,7 +17,7 @@
   "REMILIA-REMILIA_COMMON2.description": "{BloodCost} [gold]혈지[/gold]를 소모합니다.\n{Damage:diff()} 피해를 줍니다.\n카드를 {Cards}장 뽑습니다.",
   "REMILIA-REMILIA_COMMON2.title": "야상곡",
 
-  "REMILIA-REMILIA_COMMON3.description": "{Damage:diff()} 피해를 2회 줍니다.\n가한 피해만큼 [gold]혈지[/gold]를 얻습니다.",
+  "REMILIA-REMILIA_COMMON3.description": "{Damage:diff()} 피해를 2회 줍니다.\n{BloodPool:diff()} [gold]혈지[/gold]를 얻습니다.",
   "REMILIA-REMILIA_COMMON3.title": "피의 맛",
 
   "REMILIA-REMILIA_COMMON4.description": "{BloodCost} [gold]혈지[/gold]를 소모합니다.\n{VulnerablePower:diff()} [gold]취약[/gold]을 부여합니다.\n{BloodPlague:diff()} [gold]혈병[/gold]을 부여합니다.",

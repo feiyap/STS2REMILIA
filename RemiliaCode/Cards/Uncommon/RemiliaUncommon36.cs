@@ -8,7 +8,7 @@ using Remilia.RemiliaCode.Powers;
 namespace Remilia.RemiliaCode.Cards.Uncommon;
 
 public class RemiliaUncommon36() : RemiliaCard(1,
-    CardType.Power, CardRarity.Uncommon,
+    CardType.Power, CardRarity.Rare,
     TargetType.Self)
 {
     protected override IEnumerable<DynamicVar> CanonicalVars => [new PowerVar<RemiliaUncommon36Power>(2)];

@@ -11,7 +11,7 @@ using Remilia.RemiliaCode.Cards;
 
 namespace Remilia.RemiliaCode.Cards.Ancient;
 
-public class RemiliaAncient1() : RemiliaCard(2,
+public class RemiliaAncient1() : RemiliaCard(1,
     CardType.Attack, CardRarity.Ancient,
     TargetType.AnyEnemy)
 {
@@ -23,7 +23,7 @@ public class RemiliaAncient1() : RemiliaCard(2,
         new CalculatedDamageVar(ValueProp.Move).FromOsty().WithMultiplier((CardModel card, Creature? _) => (decimal)(card.Owner.Creature.MaxHp * 0.25))
     ];
     
-    public override IEnumerable<CardKeyword> CanonicalKeywords => [CardKeyword.Exhaust];
+    public override IEnumerable<CardKeyword> CanonicalKeywords => [CardKeyword.Exhaust, CardKeyword.Retain];
     
     protected override IEnumerable<IHoverTip> ExtraHoverTips => [HoverTipFactory.ForEnergy(this)];
 

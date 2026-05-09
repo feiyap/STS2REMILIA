@@ -17,7 +17,7 @@
   "REMILIA-REMILIA_COMMON2.description": "{BloodCost}[gold]血液[/gold]を消費する。\n{Damage:diff()}ダメージを与える。\nカードを{Cards}枚引く。",
   "REMILIA-REMILIA_COMMON2.title": "夜曲",
 
-  "REMILIA-REMILIA_COMMON3.description": "{Damage:diff()}ダメージを2回与える。\n与えたダメージと同量の[gold]血液[/gold]を得る。",
+  "REMILIA-REMILIA_COMMON3.description": "{Damage:diff()}ダメージを2回与える。\n{BloodPool:diff()}[gold]血液[/gold]を得る。",
   "REMILIA-REMILIA_COMMON3.title": "血の味",
 
   "REMILIA-REMILIA_COMMON4.description": "{BloodCost}[gold]血液[/gold]を消費する。\n{VulnerablePower:diff()}の[gold]弱体[/gold]と{BloodPlague:diff()}[gold]血疫[/gold]を付与する。",
