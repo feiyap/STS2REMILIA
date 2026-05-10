@@ -5,5 +5,13 @@
 
   "REMILIA-REMILIA_RELIC_RED_BLOOD.description": "失去生命时，失去生命的{HpLossReduction}%转化为血池。\n战斗结束后，剩余血池的[green]{BloodPoolLift}%[/green]会存储进“绯红之血”中，在下次战斗开始时取出。",
   "REMILIA-REMILIA_RELIC_RED_BLOOD.flavor": "这个遗物的细节将在未来揭晓……",
-  "REMILIA-REMILIA_RELIC_RED_BLOOD.title": "绯红之血"
+  "REMILIA-REMILIA_RELIC_RED_BLOOD.title": "绯红之血",
+
+  "REMILIA-REMILIA_RELIC_MIDNIGHT_BLACK_TEA.description": "每场战斗开始时，获得{BloodPool}点[gold]血池[/gold]。",
+  "REMILIA-REMILIA_RELIC_MIDNIGHT_BLACK_TEA.flavor": "这个遗物的细节将在未来揭晓……",
+  "REMILIA-REMILIA_RELIC_MIDNIGHT_BLACK_TEA.title": "午夜的红茶",
+
+  "REMILIA-REMILIA_RELIC_BLOODSTAINED_DRESS.description": "每消耗1点[gold]血池[/gold]，获得[blue]{Block}[/blue]点[blue]格挡[/blue]。",
+  "REMILIA-REMILIA_RELIC_BLOODSTAINED_DRESS.flavor": "这个遗物的细节将在未来揭晓……",
+  "REMILIA-REMILIA_RELIC_BLOODSTAINED_DRESS.title": "染血的洋装"
 }
