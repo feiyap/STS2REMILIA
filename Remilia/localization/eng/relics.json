@@ -5,5 +5,29 @@
 
   "REMILIA-REMILIA_RELIC_RED_BLOOD.description": "When losing HP, [blue]{HpLossReduction}%[/blue] of the HP lost is converted into a Blood Pool.\nAt the end of combat, [green]{BloodPoolLift}%[/green] of the remaining Blood Pool is stored as “Scarlet Blood” and is retrieved at the start of the next combat.",
   "REMILIA-REMILIA_RELIC_RED_BLOOD.flavor": "[red]Details for this relic will be revealed in the future...[/red]",
-  "REMILIA-REMILIA_RELIC_RED_BLOOD.title": "Crimson Blood"
+  "REMILIA-REMILIA_RELIC_RED_BLOOD.title": "Crimson Blood",
+
+  "REMILIA-REMILIA_RELIC_MIDNIGHT_BLACK_TEA.description": "At the start of each combat, gain [blue]{BloodPool}[/blue] [gold]Blood Pool[/gold].",
+  "REMILIA-REMILIA_RELIC_MIDNIGHT_BLACK_TEA.flavor": "Details of this relic will be revealed in the future...",
+  "REMILIA-REMILIA_RELIC_MIDNIGHT_BLACK_TEA.title": "Midnight Black Tea",
+  
+  "REMILIA-REMILIA_RELIC_BLOODSTAINED_DRESS.description": "Whenever you spend 1 [gold]Blood Pool[/gold], gain [blue]{Block}[/blue] [blue]Block[/blue].",
+  "REMILIA-REMILIA_RELIC_BLOODSTAINED_DRESS.flavor": "Details of this relic will be revealed in the future...",
+  "REMILIA-REMILIA_RELIC_BLOODSTAINED_DRESS.title": "Bloodstained Dress",
+  
+  "REMILIA-REMILIA_RELIC_ELEGANT_PARASOL.description": "When applying a debuff, 33% chance to apply [blue]1[/blue] more stack.",
+  "REMILIA-REMILIA_RELIC_ELEGANT_PARASOL.flavor": "Details of this relic will be revealed in the future...",
+  "REMILIA-REMILIA_RELIC_ELEGANT_PARASOL.title": "Elegant Parasol",
+  
+  "REMILIA-REMILIA_RELIC_ANCIENT_DESTINY.description": "You can ignore the current path when choosing rooms.",
+  "REMILIA-REMILIA_RELIC_ANCIENT_DESTINY.flavor": "Details of this relic will be revealed in the future...",
+  "REMILIA-REMILIA_RELIC_ANCIENT_DESTINY.title": "Ancient Destiny",
+  
+  "REMILIA-REMILIA_RELIC_ANCIENT_SEPTET.description": "Whenever an enemy that is not a \"Minion\" dies, gain [blue]1[/blue] Max HP.",
+  "REMILIA-REMILIA_RELIC_ANCIENT_SEPTET.flavor": "Details of this relic will be revealed in the future...",
+  "REMILIA-REMILIA_RELIC_ANCIENT_SEPTET.title": "Ancient Septet",
+  
+  "REMILIA-REMILIA_RELIC_RED_MIST_ANOMALY.description": "At the start of each combat, apply [blue]{BloodPlague}[/blue] [gold]Blood Plague[/gold] to all enemies.",
+  "REMILIA-REMILIA_RELIC_RED_MIST_ANOMALY.flavor": "Details of this relic will be revealed in the future...",
+  "REMILIA-REMILIA_RELIC_RED_MIST_ANOMALY.title": "Red Mist Anomaly"
 }

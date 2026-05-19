@@ -244,6 +244,9 @@
   "REMILIA-REMILIA_RARE22.description": "저주 카드를 뽑을 때, 생명력 1을 잃고 그 카드를 [gold]소멸[/gold]시킵니다.\n저주 카드를 [gold]소멸[/gold]시킬 때마다 카드를 1장 뽑고 [gold]힘[/gold]을 {RemiliaRare22Power:diff()} 얻습니다.",
   "REMILIA-REMILIA_RARE22.title": "저주「블라드 체페쉬의 저주」",
 
+  "REMILIA-REMILIA_RARE23.description": "적이 죽을 때마다, 그 적이 가진 [gold]발톱 자국[/gold] 중첩을 무작위 적 하나에게 옮깁니다.",
+  "REMILIA-REMILIA_RARE23.title": "「단속적인 악몽」",
+
   "REMILIA-REMILIA_RARE24.description": "턴 시작 시, 카드를 {RemiliaRare24Power:diff()}장 뽑습니다.",
   "REMILIA-REMILIA_RARE24.title": "「적마법」",
 

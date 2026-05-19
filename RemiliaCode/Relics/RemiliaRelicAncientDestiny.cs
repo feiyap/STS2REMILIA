@@ -4,11 +4,13 @@ using Remilia.RemiliaCode.Relics;
 
 namespace Remilia.RemiliaCode.Relics;
 
-[Pool(typeof(RelicPool))]
 public class RemiliaRelicAncientDestiny() : RemiliaRelic
 {
     public override RelicRarity Rarity =>
-        RelicRarity.Starter;
+        RelicRarity.Rare;
 
-    
+    public override bool ShouldAllowFreeTravel()
+    {
+        return true;
+    }
 }

@@ -7,11 +7,27 @@
   "REMILIA-REMILIA_RELIC_RED_BLOOD.flavor": "这个遗物的细节将在未来揭晓……",
   "REMILIA-REMILIA_RELIC_RED_BLOOD.title": "绯红之血",
 
-  "REMILIA-REMILIA_RELIC_MIDNIGHT_BLACK_TEA.description": "每场战斗开始时，获得{BloodPool}点[gold]血池[/gold]。",
+  "REMILIA-REMILIA_RELIC_MIDNIGHT_BLACK_TEA.description": "每场战斗开始时，获得[blue]{BloodPool}[/blue]点[gold]血池[/gold]。",
   "REMILIA-REMILIA_RELIC_MIDNIGHT_BLACK_TEA.flavor": "这个遗物的细节将在未来揭晓……",
   "REMILIA-REMILIA_RELIC_MIDNIGHT_BLACK_TEA.title": "午夜的红茶",
 
   "REMILIA-REMILIA_RELIC_BLOODSTAINED_DRESS.description": "每消耗1点[gold]血池[/gold]，获得[blue]{Block}[/blue]点[blue]格挡[/blue]。",
   "REMILIA-REMILIA_RELIC_BLOODSTAINED_DRESS.flavor": "这个遗物的细节将在未来揭晓……",
-  "REMILIA-REMILIA_RELIC_BLOODSTAINED_DRESS.title": "染血的洋装"
+  "REMILIA-REMILIA_RELIC_BLOODSTAINED_DRESS.title": "染血的洋装",
+
+  "REMILIA-REMILIA_RELIC_ELEGANT_PARASOL.description": "给予减益时，有33%的概率多给予[blue]1[/blue]层。",
+  "REMILIA-REMILIA_RELIC_ELEGANT_PARASOL.flavor": "这个遗物的细节将在未来揭晓……",
+  "REMILIA-REMILIA_RELIC_ELEGANT_PARASOL.title": "华丽的洋伞",
+
+  "REMILIA-REMILIA_RELIC_ANCIENT_DESTINY.description": "你在选择房间时可以无视当前的路线。",
+  "REMILIA-REMILIA_RELIC_ANCIENT_DESTINY.flavor": "这个遗物的细节将在未来揭晓……",
+  "REMILIA-REMILIA_RELIC_ANCIENT_DESTINY.title": "古老的命运",
+
+  "REMILIA-REMILIA_RELIC_ANCIENT_SEPTET.description": "每当1名不是“爪牙”的敌人死亡时，获得[blue]1[/blue]点最大生命值。",
+  "REMILIA-REMILIA_RELIC_ANCIENT_SEPTET.flavor": "这个遗物的细节将在未来揭晓……",
+  "REMILIA-REMILIA_RELIC_ANCIENT_SEPTET.title": "古老的七重奏",
+
+  "REMILIA-REMILIA_RELIC_RED_MIST_ANOMALY.description": "在每场战斗开始时，给予所有敌人[blue]{BloodPlague}[/blue]层[gold]血疫[/gold]。",
+  "REMILIA-REMILIA_RELIC_RED_MIST_ANOMALY.flavor": "这个遗物的细节将在未来揭晓……",
+  "REMILIA-REMILIA_RELIC_RED_MIST_ANOMALY.title": "红雾异变"
 }

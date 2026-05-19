@@ -83,6 +83,10 @@
   "REMILIA-REMILIA_RARE22_POWER.smartDescription": "Whenever you draw a Curse, lose 1 HP and [gold]Exhaust[/gold] it.\nWhenever a Curse is [gold]Exhausted[/gold], draw 1 card and gain [blue]{Amount}[/blue] [gold]Strength[/gold].",
   "REMILIA-REMILIA_RARE22_POWER.title": "Curse 「Curse of Vlad Tepes」",
 
+  "REMILIA-REMILIA_RARE23_POWER.description": "Whenever an enemy dies, transfer all [gold]Claw Mark[/gold] stacks from it to a random enemy.",
+  "REMILIA-REMILIA_RARE23_POWER.smartDescription": "Whenever an enemy dies, transfer all [gold]Claw Mark[/gold] stacks from it to a random enemy.",
+  "REMILIA-REMILIA_RARE23_POWER.title": "「Intermittent Nightmare」",
+
   "REMILIA-REMILIA_RARE24_POWER.description": "At the start of your turn, draw [blue]1[/blue] card.",
   "REMILIA-REMILIA_RARE24_POWER.smartDescription": "At the start of your turn, draw [blue]{Amount}[/blue] cards.",
   "REMILIA-REMILIA_RARE24_POWER.title": "「Red Magic」",

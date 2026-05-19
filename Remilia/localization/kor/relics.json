@@ -5,5 +5,29 @@
 
   "REMILIA-REMILIA_RELIC_RED_BLOOD.description": "생명력을 잃을 때, 잃은 생명력의 {HpLossReduction}%가 혈지로 전환됩니다.\n전투 종료 후, 남은 혈지의 [green]{BloodPoolLift}%[/green]가 ‘비홍의 피’에 저장되며, 다음 전투 시작 시 꺼내어 사용합니다.",
   "REMILIA-REMILIA_RELIC_RED_BLOOD.flavor": "이 유물의 상세한 내용은 추후 밝혀질 것입니다……",
-  "REMILIA-REMILIA_RELIC_RED_BLOOD.title": "비홍의 피"
+  "REMILIA-REMILIA_RELIC_RED_BLOOD.title": "비홍의 피",
+
+  "REMILIA-REMILIA_RELIC_MIDNIGHT_BLACK_TEA.description": "각 전투 시작 시, [blue]{BloodPool}[/blue]만큼의 [gold]혈지[/gold]를 얻습니다.",
+  "REMILIA-REMILIA_RELIC_MIDNIGHT_BLACK_TEA.flavor": "이 유물의 세부 정보는 추후 공개됩니다...",
+  "REMILIA-REMILIA_RELIC_MIDNIGHT_BLACK_TEA.title": "한밤의 홍차",
+  
+  "REMILIA-REMILIA_RELIC_BLOODSTAINED_DRESS.description": "[gold]혈지[/gold]를 1 소비할 때마다, [blue]{Block}[/blue]만큼의 [blue]방어도[/blue]를 얻습니다.",
+  "REMILIA-REMILIA_RELIC_BLOODSTAINED_DRESS.flavor": "이 유물의 세부 정보는 추후 공개됩니다...",
+  "REMILIA-REMILIA_RELIC_BLOODSTAINED_DRESS.title": "피 묻은 드레스",
+  
+  "REMILIA-REMILIA_RELIC_ELEGANT_PARASOL.description": "약화 효과를 부여할 때, 33% 확률로 [blue]1[/blue] 중첩을 더 부여합니다.",
+  "REMILIA-REMILIA_RELIC_ELEGANT_PARASOL.flavor": "이 유물의 세부 정보는 추후 공개됩니다...",
+  "REMILIA-REMILIA_RELIC_ELEGANT_PARASOL.title": "우아한 파라솔",
+  
+  "REMILIA-REMILIA_RELIC_ANCIENT_DESTINY.description": "방을 선택할 때 현재 경로를 무시할 수 있습니다.",
+  "REMILIA-REMILIA_RELIC_ANCIENT_DESTINY.flavor": "이 유물의 세부 정보는 추후 공개됩니다...",
+  "REMILIA-REMILIA_RELIC_ANCIENT_DESTINY.title": "고대의 운명",
+  
+  "REMILIA-REMILIA_RELIC_ANCIENT_SEPTET.description": "\"하수인\"이 아닌 적이 죽을 때마다, 최대 체력을 [blue]1[/blue] 얻습니다.",
+  "REMILIA-REMILIA_RELIC_ANCIENT_SEPTET.flavor": "이 유물의 세부 정보는 추후 공개됩니다...",
+  "REMILIA-REMILIA_RELIC_ANCIENT_SEPTET.title": "고대의 칠중주",
+  
+  "REMILIA-REMILIA_RELIC_RED_MIST_ANOMALY.description": "각 전투 시작 시, 모든 적에게 [blue]{BloodPlague}[/blue]만큼의 [gold]혈역[/gold]을 부여합니다.",
+  "REMILIA-REMILIA_RELIC_RED_MIST_ANOMALY.flavor": "이 유물의 세부 정보는 추후 공개됩니다...",
+  "REMILIA-REMILIA_RELIC_RED_MIST_ANOMALY.title": "붉은 안개 이변"
 }

@@ -244,6 +244,9 @@
   "REMILIA-REMILIA_RARE22.description": "呪いを引くたびHPを1失い、それを消滅させる。\n呪いを消滅させるたび1ドロー＋{RemiliaRare22Power:diff()}の筋力。",
   "REMILIA-REMILIA_RARE22.title": "呪詛「ブラド・ツェペシュの呪い」",
 
+  "REMILIA-REMILIA_RARE23.description": "敵が死亡するたび、その敵が持っていた[gold]爪痕[/gold]をランダムな敵1体に移す。",
+  "REMILIA-REMILIA_RARE23.title": "「断続的な悪夢」",
+
   "REMILIA-REMILIA_RARE24.description": "ターン開始時、{RemiliaRare24Power:diff()}枚引く。",
   "REMILIA-REMILIA_RARE24.title": "「レッドマジック」",
 

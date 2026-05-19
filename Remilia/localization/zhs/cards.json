@@ -244,6 +244,9 @@
   "REMILIA-REMILIA_RARE22.description": "抽到诅咒牌时，失去1点生命，使其[gold]消耗[/gold]。\n每次[gold]消耗[/gold]诅咒牌时，抽1张牌，获得{RemiliaRare22Power:diff()}点[gold]力量[/gold]。",
   "REMILIA-REMILIA_RARE22.title": "诅咒「弗拉德·特佩斯的诅咒」",
 
+  "REMILIA-REMILIA_RARE23.description": "每当有敌人死去时，将其身上的[gold]爪痕[/gold]层数移到一名随机敌人身上。",
+  "REMILIA-REMILIA_RARE23.title": "「断续的噩梦」",
+
   "REMILIA-REMILIA_RARE24.description": "在你的回合开始时，抽{RemiliaRare24Power:diff()}张牌。",
   "REMILIA-REMILIA_RARE24.title": "「红魔法」",
 

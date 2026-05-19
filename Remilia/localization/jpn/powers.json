@@ -83,6 +83,10 @@
   "REMILIA-REMILIA_RARE22_POWER.smartDescription": "呪いカードを引いた時、1HPを失い、それを[gold]消費[/gold]する。\n呪いカードを[gold]消費[/gold]するたび、カードを1枚引き、[blue]{Amount}[/blue]筋力を得る。",
   "REMILIA-REMILIA_RARE22_POWER.title": "呪詛「ブラド・ツェペシュの呪い」",
 
+  "REMILIA-REMILIA_RARE23_POWER.description": "敵が死亡するたび、その敵が持っていた[gold]爪痕[/gold]をランダムな敵1体に移す。",
+  "REMILIA-REMILIA_RARE23_POWER.smartDescription": "敵が死亡するたび、その敵が持っていた[gold]爪痕[/gold]をランダムな敵1体に移す。",
+  "REMILIA-REMILIA_RARE23_POWER.title": "「断続的な悪夢」",
+
   "REMILIA-REMILIA_RARE24_POWER.description": "自分のターン開始時、カードを[blue]1[/blue]枚引く。",
   "REMILIA-REMILIA_RARE24_POWER.smartDescription": "自分のターン開始時、カードを[blue]{Amount}[/blue]枚引く。",
   "REMILIA-REMILIA_RARE24_POWER.title": "「レッドマジック」",

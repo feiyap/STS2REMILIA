@@ -23,6 +23,11 @@ public class ClawPrints : RemiliaPower
     
     protected override IEnumerable<DynamicVar> CanonicalVars => 
         [new DynamicVar("DamageIncrease", 1m)];
+    
+    public override bool ShouldPowerBeRemovedAfterOwnerDeath()
+    {
+        return false;
+    }
 
     public override decimal ModifyDamageAdditive(Creature? target, decimal amount, ValueProp props, Creature? dealer,
         CardModel? cardSource)
