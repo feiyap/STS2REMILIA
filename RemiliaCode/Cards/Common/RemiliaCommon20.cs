@@ -31,7 +31,7 @@ public class RemiliaCommon20() : RemiliaCard(1,
             .WithHitFx("vfx/vfx_starry_impact", "blunt_attack.mp3")
             .Execute(choiceContext);
         
-        await PowerCmd.Apply<BloodPlague>(play.Target, base.DynamicVars["BloodPlague"].BaseValue, base.Owner.Creature, this);
+        await PowerCmd.Apply<BloodPlague>(choiceContext, play.Target, base.DynamicVars["BloodPlague"].BaseValue, base.Owner.Creature, this);
     }
 
     protected override void OnUpgrade()

@@ -37,7 +37,7 @@ public class RemiliaUncommon7() : RemiliaCard(2,
             .Execute(choiceContext);
         
         await CreatureCmd.GainBlock(base.Owner.Creature, damageValue, ValueProp.Move, play);
-        await PowerCmd.Apply<BloodPool>(base.Owner.Creature, -damageValue, base.Owner.Creature, null);
+        await PowerCmd.Apply<BloodPool>(choiceContext, base.Owner.Creature, -damageValue, base.Owner.Creature, null);
         await CreatureCmd.Heal(base.Owner.Creature, damageValue);
     }
 

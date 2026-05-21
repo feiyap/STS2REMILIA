@@ -34,15 +34,15 @@ public class RemiliaRare8() : RemiliaCard(0,
             .Execute(choiceContext);
         
         
-        int count = attackCommand.Results.Sum((DamageResult r) => r.TotalDamage + r.OverkillDamage);
-        await PowerCmd.Apply<BloodPool>(base.Owner.Creature, count, base.Owner.Creature, null);
-        await PowerCmd.Apply<StrengthPower>(base.Owner.Creature, base.DynamicVars["StrengthPower"].BaseValue, base.Owner.Creature, this);
-        await PowerCmd.Apply<StrengthPower>(play.Target, base.DynamicVars["StrengthPower"].BaseValue, base.Owner.Creature, this);
+        int count = attackCommand.Results.SelectMany((List<DamageResult> r) => r).Sum((DamageResult r) => r.TotalDamage + r.OverkillDamage);
+        await PowerCmd.Apply<BloodPool>(choiceContext, base.Owner.Creature, count, base.Owner.Creature, null);
+        await PowerCmd.Apply<StrengthPower>(choiceContext, base.Owner.Creature, base.DynamicVars["StrengthPower"].BaseValue, base.Owner.Creature, this);
+        await PowerCmd.Apply<StrengthPower>(choiceContext, play.Target, base.DynamicVars["StrengthPower"].BaseValue, base.Owner.Creature, this);
         
         bool shouldTriggerFatal = play.Target.Powers.All((PowerModel p) => p.ShouldOwnerDeathTriggerFatal());
-        if (shouldTriggerFatal && attackCommand.Results.Any((DamageResult r) => r.WasTargetKilled))
+        if (shouldTriggerFatal && attackCommand.Results.SelectMany((List<DamageResult> r) => r).Any((DamageResult r) => r.WasTargetKilled))
         {
-            await PowerCmd.Apply<StrengthPower>(base.Owner.Creature, base.DynamicVars["StrengthPower"].BaseValue, base.Owner.Creature, this);
+            await PowerCmd.Apply<StrengthPower>(choiceContext, base.Owner.Creature, base.DynamicVars["StrengthPower"].BaseValue, base.Owner.Creature, this);
             await PlayerCmd.GainEnergy(base.DynamicVars.Energy.BaseValue, base.Owner);
         }
     }

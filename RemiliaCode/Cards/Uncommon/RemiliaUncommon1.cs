@@ -27,24 +27,24 @@ public class RemiliaUncommon1() : RemiliaCard(0,
             .Targeting(play.Target)
             .WithHitVfxNode((Creature t) => NScratchVfx.Create(t, goingRight: true))
             .Execute(choiceContext);
-        await PowerCmd.Apply<ClawPrints>(play.Target, base.DynamicVars["ClawPrints"].BaseValue, base.Owner.Creature, this);
+        await PowerCmd.Apply<ClawPrints>(choiceContext, play.Target, base.DynamicVars["ClawPrints"].BaseValue, base.Owner.Creature, this);
         await Cmd.Wait(0.25f);
     }
     
-    protected override PileType GetResultPileType()
+    protected override PileType GetResultPileTypeForCardPlay()
     {
-        PileType resultPileType = base.GetResultPileType();
-        if (resultPileType != PileType.Discard)
+        PileType resultPileTypeForCardPlay = base.GetResultPileTypeForCardPlay();
+        if (resultPileTypeForCardPlay != PileType.Discard)
         {
-            return resultPileType;
+            return resultPileTypeForCardPlay;
         }
 
         if (IsBloodPoolCount(3))
         {
-            PowerCmd.Apply<BloodPool>(base.Owner.Creature, -3, base.Owner.Creature, null);
+            PowerCmd.Apply<BloodPool>(new ThrowingPlayerChoiceContext(),base.Owner.Creature, -3, base.Owner.Creature, null);
             return PileType.Hand;
         }
-        return resultPileType;
+        return resultPileTypeForCardPlay;
     }
 
     protected override void OnUpgrade()

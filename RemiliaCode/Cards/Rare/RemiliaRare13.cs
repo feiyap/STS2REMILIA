@@ -24,7 +24,7 @@ public class RemiliaRare13() : RemiliaCard(1,
 
         if (base.IsUpgraded)
         {
-            await PowerCmd.Apply<RetainHandPower>(base.Owner.Creature, base.DynamicVars["Equilibrium"].BaseValue, base.Owner.Creature, this);
+            await PowerCmd.Apply<RetainHandPower>(choiceContext, base.Owner.Creature, base.DynamicVars["Equilibrium"].BaseValue, base.Owner.Creature, this);
         }
     }
 

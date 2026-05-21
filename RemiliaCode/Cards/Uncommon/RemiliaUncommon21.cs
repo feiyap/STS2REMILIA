@@ -26,7 +26,7 @@ public class RemiliaUncommon21() : RemiliaCard(0,
         await CreatureCmd.TriggerAnim(base.Owner.Creature, "Cast", base.Owner.Character.CastAnimDelay);
         foreach (Creature hittableEnemy in base.CombatState.HittableEnemies)
         {
-            await PowerCmd.Apply<BloodPlague>(hittableEnemy, base.DynamicVars["BloodPlague"].BaseValue, base.Owner.Creature, this);
+            await PowerCmd.Apply<BloodPlague>(choiceContext, hittableEnemy, base.DynamicVars["BloodPlague"].BaseValue, base.Owner.Creature, this);
         }
     }
 

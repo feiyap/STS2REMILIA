@@ -20,12 +20,12 @@ public class RemiliaRelicRedMistAnomaly() : RemiliaRelic
 
     protected override IEnumerable<IHoverTip> ExtraHoverTips => [HoverTipFactory.FromPower<BloodPlague>()];
 
-    public override async Task BeforeSideTurnStart(PlayerChoiceContext choiceContext, CombatSide side, CombatState combatState)
+    public override async Task BeforeSideTurnStart(PlayerChoiceContext choiceContext, CombatSide side, ICombatState combatState)
     {
         if (side == base.Owner.Creature.Side && combatState.RoundNumber <= 1)
         {
             Flash();
-            await PowerCmd.Apply<BloodPlague>(combatState.HittableEnemies, base.DynamicVars["BloodPlague"].BaseValue, base.Owner.Creature, null);
+            await PowerCmd.Apply<BloodPlague>(choiceContext, combatState.HittableEnemies, base.DynamicVars["BloodPlague"].BaseValue, base.Owner.Creature, null);
         }
     }
 }

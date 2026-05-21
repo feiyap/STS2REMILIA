@@ -31,7 +31,7 @@ public class RemiliaRare18Power : RemiliaPower
             return Task.CompletedTask;
         }
         
-        PowerCmd.Apply<BloodPool>(base.Owner, base.Amount, base.Owner, null);
+        PowerCmd.Apply<BloodPool>(choiceContext, base.Owner, base.Amount, base.Owner, null);
         
         return Task.CompletedTask;
     }

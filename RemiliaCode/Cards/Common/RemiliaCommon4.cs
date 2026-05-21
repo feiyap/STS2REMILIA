@@ -32,9 +32,9 @@ public class RemiliaCommon4() : RemiliaCard(0,
         PlayerChoiceContext choiceContext,
         CardPlay play)
     {
-        await PowerCmd.Apply<BloodPool>(base.Owner.Creature, -base.DynamicVars["BloodCost"].BaseValue, base.Owner.Creature, null);
-        await PowerCmd.Apply<VulnerablePower>(play.Target, base.DynamicVars["VulnerablePower"].BaseValue, base.Owner.Creature, this);
-        await PowerCmd.Apply<BloodPlague>(play.Target, base.DynamicVars["BloodPlague"].BaseValue, base.Owner.Creature, this);
+        await PowerCmd.Apply<BloodPool>(choiceContext, base.Owner.Creature, -base.DynamicVars["BloodCost"].BaseValue, base.Owner.Creature, null);
+        await PowerCmd.Apply<VulnerablePower>(choiceContext, play.Target, base.DynamicVars["VulnerablePower"].BaseValue, base.Owner.Creature, this);
+        await PowerCmd.Apply<BloodPlague>(choiceContext, play.Target, base.DynamicVars["BloodPlague"].BaseValue, base.Owner.Creature, this);
     }
 
     protected override void OnUpgrade()

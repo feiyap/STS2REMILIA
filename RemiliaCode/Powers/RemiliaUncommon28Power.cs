@@ -56,6 +56,6 @@ public class RemiliaUncommon28Power : RemiliaPower
         Console.WriteLine(power.Applier);
         Console.WriteLine(power.Amount);
         Console.WriteLine(powerCount);
-        await PowerCmd.Apply(power, power.Applier, powerCount, base.Owner, null);
+        await PowerCmd.Apply(new ThrowingPlayerChoiceContext(),power, power.Applier, powerCount, base.Owner, null);
     }
 }

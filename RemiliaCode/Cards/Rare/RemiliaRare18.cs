@@ -17,7 +17,7 @@ public class RemiliaRare18() : RemiliaCard(1,
         PlayerChoiceContext choiceContext,
         CardPlay play)
     {
-        await PowerCmd.Apply<RemiliaRare18Power>(base.Owner.Creature, base.DynamicVars["RemiliaRare18Power"].BaseValue, base.Owner.Creature, this);
+        await PowerCmd.Apply<RemiliaRare18Power>(choiceContext, base.Owner.Creature, base.DynamicVars["RemiliaRare18Power"].BaseValue, base.Owner.Creature, this);
     }
 
     protected override void OnUpgrade()

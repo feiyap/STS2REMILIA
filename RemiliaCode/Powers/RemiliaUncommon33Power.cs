@@ -25,7 +25,7 @@ public class RemiliaUncommon33Power : RemiliaPower
     {
         if (!fromHandDraw && card.Owner.Creature == base.Owner && card.Owner.Creature.CombatState.CurrentSide == card.Owner.Creature.Side)
         {
-            await PowerCmd.Apply<BloodPool>(base.Owner, this.Amount, base.Owner, null);
+            await PowerCmd.Apply<BloodPool>(choiceContext, base.Owner, this.Amount, base.Owner, null);
         }
     }
 }

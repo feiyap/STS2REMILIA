@@ -35,7 +35,7 @@ public class RemiliaUncommon30Power : RemiliaPower
         int value3 = Math.Max(0, base.Owner.MaxHp - base.Owner.CurrentHp);
         int count = new[] { value1, value2, value3 }.Min();
         
-        await PowerCmd.Apply<BloodPool>(base.Owner, -count, base.Owner, null);
+        await PowerCmd.Apply<BloodPool>(context, base.Owner, -count, base.Owner, null);
         await CreatureCmd.Heal(base.Owner, count);
     }
 }

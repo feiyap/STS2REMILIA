@@ -29,7 +29,7 @@ public class RemiliaCommon9() : RemiliaCard(1,
         int num = (play.Target.IsAlive ? play.Target.GetPowerAmount<ClawPrints>() : 0);
         if (num > 0)
         {
-            await PowerCmd.Apply<ClawPrints>(play.Target, num, base.Owner.Creature, this);
+            await PowerCmd.Apply<ClawPrints>(choiceContext, play.Target, num, base.Owner.Creature, this);
         }
     }
 

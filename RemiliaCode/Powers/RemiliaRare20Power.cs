@@ -30,7 +30,7 @@ public class RemiliaRare20Power : RemiliaPower
         if (dealer == base.Owner && props.IsPoweredAttack_() && result.UnblockedDamage > 0)
         {
             Flash();
-            await PowerCmd.Apply<ClawPrints>(target, base.Amount, base.Owner, null);
+            await PowerCmd.Apply<ClawPrints>(choiceContext, target, base.Amount, base.Owner, null);
         }
     }
 }

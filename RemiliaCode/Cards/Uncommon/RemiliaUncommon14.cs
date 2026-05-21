@@ -28,8 +28,8 @@ public class RemiliaUncommon14() : RemiliaCard(2,
         await DamageCmd.Attack(base.DynamicVars.Damage.BaseValue).FromCard(this).Targeting(play.Target)
             .WithHitFx("vfx/vfx_starry_impact", "blunt_attack.mp3")
             .Execute(choiceContext);
-        await PowerCmd.Apply<VulnerablePower>(play.Target, base.DynamicVars.Vulnerable.BaseValue, base.Owner.Creature, this);
-        await PowerCmd.Apply<ClawPrints>(play.Target, base.DynamicVars["ClawPrints"].BaseValue, base.Owner.Creature, this);
+        await PowerCmd.Apply<VulnerablePower>(choiceContext, play.Target, base.DynamicVars.Vulnerable.BaseValue, base.Owner.Creature, this);
+        await PowerCmd.Apply<ClawPrints>(choiceContext, play.Target, base.DynamicVars["ClawPrints"].BaseValue, base.Owner.Creature, this);
     }
 
     protected override void OnUpgrade()

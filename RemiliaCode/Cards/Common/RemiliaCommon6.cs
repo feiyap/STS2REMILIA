@@ -20,7 +20,7 @@ public class RemiliaCommon6() : RemiliaCard(1,
         CardPlay play)
     {
         await CommonActions.CardBlock(this, play);
-        await PowerCmd.Apply<BloodPool>(base.Owner.Creature, base.DynamicVars["BloodPool"].BaseValue, base.Owner.Creature, null);
+        await PowerCmd.Apply<BloodPool>(choiceContext, base.Owner.Creature, base.DynamicVars["BloodPool"].BaseValue, base.Owner.Creature, null);
     }
 
     protected override void OnUpgrade()

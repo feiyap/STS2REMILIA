@@ -28,7 +28,7 @@ public class RemiliaUncommon24() : RemiliaCard(0,
         
         //await PowerCmd.Apply<TemporaryStrengthPower>(base.Owner.Creature, base.DynamicVars["StrengthPower"].BaseValue, base.Owner.Creature, this);
         //await PowerCmd.Apply<TemporaryDexterityPower>(base.Owner.Creature, base.DynamicVars["DexterityPower"].BaseValue, base.Owner.Creature, this);
-        await PowerCmd.Apply<RemiliaUncommon24Power>(base.Owner.Creature, base.DynamicVars["DexterityPower"].BaseValue, base.Owner.Creature, this);
+        await PowerCmd.Apply<RemiliaUncommon24Power>(choiceContext, base.Owner.Creature, base.DynamicVars["DexterityPower"].BaseValue, base.Owner.Creature, this);
     }
 
     protected override void OnUpgrade()

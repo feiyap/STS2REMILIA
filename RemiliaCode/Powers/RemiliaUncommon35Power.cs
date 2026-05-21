@@ -25,7 +25,7 @@ public class RemiliaUncommon35Power : RemiliaPower
     protected override IEnumerable<IHoverTip> ExtraHoverTips =>
         [HoverTipFactory.FromPower<ClawPrints>()];
 
-    public override async Task AfterSideTurnStart(CombatSide side, CombatState combatState)
+    public override async Task AfterSideTurnStart(CombatSide side, ICombatState combatState)
     {
         if (side != base.Owner.Side)
         {
@@ -33,6 +33,6 @@ public class RemiliaUncommon35Power : RemiliaPower
         }
         Flash();
         await Cmd.CustomScaledWait(0.2f, 0.4f);
-        await PowerCmd.Apply<ClawPrints>(base.CombatState.HittableEnemies, base.Amount, base.Owner, null);
+        await PowerCmd.Apply<ClawPrints>(new ThrowingPlayerChoiceContext(), base.CombatState.HittableEnemies, base.Amount, base.Owner, null);
     }
 }

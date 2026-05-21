@@ -40,7 +40,7 @@ public class RemiliaUncommon6() : RemiliaCard(1,
             await CardCmd.Exhaust(choiceContext, item);
             count++;
         }
-        await PowerCmd.Apply<StrengthPower>(base.Owner.Creature, count, base.Owner.Creature, this);
+        await PowerCmd.Apply<StrengthPower>(choiceContext, base.Owner.Creature, count, base.Owner.Creature, this);
     }
 
     protected override void OnUpgrade()

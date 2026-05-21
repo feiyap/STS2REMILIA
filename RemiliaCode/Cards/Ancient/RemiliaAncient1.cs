@@ -36,7 +36,7 @@ public class RemiliaAncient1() : RemiliaCard(1,
             .Targeting(play.Target)
             .Execute(choiceContext);
         
-        if (shouldTriggerFatal && attackCommand.Results.Any((DamageResult r) => r.WasTargetKilled))
+        if (shouldTriggerFatal && attackCommand.Results.SelectMany((List<DamageResult> r) => r).Any((DamageResult r) => r.WasTargetKilled))
         {
             await CreatureCmd.GainMaxHp(base.Owner.Creature, base.DynamicVars.MaxHp.IntValue);
             await PlayerCmd.GainEnergy(base.DynamicVars.Energy.BaseValue, base.Owner);

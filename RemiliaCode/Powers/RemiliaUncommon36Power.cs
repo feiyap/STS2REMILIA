@@ -26,7 +26,7 @@ public class RemiliaUncommon36Power : RemiliaPower
     {
         if (card.Owner.Creature == base.Owner)
         {
-            await PowerCmd.Apply<BloodPool>(base.Owner, base.Amount, base.Owner, null);
+            await PowerCmd.Apply<BloodPool>(choiceContext, base.Owner, base.Amount, base.Owner, null);
         }
     }
 }

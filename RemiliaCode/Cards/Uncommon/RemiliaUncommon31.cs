@@ -18,7 +18,7 @@ public class RemiliaUncommon31() : RemiliaCard(1,
         CardPlay play)
     {
         await CreatureCmd.TriggerAnim(base.Owner.Creature, "Cast", base.Owner.Character.CastAnimDelay);
-        await PowerCmd.Apply<RemiliaUncommon31Power>(base.Owner.Creature, base.DynamicVars["RemiliaUncommon31Power"].BaseValue, base.Owner.Creature, this);
+        await PowerCmd.Apply<RemiliaUncommon31Power>(choiceContext, base.Owner.Creature, base.DynamicVars["RemiliaUncommon31Power"].BaseValue, base.Owner.Creature, this);
     }
 
     protected override void OnUpgrade()

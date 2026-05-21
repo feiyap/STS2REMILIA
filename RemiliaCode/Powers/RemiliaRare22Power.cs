@@ -42,7 +42,7 @@ public class RemiliaRare22Power : RemiliaPower
     {
         if (card.Owner.Creature == base.Owner && card.Type == CardType.Curse)
         {
-            await PowerCmd.Apply<StrengthPower>(base.Owner, base.Amount, base.Owner, null);
+            await PowerCmd.Apply<StrengthPower>(choiceContext, base.Owner, base.Amount, base.Owner, null);
             await CardPileCmd.Draw(choiceContext, 1, base.Owner.Player);
         }
     }

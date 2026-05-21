@@ -38,7 +38,7 @@ public class RemiliaRare3() : RemiliaCard(3,
         bool shouldTriggerFatal = play.Target.Powers.All((PowerModel p) => p.ShouldOwnerDeathTriggerFatal());
 
         isFatal = false;
-        if (shouldTriggerFatal && attackCommand.Results.Any((DamageResult r) => r.WasTargetKilled))
+        if (shouldTriggerFatal && attackCommand.Results.SelectMany((List<DamageResult> r) => r).Any((DamageResult r) => r.WasTargetKilled))
         {
             isFatal = true;
         }
@@ -53,7 +53,7 @@ public class RemiliaRare3() : RemiliaCard(3,
             cardModel.SetToFreeThisTurn();
             cardModel.AddKeyword(CardKeyword.Exhaust);
             cardModel.AddKeyword(CardKeyword.Ethereal);
-            await CardPileCmd.AddGeneratedCardToCombat(cardModel, PileType.Hand, addedByPlayer: true);
+            await CardPileCmd.AddGeneratedCardToCombat(cardModel, PileType.Hand, base.Owner);
         }
     }
 

@@ -31,17 +31,17 @@ public class BloodCurse() : RemiliaCard(0,
         await CardPileCmd.Draw(choiceContext, base.DynamicVars.Cards.IntValue, base.Owner);
     }
 
-    public override async Task OnTurnEndInHand(PlayerChoiceContext choiceContext)
+    protected override async Task OnTurnEndInHand(PlayerChoiceContext choiceContext)
     {
         await CreatureCmd.Damage(choiceContext, base.Owner.Creature, base.DynamicVars.HpLoss.BaseValue, ValueProp.Unblockable | ValueProp.Unpowered | ValueProp.Move, this);
     }
     
-    public static async Task<CardModel?> CreateInHand(Player owner, CombatState combatState)
+    public static async Task<CardModel?> CreateInHand(Player owner, ICombatState combatState)
     {
         return (await CreateInHand(owner, 1, combatState)).FirstOrDefault();
     }
     
-    public static async Task<IEnumerable<CardModel>> CreateInHand(Player owner, int count, CombatState combatState)
+    public static async Task<IEnumerable<CardModel>> CreateInHand(Player owner, int count, ICombatState combatState)
     {
         if (count == 0)
         {
@@ -56,7 +56,7 @@ public class BloodCurse() : RemiliaCard(0,
         {
             bloodCurses.Add(combatState.CreateCard<BloodCurse>(owner));
         }
-        await CardPileCmd.AddGeneratedCardsToCombat(bloodCurses, PileType.Hand, addedByPlayer: true);
+        await CardPileCmd.AddGeneratedCardsToCombat(bloodCurses, PileType.Hand, owner);
         return bloodCurses;
     }
 }

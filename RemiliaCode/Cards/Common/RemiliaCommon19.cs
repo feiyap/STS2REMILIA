@@ -19,7 +19,7 @@ public class RemiliaCommon19() : RemiliaCard(1,
         CardPlay play)
     {
         await CardPileCmd.Draw(choiceContext, base.DynamicVars.Cards.IntValue, base.Owner);
-        await PowerCmd.Apply<RemiliaCommon19Power>(base.Owner.Creature, base.DynamicVars["RemiliaCommon19Power"].BaseValue, base.Owner.Creature, this);
+        await PowerCmd.Apply<RemiliaCommon19Power>(choiceContext, base.Owner.Creature, base.DynamicVars["RemiliaCommon19Power"].BaseValue, base.Owner.Creature, this);
     }
 
     protected override void OnUpgrade()

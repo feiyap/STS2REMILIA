@@ -34,18 +34,19 @@ public class RemiliaRare1() : RemiliaCard(3,
         PlayerChoiceContext choiceContext,
         CardPlay play)
     {
+        int count = base.Owner.Creature.GetPower<BloodPool>()?.Amount ?? 0;
+
         AttackCommand attackCommand = await DamageCmd.Attack(base.DynamicVars.CalculatedDamage).FromCard(this)
             .TargetingAllOpponents(base.CombatState)
             .WithHitVfxNode((Creature t) => NScratchVfx.Create(t, goingRight: true))
             .Execute(choiceContext);
         
-        int count = base.Owner.Creature.GetPower<BloodPool>()?.Amount ?? 0;
-        await PowerCmd.Apply<BloodPool>(base.Owner.Creature, -count, base.Owner.Creature, null);
+        await PowerCmd.Apply<BloodPool>(choiceContext, base.Owner.Creature, -count, base.Owner.Creature, null);
         await CreatureCmd.Heal(base.Owner.Creature, count);
 
         if (base.IsUpgraded)
         {
-            await PowerCmd.Apply<IntangiblePower>(base.Owner.Creature, base.DynamicVars["IntangiblePower"].BaseValue, base.Owner.Creature, this);
+            await PowerCmd.Apply<IntangiblePower>(choiceContext, base.Owner.Creature, base.DynamicVars["IntangiblePower"].BaseValue, base.Owner.Creature, this);
         }
     }
 

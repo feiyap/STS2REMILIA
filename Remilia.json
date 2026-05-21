@@ -3,9 +3,11 @@
   "name": "Remilia",
   "author": "Feiyap",
   "description": "蕾米莉亚MOD",
-  "version": "v0.0.1",
+  "version": "v0.0.2",
   "has_pck": true,
   "has_dll": true,
-  "dependencies": ["BaseLib"],
+  "dependencies": [
+    { "id": "BaseLib", "min_version": "3.1.3" }
+  ],
   "affects_gameplay": true
 }

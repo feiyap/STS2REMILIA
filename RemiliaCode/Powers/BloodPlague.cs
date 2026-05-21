@@ -35,7 +35,7 @@ public class BloodPlague : RemiliaPower
     }
 
 
-    public override async Task AfterPowerAmountChanged(PowerModel power, decimal amount, Creature? applier, CardModel? cardSource)
+    public override async Task AfterPowerAmountChanged(PlayerChoiceContext choiceContext, PowerModel power, decimal amount, Creature? applier, CardModel? cardSource)
     {
         if (!(amount == 0m) && power.GetTypeForAmount(amount) == PowerType.Debuff && power.Owner == base.Owner && !(power is ITemporaryPower))
         {

@@ -34,7 +34,7 @@ public class RemiliaRare25() : RemiliaCard(0,
         {
             foreach (Creature hittableEnemy in base.CombatState.HittableEnemies)
             {
-                await PowerCmd.Apply<BloodPlague>(hittableEnemy, base.DynamicVars["BloodPlague"].BaseValue, base.Owner.Creature, this);
+                await PowerCmd.Apply<BloodPlague>(choiceContext, hittableEnemy, base.DynamicVars["BloodPlague"].BaseValue, base.Owner.Creature, this);
             }
         }
     }

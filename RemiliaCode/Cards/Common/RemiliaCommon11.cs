@@ -32,7 +32,7 @@ public class RemiliaCommon11() : RemiliaCard(1,
 
         if (IsDrawInRound())
         {
-            await PowerCmd.Apply<ClawPrints>(play.Target, base.DynamicVars["ClawPrints"].BaseValue, base.Owner.Creature, this);
+            await PowerCmd.Apply<ClawPrints>(choiceContext, play.Target, base.DynamicVars["ClawPrints"].BaseValue, base.Owner.Creature, this);
         }
     }
 

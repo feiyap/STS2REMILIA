@@ -51,12 +51,13 @@ public class RemiliaUncommon24Power : RemiliaPower, ITemporaryPower
     }
     else
     {
-      StrengthPower strPower = await PowerCmd.Apply<StrengthPower>(target, (Decimal) this.Sign * amount, applier, cardSource, true);
-      DexterityPower sexPower = await PowerCmd.Apply<DexterityPower>(target, (Decimal) this.Sign * amount, applier, cardSource, true);
+      StrengthPower strPower = await PowerCmd.Apply<StrengthPower>(new ThrowingPlayerChoiceContext(), target, (Decimal) this.Sign * amount, applier, cardSource, true);
+      DexterityPower sexPower = await PowerCmd.Apply<DexterityPower>(new ThrowingPlayerChoiceContext(), target, (Decimal) this.Sign * amount, applier, cardSource, true);
     }
   }
 
   public override async Task AfterPowerAmountChanged(
+    PlayerChoiceContext choiceContext, 
     PowerModel power,
     Decimal amount,
     Creature? applier,
@@ -71,8 +72,8 @@ public class RemiliaUncommon24Power : RemiliaPower, ITemporaryPower
     }
     else
     {
-      StrengthPower strPower = await PowerCmd.Apply<StrengthPower>(temporaryStrengthPower.Owner, (Decimal) temporaryStrengthPower.Sign * amount, applier, cardSource, true);
-      DexterityPower dexPower = await PowerCmd.Apply<DexterityPower>(temporaryStrengthPower.Owner, (Decimal) temporaryStrengthPower.Sign * amount, applier, cardSource, true);
+      StrengthPower strPower = await PowerCmd.Apply<StrengthPower>(choiceContext,temporaryStrengthPower.Owner, (Decimal) temporaryStrengthPower.Sign * amount, applier, cardSource, true);
+      DexterityPower dexPower = await PowerCmd.Apply<DexterityPower>(choiceContext,temporaryStrengthPower.Owner, (Decimal) temporaryStrengthPower.Sign * amount, applier, cardSource, true);
     }
   }
 
@@ -83,7 +84,7 @@ public class RemiliaUncommon24Power : RemiliaPower, ITemporaryPower
       return;
     power.Flash();
     await PowerCmd.Remove((PowerModel) power);
-    StrengthPower stPower = await PowerCmd.Apply<StrengthPower>(power.Owner, (Decimal) (-power.Sign * power.Amount), power.Owner, (CardModel) null);
-    DexterityPower dexthPower = await PowerCmd.Apply<DexterityPower>(power.Owner, (Decimal) (-power.Sign * power.Amount), power.Owner, (CardModel) null);
+    StrengthPower stPower = await PowerCmd.Apply<StrengthPower>(choiceContext, power.Owner, (Decimal) (-power.Sign * power.Amount), power.Owner, (CardModel) null);
+    DexterityPower dexthPower = await PowerCmd.Apply<DexterityPower>(choiceContext, power.Owner, (Decimal) (-power.Sign * power.Amount), power.Owner, (CardModel) null);
   }
 }

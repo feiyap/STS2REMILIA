@@ -30,7 +30,7 @@ public class RemiliaRare14() : RemiliaCard(3,
             select c;
         foreach (Creature item in enumerable)
         {
-            await PowerCmd.Apply<IntangiblePower>(item, base.DynamicVars["IntangiblePower"].BaseValue, base.Owner.Creature, this);
+            await PowerCmd.Apply<IntangiblePower>(choiceContext, item, base.DynamicVars["IntangiblePower"].BaseValue, base.Owner.Creature, this);
         }
     }
 

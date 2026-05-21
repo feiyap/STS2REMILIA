@@ -45,16 +45,16 @@ public class RemiliaRelicRedBlood() : RemiliaRelic
         if (target == base.Owner.Creature && result.UnblockedDamage > 0)
         {
             Flash();
-            await PowerCmd.Apply<BloodPool>(base.Owner.Creature, count, base.Owner.Creature, null);
+            await PowerCmd.Apply<BloodPool>(choiceContext, base.Owner.Creature, count, base.Owner.Creature, null);
         }
     }
     
-    public override async Task AfterSideTurnStart(CombatSide side, CombatState combatState)
+    public override async Task AfterSideTurnStart(CombatSide side, ICombatState combatState)
     {
         if (side == base.Owner.Creature.Side && combatState.RoundNumber <= 1)
         {
             Flash();
-            await PowerCmd.Apply<BloodPool>(base.Owner.Creature, SavedBlood, base.Owner.Creature, null);
+            await PowerCmd.Apply<BloodPool>(new ThrowingPlayerChoiceContext(),base.Owner.Creature, SavedBlood, base.Owner.Creature, null);
             SavedBlood = 0;
         }
     }

@@ -2,6 +2,7 @@ using BaseLib.Utils;
 using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Creatures;
 using MegaCrit.Sts2.Core.Entities.Relics;
+using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
 using MegaCrit.Sts2.Core.Models;
 using MegaCrit.Sts2.Core.ValueProps;
@@ -17,7 +18,7 @@ public class RemiliaRelicBloodstainedDress() : RemiliaRelic
     
     protected override IEnumerable<DynamicVar> CanonicalVars => [new BlockVar(1m, ValueProp.Unpowered)];
 
-    public override Task AfterPowerAmountChanged(PowerModel power, decimal amount, Creature? applier, CardModel? cardSource)
+    public override Task AfterPowerAmountChanged(PlayerChoiceContext choiceContext, PowerModel power, decimal amount, Creature? applier, CardModel? cardSource)
     {
         if (power is BloodPool && amount < 0)
         {
@@ -25,6 +26,6 @@ public class RemiliaRelicBloodstainedDress() : RemiliaRelic
             decimal count = base.DynamicVars.Block.BaseValue * -amount;
             CreatureCmd.GainBlock(base.Owner.Creature, count, ValueProp.Unpowered, null);
         }
-        return base.AfterPowerAmountChanged(power, amount, applier, cardSource);
+        return base.AfterPowerAmountChanged(choiceContext, power, amount, applier, cardSource);
     }
 }

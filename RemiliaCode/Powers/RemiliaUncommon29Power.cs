@@ -22,7 +22,7 @@ public class RemiliaUncommon29Power : RemiliaPower
     protected override IEnumerable<IHoverTip> ExtraHoverTips =>
         [HoverTipFactory.FromPower<BloodPlague>()];
 
-    public override async Task AfterSideTurnStart(CombatSide side, CombatState combatState)
+    public override async Task AfterSideTurnStart(CombatSide side, ICombatState combatState)
     {
         if (side != base.Owner.Side)
         {
@@ -30,6 +30,6 @@ public class RemiliaUncommon29Power : RemiliaPower
         }
         Flash();
         await Cmd.CustomScaledWait(0.2f, 0.4f);
-        await PowerCmd.Apply<BloodPlague>(base.CombatState.HittableEnemies, base.Amount, base.Owner, null);
+        await PowerCmd.Apply<BloodPlague>(new ThrowingPlayerChoiceContext(),base.CombatState.HittableEnemies, base.Amount, base.Owner, null);
     }
 }

@@ -35,8 +35,8 @@ public class RemiliaUncommon37() : RemiliaCard(0,
             .WithHitVfxNode((Creature t) => NScratchVfx.Create(t, goingRight: true))
             .Execute(choiceContext);
 
-        await PowerCmd.Apply<BloodPlague>(play.Target, base.DynamicVars["BloodPlague"].BaseValue * num, base.Owner.Creature, this);
-        await PowerCmd.Apply<ClawPrints>(play.Target, base.DynamicVars["ClawPrints"].BaseValue * num, base.Owner.Creature, this);
+        await PowerCmd.Apply<BloodPlague>(choiceContext, play.Target, base.DynamicVars["BloodPlague"].BaseValue * num, base.Owner.Creature, this);
+        await PowerCmd.Apply<ClawPrints>(choiceContext, play.Target, base.DynamicVars["ClawPrints"].BaseValue * num, base.Owner.Creature, this);
     }
 
     protected override void OnUpgrade()

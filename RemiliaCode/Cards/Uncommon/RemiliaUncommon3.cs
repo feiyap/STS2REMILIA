@@ -27,11 +27,11 @@ public class RemiliaUncommon3() : RemiliaCard(1,
             .Execute(choiceContext);
         
         
-        int count = attackCommand.Results.Sum((DamageResult r) => r.TotalDamage + r.OverkillDamage);
+        int count = attackCommand.Results.SelectMany((List<DamageResult> r) => r).Sum((DamageResult r) => r.TotalDamage + r.OverkillDamage);
         
         if (IsDrawInRound())
         {
-            await PowerCmd.Apply<BloodPool>(base.Owner.Creature, count, base.Owner.Creature, null);
+            await PowerCmd.Apply<BloodPool>(choiceContext, base.Owner.Creature, count, base.Owner.Creature, null);
         }
     }
 
