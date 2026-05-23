@@ -77,7 +77,7 @@ public class RemiliaUncommon24Power : RemiliaPower, ITemporaryPower
     }
   }
 
-  public override async Task AfterTurnEnd(PlayerChoiceContext choiceContext, CombatSide side)
+  public override async Task AfterSideTurnEnd(PlayerChoiceContext choiceContext, CombatSide side, IEnumerable<Creature> participants)
   {
     RemiliaUncommon24Power power = this;
     if (side != power.Owner.Side)

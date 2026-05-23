@@ -54,8 +54,8 @@ public class RemiliaRelicScarletBlood() : RemiliaRelic
             await PowerCmd.Apply<BloodPool>(choiceContext, base.Owner.Creature, count, base.Owner.Creature, null);
         }
     }
-    
-    public override async Task AfterSideTurnStart(CombatSide side, ICombatState combatState)
+
+    public override async Task AfterSideTurnStart(CombatSide side, IReadOnlyList<Creature> participants, ICombatState combatState)
     {
         if (side == base.Owner.Creature.Side && combatState.RoundNumber <= 1)
         {
