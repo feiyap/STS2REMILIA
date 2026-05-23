@@ -23,10 +23,6 @@ public class RemiliaRelicElegantParasol() : RemiliaRelic
         {
             return amount;
         }
-        if (Random.Shared.NextDouble() >= 0.33)
-        {
-            return amount;
-        }
         return amount + 1;
     }
 

@@ -29,8 +29,8 @@ public class RemiliaUncommon30Power : RemiliaPower
         
         Flash();
         //int count = Math.Min(this.Amount, base.Owner.GetPower<BloodPool>()?.Amount ?? 0);
-        
-        int value1 = base.DynamicVars["BloodCost"].IntValue;
+
+        int value1 = this.Amount;
         int value2 = base.Owner.GetPower<BloodPool>()?.Amount ?? 0;
         int value3 = Math.Max(0, base.Owner.MaxHp - base.Owner.CurrentHp);
         int count = new[] { value1, value2, value3 }.Min();
