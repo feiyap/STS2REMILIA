@@ -33,18 +33,17 @@ public class RemiliaUncommon4() : RemiliaCard(4,
         base.DynamicVars.Damage.UpgradeValueBy(6m);
     }
     
-    public override async Task AfterDamageReceived(PlayerChoiceContext choiceContext, Creature target, DamageResult result, ValueProp props, Creature? dealer, CardModel? cardSource)
+    public override Task AfterDamageReceived(PlayerChoiceContext choiceContext, Creature target, DamageResult result, ValueProp props, Creature? dealer, CardModel? cardSource)
     {
-        if (target == base.Owner.Creature && result.UnblockedDamage > 0)
+        if (this.IsInCombat && target == base.Owner.Creature && result.UnblockedDamage > 0)
         {
-            Console.WriteLine("LL1");
             ReduceCostBy(1);
         }
+        return Task.CompletedTask;
     }
     
     private void ReduceCostBy(int amount)
     {
-        Console.WriteLine("LL2");
         base.EnergyCost.AddThisCombat(-amount);
     }
 }
