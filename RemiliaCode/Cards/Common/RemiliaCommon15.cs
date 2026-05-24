@@ -26,12 +26,13 @@ public class RemiliaCommon15() : RemiliaCard(1,
             .Execute(choiceContext);
     }
     
-    public override async Task AfterDamageReceived(PlayerChoiceContext choiceContext, Creature target, DamageResult result, ValueProp props, Creature? dealer, CardModel? cardSource)
+    public override Task AfterDamageReceived(PlayerChoiceContext choiceContext, Creature target, DamageResult result, ValueProp props, Creature? dealer, CardModel? cardSource)
     {
-        if (target == base.Owner.Creature && result.UnblockedDamage > 0)
+        if (this.IsInCombat && target == base.Owner.Creature && result.UnblockedDamage > 0)
         {
             base.EnergyCost.AddThisTurn(-base.DynamicVars.Energy.IntValue);
         }
+        return Task.CompletedTask;
     }
 
     protected override void OnUpgrade()
