@@ -58,6 +58,9 @@ public class Remilia : PlaceholderCharacterModel
     public override string CustomIconPath => "character_icon_char.tscn".CharacterUiPath();
     public override string CustomMerchantAnimPath => "character_merchant.tscn".CharacterUiPath();
     
+    // 篝火休息场景。
+    public override string CustomRestSiteAnimPath => "remilia_rest_site.tscn".CharacterUiPath();
+    
     // 多人模式-手指。
     public override string CustomArmPointingTexturePath => "multiplayer_hand_remilia_point.png".CharacterUiPath();
     // 多人模式剪刀石头布-石头。

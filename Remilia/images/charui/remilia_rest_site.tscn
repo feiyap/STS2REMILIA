@@ -1,0 +1,74 @@
+[gd_scene load_steps=7 format=3 uid="uid://bbaggljcvaea1"]
+
+[ext_resource type="Texture2D" uid="uid://byxms3581nc1c" path="res://remilia0000.png" id="1_dbw6y"]
+[ext_resource type="Texture2D" uid="uid://c24h5mjb2gvf5" path="res://remilia0001.png" id="2_esm4n"]
+[ext_resource type="Texture2D" uid="uid://48jf1eu240f2" path="res://remilia0002.png" id="3_03j6h"]
+[ext_resource type="Texture2D" uid="uid://b0o16pk0fe1vc" path="res://remilia0003.png" id="4_grfss"]
+[ext_resource type="Texture2D" uid="uid://d35pqdrwq1eex" path="res://remilia0004.png" id="5_w36at"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dvbx6"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_dbw6y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_esm4n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_03j6h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_grfss")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_w36at")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_grfss")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_03j6h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_esm4n")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[node name="RemiliaRestSite" type="Node2D"]
+
+[node name="Node" type="AnimatedSprite2D" parent="."]
+position = Vector2(122, -184)
+scale = Vector2(-4, 4)
+sprite_frames = SubResource("SpriteFrames_dvbx6")
+animation = &"idle"
+frame_progress = 0.4736683
+
+[node name="ControlRoot" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="SelectionReticle" type="Control" parent="ControlRoot"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Hitbox" type="Control" parent="ControlRoot"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ThoughtBubbleRight" type="Control" parent="ControlRoot"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ThoughtBubbleLeft" type="Control" parent="ControlRoot"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
