@@ -8,6 +8,7 @@ using MegaCrit.Sts2.Core.Nodes.Vfx;
 using MegaCrit.Sts2.Core.ValueProps;
 using Remilia.RemiliaCode.Cards;
 using Remilia.RemiliaCode.Powers;
+using Remilia.RemiliaCode.Resources;
 
 namespace Remilia.RemiliaCode.Cards.Uncommon;
 
@@ -41,7 +42,7 @@ public class RemiliaUncommon1() : RemiliaCard(0,
 
         if (IsBloodPoolCount(3))
         {
-            PowerCmd.Apply<BloodPool>(new ThrowingPlayerChoiceContext(),base.Owner.Creature, -3, base.Owner.Creature, null);
+            _ = RemiliaBloodPool.Lose(Owner, 3, this);
             return PileType.Hand;
         }
         return resultPileTypeForCardPlay;

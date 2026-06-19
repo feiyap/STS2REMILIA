@@ -1,6 +1,7 @@
 using System.Reflection;
 using Godot;
 using MegaCrit.Sts2.Core.Modding;
+using Remilia.RemiliaCode.Resources;
 using STS2RitsuLib;
 using STS2RitsuLib.Interop;
 using STS2RitsuLib.Patching.Core;
@@ -22,6 +23,7 @@ public partial class MainFile : Node
         Logger = RitsuLibFramework.CreateLogger(ModId);
         ModTypeDiscoveryHub.RegisterModAssembly(ModId, assembly);
         RitsuLibFramework.EnsureGodotScriptsRegistered(assembly, Logger);
+        RemiliaBloodPool.Register();
 
         var patcher = RitsuLibFramework.CreatePatcher(ModId, "main");
         RitsuLibFramework.ApplyRequiredPatcher(patcher, static () =>

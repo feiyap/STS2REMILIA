@@ -7,7 +7,7 @@ using MegaCrit.Sts2.Core.Localization.DynamicVars;
 using MegaCrit.Sts2.Core.Nodes.Vfx;
 using MegaCrit.Sts2.Core.ValueProps;
 using Remilia.RemiliaCode.Cards;
-using Remilia.RemiliaCode.Powers;
+using Remilia.RemiliaCode.Resources;
 
 namespace Remilia.RemiliaCode.Cards.Uncommon;
 
@@ -31,7 +31,7 @@ public class RemiliaUncommon3() : RemiliaCard(1,
         
         if (IsDrawInRound())
         {
-            await PowerCmd.Apply<BloodPool>(choiceContext, base.Owner.Creature, count, base.Owner.Creature, null);
+            await RemiliaBloodPool.Gain(Owner, count, this);
         }
     }
 

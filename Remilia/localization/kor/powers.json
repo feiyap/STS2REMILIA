@@ -1,7 +1,4 @@
 {
-  "REMILIA_POWER_BLOOD_POOL.description": "축적된 혈지는 스킬에 의해 소모될 수 있습니다.",
-  "REMILIA_POWER_BLOOD_POOL.smartDescription": "축적된 혈지는 스킬에 의해 소모될 수 있습니다.",
-  "REMILIA_POWER_BLOOD_POOL.title": "혈지",
   "REMILIA_POWER_CLAW_PRINTS.description": "공격으로 받는 피해가 [blue]1[/blue] 증가합니다.",
   "REMILIA_POWER_CLAW_PRINTS.smartDescription": "공격으로 받는 피해가 [blue]{Amount}[/blue] 증가합니다.",
   "REMILIA_POWER_CLAW_PRINTS.title": "발톱 자국",

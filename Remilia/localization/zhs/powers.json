@@ -1,7 +1,4 @@
 {
-  "REMILIA_POWER_BLOOD_POOL.description": "积攒的血池可以被技能消耗。",
-  "REMILIA_POWER_BLOOD_POOL.smartDescription": "积攒的血池可以被技能消耗。",
-  "REMILIA_POWER_BLOOD_POOL.title": "血池",
   "REMILIA_POWER_CLAW_PRINTS.description": "从攻击中受到的伤害增加[blue]1[/blue]点。",
   "REMILIA_POWER_CLAW_PRINTS.smartDescription": "从攻击中受到的伤害增加[blue]{Amount}[/blue]点。",
   "REMILIA_POWER_CLAW_PRINTS.title": "爪痕",

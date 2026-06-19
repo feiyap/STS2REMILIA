@@ -12,6 +12,7 @@ using MegaCrit.Sts2.Core.Nodes.Vfx;
 using MegaCrit.Sts2.Core.ValueProps;
 using Remilia.RemiliaCode.Cards;
 using Remilia.RemiliaCode.Powers;
+using Remilia.RemiliaCode.Resources;
 
 namespace Remilia.RemiliaCode.Cards.Rare;
 
@@ -23,7 +24,7 @@ public class RemiliaRare1() : RemiliaCard(3,
         new PowerVar<IntangiblePower>(1m),
         new CalculationBaseVar(0m),
         new ExtraDamageVar(1m),
-        new CalculatedDamageVar(ValueProp.Move).WithMultiplier((CardModel card, Creature? _) => card.Owner.Creature.GetPowerAmount<BloodPool>())
+        new CalculatedDamageVar(ValueProp.Move).WithMultiplier((CardModel card, Creature? _) => RemiliaBloodPool.Get(card.Owner))
     ];
 
     protected override IEnumerable<IHoverTip> AdditionalHoverTips => [HoverTipFactory.FromPower<IntangiblePower>()];
@@ -34,14 +35,14 @@ public class RemiliaRare1() : RemiliaCard(3,
         PlayerChoiceContext choiceContext,
         CardPlay play)
     {
-        int count = base.Owner.Creature.GetPower<BloodPool>()?.Amount ?? 0;
+        int count = RemiliaBloodPool.Get(Owner);
 
         AttackCommand attackCommand = await DamageCmd.Attack(base.DynamicVars.CalculatedDamage).FromCard(this)
             .TargetingAllOpponents(base.CombatState)
             .WithHitVfxNode((Creature t) => NScratchVfx.Create(t, goingRight: true))
             .Execute(choiceContext);
         
-        await PowerCmd.Apply<BloodPool>(choiceContext, base.Owner.Creature, -count, base.Owner.Creature, null);
+        await RemiliaBloodPool.Lose(Owner, count, this);
         await CreatureCmd.Heal(base.Owner.Creature, count);
 
         if (base.IsUpgraded)

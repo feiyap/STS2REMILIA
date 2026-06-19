@@ -95,9 +95,6 @@
         <EmbeddedResource Remove="images/**" />
         <Compile Remove="RemiliaCode\Keywords\**" />
         <EmbeddedResource Remove="RemiliaCode\Keywords\**" />
-        <!-- 依赖 RitsuLib 的次级资源实现，当前项目使用 Power 版 BloodPool -->
-        <Compile Remove="RemiliaCode\Resources\**" />
-        <EmbeddedResource Remove="RemiliaCode\Resources\**" />
     </ItemGroup>
 
     <ItemGroup>

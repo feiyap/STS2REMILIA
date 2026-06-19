@@ -5,7 +5,7 @@ using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
 using MegaCrit.Sts2.Core.ValueProps;
 using Remilia.RemiliaCode.Cards;
-using Remilia.RemiliaCode.Powers;
+using Remilia.RemiliaCode.Resources;
 
 namespace Remilia.RemiliaCode.Cards.Common;
 
@@ -20,7 +20,7 @@ public class RemiliaCommon6() : RemiliaCard(1,
         CardPlay play)
     {
         await CommonActions.CardBlock(this, play);
-        await PowerCmd.Apply<BloodPool>(choiceContext, base.Owner.Creature, base.DynamicVars["BloodPool"].BaseValue, base.Owner.Creature, null);
+        await RemiliaBloodPool.Gain(Owner, base.DynamicVars["BloodPool"].IntValue, this);
     }
 
     protected override void OnUpgrade()

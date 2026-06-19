@@ -6,7 +6,7 @@ using MegaCrit.Sts2.Core.Localization.DynamicVars;
 using MegaCrit.Sts2.Core.Models;
 using MegaCrit.Sts2.Core.ValueProps;
 using Remilia.RemiliaCode.Cards;
-using Remilia.RemiliaCode.Powers;
+using Remilia.RemiliaCode.Resources;
 
 namespace Remilia.RemiliaCode.Cards.Common;
 
@@ -17,7 +17,7 @@ public class RemiliaCommon18() : RemiliaCard(2,
     protected override IEnumerable<DynamicVar> CanonicalVars => [
         new CalculationBaseVar(0m),
         new ExtraDamageVar(1m),
-        new CalculatedDamageVar(ValueProp.Move).WithMultiplier((CardModel card, Creature? _) => card.Owner.Creature.GetPowerAmount<BloodPool>())
+        new CalculatedDamageVar(ValueProp.Move).WithMultiplier((CardModel card, Creature? _) => RemiliaBloodPool.Get(card.Owner))
     ];
     
     public override IEnumerable<CardKeyword> CanonicalKeywords => [CardKeyword.Exhaust];

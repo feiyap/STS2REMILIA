@@ -5,7 +5,6 @@ using MegaCrit.Sts2.Core.HoverTips;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
 using MegaCrit.Sts2.Core.ValueProps;
 using Remilia.RemiliaCode.Cards;
-using Remilia.RemiliaCode.Powers;
 
 namespace Remilia.RemiliaCode.Cards.Common;
 
@@ -17,7 +16,7 @@ public class RemiliaCommon10() : RemiliaCard(0,
     
     protected override IEnumerable<IHoverTip> AdditionalHoverTips => [HoverTipFactory.ForEnergy(this)];
     
-    protected override bool IsPlayable => IsBloodPoolCount(base.DynamicVars["BloodCost"].IntValue);
+    protected override bool AutoBindBloodCost => true;
 
     protected override async Task OnPlay(
         PlayerChoiceContext choiceContext,
@@ -25,7 +24,6 @@ public class RemiliaCommon10() : RemiliaCard(0,
     {
         await CreatureCmd.TriggerAnim(base.Owner.Creature, "Cast", base.Owner.Character.CastAnimDelay);
         VfxCmd.PlayOnCreatureCenter(base.Owner.Creature, "vfx/vfx_bloody_impact");
-        await PowerCmd.Apply<BloodPool>(choiceContext, base.Owner.Creature, -base.DynamicVars["BloodCost"].IntValue, base.Owner.Creature, null);
         await PlayerCmd.GainEnergy(base.DynamicVars.Energy.BaseValue, base.Owner);
     }
 

@@ -8,7 +8,7 @@ using MegaCrit.Sts2.Core.Models;
 using MegaCrit.Sts2.Core.Nodes.Vfx;
 using MegaCrit.Sts2.Core.ValueProps;
 using Remilia.RemiliaCode.Cards;
-using Remilia.RemiliaCode.Powers;
+using Remilia.RemiliaCode.Resources;
 
 namespace Remilia.RemiliaCode.Cards.Uncommon;
 
@@ -20,7 +20,7 @@ public class RemiliaUncommon7() : RemiliaCard(2,
         new DynamicVar("BloodCost", 9m),
         new CalculationBaseVar(0m),
         new ExtraDamageVar(1m),
-        new CalculatedDamageVar(ValueProp.Move).WithMultiplier((CardModel card, Creature? _) => Math.Min(card.Owner.Creature.GetPowerAmount<BloodPool>(), card.DynamicVars["BloodCost"].BaseValue))
+        new CalculatedDamageVar(ValueProp.Move).WithMultiplier((CardModel card, Creature? _) => Math.Min(RemiliaBloodPool.Get(card.Owner), card.DynamicVars["BloodCost"].BaseValue))
     ];
     
     protected override HashSet<CardTag> CanonicalTags => [CardTag.Strike];
@@ -29,7 +29,7 @@ public class RemiliaUncommon7() : RemiliaCard(2,
         PlayerChoiceContext choiceContext,
         CardPlay play)
     {
-        decimal damageValue = Math.Min(base.Owner.Creature.GetPowerAmount<BloodPool>(), base.DynamicVars["BloodCost"].BaseValue);
+        decimal damageValue = Math.Min(RemiliaBloodPool.Get(Owner), base.DynamicVars["BloodCost"].BaseValue);
         
         AttackCommand attackCommand = await DamageCmd.Attack(damageValue).FromCard(this)
             .Targeting(play.Target)
@@ -37,7 +37,7 @@ public class RemiliaUncommon7() : RemiliaCard(2,
             .Execute(choiceContext);
         
         await CreatureCmd.GainBlock(base.Owner.Creature, damageValue, ValueProp.Move, play);
-        await PowerCmd.Apply<BloodPool>(choiceContext, base.Owner.Creature, -damageValue, base.Owner.Creature, null);
+        await RemiliaBloodPool.Lose(Owner, (int)damageValue, this);
         await CreatureCmd.Heal(base.Owner.Creature, damageValue);
     }
 

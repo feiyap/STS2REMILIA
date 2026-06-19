@@ -7,7 +7,7 @@ using MegaCrit.Sts2.Core.Localization.DynamicVars;
 using MegaCrit.Sts2.Core.Nodes.Vfx;
 using MegaCrit.Sts2.Core.ValueProps;
 using Remilia.RemiliaCode.Cards;
-using Remilia.RemiliaCode.Powers;
+using Remilia.RemiliaCode.Resources;
 
 namespace Remilia.RemiliaCode.Cards.Ancient;
 
@@ -28,11 +28,11 @@ public class RemiliaAncient2() : RemiliaCard(1,
         
         
         int value1 = attackCommand.Results.SelectMany((List<DamageResult> r) => r).Sum(r => r.TotalDamage + r.OverkillDamage);
-        int value2 = base.Owner.Creature.GetPower<BloodPool>()?.Amount ?? 0;
+        int value2 = RemiliaBloodPool.Get(Owner);
         int value3 = Math.Max(0, base.Owner.Creature.MaxHp - base.Owner.Creature.CurrentHp);
         int count = new[] { value1, value2, value3 }.Min();
         
-        await PowerCmd.Apply<BloodPool>(choiceContext, base.Owner.Creature, -count, base.Owner.Creature, null);
+        await RemiliaBloodPool.Lose(Owner, count, this);
         await CreatureCmd.Heal(base.Owner.Creature, count);
     }
 

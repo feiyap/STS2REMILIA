@@ -6,7 +6,7 @@ using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
 using MegaCrit.Sts2.Core.ValueProps;
 using Remilia.RemiliaCode.Cards;
-using Remilia.RemiliaCode.Powers;
+using Remilia.RemiliaCode.Resources;
 
 namespace Remilia.RemiliaCode.Cards.Common;
 
@@ -14,7 +14,7 @@ public class RemiliaCommon3() : RemiliaCard(2,
     CardType.Attack, CardRarity.Common,
     TargetType.AnyEnemy)
 {
-    protected override IEnumerable<DynamicVar> CanonicalVars => [new DamageVar(9m, ValueProp.Move), new PowerVar<BloodPool>(3m)];
+    protected override IEnumerable<DynamicVar> CanonicalVars => [new DamageVar(9m, ValueProp.Move), new DynamicVar("BloodPool", 3m)];
 
     protected override async Task OnPlay(
         PlayerChoiceContext choiceContext,
@@ -26,7 +26,7 @@ public class RemiliaCommon3() : RemiliaCard(2,
             .WithHitFx("vfx/vfx_attack_slash")
             .Execute(choiceContext);
         
-        await PowerCmd.Apply<BloodPool>(choiceContext, base.Owner.Creature, base.DynamicVars["BloodPool"].BaseValue, base.Owner.Creature, null);
+        await RemiliaBloodPool.Gain(Owner, base.DynamicVars["BloodPool"].IntValue, this);
     }
 
     protected override void OnUpgrade()

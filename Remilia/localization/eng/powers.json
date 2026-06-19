@@ -1,7 +1,4 @@
 {
-  "REMILIA_POWER_BLOOD_POOL.description": "Accumulated Blood Pool can be consumed by Skills.",
-  "REMILIA_POWER_BLOOD_POOL.smartDescription": "Accumulated Blood Pool can be consumed by Skills.",
-  "REMILIA_POWER_BLOOD_POOL.title": "Blood Pool",
   "REMILIA_POWER_CLAW_PRINTS.description": "Receive [blue]1[/blue] more damage from Attacks.",
   "REMILIA_POWER_CLAW_PRINTS.smartDescription": "Receive [blue]{Amount}[/blue] more damage from Attacks.",
   "REMILIA_POWER_CLAW_PRINTS.title": "Claw Marks",

@@ -9,7 +9,7 @@ using MegaCrit.Sts2.Core.Models.Powers;
 using MegaCrit.Sts2.Core.Nodes.Vfx;
 using MegaCrit.Sts2.Core.ValueProps;
 using Remilia.RemiliaCode.Cards;
-using Remilia.RemiliaCode.Powers;
+using Remilia.RemiliaCode.Resources;
 
 namespace Remilia.RemiliaCode.Cards.Common;
 
@@ -29,7 +29,7 @@ public class RemiliaCommon1() : RemiliaCard(1,
             .WithHitVfxNode((Creature t) => NScratchVfx.Create(t, goingRight: true))
             .Execute(choiceContext);
         
-        await PowerCmd.Apply<BloodPool>(choiceContext, base.Owner.Creature, base.DynamicVars["BloodPool"].BaseValue, base.Owner.Creature, null);
+        await RemiliaBloodPool.Gain(Owner, base.DynamicVars["BloodPool"].IntValue, this);
     }
 
     protected override void OnUpgrade()

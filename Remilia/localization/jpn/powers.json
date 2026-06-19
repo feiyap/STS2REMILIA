@@ -1,7 +1,4 @@
 {
-  "REMILIA_POWER_BLOOD_POOL.description": "蓄積された血液はスキルで消費される。",
-  "REMILIA_POWER_BLOOD_POOL.smartDescription": "蓄積された血液はスキルで消費される。",
-  "REMILIA_POWER_BLOOD_POOL.title": "血液",
   "REMILIA_POWER_CLAW_PRINTS.description": "攻撃から受けるダメージが[blue]1[/blue]増加する。",
   "REMILIA_POWER_CLAW_PRINTS.smartDescription": "攻撃から受けるダメージが[blue]{Amount}[/blue]増加する。",
   "REMILIA_POWER_CLAW_PRINTS.title": "爪痕",

@@ -6,7 +6,7 @@ using MegaCrit.Sts2.Core.Localization.DynamicVars;
 using MegaCrit.Sts2.Core.Models;
 using MegaCrit.Sts2.Core.ValueProps;
 using Remilia.RemiliaCode.Cards;
-using Remilia.RemiliaCode.Powers;
+using Remilia.RemiliaCode.Resources;
 
 namespace Remilia.RemiliaCode.Cards.Uncommon;
 
@@ -17,7 +17,7 @@ public class RemiliaUncommon18() : RemiliaCard(2,
     protected override IEnumerable<DynamicVar> CanonicalVars => [
         new CalculationBaseVar(0m),
         new CalculationExtraVar(1m),
-        new CalculatedBlockVar(ValueProp.Move).WithMultiplier((CardModel card, Creature? _) => card.Owner.Creature.GetPowerAmount<BloodPool>())
+        new CalculatedBlockVar(ValueProp.Move).WithMultiplier((CardModel card, Creature? _) => RemiliaBloodPool.Get(card.Owner))
     ];
     
     public override IEnumerable<CardKeyword> CanonicalKeywords => [CardKeyword.Exhaust];
@@ -26,7 +26,7 @@ public class RemiliaUncommon18() : RemiliaCard(2,
         PlayerChoiceContext choiceContext,
         CardPlay play)
     {
-        decimal blockValue = base.Owner.Creature.GetPowerAmount<BloodPool>();
+        decimal blockValue = RemiliaBloodPool.Get(Owner);
         await CreatureCmd.GainBlock(base.Owner.Creature, blockValue, base.DynamicVars.CalculatedBlock.Props, play);
     }
 

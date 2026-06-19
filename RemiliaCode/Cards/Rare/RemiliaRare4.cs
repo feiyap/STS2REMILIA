@@ -9,7 +9,6 @@ using MegaCrit.Sts2.Core.Models;
 using MegaCrit.Sts2.Core.Saves.Runs;
 using MegaCrit.Sts2.Core.ValueProps;
 using Remilia.RemiliaCode.Cards;
-using Remilia.RemiliaCode.Powers;
 
 namespace Remilia.RemiliaCode.Cards.Rare;
 
@@ -19,7 +18,7 @@ public class RemiliaRare4() : RemiliaCard(1,
 {
     protected override IEnumerable<DynamicVar> CanonicalVars => [new DamageVar(CurrentDamage, ValueProp.Move), new DynamicVar("BloodCost", 3), new IntVar("Increase", 3m)];
     
-    protected override bool IsPlayable => IsBloodPoolCount(base.DynamicVars["BloodCost"].IntValue);
+    protected override bool AutoBindBloodCost => true;
     
     private const int _baseDamage = 18;
 
@@ -63,7 +62,6 @@ public class RemiliaRare4() : RemiliaCard(1,
         CardPlay play)
     {
         await CreatureCmd.TriggerAnim(base.Owner.Creature, "Cast", base.Owner.Character.CastAnimDelay);
-        await PowerCmd.Apply<BloodPool>(choiceContext, base.Owner.Creature, -base.DynamicVars["BloodCost"].IntValue, base.Owner.Creature, null);
         
         AttackCommand attackCommand = await DamageCmd.Attack(base.DynamicVars.Damage.BaseValue).FromCard(this).Targeting(play.Target)
             .WithHitFx("vfx/vfx_attack_slash")

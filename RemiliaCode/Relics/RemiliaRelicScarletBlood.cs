@@ -5,11 +5,11 @@ using MegaCrit.Sts2.Core.Entities.Relics;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
 using MegaCrit.Sts2.Core.Models;
-using MegaCrit.Sts2.Core.Models.Powers;
 using MegaCrit.Sts2.Core.Rooms;
 using MegaCrit.Sts2.Core.Saves.Runs;
 using MegaCrit.Sts2.Core.ValueProps;
-using Remilia.RemiliaCode.Powers;
+using Remilia.RemiliaCode.Relics;
+using Remilia.RemiliaCode.Resources;
 using STS2RitsuLib.Interop.AutoRegistration;
 
 namespace Remilia.RemiliaCode.Relics;
@@ -46,7 +46,7 @@ public class RemiliaRelicScarletBlood() : RemiliaRelic
         if (target == base.Owner.Creature && result.UnblockedDamage > 0)
         {
             Flash();
-            await PowerCmd.Apply<BloodPool>(choiceContext, base.Owner.Creature, count, base.Owner.Creature, null);
+            await RemiliaBloodPool.Gain(base.Owner, count, this);
         }
     }
 
@@ -55,7 +55,7 @@ public class RemiliaRelicScarletBlood() : RemiliaRelic
         if (side == base.Owner.Creature.Side && combatState.RoundNumber <= 1)
         {
             Flash();
-            await PowerCmd.Apply<BloodPool>(new ThrowingPlayerChoiceContext(),base.Owner.Creature, SavedBlood, base.Owner.Creature, null);
+            await RemiliaBloodPool.Gain(base.Owner, SavedBlood, this);
             SavedBlood = 0;
         }
     }
@@ -65,7 +65,7 @@ public class RemiliaRelicScarletBlood() : RemiliaRelic
         if (!base.Owner.Creature.IsDead)
         {
             Flash();
-            int count = base.Owner.Creature.GetPower<BloodPool>()?.Amount ?? 0;
+            int count = RemiliaBloodPool.Get(base.Owner);
             SavedBlood = (int)((base.DynamicVars["BloodPoolLift"].BaseValue * count) / 100);
         }
 

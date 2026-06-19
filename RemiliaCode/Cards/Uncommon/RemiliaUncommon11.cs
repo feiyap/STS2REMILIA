@@ -5,7 +5,7 @@ using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
 using MegaCrit.Sts2.Core.ValueProps;
 using Remilia.RemiliaCode.Cards;
-using Remilia.RemiliaCode.Powers;
+using Remilia.RemiliaCode.Resources;
 
 namespace Remilia.RemiliaCode.Cards.Uncommon;
 
@@ -23,12 +23,11 @@ public class RemiliaUncommon11() : RemiliaCard(1,
             .WithHitFx("vfx/vfx_attack_slash")
             .Execute(choiceContext);
         
-        //int count = Math.Min(base.DynamicVars["BloodCost"].IntValue, base.Owner.Creature.GetPower<BloodPool>()?.Amount ?? 0);
         int value1 = base.DynamicVars["BloodCost"].IntValue;
-        int value2 = base.Owner.Creature.GetPower<BloodPool>()?.Amount ?? 0;
+        int value2 = RemiliaBloodPool.Get(Owner);
         int value3 = Math.Max(0, base.Owner.Creature.MaxHp - base.Owner.Creature.CurrentHp);
         int count = new[] { value1, value2, value3 }.Min();
-        await PowerCmd.Apply<BloodPool>(choiceContext, base.Owner.Creature, -count, base.Owner.Creature, null);
+        await RemiliaBloodPool.Lose(Owner, count, this);
         await CreatureCmd.Heal(base.Owner.Creature, count);
     }
 

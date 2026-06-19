@@ -7,7 +7,7 @@ using MegaCrit.Sts2.Core.Localization.DynamicVars;
 using MegaCrit.Sts2.Core.Models;
 using MegaCrit.Sts2.Core.ValueProps;
 using Remilia.RemiliaCode.Cards;
-using Remilia.RemiliaCode.Powers;
+using Remilia.RemiliaCode.Resources;
 
 namespace Remilia.RemiliaCode.Cards.Uncommon;
 
@@ -30,7 +30,7 @@ public class RemiliaUncommon10() : RemiliaCard(3,
         
         if (shouldTriggerFatal && attackCommand.Results.SelectMany((List<DamageResult> r) => r).Any((DamageResult r) => r.WasTargetKilled))
         {
-            await PowerCmd.Apply<BloodPool>(choiceContext, base.Owner.Creature, base.DynamicVars["BloodPool"].BaseValue, base.Owner.Creature, null);
+            await RemiliaBloodPool.Gain(Owner, base.DynamicVars["BloodPool"].IntValue, this);
         }
     }
 

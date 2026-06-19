@@ -57,6 +57,8 @@ public static class RemiliaBloodPool
 
     public static int Get(Player player) => SecondaryResourceCmd.Get(player, Id);
 
+    public static bool Has(Player player, int amount) => Get(player) >= amount;
+
     public static Task Gain(Player player, int amount, AbstractModel? source = null) =>
         SecondaryResourceCmd.Gain(player, Id, amount, source);
 

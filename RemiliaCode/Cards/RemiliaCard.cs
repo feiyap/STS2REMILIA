@@ -3,8 +3,9 @@ using MegaCrit.Sts2.Core.Combat;
 using MegaCrit.Sts2.Core.Combat.History.Entries;
 using Remilia.RemiliaCode.Character;
 using Remilia.RemiliaCode.Extensions;
+using Remilia.RemiliaCode.Resources;
 using MegaCrit.Sts2.Core.Entities.Cards;
-using Remilia.RemiliaCode.Powers;
+using STS2RitsuLib.Combat.SecondaryResources;
 using STS2RitsuLib.Interop.AutoRegistration;
 using STS2RitsuLib.Scaffolding.Content;
 
@@ -16,6 +17,11 @@ public abstract class RemiliaCard(int cost, CardType type, CardRarity rarity, Ta
     ModCardTemplate(cost, type, rarity, target)
 {
     private string ImageStem => GetType().ModelImageStem();
+
+    /// <summary>
+    /// 是否在创建/升级时自动将 DynamicVar「BloodCost」绑定为次级资源费用。
+    /// </summary>
+    protected virtual bool AutoBindBloodCost => false;
 
     public override string CustomPortraitPath
     {
@@ -44,10 +50,21 @@ public abstract class RemiliaCard(int cost, CardType type, CardRarity rarity, Ta
         }
     }
 
-    public bool IsBloodPoolCount(int count)
+    public override void AfterCreated()
     {
-        return base.Owner.Creature.GetPowerAmount<BloodPool>() >= count;
+        base.AfterCreated();
+        if (AutoBindBloodCost)
+            SyncBloodCost();
     }
+
+    protected void SyncBloodCost(string varName = "BloodCost")
+    {
+        this.SecondaryCosts().Set(RemiliaBloodPool.Id, DynamicVars[varName].IntValue);
+    }
+
+    public bool HasBloodPool(int count) => RemiliaBloodPool.Has(Owner, count);
+
+    public bool IsBloodPoolCount(int count) => HasBloodPool(count);
 
     public bool IsDrawInRound()
     {

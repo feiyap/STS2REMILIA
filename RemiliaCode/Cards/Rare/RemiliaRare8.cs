@@ -11,6 +11,7 @@ using MegaCrit.Sts2.Core.Nodes.Vfx;
 using MegaCrit.Sts2.Core.ValueProps;
 using Remilia.RemiliaCode.Cards;
 using Remilia.RemiliaCode.Powers;
+using Remilia.RemiliaCode.Resources;
 
 namespace Remilia.RemiliaCode.Cards.Rare;
 
@@ -35,7 +36,7 @@ public class RemiliaRare8() : RemiliaCard(0,
         
         
         int count = attackCommand.Results.SelectMany((List<DamageResult> r) => r).Sum((DamageResult r) => r.TotalDamage + r.OverkillDamage);
-        await PowerCmd.Apply<BloodPool>(choiceContext, base.Owner.Creature, count, base.Owner.Creature, null);
+        await RemiliaBloodPool.Gain(Owner, count, this);
         await PowerCmd.Apply<StrengthPower>(choiceContext, base.Owner.Creature, base.DynamicVars["StrengthPower"].BaseValue, base.Owner.Creature, this);
         await PowerCmd.Apply<StrengthPower>(choiceContext, play.Target, base.DynamicVars["StrengthPower"].BaseValue, base.Owner.Creature, this);
         

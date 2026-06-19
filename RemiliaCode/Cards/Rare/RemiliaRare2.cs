@@ -17,7 +17,7 @@ public class RemiliaRare2() : RemiliaCard(1,
     
     protected override IEnumerable<IHoverTip> AdditionalHoverTips => [HoverTipFactory.FromPower<ClawPrints>()];
     
-    protected override bool IsPlayable => IsBloodPoolCount(base.DynamicVars["BloodCost"].IntValue);
+    protected override bool AutoBindBloodCost => true;
 
     protected override async Task OnPlay(
         PlayerChoiceContext choiceContext,
@@ -27,7 +27,6 @@ public class RemiliaRare2() : RemiliaCard(1,
             .WithHitFx("vfx/vfx_attack_slash")
             .Execute(choiceContext);
         
-        await PowerCmd.Apply<BloodPool>(choiceContext, base.Owner.Creature, -base.DynamicVars["BloodCost"].IntValue, base.Owner.Creature, null);
         await PowerCmd.Apply<ClawPrints>(choiceContext, base.CombatState.HittableEnemies, base.DynamicVars["ClawPrints"].BaseValue, base.Owner.Creature, this);
     }
 
