@@ -1,4 +1,3 @@
-using BaseLib.Utils;
 using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Relics;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
@@ -18,7 +17,7 @@ public class RemiliaRelicMidnightBlackTea() : RemiliaRelic
     
     protected override IEnumerable<DynamicVar> CanonicalVars => [new PowerVar<BloodPool>(2m)];
 
-    protected override IEnumerable<IHoverTip> ExtraHoverTips =>
+    protected override IEnumerable<IHoverTip> AdditionalHoverTips =>
         [HoverTipFactory.FromPower<BloodPool>()];
 
     public override async Task AfterRoomEntered(AbstractRoom room)

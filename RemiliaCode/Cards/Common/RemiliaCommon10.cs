@@ -15,7 +15,7 @@ public class RemiliaCommon10() : RemiliaCard(0,
 {
     protected override IEnumerable<DynamicVar> CanonicalVars => [new DynamicVar("BloodCost", 3m), new EnergyVar(2)];
     
-    protected override IEnumerable<IHoverTip> ExtraHoverTips => [HoverTipFactory.ForEnergy(this)];
+    protected override IEnumerable<IHoverTip> AdditionalHoverTips => [HoverTipFactory.ForEnergy(this)];
     
     protected override bool IsPlayable => IsBloodPoolCount(base.DynamicVars["BloodCost"].IntValue);
 

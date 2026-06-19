@@ -23,7 +23,7 @@ public class RemiliaUncommon9() : RemiliaCard(1,
     
     public override IEnumerable<CardKeyword> CanonicalKeywords => [CardKeyword.Exhaust];
     
-    protected override IEnumerable<IHoverTip> ExtraHoverTips => [
+    protected override IEnumerable<IHoverTip> AdditionalHoverTips => [
         HoverTipFactory.FromPower<BloodPlague>(), 
         HoverTipFactory.FromPower<ArtifactPower>(),
         HoverTipFactory.FromCard<BloodCurse>()

@@ -22,7 +22,7 @@ public class RemiliaRare8() : RemiliaCard(0,
 
     public override CardMultiplayerConstraint MultiplayerConstraint => CardMultiplayerConstraint.MultiplayerOnly;
     
-    protected override IEnumerable<IHoverTip> ExtraHoverTips => [HoverTipFactory.FromPower<StrengthPower>()];
+    protected override IEnumerable<IHoverTip> AdditionalHoverTips => [HoverTipFactory.FromPower<StrengthPower>()];
     
     protected override async Task OnPlay(
         PlayerChoiceContext choiceContext,

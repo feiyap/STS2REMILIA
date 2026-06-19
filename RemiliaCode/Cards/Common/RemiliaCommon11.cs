@@ -1,4 +1,3 @@
-using BaseLib.Utils;
 using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Commands.Builders;
 using MegaCrit.Sts2.Core.Entities.Cards;
@@ -19,7 +18,7 @@ public class RemiliaCommon11() : RemiliaCard(1,
 {
     protected override IEnumerable<DynamicVar> CanonicalVars => [new DamageVar(10m, ValueProp.Move), new PowerVar<ClawPrints>(1m)];
     
-    protected override IEnumerable<IHoverTip> ExtraHoverTips => [HoverTipFactory.FromPower<ClawPrints>()];
+    protected override IEnumerable<IHoverTip> AdditionalHoverTips => [HoverTipFactory.FromPower<ClawPrints>()];
 
     protected override async Task OnPlay(
         PlayerChoiceContext choiceContext,

@@ -1,17 +1,16 @@
-﻿using BaseLib.Abstracts;
-using Remilia.RemiliaCode.Extensions;
+﻿using Remilia.RemiliaCode.Extensions;
 using Godot;
 using MegaCrit.Sts2.Core.Entities.Characters;
 using MegaCrit.Sts2.Core.Models;
-using MegaCrit.Sts2.Core.Models.Cards;
-using MegaCrit.Sts2.Core.Models.Relics;
-using Remilia.RemiliaCode.Cards;
 using Remilia.RemiliaCode.Cards.Basic;
 using Remilia.RemiliaCode.Relics;
+using STS2RitsuLib.Interop.AutoRegistration;
+using STS2RitsuLib.Scaffolding.Characters;
 
 namespace Remilia.RemiliaCode.Character;
 
-public class Remilia : PlaceholderCharacterModel
+[RegisterCharacter]
+public class Remilia : ModCharacterTemplate<RemiliaCardPool, RemiliaRelicPool, RemiliaPotionPool>
 {
     public const string CharacterId = "Remilia";
 
@@ -21,52 +20,45 @@ public class Remilia : PlaceholderCharacterModel
     public override Color MapDrawingColor => Color;
     public override CharacterGender Gender => CharacterGender.Feminine;
     public override int StartingHp => 85;
+    public override int StartingGold => 99;
+    public override float AttackAnimDelay => 0.15f;
+    public override float CastAnimDelay => 0.25f;
 
-    public override IEnumerable<CardModel> StartingDeck =>
+    public override List<string> GetArchitectAttackVfx() =>
     [
-        ModelDb.Card<StrikeRemilia>(),
-        ModelDb.Card<StrikeRemilia>(),
-        ModelDb.Card<StrikeRemilia>(),
-        ModelDb.Card<StrikeRemilia>(),
-        ModelDb.Card<DefendRemilia>(),
-        ModelDb.Card<DefendRemilia>(),
-        ModelDb.Card<DefendRemilia>(),
-        ModelDb.Card<DefendRemilia>(),
-        ModelDb.Card<ScarletFigure>(),
-        ModelDb.Card<BloodSucking>()
+        "vfx/vfx_attack_blunt",
+        "vfx/vfx_heavy_blunt",
+        "vfx/vfx_attack_slash",
+        "vfx/vfx_bloody_impact",
+        "vfx/vfx_rock_shatter"
     ];
 
-    public override IReadOnlyList<RelicModel> StartingRelics =>
+#pragma warning disable CS0618
+    protected override IEnumerable<StartingDeckEntry> StartingDeckEntries =>
     [
-        ModelDb.Relic<RemiliaRelicScarletBlood>()
+        StartingDeckEntry.Of<StrikeRemilia>(4),
+        StartingDeckEntry.Of<DefendRemilia>(4),
+        StartingDeckEntry.Of<ScarletFigure>(),
+        StartingDeckEntry.Of<BloodSucking>()
     ];
 
-    public override CardPoolModel CardPool => ModelDb.CardPool<RemiliaCardPool>();
-    public override RelicPoolModel RelicPool => ModelDb.RelicPool<RemiliaRelicPool>();
-    public override PotionPoolModel PotionPool => ModelDb.PotionPool<RemiliaPotionPool>();
+    protected override IEnumerable<Type> StartingRelicTypes =>
+    [
+        typeof(RemiliaRelicScarletBlood)
+    ];
+#pragma warning restore CS0618
 
-    /*  PlaceholderCharacterModel will utilize placeholder basegame assets for most of your character assets until you
-        override all the other methods that define those assets.
-        These are just some of the simplest assets, given some placeholders to differentiate your character with.
-        You don't have to, but you're suggested to rename these images. */
-    public override string CustomVisualPath => "remilia_character.tscn".CharacterUiPath();
-    public override string CustomCharacterSelectBg => "remilia_background.tscn".CharacterUiPath();
-    public override string CustomIconTexturePath => "character_icon_char_name.png".CharacterUiPath();
-    public override string CustomCharacterSelectIconPath => "char_select_char_name.png".CharacterUiPath();
-    public override string CustomCharacterSelectLockedIconPath => "char_select_char_name_locked.png".CharacterUiPath();
-    public override string CustomMapMarkerPath => "map_marker_char_name.png".CharacterUiPath();
-    public override string CustomIconPath => "character_icon_char.tscn".CharacterUiPath();
-    public override string CustomMerchantAnimPath => "character_merchant.tscn".CharacterUiPath();
-    
-    // 篝火休息场景。
-    public override string CustomRestSiteAnimPath => "remilia_rest_site.tscn".CharacterUiPath();
-    
-    // 多人模式-手指。
-    public override string CustomArmPointingTexturePath => "multiplayer_hand_remilia_point.png".CharacterUiPath();
-    // 多人模式剪刀石头布-石头。
-    public override string CustomArmRockTexturePath => "multiplayer_hand_remilia_rock.png".CharacterUiPath();
-    // 多人模式剪刀石头布-布。
-    public override string CustomArmPaperTexturePath => "multiplayer_hand_remilia_paper.png".CharacterUiPath();
-    // 多人模式剪刀石头布-剪刀。
-    public override string CustomArmScissorsTexturePath => "multiplayer_hand_remilia_scissors.png".CharacterUiPath();
+    public override string? CustomVisualsPath => "remilia_character.tscn".CharacterUiPath();
+    public override string? CustomCharacterSelectBgPath => "remilia_background.tscn".CharacterUiPath();
+    public override string? CustomIconTexturePath => "character_icon_char_name.png".CharacterUiPath();
+    public override string? CustomCharacterSelectIconPath => "char_select_char_name.png".CharacterUiPath();
+    public override string? CustomCharacterSelectLockedIconPath => "char_select_char_name_locked.png".CharacterUiPath();
+    public override string? CustomMapMarkerPath => "map_marker_char_name.png".CharacterUiPath();
+    public override string? CustomIconPath => "character_icon_char.tscn".CharacterUiPath();
+    public override string? CustomMerchantAnimPath => "character_merchant.tscn".CharacterUiPath();
+    public override string? CustomRestSiteAnimPath => "remilia_rest_site.tscn".CharacterUiPath();
+    public override string? CustomArmPointingTexturePath => "multiplayer_hand_remilia_point.png".CharacterUiPath();
+    public override string? CustomArmRockTexturePath => "multiplayer_hand_remilia_rock.png".CharacterUiPath();
+    public override string? CustomArmPaperTexturePath => "multiplayer_hand_remilia_paper.png".CharacterUiPath();
+    public override string? CustomArmScissorsTexturePath => "multiplayer_hand_remilia_scissors.png".CharacterUiPath();
 }

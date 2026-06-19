@@ -21,7 +21,7 @@ public class RemiliaRare5() : RemiliaCard(1,
         new CalculatedDamageVar(ValueProp.Move).WithMultiplier((CardModel card, Creature? _) => card.Owner.PlayerCombatState?.AllCards.Count((CardModel c) => c.Type == CardType.Curse) ?? 0)
     ];
     
-    protected override IEnumerable<IHoverTip> ExtraHoverTips => [HoverTipFactory.FromCard<BloodCurse>()];
+    protected override IEnumerable<IHoverTip> AdditionalHoverTips => [HoverTipFactory.FromCard<BloodCurse>()];
 
     protected override async Task OnPlay(
         PlayerChoiceContext choiceContext,

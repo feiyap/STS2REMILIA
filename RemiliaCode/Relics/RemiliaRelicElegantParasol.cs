@@ -1,4 +1,3 @@
-using BaseLib.Utils;
 using MegaCrit.Sts2.Core.Entities.Creatures;
 using MegaCrit.Sts2.Core.Entities.Powers;
 using MegaCrit.Sts2.Core.Entities.Relics;
@@ -13,17 +12,17 @@ public class RemiliaRelicElegantParasol() : RemiliaRelic
     public override RelicRarity Rarity =>
         RelicRarity.Uncommon;
 
-    public override decimal ModifyPowerAmountGiven(PowerModel power, Creature giver, decimal amount, Creature? target, CardModel? cardSource)
+    public override decimal ModifyPowerAmountGivenAdditive(PowerModel power, Creature giver, decimal amount, Creature? target, CardModel? cardSource)
     {
         if (power.GetTypeForAmount(amount) != PowerType.Debuff)
         {
-            return amount;
+            return 0;
         }
         if (giver != base.Owner.Creature)
         {
-            return amount;
+            return 0;
         }
-        return amount + 1;
+        return 1;
     }
 
     public override Task AfterModifyingPowerAmountGiven(PowerModel power)

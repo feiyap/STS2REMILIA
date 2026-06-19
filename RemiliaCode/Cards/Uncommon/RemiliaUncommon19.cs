@@ -16,7 +16,7 @@ public class RemiliaUncommon19() : RemiliaCard(0,
 {
     protected override IEnumerable<DynamicVar> CanonicalVars => [new DynamicVar("BloodPool", 3m), new CardsVar(1)];
     
-    protected override IEnumerable<IHoverTip> ExtraHoverTips => [HoverTipFactory.FromKeyword(CardKeyword.Exhaust)];
+    protected override IEnumerable<IHoverTip> AdditionalHoverTips => [HoverTipFactory.FromKeyword(CardKeyword.Exhaust)];
     
     public override IEnumerable<CardKeyword> CanonicalKeywords => [CardKeyword.Exhaust];
 

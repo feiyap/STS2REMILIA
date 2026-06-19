@@ -1,4 +1,3 @@
-using BaseLib.Utils;
 using MegaCrit.Sts2.Core.Combat;
 using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Creatures;
@@ -11,10 +10,11 @@ using MegaCrit.Sts2.Core.Rooms;
 using MegaCrit.Sts2.Core.Saves.Runs;
 using MegaCrit.Sts2.Core.ValueProps;
 using Remilia.RemiliaCode.Powers;
-using Remilia.RemiliaCode.Relics;
+using STS2RitsuLib.Interop.AutoRegistration;
 
 namespace Remilia.RemiliaCode.Relics;
 
+[RegisterTouchOfOrobasRefinement(typeof(RemiliaRelicRedBlood))]
 public class RemiliaRelicScarletBlood() : RemiliaRelic
 {
     public override bool ShowCounter => true;
@@ -37,12 +37,7 @@ public class RemiliaRelicScarletBlood() : RemiliaRelic
     
     public override int DisplayAmount => SavedBlood;
 
-    public override RelicModel GetUpgradeReplacement()
-    {
-        return ModelDb.Relic<RemiliaRelicRedBlood>();
-    }
-    
-    protected override IEnumerable<DynamicVar> CanonicalVars => 
+    protected override IEnumerable<DynamicVar> CanonicalVars =>
         [new DynamicVar("HpLossReduction", 100m), new DynamicVar("BloodPoolLift", 50m)];
     
     public override async Task AfterDamageReceived(PlayerChoiceContext choiceContext, Creature target, DamageResult result, ValueProp props, Creature? dealer, CardModel? cardSource)

@@ -14,7 +14,7 @@ public class RemiliaRare16() : RemiliaCard(3,
 {
     protected override IEnumerable<DynamicVar> CanonicalVars => [new PowerVar<RemiliaRare16Power>(1), new EnergyVar(1)];
     
-    protected override IEnumerable<IHoverTip> ExtraHoverTips => [HoverTipFactory.ForEnergy(this)];
+    protected override IEnumerable<IHoverTip> AdditionalHoverTips => [HoverTipFactory.ForEnergy(this)];
     
     public override IEnumerable<CardKeyword> CanonicalKeywords => [CardKeyword.Ethereal];
 

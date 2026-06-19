@@ -1,4 +1,4 @@
-using BaseLib.Utils;
+using Remilia.RemiliaCode.Utils;
 using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
@@ -16,7 +16,7 @@ public class RemiliaUncommon17() : RemiliaCard(1,
 {
     protected override IEnumerable<DynamicVar> CanonicalVars => [new BlockVar(7m, ValueProp.Move), new CardsVar(2),new EnergyVar(1)];
     
-    protected override IEnumerable<IHoverTip> ExtraHoverTips => [HoverTipFactory.ForEnergy(this)];
+    protected override IEnumerable<IHoverTip> AdditionalHoverTips => [HoverTipFactory.ForEnergy(this)];
 
     protected override async Task OnPlay(
         PlayerChoiceContext choiceContext,

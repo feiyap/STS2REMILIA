@@ -1,18 +1,21 @@
-﻿using BaseLib.Abstracts;
-using BaseLib.Extensions;
-using Remilia.RemiliaCode.Extensions;
+﻿using Remilia.RemiliaCode.Extensions;
 using Godot;
+using STS2RitsuLib.Interop.AutoRegistration;
+using STS2RitsuLib.Scaffolding.Content;
 
 namespace Remilia.RemiliaCode.Powers;
 
-public abstract class RemiliaPower : CustomPowerModel
+#pragma warning disable RITSU001 // 抽象能力模板，本地化由具体派生能力提供
+[RegisterPower(Inherit = true)]
+public abstract class RemiliaPower : ModPowerTemplate
 {
-    //Loads from Remilia/images/powers/your_power.png
-    public override string CustomPackedIconPath
+    private string ImageStem => GetType().ModelImageStem();
+
+    public override string CustomIconPath
     {
         get
         {
-            var path = $"{Id.Entry.RemovePrefix().ToLowerInvariant()}.png".PowerImagePath();
+            var path = $"{ImageStem}.png".PowerImagePath();
             return ResourceLoader.Exists(path) ? path : "power.png".PowerImagePath();
         }
     }
@@ -21,7 +24,7 @@ public abstract class RemiliaPower : CustomPowerModel
     {
         get
         {
-            var path = $"{Id.Entry.RemovePrefix().ToLowerInvariant()}_big.png".BigPowerImagePath();
+            var path = $"{ImageStem}_big.png".BigPowerImagePath();
             return ResourceLoader.Exists(path) ? path : "power.png".BigPowerImagePath();
         }
     }

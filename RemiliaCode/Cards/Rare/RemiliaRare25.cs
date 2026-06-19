@@ -15,7 +15,7 @@ public class RemiliaRare25() : RemiliaCard(0,
 {
     protected override IEnumerable<DynamicVar> CanonicalVars => [new PowerVar<BloodPlague>(3m)];
     
-    protected override IEnumerable<IHoverTip> ExtraHoverTips => [HoverTipFactory.FromPower<BloodPlague>()];
+    protected override IEnumerable<IHoverTip> AdditionalHoverTips => [HoverTipFactory.FromPower<BloodPlague>()];
     
     protected override bool HasEnergyCostX => true;
 

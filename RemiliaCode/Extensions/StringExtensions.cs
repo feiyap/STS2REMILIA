@@ -1,6 +1,9 @@
-﻿namespace Remilia.RemiliaCode.Extensions;
+using System.Text.RegularExpressions;
+using Remilia;
 
-//Mostly utilities to get asset paths.
+namespace Remilia.RemiliaCode.Extensions;
+
+// 资源路径辅助方法。
 public static class StringExtensions
 {
     public static string ImagePath(this string path)
@@ -41,5 +44,18 @@ public static class StringExtensions
     public static string CharacterUiPath(this string path)
     {
         return Path.Join(MainFile.ModId, "images", "charui", path);
+    }
+
+    /// <summary>
+    /// 将模型 CLR 类型名转为资源文件名 stem（与 RitsuLib StringHelper.Slugify 规则一致，再转小写）。
+    /// </summary>
+    public static string ModelImageStem(this Type type)
+    {
+        var value = type.Name;
+        value = Regex.Replace(value, "([A-Za-z0-9]|\\G(?!^))([A-Z])", "$1_$2");
+        value = value.ToUpperInvariant();
+        value = Regex.Replace(value, "\\s+", "_");
+        value = Regex.Replace(value, "[^A-Z0-9_]", "");
+        return value.ToLowerInvariant();
     }
 }

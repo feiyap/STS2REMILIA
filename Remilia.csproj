@@ -62,6 +62,7 @@
         <!-- Diasble architecture mismatch warning; mods are ideally built for all platforms (MSIL)
              while your local StS2 version will be for your specific platform. -->
         <NoWarn>$(NoWarn);MSB3270</NoWarn>
+        <RitsuLibDeployDir>$(ModsPath)STS2-RitsuLib/</RitsuLibDeployDir>
     </PropertyGroup>
 
     <ItemGroup Condition="Exists('$(Sts2DataDir)')">
@@ -76,10 +77,11 @@
     </ItemGroup>
 
     <ItemGroup>
-        <PackageReference Include="Alchyr.Sts2.BaseLib" Version="3.1.5" PrivateAssets="All" />
-        <PackageReference Include="Alchyr.Sts2.ModAnalyzers" Version="*" />
+        <PackageReference Include="Nothing.STS2RitsuLib.ModAnalyzers" Version="0.8.1" PrivateAssets="all" />
         <AdditionalFiles Include="Remilia/localization/**/*.json" />
+        <PackageReference Include="Nothing.STS2RitsuLib.ModAnalyzers" Version="0.8.1" />
         <PackageReference Include="PostHog" Version="2.7.1" />
+        <PackageReference Include="STS2.RitsuLib" Version="0.4.24" PrivateAssets="All" />
     </ItemGroup>
 
     <ItemGroup>
@@ -93,6 +95,9 @@
         <EmbeddedResource Remove="images/**" />
         <Compile Remove="RemiliaCode\Keywords\**" />
         <EmbeddedResource Remove="RemiliaCode\Keywords\**" />
+        <!-- 依赖 RitsuLib 的次级资源实现，当前项目使用 Power 版 BloodPool -->
+        <Compile Remove="RemiliaCode\Resources\**" />
+        <EmbeddedResource Remove="RemiliaCode\Resources\**" />
     </ItemGroup>
 
     <ItemGroup>
@@ -126,11 +131,6 @@
         <Message Text="Copying .dll and manifest to mods folder." Importance="high" />
         <Copy SourceFiles="$(TargetPath)" DestinationFolder="$(ModsPath)$(MSBuildProjectName)/" />
         <Copy SourceFiles="Remilia.json" DestinationFolder="$(ModsPath)$(MSBuildProjectName)/" />
-        <Message Text="Copying BaseLib to mods folder." Importance="high" />
-        <ItemGroup>
-            <BaseLibFiles Include="$(NuGetPackageRoot)/alchyr.sts2.baselib/**/lib/**/BaseLib.dll;$(NuGetPackageRoot)/alchyr.sts2.baselib/**/Content/BaseLib.pck;$(NuGetPackageRoot)/alchyr.sts2.baselib/**/Content/BaseLib.json;" />
-        </ItemGroup>
-        <Copy SourceFiles="@(BaseLibFiles)" DestinationFolder="$(ModsPath)BaseLib/" />
     </Target>
 
     <Target Name="GodotPublish" AfterTargets="Publish" Condition="'$(GodotPath)' != '' and Exists('$(GodotPath)') and '$(IsInnerGodotExport)' != 'true'">

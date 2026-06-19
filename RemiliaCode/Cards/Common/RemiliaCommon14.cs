@@ -18,7 +18,7 @@ public class RemiliaCommon14() : RemiliaCard(1,
         new PowerVar<ClawPrints>(1m)
     ];
     
-    protected override IEnumerable<IHoverTip> ExtraHoverTips => [HoverTipFactory.FromPower<ClawPrints>()];
+    protected override IEnumerable<IHoverTip> AdditionalHoverTips => [HoverTipFactory.FromPower<ClawPrints>()];
 
     protected override async Task OnPlay(
         PlayerChoiceContext choiceContext,

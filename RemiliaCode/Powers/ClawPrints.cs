@@ -1,5 +1,3 @@
-using BaseLib.Extensions;
-using BaseLib.Utils;
 using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Creatures;
 using MegaCrit.Sts2.Core.Entities.Powers;
@@ -36,7 +34,7 @@ public class ClawPrints : RemiliaPower
         {
             return base.ModifyDamageAdditive(target, amount, props, dealer, cardSource);
         }
-        if (!props.IsPoweredAttack_())
+        if (!props.IsPoweredAttack())
         {
             return base.ModifyDamageAdditive(target, amount, props, dealer, cardSource);
         }

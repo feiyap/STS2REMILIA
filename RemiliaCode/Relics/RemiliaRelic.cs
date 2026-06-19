@@ -1,40 +1,40 @@
-﻿using System.Diagnostics;
-using BaseLib.Abstracts;
-using BaseLib.Extensions;
-using BaseLib.Utils;
-using Remilia.RemiliaCode.Character;
+﻿using Remilia.RemiliaCode.Character;
 using Remilia.RemiliaCode.Extensions;
 using Godot;
-using MegaCrit.Sts2.Core.Logging;
+using STS2RitsuLib.Interop.AutoRegistration;
+using STS2RitsuLib.Scaffolding.Content;
 
 namespace Remilia.RemiliaCode.Relics;
 
-[Pool(typeof(RemiliaRelicPool))]
-public abstract class RemiliaRelic : CustomRelicModel
+#pragma warning disable RITSU001 // 抽象遗物模板，本地化由具体派生遗物提供
+[RegisterRelic(typeof(RemiliaRelicPool), Inherit = true)]
+public abstract class RemiliaRelic : ModRelicTemplate
 {
-    public override string PackedIconPath
+    private string ImageStem => GetType().ModelImageStem();
+
+    public override string CustomIconPath
     {
         get
         {
-            var path = $"{Id.Entry.RemovePrefix().ToLowerInvariant()}.png".RelicImagePath();
+            var path = $"{ImageStem}.png".RelicImagePath();
             return ResourceLoader.Exists(path) ? path : "relic.png".RelicImagePath();
         }
     }
 
-    protected override string PackedIconOutlinePath
+    public override string CustomIconOutlinePath
     {
         get
         {
-            var path = $"{Id.Entry.RemovePrefix().ToLowerInvariant()}_outline.png".RelicImagePath();
+            var path = $"{ImageStem}_outline.png".RelicImagePath();
             return ResourceLoader.Exists(path) ? path : "relic_outline.png".RelicImagePath();
         }
     }
 
-    protected override string BigIconPath
+    public override string CustomBigIconPath
     {
         get
         {
-            var path = $"{Id.Entry.RemovePrefix().ToLowerInvariant()}_big.png".BigRelicImagePath();
+            var path = $"{ImageStem}_big.png".BigRelicImagePath();
             return ResourceLoader.Exists(path) ? path : "relic.png".BigRelicImagePath();
         }
     }

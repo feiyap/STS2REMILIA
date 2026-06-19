@@ -1,4 +1,3 @@
-using BaseLib.Extensions;
 using MegaCrit.Sts2.Core.Combat;
 using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Creatures;
@@ -22,12 +21,12 @@ public class RemiliaRare20Power : RemiliaPower
     public override PowerType Type => PowerType.Buff;
     public override PowerStackType StackType => PowerStackType.Counter;
     
-    protected override IEnumerable<IHoverTip> ExtraHoverTips =>
+    protected override IEnumerable<IHoverTip> AdditionalHoverTips =>
         [HoverTipFactory.FromPower<ClawPrints>()];
 
     public override async Task AfterDamageGiven(PlayerChoiceContext choiceContext, Creature? dealer, DamageResult result, ValueProp props, Creature target, CardModel? cardSource)
     {
-        if (dealer == base.Owner && props.IsPoweredAttack_() && result.UnblockedDamage > 0)
+        if (dealer == base.Owner && props.IsPoweredAttack() && result.UnblockedDamage > 0)
         {
             Flash();
             await PowerCmd.Apply<ClawPrints>(choiceContext, target, base.Amount, base.Owner, null);

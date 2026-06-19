@@ -22,7 +22,7 @@ public class RemiliaUncommon15() : RemiliaCard(0,
         new CalculatedDamageVar(ValueProp.Move).WithMultiplier((CardModel _, Creature? target) => target?.GetPowerAmount<ClawPrints>() ?? 0)
     ];
     
-    protected override IEnumerable<IHoverTip> ExtraHoverTips => [HoverTipFactory.FromPower<ClawPrints>()];
+    protected override IEnumerable<IHoverTip> AdditionalHoverTips => [HoverTipFactory.FromPower<ClawPrints>()];
 
     protected override async Task OnPlay(
         PlayerChoiceContext choiceContext,

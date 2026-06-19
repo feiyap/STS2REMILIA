@@ -1,5 +1,3 @@
-using BaseLib.Abstracts;
-using BaseLib.Utils;
 using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Commands.Builders;
 using MegaCrit.Sts2.Core.Entities.Cards;
@@ -11,16 +9,16 @@ using MegaCrit.Sts2.Core.Nodes.Vfx;
 using MegaCrit.Sts2.Core.ValueProps;
 using Remilia.RemiliaCode.Cards.Ancient;
 using Remilia.RemiliaCode.Powers;
+using STS2RitsuLib.Interop.AutoRegistration;
 
 namespace Remilia.RemiliaCode.Cards.Basic;
 
+[RegisterArchaicToothTranscendence(typeof(RemiliaAncient2))]
 public class BloodSucking() : RemiliaCard(1,
     CardType.Attack, CardRarity.Basic,
-    TargetType.AnyEnemy), ITranscendenceCard
+    TargetType.AnyEnemy)
 {
     protected override IEnumerable<DynamicVar> CanonicalVars => [new DamageVar(6, ValueProp.Move)];
-    
-    public CardModel GetTranscendenceTransformedCard() => ModelDb.Card<RemiliaAncient2>();
 
     protected override async Task OnPlay(
         PlayerChoiceContext choiceContext,

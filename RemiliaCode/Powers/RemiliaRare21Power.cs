@@ -1,4 +1,3 @@
-using BaseLib.Extensions;
 using MegaCrit.Sts2.Core.Combat;
 using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Creatures;
@@ -23,7 +22,7 @@ public class RemiliaRare21Power : RemiliaPower
 
     public override decimal ModifyDamageMultiplicative(Creature? target, decimal amount, ValueProp props, Creature? dealer, CardModel? cardSource)
     {
-        if (!props.IsPoweredAttack_())
+        if (!props.IsPoweredAttack())
         {
             return 1m;
         }

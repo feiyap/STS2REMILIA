@@ -18,7 +18,7 @@ public class RemiliaCommon20() : RemiliaCard(1,
     
     protected override HashSet<CardTag> CanonicalTags => [CardTag.Strike];
 
-    protected override IEnumerable<IHoverTip> ExtraHoverTips =>
+    protected override IEnumerable<IHoverTip> AdditionalHoverTips =>
     [
         HoverTipFactory.FromPower<BloodPlague>()
     ];

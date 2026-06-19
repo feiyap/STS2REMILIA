@@ -15,7 +15,7 @@ public class RemiliaRare2() : RemiliaCard(1,
 {
     protected override IEnumerable<DynamicVar> CanonicalVars => [new DynamicVar("BloodCost", 3m), new DamageVar(13, ValueProp.Move), new PowerVar<ClawPrints>(2)];
     
-    protected override IEnumerable<IHoverTip> ExtraHoverTips => [HoverTipFactory.FromPower<ClawPrints>()];
+    protected override IEnumerable<IHoverTip> AdditionalHoverTips => [HoverTipFactory.FromPower<ClawPrints>()];
     
     protected override bool IsPlayable => IsBloodPoolCount(base.DynamicVars["BloodCost"].IntValue);
 

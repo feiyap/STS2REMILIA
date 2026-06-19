@@ -25,7 +25,7 @@ public class RemiliaAncient1() : RemiliaCard(1,
     
     public override IEnumerable<CardKeyword> CanonicalKeywords => [CardKeyword.Exhaust, CardKeyword.Retain];
     
-    protected override IEnumerable<IHoverTip> ExtraHoverTips => [HoverTipFactory.ForEnergy(this)];
+    protected override IEnumerable<IHoverTip> AdditionalHoverTips => [HoverTipFactory.ForEnergy(this)];
 
     protected override async Task OnPlay(
         PlayerChoiceContext choiceContext,
