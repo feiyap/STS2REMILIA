@@ -3,11 +3,11 @@
   "name": "Remilia",
   "author": "Feiyap",
   "description": "蕾米莉亚MOD",
-  "version": "v0.0.2",
+  "version": "v1.0.1",
   "has_pck": true,
   "has_dll": true,
   "dependencies": [
-    { "id": "STS2-RitsuLib" }
+    { "id": "STS2-RitsuLib" , "min_version": "0.4.23"}
   ],
   "affects_gameplay": true
 }

@@ -11,13 +11,11 @@ public class RemiliaRare9() : RemiliaCard(0,
     CardType.Skill, CardRarity.Rare,
     TargetType.AnyAlly)
 {
-    protected override IEnumerable<DynamicVar> CanonicalVars => [new DynamicVar("BloodCost", 10), new CardsVar(4)];
+    protected override IEnumerable<DynamicVar> CanonicalVars => [new CardsVar(4)];
     
     public override CardMultiplayerConstraint MultiplayerConstraint => CardMultiplayerConstraint.MultiplayerOnly;
     
     public override IEnumerable<CardKeyword> CanonicalKeywords => [CardKeyword.Exhaust];
-    
-    protected override bool AutoBindBloodCost => true;
 
     protected override async Task OnPlay(
         PlayerChoiceContext choiceContext,
@@ -34,7 +32,6 @@ public class RemiliaRare9() : RemiliaCard(0,
 
     protected override void OnUpgrade()
     {
-        base.DynamicVars["BloodCost"].UpgradeValueBy(-5);
-        SyncBloodCost();
+        base.RemoveKeyword(CardKeyword.Exhaust);
     }
 }

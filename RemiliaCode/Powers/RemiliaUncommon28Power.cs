@@ -1,11 +1,8 @@
-using MegaCrit.Sts2.Core.Combat;
 using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Creatures;
 using MegaCrit.Sts2.Core.Entities.Powers;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
-using MegaCrit.Sts2.Core.HoverTips;
 using MegaCrit.Sts2.Core.Models;
-using MegaCrit.Sts2.Core.ValueProps;
 
 namespace Remilia.RemiliaCode.Powers;
 
@@ -13,10 +10,10 @@ public class RemiliaUncommon28Power : RemiliaPower
 {
     public override PowerType Type => PowerType.Buff;
     public override PowerStackType StackType => PowerStackType.Counter;
-    
+
     public override bool ShouldScaleInMultiplayer => true;
 
-    private int powerCount = 0;
+    private int _reflectAmount;
 
     public override bool TryModifyPowerAmountReceived(PowerModel canonicalPower, Creature target, decimal amount, Creature? _, out decimal modifiedAmount)
     {
@@ -37,25 +34,24 @@ public class RemiliaUncommon28Power : RemiliaPower
         }
         if (canonicalPower.Applier == base.Owner)
         {
-            Console.WriteLine("LL1");
             modifiedAmount = amount;
             return false;
         }
-        Console.WriteLine("LL2");
-        Console.WriteLine(amount);
-        powerCount = (int)amount;
+
+        _reflectAmount = (int)amount;
         modifiedAmount = default(decimal);
         return true;
     }
 
     public override async Task AfterModifyingPowerAmountReceived(PowerModel power)
     {
+        int reflectAmount = _reflectAmount;
+        _reflectAmount = 0;
         await PowerCmd.Decrement(this);
-        
-        Console.WriteLine(power);
-        Console.WriteLine(power.Applier);
-        Console.WriteLine(power.Amount);
-        Console.WriteLine(powerCount);
-        await PowerCmd.Apply(new ThrowingPlayerChoiceContext(),power, power.Applier, powerCount, base.Owner, null);
+
+        if (reflectAmount <= 0 || power.Applier == null)
+            return;
+
+        await PowerCmd.Apply(new ThrowingPlayerChoiceContext(), power, power.Applier, reflectAmount, base.Owner, null);
     }
 }

@@ -33,7 +33,7 @@ public class RemiliaRare23Power : RemiliaPower
             Creature creature = base.Owner.Player.RunState.Rng.CombatTargets.NextItem(base.Owner.CombatState.HittableEnemies);
             if (creature != null)
             {
-                PowerCmd.Apply<ClawPrints>(choiceContext, creature, count, base.Owner, null);
+                await PowerCmd.Apply<ClawPrints>(choiceContext, creature, count, base.Owner, null);
             }
         }
     }

@@ -13,6 +13,8 @@ namespace Remilia.RemiliaCode.Powers;
 
 public class BloodPlague : RemiliaPower
 {
+    private bool _isTriggering;
+
     public override PowerType Type => PowerType.Debuff;
     public override PowerStackType StackType => PowerStackType.Counter;
 
@@ -35,15 +37,23 @@ public class BloodPlague : RemiliaPower
 
     public override async Task AfterPowerAmountChanged(PlayerChoiceContext choiceContext, PowerModel power, decimal amount, Creature? applier, CardModel? cardSource)
     {
+        if (_isTriggering)
+            return;
         if (!(amount == 0m) && power.GetTypeForAmount(amount) == PowerType.Debuff && power.Owner == base.Owner && !(power is ITemporaryPower))
         {
-            Flash();
-            //await CreatureCmd.Damage(new ThrowingPlayerChoiceContext(), power.Owner, base.Amount, ValueProp.Unpowered, base.Applier, null);
-            
-            int iterations = TriggerCount;
-            for (int i = 0; i < iterations; i++)
+            _isTriggering = true;
+            try
             {
-                await CreatureCmd.Damage(new ThrowingPlayerChoiceContext(), power.Owner, base.Amount, ValueProp.Unpowered, base.Applier, null);
+                Flash();
+                int iterations = TriggerCount;
+                for (int i = 0; i < iterations; i++)
+                {
+                    await CreatureCmd.Damage(choiceContext, power.Owner, base.Amount, ValueProp.Unpowered, base.Applier, null);
+                }
+            }
+            finally
+            {
+                _isTriggering = false;
             }
         }
     }

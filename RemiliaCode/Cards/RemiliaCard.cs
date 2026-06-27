@@ -1,10 +1,12 @@
 ﻿using Godot;
 using MegaCrit.Sts2.Core.Combat;
 using MegaCrit.Sts2.Core.Combat.History.Entries;
+using MegaCrit.Sts2.Core.Models;
 using Remilia.RemiliaCode.Character;
 using Remilia.RemiliaCode.Extensions;
 using Remilia.RemiliaCode.Resources;
 using MegaCrit.Sts2.Core.Entities.Cards;
+using STS2RitsuLib;
 using STS2RitsuLib.Combat.SecondaryResources;
 using STS2RitsuLib.Interop.AutoRegistration;
 using STS2RitsuLib.Scaffolding.Content;
@@ -50,9 +52,33 @@ public abstract class RemiliaCard(int cost, CardType type, CardRarity rarity, Ta
         }
     }
 
+    /// <summary>
+    /// 注册克隆回调，确保每场战斗复制出的卡牌实例也会绑定血池费用。
+    /// </summary>
+    public static void RegisterLifecycleHooks()
+    {
+        RitsuLibFramework.GetModelCloneRegistry(MainFile.ModId)
+            .Register<CardModel>("blood_cost_sync", static (_, clone) =>
+            {
+                if (clone is RemiliaCard card)
+                    card.EnsureBloodCostBound();
+            });
+    }
+
     public override void AfterCreated()
     {
         base.AfterCreated();
+        EnsureBloodCostBound();
+    }
+
+    protected override void AfterDeserialized()
+    {
+        base.AfterDeserialized();
+        EnsureBloodCostBound();
+    }
+
+    internal void EnsureBloodCostBound()
+    {
         if (AutoBindBloodCost)
             SyncBloodCost();
     }

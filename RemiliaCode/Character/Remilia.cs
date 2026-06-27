@@ -24,6 +24,9 @@ public class Remilia : ModCharacterTemplate<RemiliaCardPool, RemiliaRelicPool, R
     public override float AttackAnimDelay => 0.15f;
     public override float CastAnimDelay => 0.25f;
 
+    // 未注册时间线/纪元时跳过原版 Act 通关后的纪元授予，避免击败 Boss 后战斗结束流程异常中断。
+    public override bool RequiresEpochAndTimeline => false;
+
     public override List<string> GetArchitectAttackVfx() =>
     [
         "vfx/vfx_attack_blunt",

@@ -17,6 +17,7 @@ namespace Remilia.RemiliaCode.Resources;
 public static class RemiliaBloodPool
 {
     public const string LocalId = "blood_pool";
+    private const string CombatUiRowLocalId = "blood_pool_row";
 
     /// <summary>
     /// 相对能量计数器原点的偏移：右侧 120、上方 120。
@@ -45,12 +46,17 @@ public static class RemiliaBloodPool
         registry.AlwaysShowInCombatUiForCharacter<CharacterRemilia>(Definition.LocalId);
 
         registry.RegisterCombatUi<NCombatUi, NSecondaryResourceCounterRow>(
-            "blood_pool_row",
+            CombatUiRowLocalId,
             static _ => new NSecondaryResourceCounterRow(),
             static ctx =>
             {
-                EnsureCombatUiPlacement(ctx.Parent, ctx.Node);
-                ctx.Node.Bind(ctx.Player, ctx.VisibleDefinitions);
+                // 节点 attachment 重建后，旧 updater 闭包仍可能持有已释放的 ctx.Node。
+                if (!ModNodeAttachmentRegistry.For(MainFile.ModId)
+                        .TryGetAttached(ctx.Parent, CombatUiRowLocalId, out NSecondaryResourceCounterRow row))
+                    return;
+
+                EnsureCombatUiPlacement(ctx.Parent, row);
+                row.Bind(ctx.Player, ctx.VisibleDefinitions);
             },
             CreateCombatUiOptions());
     }
@@ -70,8 +76,14 @@ public static class RemiliaBloodPool
 
     private static NodeAttachmentOptions CreateCombatUiOptions() => new()
     {
+        Name = CombatUiRowLocalId,
+        DuplicatePolicy = NodeAttachmentDuplicatePolicy.ReuseExistingByName,
+        // 挂到 EnergyCounterContainer 而非 _energyCounter：Activate 每次都会重建能量球，
+        // 联机模式下旧 energy counter 被释放时会连带释放血池行，触发 RitsuLib 陈旧 updater 崩溃。
         AttachParentSelector = static combatUi =>
-            TryGetEnergyCounter(combatUi, out var energyCounter) ? energyCounter : combatUi,
+            combatUi is NCombatUi ui && GodotObject.IsInstanceValid(ui.EnergyCounterContainer)
+                ? ui.EnergyCounterContainer
+                : combatUi,
     };
 
     private static bool TryGetEnergyCounter(Node combatUi, out Node energyCounter)
@@ -88,16 +100,22 @@ public static class RemiliaBloodPool
 
     private static void EnsureCombatUiPlacement(NCombatUi combatUi, NSecondaryResourceCounterRow row)
     {
-        if (!TryGetEnergyCounter(combatUi, out var energyCounter))
+        if (!GodotObject.IsInstanceValid(combatUi) || !GodotObject.IsInstanceValid(row))
             return;
 
-        if (row.GetParent() != energyCounter)
+        var attachParent = combatUi.EnergyCounterContainer;
+        if (!GodotObject.IsInstanceValid(attachParent))
+            return;
+
+        if (row.GetParent() != attachParent)
         {
             var scale = row.Scale;
-            row.Reparent(energyCounter);
+            row.Reparent(attachParent);
             row.Scale = scale;
         }
 
-        row.Position = EnergyCounterOffset;
+        row.Position = TryGetEnergyCounter(combatUi, out var energyCounter) && energyCounter is Control energyControl
+            ? energyControl.Position + EnergyCounterOffset
+            : EnergyCounterOffset;
     }
 }

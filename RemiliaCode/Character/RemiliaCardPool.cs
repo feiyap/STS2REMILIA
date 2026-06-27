@@ -12,10 +12,13 @@ public class RemiliaCardPool : TypeListCardPoolModel
 
     public override string EnergyColorName => "remilia";
 
+    public override string CardFrameMaterialPath => "card_frame_red";
+
     public override string? BigEnergyIconPath => "charui/big_energy.png".ImagePath();
     public override string? TextEnergyIconPath => "charui/text_energy.png".ImagePath();
 
     public override Color DeckEntryCardColor => new("FF3030");
+    public override Color EnergyOutlineColor => new("802020");
 
     public override bool IsColorless => false;
 }

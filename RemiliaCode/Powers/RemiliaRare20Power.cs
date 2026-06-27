@@ -1,17 +1,12 @@
-using MegaCrit.Sts2.Core.Combat;
+using System.Linq;
 using MegaCrit.Sts2.Core.Commands;
+using MegaCrit.Sts2.Core.Commands.Builders;
+using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.Entities.Creatures;
-using MegaCrit.Sts2.Core.Entities.Players;
 using MegaCrit.Sts2.Core.Entities.Powers;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
-using MegaCrit.Sts2.Core.Helpers;
 using MegaCrit.Sts2.Core.HoverTips;
-using MegaCrit.Sts2.Core.Localization.DynamicVars;
 using MegaCrit.Sts2.Core.Models;
-using MegaCrit.Sts2.Core.Models.Powers;
-using MegaCrit.Sts2.Core.Nodes.Combat;
-using MegaCrit.Sts2.Core.Nodes.Rooms;
-using MegaCrit.Sts2.Core.Nodes.Vfx;
 using MegaCrit.Sts2.Core.ValueProps;
 
 namespace Remilia.RemiliaCode.Powers;
@@ -24,12 +19,21 @@ public class RemiliaRare20Power : RemiliaPower
     protected override IEnumerable<IHoverTip> AdditionalHoverTips =>
         [HoverTipFactory.FromPower<ClawPrints>()];
 
-    public override async Task AfterDamageGiven(PlayerChoiceContext choiceContext, Creature? dealer, DamageResult result, ValueProp props, Creature target, CardModel? cardSource)
+    // 在 AfterAttack 中施加爪痕，避免在 AfterDamageGiven 中嵌套施加能力导致与蜂巢术士等敌人的受击效果死锁。
+    public override async Task AfterAttack(PlayerChoiceContext choiceContext, AttackCommand command)
     {
-        if (dealer == base.Owner && props.IsPoweredAttack() && result.UnblockedDamage > 0)
+        if (command.Attacker != base.Owner || !command.DamageProps.IsPoweredAttack())
+            return;
+        if (command.ModelSource is not CardModel cardSource || cardSource.Type != CardType.Attack)
+            return;
+
+        foreach (DamageResult result in command.Results.SelectMany(r => r))
         {
-            Flash();
-            await PowerCmd.Apply<ClawPrints>(choiceContext, target, base.Amount, base.Owner, null);
+            if (result.UnblockedDamage > 0 && result.Receiver.IsAlive)
+            {
+                Flash();
+                await PowerCmd.Apply<ClawPrints>(choiceContext, result.Receiver, base.Amount, base.Owner, cardSource);
+            }
         }
     }
 }

@@ -14,7 +14,7 @@ public class RemiliaRare12() : RemiliaCard(0,
 {
     protected override IEnumerable<DynamicVar> CanonicalVars => [new DynamicVar("BloodCost", 15), new CardsVar(5)];
     
-    public override IEnumerable<CardKeyword> CanonicalKeywords => [CardKeyword.Exhaust, CardKeyword.Ethereal];
+    public override IEnumerable<CardKeyword> CanonicalKeywords => [CardKeyword.Exhaust];
     
     protected override bool AutoBindBloodCost => true;
 
