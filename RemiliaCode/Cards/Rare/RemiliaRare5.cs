@@ -27,7 +27,7 @@ public class RemiliaRare5() : RemiliaCard(1,
         PlayerChoiceContext choiceContext,
         CardPlay play)
     {
-        await DamageCmd.Attack(base.DynamicVars.CalculatedDamage).FromCard(this).Targeting(play.Target)
+        await DamageCmd.Attack(base.DynamicVars.CalculatedDamage).FromCard(this, play).Targeting(play.Target)
             .WithHitFx("vfx/vfx_attack_slash")
             .Execute(choiceContext);
         

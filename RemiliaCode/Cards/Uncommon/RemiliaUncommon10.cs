@@ -24,7 +24,7 @@ public class RemiliaUncommon10() : RemiliaCard(3,
         CardPlay play)
     {
         bool shouldTriggerFatal = play.Target.Powers.All((PowerModel p) => p.ShouldOwnerDeathTriggerFatal());
-        AttackCommand attackCommand = await DamageCmd.Attack(base.DynamicVars.Damage.BaseValue).FromCard(this)
+        AttackCommand attackCommand = await DamageCmd.Attack(base.DynamicVars.Damage.BaseValue).FromCard(this, play)
             .Targeting(play.Target)
             .Execute(choiceContext);
         

@@ -26,14 +26,14 @@ public class BloodCurse() : RemiliaCard(0,
         CardPlay play)
     {
         VfxCmd.PlayOnCreatureCenter(base.Owner.Creature, "vfx/vfx_bloody_impact");
-        await CreatureCmd.Damage(choiceContext, base.Owner.Creature, base.DynamicVars["HpLoss2"].BaseValue, ValueProp.Unblockable | ValueProp.Unpowered | ValueProp.Move, this);
+        await CreatureCmd.Damage(choiceContext, base.Owner.Creature, base.DynamicVars["HpLoss2"].BaseValue, ValueProp.Unblockable | ValueProp.Unpowered | ValueProp.Move, this, play);
         
         await CardPileCmd.Draw(choiceContext, base.DynamicVars.Cards.IntValue, base.Owner);
     }
 
     protected override async Task OnTurnEndInHand(PlayerChoiceContext choiceContext)
     {
-        await CreatureCmd.Damage(choiceContext, base.Owner.Creature, base.DynamicVars.HpLoss.BaseValue, ValueProp.Unblockable | ValueProp.Unpowered | ValueProp.Move, this);
+        await CreatureCmd.Damage(choiceContext, base.Owner.Creature, base.DynamicVars.HpLoss.BaseValue, ValueProp.Unblockable | ValueProp.Unpowered | ValueProp.Move, this, null);
     }
     
     public static async Task<CardModel?> CreateInHand(Player owner, ICombatState combatState)

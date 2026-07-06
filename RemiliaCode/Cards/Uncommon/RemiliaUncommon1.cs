@@ -24,7 +24,7 @@ public class RemiliaUncommon1() : RemiliaCard(0,
         PlayerChoiceContext choiceContext,
         CardPlay play)
     {
-        await DamageCmd.Attack(base.DynamicVars.Damage.BaseValue).FromCard(this)
+        await DamageCmd.Attack(base.DynamicVars.Damage.BaseValue).FromCard(this, play)
             .Targeting(play.Target)
             .WithHitVfxNode((Creature t) => NScratchVfx.Create(t, goingRight: true))
             .Execute(choiceContext);
@@ -36,13 +36,15 @@ public class RemiliaUncommon1() : RemiliaCard(0,
         await Cmd.Wait(0.25f);
     }
     
-    protected override PileType GetResultPileTypeForCardPlay()
+    protected override (PileType, CardPilePosition) GetResultPileTypeAndPositionForCardPlay()
     {
-        PileType resultPileTypeForCardPlay = base.GetResultPileTypeForCardPlay();
-        if (resultPileTypeForCardPlay != PileType.Discard)
-            return resultPileTypeForCardPlay;
+        var (pileType, position) = base.GetResultPileTypeAndPositionForCardPlay();
+        if (pileType != PileType.Discard)
+            return (pileType, position);
 
-        return IsBloodPoolCount(DynamicVars["BloodCost"].IntValue) ? PileType.Hand : resultPileTypeForCardPlay;
+        return IsBloodPoolCount(DynamicVars["BloodCost"].IntValue)
+            ? (PileType.Hand, CardPilePosition.Bottom)
+            : (pileType, position);
     }
 
     protected override void OnUpgrade()

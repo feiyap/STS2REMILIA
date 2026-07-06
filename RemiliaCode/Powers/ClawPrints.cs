@@ -1,4 +1,5 @@
 using MegaCrit.Sts2.Core.Commands;
+using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.Entities.Creatures;
 using MegaCrit.Sts2.Core.Entities.Powers;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
@@ -28,15 +29,15 @@ public class ClawPrints : RemiliaPower
     }
 
     public override decimal ModifyDamageAdditive(Creature? target, decimal amount, ValueProp props, Creature? dealer,
-        CardModel? cardSource)
+        CardModel? cardSource, CardPlay? cardPlay)
     {
         if (target != base.Owner)
         {
-            return base.ModifyDamageAdditive(target, amount, props, dealer, cardSource);
+            return base.ModifyDamageAdditive(target, amount, props, dealer, cardSource, cardPlay);
         }
         if (!props.IsPoweredAttack())
         {
-            return base.ModifyDamageAdditive(target, amount, props, dealer, cardSource);
+            return base.ModifyDamageAdditive(target, amount, props, dealer, cardSource, cardPlay);
         }
         decimal num = base.DynamicVars["DamageIncrease"].BaseValue * Amount;
         

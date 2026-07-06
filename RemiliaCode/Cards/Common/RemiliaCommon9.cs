@@ -24,7 +24,7 @@ public class RemiliaCommon9() : RemiliaCard(1,
         PlayerChoiceContext choiceContext,
         CardPlay play)
     {
-        await DamageCmd.Attack(base.DynamicVars.Damage.BaseValue).FromCard(this).Targeting(play.Target)
+        await DamageCmd.Attack(base.DynamicVars.Damage.BaseValue).FromCard(this, play).Targeting(play.Target)
             .Execute(choiceContext);
         int num = (play.Target.IsAlive ? play.Target.GetPowerAmount<ClawPrints>() : 0);
         if (num > 0)

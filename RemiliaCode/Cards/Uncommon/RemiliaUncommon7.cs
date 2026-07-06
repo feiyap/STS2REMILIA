@@ -31,7 +31,7 @@ public class RemiliaUncommon7() : RemiliaCard(2,
     {
         decimal damageValue = Math.Min(RemiliaBloodPool.Get(Owner), base.DynamicVars["BloodCost"].BaseValue);
         
-        AttackCommand attackCommand = await DamageCmd.Attack(damageValue).FromCard(this)
+        AttackCommand attackCommand = await DamageCmd.Attack(damageValue).FromCard(this, play)
             .Targeting(play.Target)
             .WithHitVfxNode((Creature t) => NScratchVfx.Create(t, goingRight: true))
             .Execute(choiceContext);

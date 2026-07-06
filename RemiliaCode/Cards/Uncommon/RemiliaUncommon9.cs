@@ -39,7 +39,7 @@ public class RemiliaUncommon9() : RemiliaCard(1,
             await PowerCmd.Remove<ArtifactPower>(play.Target);
         }
         
-        await DamageCmd.Attack(base.DynamicVars.Damage.BaseValue).FromCard(this)
+        await DamageCmd.Attack(base.DynamicVars.Damage.BaseValue).FromCard(this, play)
             .Targeting(play.Target)
             .WithHitVfxNode((Creature t) => NScratchVfx.Create(t, goingRight: true))
             .Execute(choiceContext);

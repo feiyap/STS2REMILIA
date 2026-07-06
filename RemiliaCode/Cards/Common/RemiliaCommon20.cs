@@ -27,7 +27,7 @@ public class RemiliaCommon20() : RemiliaCard(1,
         PlayerChoiceContext choiceContext,
         CardPlay play)
     {
-        await DamageCmd.Attack(base.DynamicVars.Damage.BaseValue).FromCard(this).Targeting(play.Target)
+        await DamageCmd.Attack(base.DynamicVars.Damage.BaseValue).FromCard(this, play).Targeting(play.Target)
             .WithHitFx("vfx/vfx_starry_impact", "blunt_attack.mp3")
             .Execute(choiceContext);
         

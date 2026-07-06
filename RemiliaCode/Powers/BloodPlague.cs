@@ -48,7 +48,7 @@ public class BloodPlague : RemiliaPower
                 int iterations = TriggerCount;
                 for (int i = 0; i < iterations; i++)
                 {
-                    await CreatureCmd.Damage(choiceContext, power.Owner, base.Amount, ValueProp.Unpowered, base.Applier, null);
+                    await CreatureCmd.Damage(choiceContext, power.Owner, base.Amount, ValueProp.Unpowered, base.Applier, null, null);
                 }
             }
             finally

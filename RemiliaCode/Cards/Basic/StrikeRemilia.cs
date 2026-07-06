@@ -17,7 +17,7 @@ public class StrikeRemilia() : RemiliaCard(1,
         PlayerChoiceContext choiceContext,
         CardPlay play)
     {
-        await CommonActions.CardAttack(this, play.Target).Execute(choiceContext);
+        await CommonActions.CardAttack(this, play.Target, play).Execute(choiceContext);
     }
 
     protected override void OnUpgrade()

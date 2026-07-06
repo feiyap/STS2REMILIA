@@ -37,7 +37,7 @@ public class RemiliaRare1() : RemiliaCard(3,
     {
         int count = RemiliaBloodPool.Get(Owner);
 
-        AttackCommand attackCommand = await DamageCmd.Attack(base.DynamicVars.CalculatedDamage).FromCard(this)
+        AttackCommand attackCommand = await DamageCmd.Attack(base.DynamicVars.CalculatedDamage).FromCard(this, play)
             .TargetingAllOpponents(base.CombatState)
             .WithHitVfxNode((Creature t) => NScratchVfx.Create(t, goingRight: true))
             .Execute(choiceContext);

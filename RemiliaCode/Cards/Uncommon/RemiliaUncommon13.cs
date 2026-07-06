@@ -21,7 +21,7 @@ public class RemiliaUncommon13() : RemiliaCard(1,
     {
         await CreatureCmd.TriggerAnim(base.Owner.Creature, "Cast", base.Owner.Character.CastAnimDelay);
         
-        await DamageCmd.Attack(base.DynamicVars.Damage.BaseValue).FromCard(this)
+        await DamageCmd.Attack(base.DynamicVars.Damage.BaseValue).FromCard(this, play)
             .Targeting(play.Target)
             .Execute(choiceContext);
     }

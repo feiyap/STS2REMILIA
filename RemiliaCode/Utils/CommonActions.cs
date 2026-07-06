@@ -15,13 +15,14 @@ public static class CommonActions
     public static AttackCommand CardAttack(
         CardModel card,
         Creature? target,
+        CardPlay play,
         int hitCount = 1,
         string vfx = "vfx/vfx_attack_slash")
     {
         ArgumentNullException.ThrowIfNull(target);
 
         var command = DamageCmd.Attack(card.DynamicVars.Damage.BaseValue)
-            .FromCard(card)
+            .FromCard(card, play)
             .Targeting(target)
             .WithHitFx(vfx);
 

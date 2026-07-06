@@ -3,7 +3,8 @@
   "name": "Remilia",
   "author": "Feiyap",
   "description": "蕾米莉亚MOD",
-  "version": "v1.0.1",
+  "version": "v1.0.2",
+  "min_game_version": "0.108.0",
   "has_pck": true,
   "has_dll": true,
   "dependencies": [

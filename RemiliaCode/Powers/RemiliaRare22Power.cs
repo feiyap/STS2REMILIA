@@ -31,7 +31,7 @@ public class RemiliaRare22Power : RemiliaPower
             await CreatureCmd.TriggerAnim(base.Owner, "Cast", base.Owner.Player.Character.CastAnimDelay);
             VfxCmd.PlayOnCreatureCenter(base.Owner, "vfx/vfx_bloody_impact");
             DamageVar damageVar = (DamageVar)base.DynamicVars["SelfDamage"];
-            await CreatureCmd.Damage(choiceContext, base.Owner, damageVar.BaseValue, damageVar.Props, base.Owner, null);
+            await CreatureCmd.Damage(choiceContext, base.Owner, damageVar, base.Owner);
             
             await CardCmd.Exhaust(choiceContext, card);
         }

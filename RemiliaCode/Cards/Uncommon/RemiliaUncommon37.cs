@@ -30,7 +30,7 @@ public class RemiliaUncommon37() : RemiliaCard(0,
             num++;
         }
         
-        await DamageCmd.Attack(base.DynamicVars.Damage.BaseValue).FromCard(this).WithHitCount(num)
+        await DamageCmd.Attack(base.DynamicVars.Damage.BaseValue).FromCard(this, play).WithHitCount(num)
             .Targeting(play.Target)
             .WithHitVfxNode((Creature t) => NScratchVfx.Create(t, goingRight: true))
             .Execute(choiceContext);

@@ -25,7 +25,7 @@ public class RemiliaUncommon4() : RemiliaCard(4,
         PlayerChoiceContext choiceContext,
         CardPlay play)
     {
-        await CommonActions.CardAttack(this, play.Target).Execute(choiceContext);
+        await CommonActions.CardAttack(this, play.Target, play).Execute(choiceContext);
     }
 
     protected override void OnUpgrade()

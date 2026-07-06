@@ -24,7 +24,7 @@ public class RemiliaCommon14() : RemiliaCard(1,
         PlayerChoiceContext choiceContext,
         CardPlay play)
     {
-        await DamageCmd.Attack(base.DynamicVars.Damage.BaseValue).FromCard(this).TargetingAllOpponents(base.CombatState)
+        await DamageCmd.Attack(base.DynamicVars.Damage.BaseValue).FromCard(this, play).TargetingAllOpponents(base.CombatState)
             .WithHitFx("vfx/vfx_attack_slash")
             .Execute(choiceContext);
         await PowerCmd.Apply<ClawPrints>(choiceContext, base.CombatState.HittableEnemies, base.DynamicVars["ClawPrints"].BaseValue, base.Owner.Creature, this);

@@ -28,44 +28,45 @@ public class RemiliaUncommon8() : RemiliaCard(1,
         PlayerChoiceContext choiceContext,
         CardPlay play)
     {
-        List<PowerModel> originalDebuffs = (from p in play.Target.Powers
+        Dictionary<PowerModel, int> debuffAmounts = (from p in play.Target!.Powers
             where p.TypeForCurrentAmount == PowerType.Debuff
-            select (PowerModel)p.ClonePreservingMutability()).ToList();
-        await DamageCmd.Attack(base.DynamicVars.Damage.BaseValue).FromCard(this).Targeting(play.Target)
+            select ((PowerModel)p.ClonePreservingMutability(), Amount: p.Amount)).ToDictionary();
+        foreach (KeyValuePair<PowerModel, int> item in debuffAmounts.ToList())
+        {
+            if (item.Key is ITemporaryPower temporaryPower)
+            {
+                KeyValuePair<PowerModel, int> internalPower = debuffAmounts.FirstOrDefault(
+                    p => p.Key.Id == temporaryPower.InternallyAppliedPower.Id);
+                if (internalPower.Key != null)
+                    debuffAmounts[internalPower.Key] += item.Value;
+            }
+        }
+
+        await DamageCmd.Attack(base.DynamicVars.Damage.BaseValue).FromCard(this, play).Targeting(play.Target)
             .WithHitFx("vfx/vfx_attack_slash")
             .Execute(choiceContext);
         foreach (Creature enemy in base.CombatState.HittableEnemies)
         {
             if (enemy == play.Target)
-            {
                 continue;
-            }
-            foreach (PowerModel item in originalDebuffs)
+
+            foreach (KeyValuePair<PowerModel, int> item in debuffAmounts)
             {
-                PowerModel powerModel = PowerCmd.FindExistingInstanceForStacking(item, enemy, item.Applier);
+                if (item.Value == 0)
+                    continue;
+
+                PowerModel powerModel = PowerCmd.FindExistingInstanceForStacking(item.Key, enemy, item.Key.Applier);
                 if (powerModel != null)
-                {
-                    DoHackyThingsForSpecificPowers(powerModel);
-                    await PowerCmd.ModifyAmount(choiceContext, powerModel, item.Amount,  item.Applier, this);
-                }
+                    await PowerCmd.ModifyAmount(choiceContext, powerModel, item.Value, item.Key.Applier, this);
                 else
                 {
-                    PowerModel power = (PowerModel)item.ClonePreservingMutability();
-                    DoHackyThingsForSpecificPowers(power);
-                    await PowerCmd.Apply(choiceContext, power, enemy, item.Amount,  item.Applier, this);
+                    PowerModel power = (PowerModel)item.Key.ClonePreservingMutability();
+                    await PowerCmd.Apply(choiceContext, power, enemy, item.Value, item.Key.Applier, this);
                 }
             }
         }
         
         await BloodCurse.CreateInHand(base.Owner, base.CombatState);
-    }
-    
-    private static void DoHackyThingsForSpecificPowers(PowerModel power)
-    {
-        if (power is ITemporaryPower temporaryPower)
-        {
-            temporaryPower.IgnoreNextInstance();
-        }
     }
 
     protected override void OnUpgrade()

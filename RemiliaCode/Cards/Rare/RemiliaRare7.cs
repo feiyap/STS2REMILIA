@@ -21,7 +21,7 @@ public class RemiliaRare7() : RemiliaCard(0,
         PlayerChoiceContext choiceContext,
         CardPlay play)
     {
-        await DamageCmd.Attack(base.DynamicVars.Damage.BaseValue).FromCard(this)
+        await DamageCmd.Attack(base.DynamicVars.Damage.BaseValue).FromCard(this, play)
             .TargetingAllOpponents(base.CombatState)
             .WithHitVfxNode((Creature t) => NScratchVfx.Create(t, goingRight: true))
             .Execute(choiceContext);
@@ -29,14 +29,13 @@ public class RemiliaRare7() : RemiliaCard(0,
         await Cmd.Wait(0.25f);
     }
     
-    protected override PileType GetResultPileTypeForCardPlay()
+    protected override (PileType, CardPilePosition) GetResultPileTypeAndPositionForCardPlay()
     {
-        PileType resultPileType = base.GetResultPileTypeForCardPlay();
-        if (resultPileType != PileType.Discard)
-        {
-            return resultPileType;
-        }
-        return PileType.Hand;
+        var (pileType, position) = base.GetResultPileTypeAndPositionForCardPlay();
+        if (pileType != PileType.Discard)
+            return (pileType, position);
+
+        return (PileType.Hand, CardPilePosition.Bottom);
     }
 
     protected override void OnUpgrade()

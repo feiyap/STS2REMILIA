@@ -31,7 +31,7 @@ public class RemiliaRare17Power : RemiliaPower
             NCombatRoom.Instance?.CombatVfxContainer.AddChildSafely(NFireSmokePuffVfx.Create(base.Owner));
             await Cmd.CustomScaledWait(0.2f, 0.4f);
             DamageVar damageVar = (DamageVar)base.DynamicVars["SelfDamage"];
-            await CreatureCmd.Damage(choiceContext, base.Owner, damageVar.BaseValue, damageVar.Props, base.Owner, null);
+            await CreatureCmd.Damage(choiceContext, base.Owner, damageVar, base.Owner);
 
             await PlayerCmd.GainEnergy(base.Amount, base.Owner.Player);
             await CardPileCmd.Draw(choiceContext, base.Amount, base.Owner.Player);
